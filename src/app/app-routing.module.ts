@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CashTransactionHistoryComponent } from './components/cash-transaction-history/cash-transaction-history.component';
 import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
+import { WalletComponent } from './components/wallet/wallet.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'crypto',
     component: CryptoComponent
+  },
+  {
+    path: 'wallet',
+    component: WalletComponent
   },
   {
     path: 'crypto/:id',

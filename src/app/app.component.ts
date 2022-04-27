@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
-import { Subscription } from 'rxjs';
+import { combineLatest, Subscription } from 'rxjs';
 
 import { AppService } from './app.service';
 
@@ -23,15 +23,18 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
-    this.getCoinListSettings();
+    this.getCoinList();
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
-  private getCoinListSettings(): void {
-    const stream$ = this.appService.getCoinListSettings().subscribe();
+  private getCoinList(): void {
+    const stream$ = combineLatest([
+      this.appService.getCoinListSettings(),
+      this.appService.getCoinList()
+    ]).subscribe();
 
     this.subscription.add(stream$);
   }

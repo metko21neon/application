@@ -5,4 +5,6 @@ export interface CryptoHistoryInterface {
   total: number
   amount?: number
   fee?: number
+  averagePrice?: number;
+  totalQuantity?: number;
 }

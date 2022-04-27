@@ -1,33 +1,16 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { NgxIndexedDBService } from 'ngx-indexed-db';
+import { HttpHeaders } from '@angular/common/http';
+import { MatSort } from '@angular/material/sort';
 
-import { Observable, Subscription } from 'rxjs';
-
+import { InvestStatisticInterface } from '../../interfaces/invest-statistic.interface';
+import { ColumnInterface } from '../../interfaces/column.interface';
+import { CoinInterface } from '../../interfaces/coin.interface';
 import { AppService } from '../../app.service';
 
-export interface ColumnInterface {
-  selected: boolean;
-  position: number;
-  shortcut: string;
-  label: string;
-}
+import { NgxIndexedDBService } from 'ngx-indexed-db';
 
-export interface CoinInterface {
-  id: number;
-  name: string;
-  symbol: string;
-  price: number;
-  rank: number;
-  quantity: number;
-  history: {
-    action: string;
-    price: number;
-    total: number;
-  }[];
-}
+import { Subscription } from 'rxjs';
 
 const LIST = [
   {
@@ -495,86 +478,22 @@ const LIST = [
   },
 ];
 
-const COLUMN_LIST: ColumnInterface[] = [
-  {
-    label: '#',
-    shortcut: 'number',
-    position: 0,
-    selected: true
-  },
-  {
-    label: 'Rank',
-    shortcut: 'rank',
-    position: 0,
-    selected: true
-  },
-  {
-    label: 'Coin',
-    shortcut: 'symbol',
-    position: 0,
-    selected: true
-  },
-  {
-    label: 'Coin price',
-    shortcut: 'price',
-    position: 3,
-    selected: true
-  },
-  {
-    label: 'Total coins',
-    shortcut: 'totalCoins',
-    position: 1,
-    selected: true
-  },
-  {
-    label: 'Amount in currency',
-    shortcut: 'currencyAmount',
-    position: 7,
-    selected: true
-  },
-  {
-    label: 'Total spent usd',
-    shortcut: 'totalValue',
-    position: 2,
-    selected: false
-  },
-  {
-    label: 'Average price',
-    shortcut: 'average',
-    position: 4,
-    selected: true
-  },
-  {
-    label: 'Percentage result',
-    shortcut: 'percentageResult',
-    position: 5,
-    selected: true
-  },
-  {
-    label: 'Currency result',
-    shortcut: 'currencyResult',
-    position: 6,
-    selected: true
-  }
-];
-
 @Component({
   selector: 'app-crypto',
   templateUrl: './crypto.component.html',
   styleUrls: ['./crypto.component.scss']
 })
-export class CryptoComponent implements OnInit, AfterViewInit {
+export class CryptoComponent implements OnInit, OnDestroy {
 
   @ViewChild(MatSort) matSort!: MatSort;
 
   dataSource!: MatTableDataSource<any>;
+  statistic!: InvestStatisticInterface;
 
-  title = 'crypto-statistics';
   isLoading = false;
   list: any = LIST;
-  total = 0;
 
-  columnList: ColumnInterface[] = COLUMN_LIST;
+  columnList: ColumnInterface[] = [];
   displayedColumns: string[] = [];
 
   private subscription: Subscription = new Subscription();
@@ -588,34 +507,19 @@ export class CryptoComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit(): void {
+    this.setInvestStatisticSubscription();
+    this.setColumnList();
     this.getCoinList();
-
-    // this.appService.getUsers().subscribe((users: any[]) => {
-    //   this.isLoading = false;
-
-    //   setTimeout(() => {
-    //     this.total = this.appService.total;
-    //   }, 1000);
-    // });
-
-    this.displayedColumns = this.columnList
-      .filter((column: ColumnInterface) => column.selected)
-      .map((column: ColumnInterface) => column.shortcut);
   }
 
   sort(event: { active: string; direction: string; }): void {
     console.log('sort:', event);
   }
 
-  ngAfterViewInit(): void {
-  }
-
   private getCoinList(): void {
     const stream$ = this.appService.getCoinList().subscribe((coinList: CoinInterface[]) => {
       this.dataSource = new MatTableDataSource(coinList);
-      setTimeout(() => {
-        this.dataSource.sort = this.matSort;
-      }, 0);
+      setTimeout(() => this.dataSource.sort = this.matSort);
       console.log('COIN_LIST:', coinList);
     });
 
@@ -638,5 +542,21 @@ export class CryptoComponent implements OnInit, AfterViewInit {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  private setColumnList(): void {
+    this.columnList = this.appService.getColumnListList();
+
+    this.displayedColumns = this.columnList
+      .filter((column: ColumnInterface) => column.selected)
+      .map((column: ColumnInterface) => column.shortcut);
+  }
+
+  private setInvestStatisticSubscription(): void {
+    const stream$ = this.appService.investStatistic$.subscribe((statistic: InvestStatisticInterface) => {
+      this.statistic = statistic;
+    });
+
+    this.subscription.add(stream$);
   }
 }

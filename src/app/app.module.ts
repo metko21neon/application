@@ -12,21 +12,16 @@ import { MatSortModule } from '@angular/material/sort';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PricePipe } from './pipes/price.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { USDValuePipe } from './pipes/usd-value.pipe';
-import { AveragePricePipe } from './pipes/average-price.pipe';
-import { PercentResultPipe } from './pipes/percent-result.pipe';
-import { UsdValueResultPipe } from './pipes/usd-value-result.pipe';
-import { TotalFilledPipe } from './pipes/total-filled.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { QuantityPipe } from './pipes/quantity.pipe';
 
 import { NgxIndexedDBModule, DBConfig } from 'ngx-indexed-db';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
 import { CashTransactionHistoryComponent } from './components/cash-transaction-history/cash-transaction-history.component';
 import { AddTransactionComponent } from './components/cash-transaction-history/add-transaction/add-transaction.component';
+import { WalletComponent } from './components/wallet/wallet.component';
+import { MatSelectModule } from '@angular/material/select';
 
 const dbConfig: DBConfig = {
   name: 'Crypto',
@@ -55,18 +50,12 @@ const dbConfig: DBConfig = {
 
 @NgModule({
   declarations: [
-    AveragePricePipe,
     AppComponent,
-    USDValuePipe,
-    PricePipe,
-    PercentResultPipe,
-    UsdValueResultPipe,
-    TotalFilledPipe,
-    QuantityPipe,
     CryptoComponent,
     CryptoDetailsComponent,
     CashTransactionHistoryComponent,
-    AddTransactionComponent
+    AddTransactionComponent,
+    WalletComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +68,7 @@ const dbConfig: DBConfig = {
 
     MatFormFieldModule,
     MatCheckboxModule,
+    MatSelectModule,
     MatButtonModule,
     MatDialogModule,
     MatTableModule,

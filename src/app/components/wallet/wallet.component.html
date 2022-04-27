@@ -1,16 +1,32 @@
 <div class="im-app">
-  <h1 class="im-header"> Statistics </h1>
+  <h1 class="im-header"> Wallets </h1>
 
   <div class="im-content">
-    <!-- <div>
-      <mat-checkbox *ngFor="let column of columnList" class="ml-15" [(ngModel)]="column.selected"
-        (change)="showColumn(column)">
-        {{ column.label }}
-      </mat-checkbox>
-    </div> -->
+    <div class="mb-10">
+      <button *ngFor="let wallet of walletList" mat-flat-button class="mr-10"
+        [color]="selectedWallet === wallet ? 'primary' : ''" (click)="selectWallet(wallet)">
+        {{ wallet.name }} ({{ wallet.company }})
+      </button>
+    </div>
 
-    <table matSort mat-table class="mat-elevation-z8" style="width: 100%;" [dataSource]="dataSource"
-      (matSortChange)="sort($event)">
+    <div class="mb-10">
+      <mat-form-field appearance="fill">
+        <mat-label> Project status </mat-label>
+
+        <mat-select [formControl]="statusControl">
+          <mat-option *ngFor="let status of statusList" [value]="status.value" (click)="filterProjectByStatus()">
+            {{ status.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="standard" style="width: 100%;">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="searchCoin($event)" placeholder="Ex. ium" #input>
+    </mat-form-field>
+
+    <table matSort mat-table class="mat-elevation-z8" style="width: 100%;" [dataSource]="dataSource">
       <ng-container matColumnDef="number">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
         <td mat-cell *matCellDef="let index = index"> {{ index + 1 }} </td>
@@ -43,7 +59,7 @@
 
       <ng-container matColumnDef="average">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Average price </th>
-        <td mat-cell *matCellDef="let element"> {{ element.averagePrice | currency: 'USD': 'symbol': '1.2-10' }} </td>
+        <td mat-cell *matCellDef="let element"> {{ element.averagePrice | currency: 'USD': 'symbol': '1.2-20' }} </td>
       </ng-container>
 
       <ng-container matColumnDef="percentageResult">
@@ -66,7 +82,10 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="row.id" (click)="selectCrypto(row)">
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="'/crypto/' + row?.token_address"></tr>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
       </tr>
     </table>
   </div>
@@ -74,22 +93,22 @@
   <div class="im-footer">
     <div>
       <span> Total spent currency: </span>
-      <span> {{ statistic.totalSpendCurrency | currency: 'USD': 'symbol': '1.0-0' }} </span>
+      <span> {{ totalSpendCurrency | currency: 'USD': 'symbol': '1.0-0' }} </span>
     </div>
 
     <div>
-      <span> Amount in currency total: </span>
-      <span> {{ statistic.totalInCurrency | currency: 'USD': 'symbol': '1.0-0' }} </span>
+      <span> Amount in currency: </span>
+      <span> {{ totalInCurrency | currency: 'USD': 'symbol': '1.2-2' }} </span>
     </div>
 
     <div>
-      <span> Currency difference: </span>
-      <span> {{ statistic.currencyDifference | currency: 'USD': 'symbol': '1.0-0' }} </span>
+      <span> Percentage result: </span>
+      <span> {{ percentageResult }}% </span>
     </div>
 
     <div>
-      <span> Percentage difference: </span>
-      <span> {{ statistic.percentageDifference }}% </span>
+      <span> Currency result: </span>
+      <span> {{ currencyResult | currency: 'USD': 'symbol': '1.2-2' }} </span>
     </div>
   </div>
 </div>

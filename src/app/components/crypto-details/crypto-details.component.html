@@ -2,10 +2,110 @@
   <h1 class="im-header"> {{ coinDetails?.name }} {{ coinDetails?.symbol }} </h1>
 
   <div class="im-content">
-    <div> Price: {{ coinDetails?.symbol | usdValue }} </div>
-    <div> Quantity: {{ coinDetails?.quantity }} </div>
+    <div> Rank: {{ coinDetails?.rank }} </div>
+    <div> Coin price: {{ coinDetails?.price | currency: 'USD': 'symbol': '1.2-20' }} </div>
+    <div> Total coins: {{ coinDetails?.quantity }} {{ coinDetails.symbol }} </div>
+    <div> Total spent usd: {{ coinDetails.investedAmount | currency }} </div>
+    <div> Average price: {{ coinDetails.averagePrice | currency: 'USD': 'symbol': '1.2-20' }} </div>
+    <div> Percentage result: {{ coinDetails.percentageResult }}% </div>
+    <div> Currency result: {{ coinDetails.currencyResult }} USD </div>
+    <div> Amount in currency: {{ coinDetails.totalInCurrency | currency }} </div>
+
+    <table matSort mat-table class="mat-elevation-z8 mt-15" style="width: 100%;" [dataSource]="dataSource">
+      <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+        <td mat-cell *matCellDef="let index = index"> {{ index + 1 }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let element"> {{ element.action | uppercase }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let element"> {{ element?.price | currency: 'USD': 'symbol': '1.2-20' }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Total </th>
+        <td mat-cell *matCellDef="let element">
+          <span *ngIf="actionHistoryEnum.SELL === element.action" class="is-buy">
+            {{ element.filled * element.price }}
+          </span>
+
+          <span *ngIf="actionHistoryEnum.BUY === element.action" class="is-sell">
+            {{ element.total }}
+          </span>
+
+          USD
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Quantity </th>
+        <td mat-cell *matCellDef="let element">
+          <span *ngIf="actionHistoryEnum.SELL === element.action" class="is-sell">
+            - {{ element.filled }}
+          </span>
+
+          <span *ngIf="actionHistoryEnum.BUY === element.action" class="is-buy">
+            + {{ element.total / element.price }}
+          </span>
+
+          {{ coinDetails.symbol }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="percentageResult">
+        <th mat-header-cell *matHeaderCellDef> X result </th>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="actionHistoryEnum.SELL === element.action">
+            {{ (element.price / element.averagePrice).toFixed(1) }} x
+          </ng-container>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="currencyResult">
+        <th mat-header-cell *matHeaderCellDef> Currency result </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.currencyResult }} USD
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="totalQuantity">
+        <th mat-header-cell *matHeaderCellDef> Total quantity </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.totalQuantity }} {{ coinDetails.symbol }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
 
   <div class="im-footer">
+    <div>
+      <span> Total spent currency: </span>
+      <span> {{ totalSpendCurrency | currency: 'USD': 'symbol': '1.0-0' }} </span>
+    </div>
+
+    <div>
+      <span> Total earned currency: </span>
+      <span> {{ totalEarnedCurrency | currency: 'USD': 'symbol': '1.2-2' }} </span>
+    </div>
+
+    <!-- <div>
+      <span> Currency difference: </span>
+      <span> {{ statistic.currencyDifference | currency: 'USD': 'symbol': '1.0-0' }} </span>
+    </div> -->
+
+    <div>
+      <span> Percentage difference: </span>
+      <span>
+        {{ (totalEarnedCurrency / totalSpendCurrency).toFixed(1) }} x
+      </span>
+    </div>
   </div>
 </div>
