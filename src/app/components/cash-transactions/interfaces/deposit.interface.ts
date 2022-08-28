@@ -9,4 +9,5 @@ export interface DepositInterface {
   createTime: number;
   updateTime: number;
   usdPrice: string;
+  usdAmount?: number;
 }

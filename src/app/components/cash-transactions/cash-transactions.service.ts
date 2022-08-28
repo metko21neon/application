@@ -1,64 +1,71 @@
 import { Injectable } from '@angular/core';
 
-import { BehaviorSubject, delay, Observable, of, reduce, tap } from 'rxjs';
-import { combineLatest, concatMap, from } from 'rxjs';
+import { BehaviorSubject, Observable, of, switchMap, tap } from 'rxjs';
+import { combineLatest } from 'rxjs';
 
+import { CashTransactionsInterface } from './interfaces/cash-transactions.interface';
+import { CASH_TRANSACTIONS_STATE } from './states/cash-transactions.state';
 import { WithdrawalInterface } from './interfaces/withdrawal.interface';
-import { TimeRangeInterface } from '../../interfaces/time-range.interface';
 import { DepositInterface } from './interfaces/deposit.interface';
-import { getDateRange } from '../../utilities/date-range.utility';
-import { FirebaseService } from '../../services/firebase.service';
-import { Api } from '../../api/api';
-
 import { WITHDRAWAL } from '../../states/withdrawal.state';
 import { DEPOSIT } from '../../states/deposit.state';
+
+export type TransactionsType = DepositInterface | WithdrawalInterface;
 
 @Injectable({
   providedIn: 'root'
 })
 export class CashTransactionsService {
 
-  withdrawals$!: Observable<WithdrawalInterface[]>;
-  deposits$!: Observable<DepositInterface[]>;
+  cashTransactions$!: Observable<CashTransactionsInterface>;
 
-  private withdrawalsState: WithdrawalInterface[] = [];
-  private withdrawalsSubject = new BehaviorSubject<WithdrawalInterface[]>(this.withdrawalsState);
+  private cashTransactionsState: CashTransactionsInterface = CASH_TRANSACTIONS_STATE;
+  private cashTransactionsSubject = new BehaviorSubject<CashTransactionsInterface>(this.cashTransactionsState);
 
-  private depositsState: DepositInterface[] = [];
-  private depositsSubject = new BehaviorSubject<DepositInterface[]>(this.depositsState);
-
-  constructor(
-    private firebaseService: FirebaseService,
-    private api: Api) {
-    this.withdrawals$ = this.withdrawalsSubject.asObservable();
-    this.deposits$ = this.depositsSubject.asObservable();
+  constructor() {
+    this.cashTransactions$ = this.cashTransactionsSubject.asObservable();
   }
 
-  synchronize(): Observable<[WithdrawalInterface[], DepositInterface[]]> {
-    return combineLatest([
-      this.synchronizeWithdrawalHistory(),
-      this.synchronizeDepositHistory()
-    ]);
-  }
-
-  getWithdrawalHistory(): Observable<WithdrawalInterface[]> {
-    return of(WITHDRAWAL).pipe(
+  getCashTransactions(): Observable<CashTransactionsInterface> {
+    return combineLatest([of(WITHDRAWAL), of(DEPOSIT)]).pipe(
       // return this.firebaseService.getWithdrawalHistory().pipe(
-      tap((withdrawals: WithdrawalInterface[]) => {
-        this.setWithdrawalsState(withdrawals);
-      })
-    );
-  }
-
-  getDepositHistory(): Observable<WithdrawalInterface[]> {
-    return of(DEPOSIT).pipe(
       // return this.firebaseService.getDepositHistory().pipe(
-      tap((deposits: DepositInterface[]) => this.setDepositsState(deposits))
+      tap(([withdrawals, deposits]: [WithdrawalInterface[], DepositInterface[]]) => {
+        withdrawals = this.sortDataByTime(withdrawals, 'desc');
+        deposits = this.sortDataByTime(deposits, 'desc');
+
+        withdrawals = this.setUSDPriceProperty(withdrawals);
+        deposits = this.setUSDPriceProperty(deposits);
+
+        this.cashTransactionsState.statistic.withdrawalUAHTotal = this.calculateTotalInUAH(withdrawals);
+        this.cashTransactionsState.statistic.withdrawalUSDTotal = this.calculateTotalInUSD(withdrawals);
+
+        this.cashTransactionsState.statistic.depositUAHTotal = this.calculateTotalInUAH(deposits);
+        this.cashTransactionsState.statistic.depositUSDTotal = this.calculateTotalInUSD(deposits);
+
+        this.cashTransactionsState.withdrawals = withdrawals;
+        this.cashTransactionsState.deposits = deposits;
+
+        this.cashTransactionsSubject.next(this.cashTransactionsState);
+      }),
+      switchMap(() => this.cashTransactions$)
     );
   }
 
-  private sortDataByTime(data: DepositInterface[], direction: string = 'asc'): void {
-    data.sort((a: DepositInterface, b: DepositInterface) => {
+  private calculateTotalInUAH(list: TransactionsType[] = []): number {
+    return list.reduce((acc: number, transaction: TransactionsType) => acc + +transaction.indicatedAmount, 0);
+  }
+
+  private calculateTotalInUSD(list: TransactionsType[] = []): number {
+    return list.reduce((acc: number, transaction: TransactionsType) => acc + +transaction.usdAmount!, 0);
+  }
+
+  private setUSDPriceProperty(list: TransactionsType[]): TransactionsType[] {
+    return list.map((item: TransactionsType) => ({ ...item, usdAmount: +item.indicatedAmount / +item.usdPrice }));
+  }
+
+  private sortDataByTime(data: TransactionsType[], direction: string = 'asc'): TransactionsType[] {
+    return data.sort((a: TransactionsType, b: TransactionsType) => {
       if (direction === 'asc') {
         return a.createTime - b.createTime
       }
@@ -69,62 +76,5 @@ export class CashTransactionsService {
 
       return 0;
     });
-  }
-
-  private setWithdrawalsState(withdrawals: WithdrawalInterface[]): void {
-    this.sortDataByTime(withdrawals, 'desc');
-
-    console.log('setWithdrawalsState:', withdrawals);
-    this.withdrawalsState = withdrawals;
-    this.withdrawalsSubject.next(this.withdrawalsState);
-  }
-
-  private setDepositsState(deposits: DepositInterface[]): void {
-    this.sortDataByTime(deposits, 'desc');
-    console.log('setDepositsState:', deposits);
-    this.depositsState = deposits;
-    this.depositsSubject.next(this.depositsState);
-  }
-
-  private synchronizeWithdrawalHistory(): Observable<WithdrawalInterface[]> {
-    const range = getDateRange(this.withdrawalsState[0]?.updateTime);
-
-    return of([]);
-    return from(range).pipe(
-      concatMap((range: TimeRangeInterface) => this.api.getWithdrawalByRange(range)),
-      reduce((acc: WithdrawalInterface[], curr) => [...acc, ...curr?.data], []),
-      tap((withdrawals: WithdrawalInterface[]) => {
-        const filteredWithdrawals = withdrawals.filter((item: WithdrawalInterface) => {
-          // if (item.status === 'Successful') {
-          //   this.firebaseService.addWithdrawalToHistory(item);
-          // }
-
-          return item.status === 'Successful';
-        });
-
-        this.setWithdrawalsState([...this.withdrawalsState, ...filteredWithdrawals]);
-      })
-    );
-  }
-
-  private synchronizeDepositHistory(): Observable<DepositInterface[]> {
-    const range = getDateRange(this.depositsState[0]?.updateTime);
-
-    return of([]);
-    return from(range).pipe(
-      concatMap((range: TimeRangeInterface) => this.api.getDepositByRange(range)),
-      reduce((acc: DepositInterface[], curr) => [...acc, ...curr?.data || []], []),
-      tap((deposits: DepositInterface[]) => {
-        const filteredDeposits = deposits.filter((item: DepositInterface) => {
-          // if (item.status === 'Successful') {
-          //   this.firebaseService.addDepositToHistory(item);
-          // }
-
-          return item.status === 'Successful';
-        });
-
-        this.setDepositsState([...this.depositsState, ...filteredDeposits]);
-      })
-    );
   }
 }
