@@ -5,29 +5,11 @@ import { FormControl } from '@angular/forms';
 
 import { WalletInterface } from '../../interfaces/wallet.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
+import { COIN_STATUS_LIST } from '../../states/coin-status.state';
 import { CoinInterface } from '../../interfaces/coin.interface';
 import { AppService } from '../../app.service';
 
 import { Subscription } from 'rxjs';
-
-const COIN_STATUS_LIST: any[] = [
-  {
-    label: 'All projects',
-    value: 'all'
-  },
-  {
-    label: 'Untracked projects',
-    value: 'untracked'
-  },
-  {
-    label: 'Closed projects',
-    value: 'closed'
-  },
-  {
-    label: 'Tracked projects',
-    value: 'tracked'
-  },
-];
 
 @Component({
   selector: 'im-wallet',
@@ -95,6 +77,10 @@ export class WalletComponent implements OnInit, OnDestroy {
     this.setTotalSpendCurrency();
   }
 
+  getCurrentWallet(coin: CoinInterface): WalletInterface {
+    return coin.wallets.find((wallet) => wallet.address === this.selectedWallet.address)!;
+  }
+
   private setTotalSpendCurrency(): void {
     this.totalSpendCurrency = 0;
     this.percentageResult = 0;
@@ -102,9 +88,19 @@ export class WalletComponent implements OnInit, OnDestroy {
     this.currencyResult = 0;
 
     this.dataSource.data.map((coin: CoinInterface) => {
-      this.totalSpendCurrency += coin.investedAmount;
-      this.totalInCurrency += coin.totalInCurrency;
-      this.currencyResult += coin.currencyResult;
+      if (coin.hasOwnProperty('history')) {
+        this.totalSpendCurrency += coin.investedAmount;
+        this.totalInCurrency += coin.totalInCurrency;
+        this.currencyResult += coin.currencyResult;
+      }
+
+      if (!coin.hasOwnProperty('history')) {
+        const wallet = this.getCurrentWallet(coin);
+
+        this.totalSpendCurrency += wallet.investedAmount!;
+        this.totalInCurrency += wallet.totalInCurrency!;
+        this.currencyResult += wallet.currencyResult!;
+      }
     });
 
     this.percentageResult = Number.parseFloat(((this.totalInCurrency - this.totalSpendCurrency) / (this.totalSpendCurrency / 100)).toFixed(1));
@@ -119,7 +115,6 @@ export class WalletComponent implements OnInit, OnDestroy {
       this.walletList = walletList;
 
       this.selectWallet(walletList[0]);
-      console.log('walletList:', walletList);
     });
 
     this.subscription.add(stream$);

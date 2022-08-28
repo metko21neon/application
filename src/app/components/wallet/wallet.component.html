@@ -49,12 +49,28 @@
 
       <ng-container matColumnDef="totalCoins">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Total coins </th>
-        <td mat-cell *matCellDef="let element"> {{ element.quantity }} {{ element.symbol }} </td>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="element.hasOwnProperty('history')">
+            {{ element.quantity }} {{ element.symbol }}
+          </ng-container>
+
+          <ng-container *ngIf="!element.hasOwnProperty('history')">
+            {{ getCurrentWallet(element)?.quantity! }}
+          </ng-container>
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="totalValue">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Total spent usd </th>
-        <td mat-cell *matCellDef="let element"> {{ element.investedAmount | currency }} </td>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="element.hasOwnProperty('history')">
+            {{ element.investedAmount | currency }}
+          </ng-container>
+
+          <ng-container *ngIf="!element.hasOwnProperty('history')">
+            {{ getCurrentWallet(element).investedAmount | currency }}
+          </ng-container>
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="average">
@@ -64,25 +80,46 @@
 
       <ng-container matColumnDef="percentageResult">
         <th mat-header-cell *matHeaderCellDef> Percentage result </th>
-        <td mat-cell *matCellDef="let element"> {{ element.percentageResult }}% </td>
+        <td mat-cell *matCellDef="let element">
+          <ng-container *ngIf="element.hasOwnProperty('history')">
+            {{ element.percentageResult }}%
+          </ng-container>
+
+          <ng-container *ngIf="!element.hasOwnProperty('history')">
+            {{ getCurrentWallet(element).percentageResult }}%
+          </ng-container>
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="currencyResult">
         <th mat-header-cell *matHeaderCellDef> Currency result </th>
         <td mat-cell *matCellDef="let element">
-          {{ element.currencyResult }} USD
+          <ng-container *ngIf="element.hasOwnProperty('history')">
+            {{ element.currencyResult }} USD
+          </ng-container>
+
+          <ng-container *ngIf="!element.hasOwnProperty('history')">
+            {{ getCurrentWallet(element).currencyResult }} USD
+          </ng-container>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="currencyAmount">
         <th mat-header-cell *matHeaderCellDef> Amount in currency </th>
         <td mat-cell *matCellDef="let element">
-          {{ element.totalInCurrency | currency }}
+          <ng-container *ngIf="element.hasOwnProperty('history')">
+            {{ element.totalInCurrency | currency }}
+          </ng-container>
+
+          <ng-container *ngIf="!element.hasOwnProperty('history')">
+            {{ getCurrentWallet(element).totalInCurrency | currency }}
+          </ng-container>
         </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="'/crypto/' + row?.token_address"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        [routerLink]="'./' + selectedWallet.address + '/coin/' + row?.token_address"></tr>
 
       <tr class="mat-row" *matNoDataRow>
         <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>

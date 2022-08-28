@@ -1,5 +1,11 @@
 <div class="im-app">
-  <h1 class="im-header"> Statistics </h1>
+  <h1 class="im-header">
+    Statistics
+
+    <div class="flex">
+      <button (click)="synchronize()"> Synchronize </button>
+    </div>
+  </h1>
 
   <div class="im-content">
     <!-- <div>
@@ -8,6 +14,12 @@
         {{ column.label }}
       </mat-checkbox>
     </div> -->
+
+    <mat-form-field style="width: 100%;">
+      <mat-label>Filter</mat-label>
+
+      <input #input matInput (keyup)="applyFilter($event)" placeholder="ex. BTC">
+    </mat-form-field>
 
     <table matSort mat-table class="mat-elevation-z8" style="width: 100%;" [dataSource]="dataSource"
       (matSortChange)="sort($event)">
@@ -28,33 +40,15 @@
 
       <ng-container matColumnDef="price">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Coin price </th>
-        <td mat-cell *matCellDef="let element"> {{ element.price | currency: 'USD': 'symbol': '1.2-10' }} </td>
+        <td mat-cell *matCellDef="let element">
+          {{ element.price | roundValue | currency: 'USD': 'symbol': '1.2-10' }}
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="totalCoins">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Total coins </th>
-        <td mat-cell *matCellDef="let element"> {{ element.quantity }} {{ element.symbol }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="totalValue">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Total spent usd </th>
-        <td mat-cell *matCellDef="let element"> {{ element.investedAmount | currency }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="average">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Average price </th>
-        <td mat-cell *matCellDef="let element"> {{ element.averagePrice | currency: 'USD': 'symbol': '1.2-10' }} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="percentageResult">
-        <th mat-header-cell *matHeaderCellDef> Percentage result </th>
-        <td mat-cell *matCellDef="let element"> {{ element.percentageResult }}% </td>
-      </ng-container>
-
-      <ng-container matColumnDef="currencyResult">
-        <th mat-header-cell *matHeaderCellDef> Currency result </th>
         <td mat-cell *matCellDef="let element">
-          {{ element.currencyResult }} USD
+          {{ element.quantity | roundValue }} {{ element.symbol }}
         </td>
       </ng-container>
 
@@ -65,7 +59,33 @@
         </td>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <ng-container matColumnDef="totalValue">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Total spent usd </th>
+        <td mat-cell *matCellDef="let element"> {{ element.investedAmount | currency }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="averagePrice">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Average price </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.averagePrice | roundValue | currency: 'USD': 'symbol': '1.2-10' }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="percentageResult">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Percentage result </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.percentageResult | roundValue }}%
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="currencyResult">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Currency result </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.currencyResult | imRound | currency }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="row.id" (click)="selectCrypto(row)">
       </tr>
     </table>

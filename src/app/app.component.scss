@@ -1,0 +1,39 @@
+.im-app {
+  padding: 16px;
+  height: 100%;
+
+  row-gap: 16px;
+  display: grid;
+  grid-template-rows: 30px minmax(0, 1fr) 30px;
+
+  background-color: #323232;
+  box-sizing: border-box;
+  color: #ffffff;
+
+  .im-header {
+    text-align: center;
+    margin: 0;
+
+    h1 {
+      margin: inherit;
+    }
+  }
+
+  .im-content {
+    overflow: auto;
+  }
+
+  .im-footer {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  table {
+    height: 100%;
+  }
+
+  td.mat-footer-cell {
+    border-top: 1px solid #ffffff;
+  }
+}

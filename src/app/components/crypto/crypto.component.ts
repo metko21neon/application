@@ -1,16 +1,16 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { HttpHeaders } from '@angular/common/http';
 import { MatSort } from '@angular/material/sort';
 
 import { InvestStatisticInterface } from '../../interfaces/invest-statistic.interface';
+import { CoinDataInterface } from '../../interfaces/coin-data.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
+import { CoinDataService } from '../../services/coin-data.service';
 import { CoinInterface } from '../../interfaces/coin.interface';
 import { AppService } from '../../app.service';
 
-import { NgxIndexedDBService } from 'ngx-indexed-db';
-
-import { Subscription } from 'rxjs';
+import { Subscription, switchMap } from 'rxjs';
 
 const LIST = [
   {
@@ -481,7 +481,8 @@ const LIST = [
 @Component({
   selector: 'app-crypto',
   templateUrl: './crypto.component.html',
-  styleUrls: ['./crypto.component.scss']
+  styleUrls: ['./crypto.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CryptoComponent implements OnInit, OnDestroy {
 
@@ -502,7 +503,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   });
 
   constructor(
-    private dbService: NgxIndexedDBService,
+    private coinDataService: CoinDataService,
     private appService: AppService
   ) { }
 
@@ -512,18 +513,21 @@ export class CryptoComponent implements OnInit, OnDestroy {
     this.getCoinList();
   }
 
-  sort(event: { active: string; direction: string; }): void {
-    console.log('sort:', event);
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  private getCoinList(): void {
-    const stream$ = this.appService.getCoinList().subscribe((coinList: CoinInterface[]) => {
-      this.dataSource = new MatTableDataSource(coinList);
-      setTimeout(() => this.dataSource.sort = this.matSort);
-      console.log('COIN_LIST:', coinList);
-    });
+  synchronize(): void {
+    const stream$ = this.coinDataService.synchronizeCoinData().pipe(
+      switchMap(() => this.coinDataService.coinData$)
+    ).subscribe((data: CoinDataInterface[]) => console.log('synchronize:', data));
 
     this.subscription.add(stream$);
+  }
+
+  sort(event: { active: string; direction: string; }): void {
+    console.log('sort:', event);
   }
 
   selectCrypto(crypto: any): void {
@@ -542,6 +546,16 @@ export class CryptoComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  private getCoinList(): void {
+    const stream$ = this.appService.coinList$.subscribe((coinList: CoinInterface[]) => {
+      this.dataSource = new MatTableDataSource(coinList);
+      setTimeout(() => this.dataSource.sort = this.matSort);
+      console.log('COIN_LIST:', coinList);
+    });
+
+    this.subscription.add(stream$);
   }
 
   private setColumnList(): void {

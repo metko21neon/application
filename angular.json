@@ -109,6 +109,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "crypto-statistics:build:production",
+            "firebaseProject": "crypto-statistic-b10a6",
+            "firebaseHostingSite": "crypto-statistic-b10a6"
+          }
         }
       }
     }

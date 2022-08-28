@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "crypto-statistic-b10a6": {
+      "hosting": {
+        "crypto-statistics": [
+          "crypto-statistic-b10a6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "crypto-statistic-b10a6"
+  }
+}

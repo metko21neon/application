@@ -15,37 +15,26 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { NgxIndexedDBModule, DBConfig } from 'ngx-indexed-db';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
-import { CashTransactionHistoryComponent } from './components/cash-transaction-history/cash-transaction-history.component';
-import { AddTransactionComponent } from './components/cash-transaction-history/add-transaction/add-transaction.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { MatSelectModule } from '@angular/material/select';
+import { CoinDetailsComponent } from './components/coin-details/coin-details.component';
 
-const dbConfig: DBConfig = {
-  name: 'Crypto',
-  version: 2,
-  objectStoresMeta: [
-    {
-      store: 'coinList',
-      storeConfig: { keyPath: 'id', autoIncrement: true },
-      storeSchema: [
-        { name: 'name', keypath: 'name', options: { unique: false } },
-        { name: 'symbol', keypath: 'symbol', options: { unique: true } },
-        { name: 'history', keypath: 'history', options: { unique: false } }
-      ]
-    },
-    {
-      store: 'cash-transactions',
-      storeConfig: { keyPath: 'id', autoIncrement: true },
-      storeSchema: [
-        { name: 'month', keypath: 'month', options: { unique: false } },
-        { name: 'deposit', keypath: 'deposit', options: { unique: false } },
-        { name: 'withdraw', keypath: 'withdraw', options: { unique: false } }
-      ]
-    }
-  ]
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+import { ListComponent } from './components/list/list.component';
+import { PipesModule } from './pipes/pipes.module';
+import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCjNMShCKpV1-EL5p73TYmAVm_lrnQjHVs",
+  authDomain: "crypto-statistic-b10a6.firebaseapp.com",
+  projectId: "crypto-statistic-b10a6",
+  storageBucket: "crypto-statistic-b10a6.appspot.com",
+  messagingSenderId: "855441284167",
+  appId: "1:855441284167:web:bcfcb6c9e96345eefea562",
+  measurementId: "G-F3721CT0L2"
 };
 
 @NgModule({
@@ -53,16 +42,16 @@ const dbConfig: DBConfig = {
     AppComponent,
     CryptoComponent,
     CryptoDetailsComponent,
-    CashTransactionHistoryComponent,
-    AddTransactionComponent,
     WalletComponent,
+    CoinDetailsComponent,
+    ListComponent,
+    CoinDataListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxIndexedDBModule.forRoot(dbConfig),
     ReactiveFormsModule,
     FormsModule,
 
@@ -74,6 +63,13 @@ const dbConfig: DBConfig = {
     MatTableModule,
     MatInputModule,
     MatSortModule,
+
+    PipesModule,
+
+    // provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    // provideFirestore(() => getFirestore()),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -45,7 +45,7 @@ export const COLUMN_LIST: ColumnInterface[] = [
   },
   {
     label: 'Average price',
-    shortcut: 'average',
+    shortcut: 'averagePrice',
     position: 4,
     selected: true
   },
