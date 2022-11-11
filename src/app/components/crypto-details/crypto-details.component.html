@@ -2,17 +2,16 @@
   <h1 class="im-header"> {{ tokenDetails?.name }} {{ tokenDetails?.symbol }} </h1>
 
   <div class="im-content">
-    <div> Rank: {{ tokenDetails?.rank }} </div>
-    <div> Coin price: {{ tokenDetails?.price | currency: 'USD': 'symbol': '1.2-20' }} </div>
-    <div> Average price: {{ tokenDetails?.averagePrice | currency: 'USD': 'symbol': '1.2-20' }} </div>
-
-    <br>
-
-    <div> Total coins: {{ wallet?.quantity }} {{ tokenDetails?.symbol }} </div>
-    <div> Current spent usd: {{ wallet?.investedAmount }} USD </div>
-    <div> Amount in currency: {{ wallet?.totalInCurrency | currency }} </div>
-    <div> Currency result: {{ wallet?.currencyResult }} USD </div>
-    <div> Percentage result: {{ wallet?.percentageResult }}% </div>
+    <div style="display: flex; justify-content: space-between;">
+      <span> Rank: {{ tokenDetails?.rank }} </span>
+      <span> Coin price: {{ tokenDetails?.price! | roundValue | currency: 'USD': 'symbol': '1.2-20' }} </span>
+      <span> Average price: {{ tokenDetails?.averagePrice! | roundValue | currency: 'USD': 'symbol': '1.2-20' }} </span>
+      <span> Total coins: {{ wallet?.quantity! | roundValue }} {{ tokenDetails?.symbol }} </span>
+      <!-- <div> Current spent usd: {{ wallet?.investedAmount }} USD </div> -->
+      <!-- <div> Amount in currency: {{ wallet?.totalInCurrency | currency }} </div> -->
+      <!-- <div> Currency result: {{ wallet?.currencyResult }} USD </div> -->
+      <!-- <div> Percentage result: {{ wallet?.percentageResult }}% </div> -->
+    </div>
 
     <table matSort mat-table class="mat-elevation-z8 mt-15" style="width: 100%;" [dataSource]="dataSource">
       <ng-container matColumnDef="number">
@@ -20,20 +19,32 @@
         <td mat-cell *matCellDef="let index = index"> {{ index + 1 }} </td>
       </ng-container>
 
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+        <td mat-cell *matCellDef="let element"> {{ element?.date }} </td>
+      </ng-container>
+
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
         <td mat-cell *matCellDef="let element"> {{ element.action | uppercase }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="averagePrice">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Average price </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.averagePrice | roundValue | currency: 'USD': 'symbol': '1.2-20' }}
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="price">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
         <td mat-cell *matCellDef="let element">
           <span *ngIf="actionHistoryEnum.RECEIVE !== element.action && actionHistoryEnum.TRANSFER !== element.action">
-            {{ (element?.price | currency: 'USD': 'symbol': '1.2-20') || '-' }}
+            {{ (element?.price | roundValue | currency: 'USD': 'symbol': '1.2-20') || '-' }}
           </span>
 
           <span *ngIf="actionHistoryEnum.RECEIVE === element.action || actionHistoryEnum.TRANSFER === element.action">
-            {{ (element?.averagePrice | currency: 'USD': 'symbol': '1.2-20') }}
+            {{ (element?.averagePrice | roundValue | currency: 'USD': 'symbol': '1.2-20') }}
           </span>
         </td>
       </ng-container>
@@ -42,15 +53,15 @@
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Total </th>
         <td mat-cell *matCellDef="let element">
           <span *ngIf="actionHistoryEnum.TRANSFER === element.action || actionHistoryEnum.RECEIVE === element.action">
-            {{ element.amount * element.averagePrice }} USD
+            {{ ((element.amount + element.fee) * element.averagePrice) | imRound }} USD
           </span>
 
-          <span *ngIf="actionHistoryEnum.SELL === element.action" class="is-buy">
-            {{ element.filled * element.price }} USD
+          <span *ngIf="actionHistoryEnum.SELL === element.action">
+            {{ (element.filled * element.price) | imRound }} USD
           </span>
 
-          <span *ngIf="actionHistoryEnum.BUY === element.action" class="is-sell">
-            {{ element.total }} USD
+          <span *ngIf="actionHistoryEnum.BUY === element.action">
+            {{ element.total | imRound }} USD
           </span>
         </td>
       </ng-container>
@@ -58,22 +69,27 @@
       <ng-container matColumnDef="quantity">
         <th mat-header-cell mat-sort-header *matHeaderCellDef> Quantity </th>
         <td mat-cell *matCellDef="let element">
-          <span *ngIf="actionHistoryEnum.TRANSFER === element.action" class="is-sell">
-            - {{ element.amount }}
+          <span *ngIf="actionHistoryEnum.TRANSFER === element.action">
+            - {{ (element.amount + element.fee) | roundValue }}
           </span>
 
-          <span *ngIf="actionHistoryEnum.SELL === element.action" class="is-sell">
-            - {{ element.filled }}
+          <span *ngIf="actionHistoryEnum.SELL === element.action">
+            - {{ element.filled | roundValue }}
           </span>
 
-          <span *ngIf="actionHistoryEnum.BUY === element.action" class="is-buy">
-            + {{ element.total / element.price }}
+          <span *ngIf="actionHistoryEnum.BUY === element.action">
+            + {{ (element.total / element.price) | roundValue }}
           </span>
 
-          <span *ngIf="actionHistoryEnum.RECEIVE === element.action" class="is-buy">
-            + {{ element.amount }} USD
+          <span *ngIf="actionHistoryEnum.RECEIVE === element.action">
+            + {{ element.amount | roundValue }} USD
           </span>
 
+          <span *ngIf="actionHistoryEnum.SPEND === element.action">
+            - {{ element.amount | roundValue }} USD
+          </span>
+
+          ({{ element.totalQuantityPercentage | imRound }}%)
           {{ tokenDetails.symbol }}
         </td>
       </ng-container>
@@ -101,7 +117,7 @@
       <ng-container matColumnDef="totalQuantity">
         <th mat-header-cell *matHeaderCellDef> Total quantity </th>
         <td mat-cell *matCellDef="let element">
-          {{ element.totalQuantity }} {{ tokenDetails.symbol }}
+          {{ element.totalQuantity | roundValue }} {{ tokenDetails.symbol }}
         </td>
       </ng-container>
 
@@ -112,25 +128,39 @@
 
   <div class="im-footer">
     <div>
-      <span> Total spent currency: </span>
-      <span> {{ totalSpendCurrency | currency: 'USD': 'symbol': '1.0-0' }} </span>
+      <span> BUY/SELL/REST/DIFF: </span>
+
+      <span>
+        {{ totalBuy | currency: 'USD': 'symbol': '1.0-0' }}
+        /
+        {{ totalSell | currency: 'USD': 'symbol': '1.0-0' }}
+        /
+        {{ totalRest | currency: 'USD': 'symbol': '1.0-0' }}
+        /
+        {{ (totalSell + totalRest) - totalBuy | currency: 'USD': 'symbol': '1.0-0' }}
+      </span>
     </div>
 
-    <div>
+    <!-- <div>
+      <span> Total spent currency: </span>
+      <span> {{ totalSpendCurrency | currency: 'USD': 'symbol': '1.0-0' }} </span>
+    </div> -->
+
+    <!-- <div>
       <span> Total earned currency: </span>
       <span> {{ totalEarnedCurrency | currency: 'USD': 'symbol': '1.2-2' }} </span>
-    </div>
+    </div> -->
 
     <!-- <div>
       <span> Currency difference: </span>
       <span> {{ statistic.currencyDifference | currency: 'USD': 'symbol': '1.0-0' }} </span>
     </div> -->
 
-    <div>
+    <!-- <div>
       <span> Percentage difference: </span>
       <span>
         {{ (totalEarnedCurrency / totalSpendCurrency).toFixed(1) }} x
       </span>
-    </div>
+    </div> -->
   </div>
 </div>

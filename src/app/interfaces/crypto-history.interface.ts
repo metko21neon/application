@@ -7,4 +7,6 @@ export interface CryptoHistoryInterface {
   fee?: number
   averagePrice?: number;
   totalQuantity?: number;
+
+  totalQuantityPercentage?: number;
 }

@@ -11,6 +11,7 @@
   color: #ffffff;
 
   .im-header {
+    position: relative;
     text-align: center;
     margin: 0;
 
@@ -27,10 +28,6 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
-  }
-
-  table {
-    height: 100%;
   }
 
   td.mat-footer-cell {

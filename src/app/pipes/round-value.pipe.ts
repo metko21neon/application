@@ -14,15 +14,15 @@ export class RoundValuePipe implements PipeTransform {
       return Number.parseFloat(value.toFixed(4));
     }
 
-    if (value > 0.0001 && value < 0.1) {
+    if (value > 0.0001 && value < 0.1 || value < -0.0001 && value > -0.1) {
       return Number.parseFloat(value.toFixed(5));
     }
 
-    if (value > 0.00001 && value < 0.0001) {
+    if (value > 0.00001 && value < 0.0001 || value < -0.00001 && value > -0.0001) {
       return Number.parseFloat(value.toFixed(7));
     }
 
-    if (value > 0.0000001 && value < 0.00001) {
+    if (value > 0.0000001 && value < 0.00001 || value < -0.0000001 && value > -0.00001) {
       return Number.parseFloat(value.toFixed(9));
     }
 

@@ -13,28 +13,18 @@ import { DepositInterface } from '../../interfaces/deposit.interface';
 export class CashTransactionsTableComponent implements AfterViewInit {
 
   @Input() set data(data: DepositInterface[] | WithdrawalInterface[]) {
-    this.setDataSource(data);
+    this.dataSource = new MatTableDataSource(data);
   };
+
+  @Input() totalInUAH = 0;
+  @Input() totalInUSD = 0;
 
   @ViewChild(MatSort) sort!: MatSort;
 
   displayedColumns: string[] = ['createTime', 'usdPrice', 'amount', 'usdAmount'];
   dataSource!: MatTableDataSource<DepositInterface | WithdrawalInterface>;
 
-  totalInUAH = 0;
-  totalInUSD = 0;
-
   ngAfterViewInit(): void {
     this.dataSource.sort = this.sort;
-  }
-
-  private setDataSource(data: DepositInterface[] | WithdrawalInterface[]): void {
-    this.dataSource = new MatTableDataSource(data);
-
-    this.totalInUAH = this.dataSource?.filteredData?.reduce(
-      (acc: number, transaction: DepositInterface) => acc + +transaction.indicatedAmount, 0);
-
-    this.totalInUSD = this.dataSource?.filteredData?.reduce(
-      (acc: number, transaction: DepositInterface) => acc + (+transaction.indicatedAmount / + transaction.usdPrice!), 0);
   }
 }

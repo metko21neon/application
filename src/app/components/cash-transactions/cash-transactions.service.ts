@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { BehaviorSubject, Observable, of, switchMap, tap } from 'rxjs';
+import { BehaviorSubject, Observable, of, tap } from 'rxjs';
 import { combineLatest } from 'rxjs';
 
 import { CashTransactionsInterface } from './interfaces/cash-transactions.interface';
@@ -26,7 +26,11 @@ export class CashTransactionsService {
     this.cashTransactions$ = this.cashTransactionsSubject.asObservable();
   }
 
-  getCashTransactions(): Observable<CashTransactionsInterface> {
+  get cashStatistic(): any {
+    return this.cashTransactionsState.statistic;
+  }
+
+  getCashTransactions(): Observable<[WithdrawalInterface[], DepositInterface[]]> {
     return combineLatest([of(WITHDRAWAL), of(DEPOSIT)]).pipe(
       // return this.firebaseService.getWithdrawalHistory().pipe(
       // return this.firebaseService.getDepositHistory().pipe(
@@ -47,13 +51,18 @@ export class CashTransactionsService {
         this.cashTransactionsState.deposits = deposits;
 
         this.cashTransactionsSubject.next(this.cashTransactionsState);
-      }),
-      switchMap(() => this.cashTransactions$)
+      })
     );
   }
 
   private calculateTotalInUAH(list: TransactionsType[] = []): number {
-    return list.reduce((acc: number, transaction: TransactionsType) => acc + +transaction.indicatedAmount, 0);
+    return list.reduce((acc: number, transaction: TransactionsType) => {
+      if (transaction.fiatCurrency === 'USD') {
+        return acc + (+transaction.indicatedAmount * +transaction.usdPrice);
+      }
+
+      return acc + +transaction.indicatedAmount;
+    }, 0);
   }
 
   private calculateTotalInUSD(list: TransactionsType[] = []): number {
@@ -61,7 +70,13 @@ export class CashTransactionsService {
   }
 
   private setUSDPriceProperty(list: TransactionsType[]): TransactionsType[] {
-    return list.map((item: TransactionsType) => ({ ...item, usdAmount: +item.indicatedAmount / +item.usdPrice }));
+    return list.map((item: TransactionsType) => {
+      if (item.fiatCurrency === 'USD') {
+        return { ...item, usdAmount: +item.indicatedAmount }
+      }
+
+      return { ...item, usdAmount: +item.indicatedAmount / +item.usdPrice }
+    });
   }
 
   private sortDataByTime(data: TransactionsType[], direction: string = 'asc'): TransactionsType[] {

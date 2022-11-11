@@ -1,94 +1,126 @@
 <div class="im-app">
-  <h1 class="im-header">
-    Statistics
+  <div class="im-header">
+    <h1> Coin list </h1>
+
+    <span style="position: absolute; right: 10px; top: 6px;"> UPDATED 11.11.2022 </span>
 
     <div class="flex">
       <button (click)="synchronize()"> Synchronize </button>
     </div>
-  </h1>
+  </div>
 
   <div class="im-content">
-    <!-- <div>
-      <mat-checkbox *ngFor="let column of columnList" class="ml-15" [(ngModel)]="column.selected"
-        (change)="showColumn(column)">
-        {{ column.label }}
+    <div style="display: flex; align-items: center;">
+      <mat-form-field class="mr-8" style="width: 300px;">
+        <mat-label>Filter</mat-label>
+
+        <input matInput imFocus (keyup)="applyFilter($event)">
+      </mat-form-field>
+
+      <mat-checkbox class="ml-8" [checked]="isHideUntracked" (change)="toggleUntracked($event.checked)">
+        Hide all untracked
       </mat-checkbox>
-    </div> -->
+    </div>
 
-    <mat-form-field style="width: 100%;">
-      <mat-label>Filter</mat-label>
+    <div style="overflow: auto;">
+      <table matSort mat-table multiTemplateDataRows class="mat-elevation-z8" [dataSource]="dataSource">
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> # </th>
+          <td mat-cell *matCellDef="let index = dataIndex"> {{ index + 1 }} </td>
+        </ng-container>
 
-      <input #input matInput (keyup)="applyFilter($event)" placeholder="ex. BTC">
-    </mat-form-field>
+        <ng-container matColumnDef="rank">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Rank </th>
+          <td mat-cell *matCellDef="let element"> {{ element.rank }} </td>
+        </ng-container>
 
-    <table matSort mat-table class="mat-elevation-z8" style="width: 100%;" [dataSource]="dataSource"
-      (matSortChange)="sort($event)">
-      <ng-container matColumnDef="number">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
-        <td mat-cell *matCellDef="let index = index"> {{ index + 1 }} </td>
-      </ng-container>
+        <ng-container matColumnDef="coin">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Coin </th>
+          <td mat-cell *matCellDef="let element"> {{ element.name }} ({{ element.symbol }}) </td>
+        </ng-container>
 
-      <ng-container matColumnDef="rank">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rank </th>
-        <td mat-cell *matCellDef="let element"> {{ element.rank }} </td>
-      </ng-container>
+        <ng-container matColumnDef="price">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Coin price </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.price !== null">
+              {{ element.price | roundValue | currency: 'USD': 'symbol': '1.2-15' }}
+            </ng-container>
 
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Coin </th>
-        <td mat-cell *matCellDef="let element"> {{ element.name }} ({{ element.symbol }}) </td>
-      </ng-container>
+            <ng-container *ngIf="element.price === null"> - </ng-container>
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="price">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Coin price </th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.price | roundValue | currency: 'USD': 'symbol': '1.2-10' }}
-        </td>
-      </ng-container>
+        <ng-container matColumnDef="totalCoins">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Total coins </th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.quantity | roundValue | number: '1.2-15' }} {{ element.symbol }}
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="totalCoins">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Total coins </th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.quantity | roundValue }} {{ element.symbol }}
-        </td>
-      </ng-container>
+        <ng-container matColumnDef="totalInCurrency">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> Amount in currency </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.price !== null">
+              {{ element.totalInCurrency | currency }}
+            </ng-container>
 
-      <ng-container matColumnDef="currencyAmount">
-        <th mat-header-cell *matHeaderCellDef> Amount in currency </th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.totalInCurrency | currency }}
-        </td>
-      </ng-container>
+            <ng-container *ngIf="element.price === null"> - </ng-container>
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="totalValue">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Total spent usd </th>
-        <td mat-cell *matCellDef="let element"> {{ element.investedAmount | currency }} </td>
-      </ng-container>
+        <ng-container matColumnDef="investedAmount">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Total spent usd </th>
+          <td mat-cell *matCellDef="let element"> {{ element.investedAmount | currency }} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="averagePrice">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Average price </th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.averagePrice | roundValue | currency: 'USD': 'symbol': '1.2-10' }}
-        </td>
-      </ng-container>
+        <ng-container matColumnDef="averagePrice">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Average price </th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.averagePrice | roundValue | currency: 'USD': 'symbol': '1.2-10' }}
+          </td>
+        </ng-container>
 
-      <ng-container matColumnDef="percentageResult">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Percentage result </th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.percentageResult | roundValue }}%
-        </td>
-      </ng-container>
+        <ng-container matColumnDef="percentageResult">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Percentage result </th>
+          <td mat-cell *matCellDef="let element">
+            <ng-container *ngIf="element.price !== null">
+              {{ element.percentageResult | roundValue }}%
+            </ng-container>
 
-      <ng-container matColumnDef="currencyResult">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Currency result </th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.currencyResult | imRound | currency }}
-        </td>
-      </ng-container>
+            <ng-container *ngIf="element.price === null"> - </ng-container>
+          </td>
+        </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="row.id" (click)="selectCrypto(row)">
-      </tr>
-    </table>
+        <ng-container matColumnDef="currencyResult">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Currency result </th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.currencyResult | imRound | currency }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="expandedDetail">
+          <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+            <div class="example-element-detail flex" style="flex-direction: column;"
+              [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+              <div *ngFor="let wallet of element.wallets" class="flex" style="cursor: pointer;"
+                [routerLink]="'../wallet/' + wallet.address + '/coin/' + element?.symbol">
+                <span> {{ wallet.name }} </span>
+                <span> {{ wallet.quantity | roundValue }} {{ element.symbol }} </span>
+              </div>
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+          [class.example-expanded-row]="expandedElement === row" class="example-element-row"
+          (click)="(expandedElement = expandedElement === row ? null : row); $event.stopPropagation()">
+          <!-- [routerLink]="'../wallet/' + row.address + '/coin/' + row?.symbol" -->
+        </tr>
+
+        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+      </table>
+    </div>
   </div>
 
   <div class="im-footer">
@@ -109,7 +141,7 @@
 
     <div>
       <span> Percentage difference: </span>
-      <span> {{ statistic.percentageDifference }}% </span>
+      <span> {{ statistic.percentageDifference | roundValue }}% </span>
     </div>
   </div>
 </div>

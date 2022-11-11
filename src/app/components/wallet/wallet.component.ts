@@ -122,6 +122,7 @@ export class WalletComponent implements OnInit, OnDestroy {
 
   private setColumnList(): void {
     this.columnList = this.appService.getColumnListList();
+    console.log('columnList:', this.columnList);
 
     this.displayedColumns = this.columnList
       .filter((column: ColumnInterface) => column.selected)

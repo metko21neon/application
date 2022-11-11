@@ -2,6 +2,18 @@ import { DepositInterface } from "../components/cash-transactions/interfaces/dep
 
 export const DEPOSIT: DepositInterface[] = [
   {
+    "method": "Bank Transfer",
+    "orderNo": "550b135930484595ab1977fce9532ef8",
+    "fiatCurrency": "USD",
+    "totalFee": "0",
+    "status": "Successful",
+    "updateTime": 1658758560000,
+    "indicatedAmount": "400",
+    "usdPrice": "39.91",
+    "amount": "400",
+    "createTime": 1658758560000
+  },
+  {
     "orderNo": "b92b81ed2e3e46109015f4cef84f4bf5",
     "fiatCurrency": "UAH",
     "indicatedAmount": "4500.00",

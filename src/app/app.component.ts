@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { combineLatest, Subscription } from 'rxjs';
 
+import { CashTransactionsService } from './components/cash-transactions/cash-transactions.service';
 import { CoinDataService } from './services/coin-data.service';
-import { FirebaseService } from './services/firebase.service';
 import { AppService } from './app.service';
 
 @Component({
@@ -17,36 +17,26 @@ export class AppComponent implements OnInit, OnDestroy {
   private subscription: Subscription = new Subscription();
 
   constructor(
+    private cashTransactionsService: CashTransactionsService,
     private coinDataService: CoinDataService,
-    private firebaseService: FirebaseService,
     private appService: AppService,
   ) { }
 
   ngOnInit(): void {
-    this.getCoinList();
+    this.initData();
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
 
-  private getCoinList(): void {
+  private initData(): void {
     const stream$ = combineLatest([
+      this.cashTransactionsService.getCashTransactions(),
       this.coinDataService.getCoinData(),
       this.appService.getCoinList()
     ]).subscribe();
 
     this.subscription.add(stream$);
   }
-
-  // private updateDirectionConfig(): Observable<any> {
-  //   const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5000&convert=USD`;
-
-  //   const headers = new HttpHeaders({
-  //     'X-CMC_PRO_API_KEY': '90c1ef10-0914-4ade-b15c-e92216c772f7',
-  //     'Accept': 'application/json'
-  //   });
-
-  //   return this.http.get<any>(url, { headers });
-  // }
 }

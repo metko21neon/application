@@ -3,21 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
 import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
-import { CoinDetailsComponent } from './components/coin-details/coin-details.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/cash-hitory', pathMatch: 'full'
+    redirectTo: '/coins', pathMatch: 'full'
   },
   {
     path: 'coin-data-list',
     component: CoinDataListComponent
   },
   {
-    path: 'cash-hitory',
+    path: 'cash-history',
     loadChildren: () => import('./components/cash-transactions/cash-transactions.module').then((m) => m.CashTransactionsModule),
   },
   {
@@ -37,13 +36,9 @@ const routes: Routes = [
     component: WalletComponent
   },
   {
-    path: 'wallet/:walletAddress/coin/:tokenAddress',
+    path: 'wallet/:walletAddress/coin/:symbol',
     component: CryptoDetailsComponent
-  },
-  {
-    path: 'crypto/:id',
-    component: CoinDetailsComponent
-  },
+  }
 ];
 
 @NgModule({

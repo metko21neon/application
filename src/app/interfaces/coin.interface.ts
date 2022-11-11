@@ -5,12 +5,13 @@ export interface CoinInterface {
   id: number;
   name: string;
   symbol: string;
-  price: number;
-  rank: number;
   quantity: number;
   averagePrice: number;
   investedAmount: number;
   totalInCurrency: number;
+
+  price: number | null;
+  rank: number | null;
 
   percentageResult: number;
   currencyResult: number;

@@ -3,21 +3,21 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable, of, tap } from 'rxjs';
 
+import { CashTransactionsService } from './components/cash-transactions/cash-transactions.service';
+import { InvestStatisticInterface } from './interfaces/invest-statistic.interface';
 import { CryptoHistoryInterface } from './interfaces/crypto-history.interface';
 import { calculateAveragePrice } from './utilities/average-price.utility';
-import { CoinInterface } from './interfaces/coin.interface';
-
-import { Api } from './api/api';
-import { ColumnInterface } from './interfaces/column.interface';
-import { InvestStatisticInterface } from './interfaces/invest-statistic.interface';
+import { CoinHistoryActionEnum } from './enums/coin-history-action.enum';
+import { CoinDataInterface } from './interfaces/coin-data.interface';
 import { WalletInterface } from './interfaces/wallet.interface';
+import { ColumnInterface } from './interfaces/column.interface';
+import { CoinDataService } from './services/coin-data.service';
+import { CoinInterface } from './interfaces/coin.interface';
+import { STATE } from './states/invest-statistic.state';
 import { WALLET_LIST } from './states/wallet.state';
 import { COLUMN_LIST } from './states/column.state';
-import { STATE } from './states/invest-statistic.state';
 import { COIN_LIST } from './states/coins.state';
-import { CoinHistoryActionEnum } from './enums/coin-history-action.enum';
-import { CoinDataService } from './services/coin-data.service';
-import { CoinDataInterface } from './interfaces/coin-data.interface';
+import { Api } from './api/api';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +34,7 @@ export class AppService {
   private coinListSubject = new BehaviorSubject<CoinInterface[]>(this.coinListState);
 
   constructor(
+    private cashTransactionsService: CashTransactionsService,
     private coinDataService: CoinDataService,
     private http: HttpClient,
     private api: Api) {
@@ -45,14 +46,12 @@ export class AppService {
     return this.coinListState.find((coin: CoinInterface) => coin?.token_address === address)!;
   }
 
+  getTokenBySymbol(symbol: string): CoinInterface {
+    return this.coinListState.find((coin: CoinInterface) => coin?.symbol === symbol)!;
+  }
+
   getCoinListByWalletAddress(address: string): CoinInterface[] {
     return this.coinListState.filter((coin: CoinInterface) => {
-      // if (!coin.hasOwnProperty('history')) {
-      //   const wallet = coin?.wallets?.find((wallet: WalletInterface) => wallet.address === address);
-
-      //   return wallet?.quantity;
-      // }
-
       return coin?.wallets?.some((wallet: WalletInterface) => wallet.address === address);
     });
   }
@@ -67,7 +66,7 @@ export class AppService {
 
   getCoinList(): Observable<CoinInterface[]> {
     // return (this.dbService.getAll('coinList') as Observable<CoinInterface[]>).pipe(
-    return (of(COIN_LIST) as Observable<CoinInterface[]>).pipe(
+    return (of(COIN_LIST) as Observable<any[]>).pipe(
       tap((coinList: CoinInterface[]) => {
         coinList.map((coin: CoinInterface) => {
           const coinData = this.coinDataService.getCoinDataBySymbol(coin);
@@ -96,39 +95,25 @@ export class AppService {
   }
 
   private setCoinTotalInCurrencyProperty(coin: CoinInterface, coinData: CoinDataInterface): void {
-    if (coin.hasOwnProperty('history')) {
-      coin.totalInCurrency = coin.quantity * coinData?.price;
-    }
+    coin?.wallets?.map((wallet: WalletInterface) => {
+      wallet.totalInCurrency = wallet.quantity! * coinData?.price;
+    });
 
-    if (!coin.hasOwnProperty('history')) {
-      coin?.wallets?.map((wallet: WalletInterface) => {
-        wallet.totalInCurrency = wallet.quantity! * coinData?.price;
-      });
-    }
+    coin.totalInCurrency = coin?.wallets?.reduce((quantity: number, wallet: WalletInterface) => quantity += wallet.totalInCurrency!, 0);
   }
 
   private setCoinCurrencyResultProperty(coin: CoinInterface): void {
-    if (coin.hasOwnProperty('history')) {
-      coin.currencyResult = coin.totalInCurrency - coin.investedAmount;
-    }
-
-    if (!coin.hasOwnProperty('history')) {
-      coin?.wallets?.map((wallet: WalletInterface) => {
-        wallet.currencyResult = wallet.totalInCurrency! - wallet.investedAmount!;
-      });
-    }
+    coin?.wallets?.map((wallet: WalletInterface) => {
+      wallet.currencyResult = wallet.totalInCurrency! - wallet.investedAmount!;
+    });
   }
 
   private setCoinInvestedAmountProperty(coin: CoinInterface): void {
-    if (coin.hasOwnProperty('history')) {
-      coin.investedAmount = this.calculateInvestedAmount(coin?.history);
-    }
+    coin?.wallets?.map((wallet: WalletInterface) => {
+      wallet.investedAmount = this.calculateInvestedAmount(wallet?.transactions);
+    });
 
-    if (!coin.hasOwnProperty('history')) {
-      coin?.wallets?.map((wallet: WalletInterface) => {
-        wallet.investedAmount = this.calculateInvestedAmount(wallet?.transactions);
-      });
-    }
+    coin.investedAmount = coin?.wallets?.reduce((quantity: number, wallet: WalletInterface) => quantity += wallet.investedAmount! || 0, 0);
   }
 
   private calculateInvestedAmount(transactions: CryptoHistoryInterface[] = []): number {
@@ -158,50 +143,37 @@ export class AppService {
   }
 
   private setCoinPercentResultProperty(coin: CoinInterface, coinData: CoinDataInterface): void {
-    if (coin.hasOwnProperty('history')) {
-      const priceDifference = (coinData?.price - coin.averagePrice);
-      const percentageResult = (priceDifference / (coin.averagePrice / 100));
+    const priceDifference = coinData?.price - (coin.averagePrice ?? coinData?.price);
+    const percentageResult = (priceDifference / ((coin.averagePrice ?? coinData?.price) / 100));
 
-      coin.percentageResult = coin.history?.length ? percentageResult : 0;
-    }
-
-    if (!coin.hasOwnProperty('history')) {
-      coin?.wallets?.map((wallet: WalletInterface) => {
-        const priceDifference = (coinData?.price - coin.averagePrice);
-        const percentageResult = (priceDifference / (coin.averagePrice / 100));
-
-        wallet.percentageResult = wallet.transactions?.length ? percentageResult : 0;
-      });
-    }
+    coin.percentageResult = coin.averagePrice !== 0 ? percentageResult : 0;
   }
 
   private setCoinAveragePriceProperty(coin: CoinInterface): void {
-    if (coin.hasOwnProperty('history')) {
-      coin.averagePrice = calculateAveragePrice(coin.history);
-    }
+    let transactions: any[] = [];
 
-    if (!coin.hasOwnProperty('history')) {
-      let transactions: any[] = [];
+    coin?.wallets?.map((wallet: WalletInterface) => {
+      if (wallet.hasOwnProperty('transactions')) {
+        transactions = [...transactions, ...wallet.transactions!];
+      }
+    });
 
-      coin?.wallets?.map((wallet: WalletInterface) => {
-        if (wallet.hasOwnProperty('transactions')) {
-          transactions = [...transactions, ...wallet.transactions!];
-        }
-      });
-
-      coin.averagePrice = calculateAveragePrice(transactions);
-    }
+    coin.averagePrice = calculateAveragePrice(transactions, coin);
   }
 
   private setCoinQuantityProperty(coin: CoinInterface): void {
-    if (coin.hasOwnProperty('history')) {
-      coin.quantity = coin.history?.reduce((acc: number, curr: CryptoHistoryInterface) => {
+    coin?.wallets?.map((wallet: WalletInterface) => {
+      wallet.quantity = wallet?.transactions?.reduce((acc: number, curr: CryptoHistoryInterface) => {
         if (curr.action === CoinHistoryActionEnum.TRANSFER) {
-          return acc - curr.fee!;
+          return acc - curr.amount! - (curr.fee! || 0);
+        }
+
+        if (curr.action === CoinHistoryActionEnum.RECEIVE) {
+          return acc + curr.amount!;
         }
 
         if (curr.action === CoinHistoryActionEnum.SPEND) {
-          return acc - curr.amount! - curr.fee!;
+          return acc - curr.amount! - (curr.fee! || 0);
         }
 
         if (curr.action === CoinHistoryActionEnum.BUY) {
@@ -214,43 +186,17 @@ export class AppService {
 
         return acc;
       }, 0);
-    }
+    });
 
-    if (!coin.hasOwnProperty('history')) {
-      coin?.wallets?.map((wallet: WalletInterface) => {
-        wallet.quantity = wallet?.transactions?.reduce((acc: number, curr: CryptoHistoryInterface) => {
-          if (curr.action === CoinHistoryActionEnum.TRANSFER) {
-            return acc - curr.amount! - (curr.fee! || 0);
-          }
-
-          if (curr.action === CoinHistoryActionEnum.RECEIVE) {
-            return acc + curr.amount!;
-          }
-
-          if (curr.action === CoinHistoryActionEnum.SPEND) {
-            return acc - curr.amount! - curr.fee!;
-          }
-
-          if (curr.action === CoinHistoryActionEnum.BUY) {
-            return acc + curr.total / curr.price;
-          }
-
-          if (curr.action === CoinHistoryActionEnum.SELL) {
-            return acc - curr.filled!;
-          }
-
-          return acc;
-        }, 0);
-      });
-    }
+    coin.quantity = coin?.wallets?.reduce((quantity: number, wallet: WalletInterface) => quantity += wallet.quantity!, 0);
   }
 
   private setCoinPriceProperty(coin: CoinInterface, coinData: CoinDataInterface): void {
-    coin.price = coinData?.price;
+    coin.price = coinData?.price || null;
   }
 
   private setCoinRankProperty(coin: CoinInterface, coinData: CoinDataInterface): void {
-    coin.rank = coinData?.cmc_rank;
+    coin.rank = coinData?.cmc_rank || null;
   }
 
   private setCoinListState(coinList: CoinInterface[]): void {
@@ -258,35 +204,37 @@ export class AppService {
     this.coinListSubject.next(this.coinListState);
   }
 
+  get cashStatistic(): any {
+    return this.cashTransactionsService.cashStatistic;
+  }
+
   private setInvestStatisticState(coinList: CoinInterface[]): void {
     coinList.map((coin: CoinInterface) => {
-      // this.investStatisticState.totalSpendCurrency += coin.investedAmount;
-      this.investStatisticState.totalSpendCurrency = 7253.63;
-
-      if (coin.hasOwnProperty('history')) {
-        this.investStatisticState.totalInCurrency += coin.totalInCurrency || 0;
-      }
-
-      if (!coin.hasOwnProperty('history')) {
-        coin?.wallets?.map((wallet: WalletInterface) => {
-          this.investStatisticState.totalInCurrency += wallet.totalInCurrency! || 0;
-        });
-      }
+      coin.wallets.map((wallet: WalletInterface) => {
+        this.investStatisticState.totalInCurrency += wallet.totalInCurrency! || 0;
+      });
     });
+
+    this.investStatisticState.totalSpendCurrency =
+      this.cashStatistic.depositUSDTotal - this.cashStatistic.withdrawalUSDTotal;
 
     this.investStatisticState.currencyDifference =
       this.investStatisticState.totalSpendCurrency - this.investStatisticState.totalInCurrency;
 
     this.investStatisticState.percentageDifference =
-      Number.parseFloat((this.investStatisticState.currencyDifference / 100).toFixed(1));
+      this.investStatisticState.totalInCurrency / this.investStatisticState.totalSpendCurrency * 100 - 100;
 
     this.investStatisticSubject.next(this.investStatisticState);
   }
 
   private sortCoinListByRank(coinList: CoinInterface[]): void {
     coinList.sort((a: CoinInterface, b: CoinInterface) => {
-      if (a.rank < b.rank) return -1;
-      if (a.rank > b.rank) return 1;
+      if (a.rank === null) return 1;
+      if (b.rank === null) return -1;
+
+      if (a.rank! < b.rank!) return -1;
+      if (a.rank! > b.rank!) return 1;
+
       return 0;
     });
   }

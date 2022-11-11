@@ -1,18 +1,22 @@
 <div class="im-app im-cash-transactions">
-  <div class="im-header" style="text-align: center; position: relative;">
+  <div class="im-header" style="text-align: center;">
     <h1> Cash transaction history </h1>
-    <span style="position: absolute; right: 10px; top: 6px;"> UPDATED 28.08.2022 </span>
+    <span style="position: absolute; right: 10px; top: 6px;"> UPDATED 11.11.2022 </span>
   </div>
 
   <div class="im-content">
     <div style="display: flex; justify-content: space-between; height: 100%; overflow: hidden;">
       <div style="height: 100%; width: 49%; overflow: auto;">
-        <im-cash-transactions-table *ngIf="cashTransactions.deposits.length" [data]="cashTransactions.deposits">
+        <im-cash-transactions-table *ngIf="cashTransactions.deposits.length" [data]="cashTransactions.deposits"
+          [totalInUAH]="cashTransactions.statistic.depositUAHTotal"
+          [totalInUSD]="cashTransactions.statistic.depositUSDTotal">
         </im-cash-transactions-table>
       </div>
 
       <div style="height: 100%; width: 49%; overflow: auto;">
-        <im-cash-transactions-table *ngIf="cashTransactions.withdrawals" [data]="cashTransactions.withdrawals">
+        <im-cash-transactions-table *ngIf="cashTransactions.withdrawals" [data]="cashTransactions.withdrawals"
+          [totalInUAH]="cashTransactions.statistic.withdrawalUAHTotal"
+          [totalInUSD]="cashTransactions.statistic.withdrawalUSDTotal">
         </im-cash-transactions-table>
       </div>
     </div>

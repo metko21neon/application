@@ -27,7 +27,7 @@ export class CashTransactionsHistoryComponent implements OnInit {
   }
 
   private getCashTransactionsSubscription(): void {
-    const stream$ = this.cashTransactionsService.getCashTransactions().subscribe((cashTransactions: CashTransactionsInterface) => {
+    const stream$ = this.cashTransactionsService.cashTransactions$.subscribe((cashTransactions: CashTransactionsInterface) => {
       this.cashTransactions = cashTransactions;
     });
 

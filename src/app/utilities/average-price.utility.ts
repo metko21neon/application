@@ -1,39 +1,29 @@
 import { CryptoHistoryInterface } from "../interfaces/crypto-history.interface";
 import { CoinHistoryActionEnum } from "../enums/coin-history-action.enum";
+import { CoinInterface } from "../interfaces/coin.interface";
 
-export function calculateAveragePrice(history: any[] = []): number {
+export function calculateAveragePrice(transactions: any[] = [], coin: CoinInterface): number {
   let averagePrice = 0;
   let accValue = 0;
 
-  const quantity = getQuantity(history);
+  const quantity = getQuantity(transactions);
 
-  const total = history?.reduce((acc: number, curr: CryptoHistoryInterface, index: number) => {
-    if (curr.action === CoinHistoryActionEnum.SELL) {
-      averagePrice = getAverage(history, index, accValue);
-    }
-
-    // acc
+  const total = transactions.reduce((acc: number, curr: CryptoHistoryInterface, index: number) => {
     if (curr.action === CoinHistoryActionEnum.BUY) {
       accValue = acc + curr.total;
+      return accValue;
     }
 
     if (curr.action === CoinHistoryActionEnum.SELL) {
+      averagePrice = getAverage(transactions, index, accValue);
       accValue = acc - (curr.filled! * averagePrice);
-    }
-
-    // return
-    if (curr.action === CoinHistoryActionEnum.BUY) {
-      return acc + curr.total;
-    }
-
-    if (curr.action === CoinHistoryActionEnum.SELL) {
-      return acc - (curr.filled! * averagePrice);
+      return accValue;
     }
 
     return acc;
   }, 0);
 
-  return total / quantity;
+  return total !== 0 && quantity !== 0 ? total / quantity : 0;
 }
 
 function getAverage(history: any[], index: number, accValue: number): number {

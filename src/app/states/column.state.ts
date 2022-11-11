@@ -15,7 +15,7 @@ export const COLUMN_LIST: ColumnInterface[] = [
   },
   {
     label: 'Coin',
-    shortcut: 'symbol',
+    shortcut: 'coin',
     position: 0,
     selected: true
   },
@@ -33,13 +33,13 @@ export const COLUMN_LIST: ColumnInterface[] = [
   },
   {
     label: 'Amount in currency',
-    shortcut: 'currencyAmount',
+    shortcut: 'totalInCurrency',
     position: 7,
     selected: true
   },
   {
     label: 'Total spent usd',
-    shortcut: 'totalValue',
+    shortcut: 'investedAmount',
     position: 2,
     selected: true
   },
@@ -55,10 +55,10 @@ export const COLUMN_LIST: ColumnInterface[] = [
     position: 5,
     selected: true
   },
-  {
-    label: 'Currency result',
-    shortcut: 'currencyResult',
-    position: 6,
-    selected: true
-  }
+  // {
+  //   label: 'Currency result',
+  //   shortcut: 'currencyResult',
+  //   position: 6,
+  //   selected: true
+  // }
 ];

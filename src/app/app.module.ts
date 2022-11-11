@@ -1,31 +1,35 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
+// Angular material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { CryptoComponent } from './components/crypto/crypto.component';
-import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
-import { WalletComponent } from './components/wallet/wallet.component';
-import { MatSelectModule } from '@angular/material/select';
-import { CoinDetailsComponent } from './components/coin-details/coin-details.component';
-
+// External modules
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { ListComponent } from './components/list/list.component';
+
+// Internal modules
+import { DirectivesModule } from './directives/directives.module';
+import { AppRoutingModule } from './app-routing.module';
 import { PipesModule } from './pipes/pipes.module';
+
+// Components
+import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
 import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
+import { CryptoComponent } from './components/crypto/crypto.component';
+import { WalletComponent } from './components/wallet/wallet.component';
+import { ListComponent } from './components/list/list.component';
+import { AppComponent } from './app.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCjNMShCKpV1-EL5p73TYmAVm_lrnQjHVs",
@@ -39,22 +43,21 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CryptoComponent,
     CryptoDetailsComponent,
-    WalletComponent,
-    CoinDetailsComponent,
-    ListComponent,
     CoinDataListComponent,
+    CryptoComponent,
+    WalletComponent,
+    ListComponent,
+    AppComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    BrowserModule,
     FormsModule,
 
+    // Angular material
     MatFormFieldModule,
     MatCheckboxModule,
     MatSelectModule,
@@ -64,10 +67,14 @@ const firebaseConfig = {
     MatInputModule,
     MatSortModule,
 
+    // Internal modules
+    DirectivesModule,
+    AppRoutingModule,
     PipesModule,
 
     // provideFirebaseApp(() => initializeApp(firebaseConfig)),
     // provideFirestore(() => getFirestore()),
+    // External modules
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule
   ],
