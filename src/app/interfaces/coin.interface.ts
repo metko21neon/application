@@ -9,6 +9,7 @@ export interface CoinInterface {
   averagePrice: number;
   investedAmount: number;
   totalInCurrency: number;
+  percantageFromDeposit: number;
 
   price: number | null;
   rank: number | null;

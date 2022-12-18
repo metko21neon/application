@@ -40,6 +40,8 @@ export class CryptoComponent implements OnInit, OnDestroy {
   isHideUntracked = true;
   isLoading = false;
 
+  updatedDate = '17.12.2022 23:59';
+
   private subscription: Subscription = new Subscription();
   private coinList: CoinInterface[] = [];
 
@@ -99,11 +101,16 @@ export class CryptoComponent implements OnInit, OnDestroy {
 
   private getCoinList(): void {
     const stream$ = this.appService.coinList$.subscribe((coinList: CoinInterface[]) => {
-      this.coinList = coinList;
+      this.coinList = coinList.map((coin: CoinInterface) => {
+        const value = this.statistic.totalSpendCurrency - coin.quantity * coin.averagePrice;
+        coin.percantageFromDeposit = 100 - (value / this.statistic.totalSpendCurrency * 100);
+
+        return coin;
+      });
       this.toggleUntracked();
 
       // console.log('COIN_LIST:', coinList);
-      // this.applyFilter(({ target: { value: 'icp' } }) as any);
+      // this.applyFilter(({ target: { value: 'link' } }) as any);
     });
 
     this.subscription.add(stream$);

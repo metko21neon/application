@@ -2,7 +2,7 @@
   <div class="im-header">
     <h1> Coin list </h1>
 
-    <span style="position: absolute; right: 10px; top: 6px;"> UPDATED 11.11.2022 </span>
+    <span style="position: absolute; right: 10px; top: 6px;"> UPDATED {{ updatedDate }} </span>
 
     <div class="flex">
       <button (click)="synchronize()"> Synchronize </button>
@@ -37,6 +37,13 @@
         <ng-container matColumnDef="coin">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Coin </th>
           <td mat-cell *matCellDef="let element"> {{ element.name }} ({{ element.symbol }}) </td>
+        </ng-container>
+
+        <ng-container matColumnDef="percantageFromDeposit">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> percantageFromDeposit </th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.percantageFromDeposit | roundValue }}%
+          </td>
         </ng-container>
 
         <ng-container matColumnDef="price">

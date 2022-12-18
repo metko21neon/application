@@ -17,7 +17,7 @@ import { AppService } from '../../app.service';
 })
 export class CryptoDetailsComponent implements OnInit, OnDestroy {
 
-  displayedColumns: string[] = ['number', 'date', 'action', 'totalQuantity', 'quantity', 'price', 'averagePrice', 'total', 'percentageResult'];
+  displayedColumns: string[] = ['number', 'date', 'action', 'totalQuantity', 'quantity', 'price', 'averagePrice', 'total'];
   dataSource!: MatTableDataSource<any>;
   tokenDetails!: CoinInterface;
   wallet!: WalletInterface;

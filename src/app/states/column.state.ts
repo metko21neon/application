@@ -55,6 +55,12 @@ export const COLUMN_LIST: ColumnInterface[] = [
     position: 5,
     selected: true
   },
+  {
+    label: 'percantageFromDeposit',
+    shortcut: 'percantageFromDeposit',
+    position: 5,
+    selected: true
+  },
   // {
   //   label: 'Currency result',
   //   shortcut: 'currencyResult',

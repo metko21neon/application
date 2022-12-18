@@ -109,6 +109,20 @@ export const COIN_LIST: CoinInterface[] = [
             total: 24.9876,
             executed: 7.92
           },
+          {
+            date: "2022-12-17 00:07:34",
+            action: "buy",
+            price: 1.633,
+            total: 24.96857,
+            executed: 15.29
+          },
+          {
+            date: "2022-12-17 15:26:46",
+            action: "buy",
+            price: 1.585,
+            total: 23.9652,
+            // executed: 15.29
+          },
         ]
       }
     ]
@@ -210,7 +224,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 0.05924529,
             fee: 0.0098,
-            // averagePrice: 32539.039
+            averagePrice: 29.322687921306237
           },
           {
             date: "2021-05-29 18:32",
@@ -219,7 +233,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 6.45804975,
             fee: 0.01,
-            // averagePrice: 32539.039
+            averagePrice: 29.322687921306237
           },
           {
             date: "2021-05-31 08:12",
@@ -228,7 +242,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 7.41329184,
             fee: 0.01,
-            // averagePrice: 32539.039
+            averagePrice: 29.322687921306237
           },
           {
             date: "2021-06-01 03:37",
@@ -237,7 +251,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 14.06935912,
             fee: 0.01,
-            // averagePrice: 32539.039
+            averagePrice: 29.322687921306237
           },
           {
             date: "2021-06-05 23:01",
@@ -246,7 +260,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 11.978,
             fee: 0.01,
-            // averagePrice: 32539.039
+            averagePrice: 29.322687921306237
           },
           {
             date: "2022-05-09 21:56:52",
@@ -261,7 +275,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 8.535,
             fee: 0.025,
-            // averagePrice: 32539.039
+            averagePrice: 25.18079034845929
           },
           {
             date: "2022-05-12 08:55:27",
@@ -276,7 +290,13 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 14.6523,
             fee: 0.033,
-            // averagePrice: 32539.039
+            averagePrice: 20.123810563224563
+          },
+          {
+            date: "2022-12-17 19:33:24",
+            action: "buy",
+            price: 3.285,
+            total: 24.99885
           },
         ]
       },
@@ -371,7 +391,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 3.079,
             total: 49.818
-          }
+          },
+          {
+            date: "2022-12-17 15:20:47",
+            action: "buy",
+            price: 1.412,
+            total: 24.9924
+          },
         ]
       }
     ]
@@ -456,6 +482,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 0.54,
             total: 99.954
+          },
+          {
+            date: "2022-11-24 11:58:28",
+            action: "sell",
+            price: 0.3551,
+            filled: 713.4
           },
         ]
       }
@@ -667,6 +699,36 @@ export const COIN_LIST: CoinInterface[] = [
     symbol: "ADA",
     wallets: [
       {
+        name: "WhiteBit",
+        address: "whitebit_1",
+        transactions: [
+          {
+            date: "12.11.2022 01:53:14",
+            action: "buy",
+            price: 0.354803,
+            total: 74.92374951,
+          },
+          {
+            date: "14.11.2022 23:58:21",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "",
+            amount: 16,
+            fee: 2,
+            // averagePrice: 29.322687921306237
+          },
+          {
+            date: "15.11.2022 00:05:08",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "",
+            amount: 191.17,
+            fee: 2,
+            // averagePrice: 29.322687921306237
+          },
+        ]
+      },
+      {
         name: "Binance",
         address: "binance_1",
         transactions: [
@@ -695,8 +757,78 @@ export const COIN_LIST: CoinInterface[] = [
             total: 48.03775,
             executed: 151.3
           },
+          {
+            date: "2022-11-15 00:20",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "",
+            amount: 9.2,
+            fee: 0.8,
+            // averagePrice: 29.322687921306237
+          },
+          {
+            date: "2022-11-15 01:19",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "",
+            amount: 510.001788,
+            fee: 0.8,
+            // averagePrice: 29.322687921306237
+          },
+          {
+            date: "2022-12-17 00:03:44",
+            action: "buy",
+            price: 0.2823,
+            total: 24.98355,
+            executed: 88.5
+          },
+          {
+            date: "2022-12-17 15:24:00",
+            action: "buy",
+            price: 0.2651,
+            total: 24.99893,
+            // executed: 88.5
+          },
         ]
-      }
+      },
+      {
+        name: "Ledger",
+        address: "ledger_1",
+        transactions: [
+          {
+            date: "2022-11-15 12:01",
+            action: "receive",
+            amount: 16,
+            fee: 2,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+          {
+            date: "2022-11-15 12:09",
+            action: "receive",
+            amount: 191.17,
+            fee: 2,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+          {
+            date: "2022-11-15 00:20",
+            action: "receive",
+            amount: 9.2,
+            fee: 0.8,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+          {
+            date: "2022-11-15 01:19",
+            action: "receive",
+            amount: 510.001788,
+            fee: 0.8,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+        ]
+      },
     ]
   },
   {
@@ -724,7 +856,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 13.94,
             total: 24.953
-          }
+          },
+          {
+            date: "2022-12-17 00:05:03",
+            action: "buy",
+            price: 8.983,
+            total: 24.97274
+          },
         ]
       }
     ]
@@ -745,6 +883,47 @@ export const COIN_LIST: CoinInterface[] = [
           }
         ]
       }
+    ]
+  },
+  {
+    name: "Zilliqa",
+    symbol: "ZIL",
+    wallets: [
+      {
+        name: "WhiteBit",
+        address: "whitebit_1",
+        transactions: [
+          {
+            date: "12.11.2022 01:50:49",
+            action: "buy",
+            price: 0.022597,
+            total: 49.95004934,
+          },
+          {
+            date: "29.11.2022 20:16:12",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 2185.4726,
+            fee: 25,
+            // averagePrice: 29.322687921306237
+          },
+        ]
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        transactions: [
+          {
+            date: "29.11.2022 20:16:12",
+            action: "receive",
+            amount: 2185.4726,
+            fee: 25,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+        ],
+      },
     ]
   },
   {
@@ -820,6 +999,36 @@ export const COIN_LIST: CoinInterface[] = [
     symbol: "BTC",
     wallets: [
       {
+        name: "WhiteBit",
+        address: "whitebit_1",
+        transactions: [
+          {
+            date: "13.11.2022 19:06:17",
+            action: "buy",
+            price: 16570,
+            total: 299.68502,
+          },
+          {
+            date: "15.11.2022 00:58:30",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "",
+            amount: 0.001,
+            fee: 0.0004,
+            // averagePrice: 29.322687921306237
+          },
+          {
+            date: "15.11.2022 01:32:31",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "",
+            amount: 0.016286,
+            fee: 0.0004,
+            // averagePrice: 29.322687921306237
+          },
+        ]
+      },
+      {
         name: "Binance",
         address: "binance_1",
         transactions: [
@@ -894,6 +1103,13 @@ export const COIN_LIST: CoinInterface[] = [
             filled: 0.00592,
             averagePrice: 25391.48925891212
           },
+          {
+            date: "2022-12-17 15:16:44",
+            action: "buy",
+            price: 16696.21,
+            total: 49.9216679,
+            // averagePrice: 25391.48925891212
+          },
         ]
       },
       {
@@ -904,6 +1120,22 @@ export const COIN_LIST: CoinInterface[] = [
             action: "receive",
             amount: 0.0005,
             fee: 0.0005,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+          {
+            date: "2022-11-15 01:33",
+            action: "receive",
+            amount: 0.001,
+            fee: 0.0004,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+          {
+            date: "2022-11-15 12:09",
+            action: "receive",
+            amount: 0.016286,
+            fee: 0.0004,
             // averagePrice: 0.01964100237799315,
             // usdFee: 0.1
           },
@@ -998,7 +1230,14 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 0.378,
             total: 25.001
-          }
+          },
+          {
+            date: "2022-11-22 02:13:08",
+            action: "sell",
+            price: 0.425,
+            filled: 66.14,
+            // averagePrice: 1165.4575898543085
+          },
         ]
       }
     ]
@@ -1022,7 +1261,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 0.66,
             total: 44.946
-          }
+          },
+          {
+            date: "2022-12-17 15:25:36",
+            action: "buy",
+            price: 0.384,
+            total: 24.9984
+          },
         ]
       }
     ]
@@ -1046,6 +1291,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 25.73,
             total: 24.96
+          },
+          {
+            date: "2022-12-17 00:04:35",
+            action: "buy",
+            price: 12.44,
+            total: 24.88
           }
         ]
       }
@@ -1055,6 +1306,41 @@ export const COIN_LIST: CoinInterface[] = [
     name: "Ethereum",
     symbol: "ETH",
     wallets: [
+      {
+        name: "WhiteBit",
+        address: "whitebit_1",
+        transactions: [
+          {
+            date: "13.11.2022 19:07:39",
+            action: "buy",
+            price: 1230,
+            total: 99.8883,
+          },
+          {
+            date: "29.11.2022 20:25:46",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 0.0796563,
+            fee: 0.0015537,
+            // averagePrice: 29.322687921306237
+          },
+        ]
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        transactions: [
+          {
+            date: "29.11.2022 20:25:46",
+            action: "receive",
+            amount: 0.0796563,
+            fee: 0.0015537,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+        ],
+      },
       {
         name: "Binance",
         address: "binance_1",
@@ -1124,6 +1410,18 @@ export const COIN_LIST: CoinInterface[] = [
             filled: 0.0784,
             averagePrice: 1165.4575898543085
           },
+          {
+            date: "2022-12-17 15:16:20",
+            action: "buy",
+            price: 1179.93,
+            total: 49.911039
+          },
+          {
+            date: "2022-12-17 15:22:39",
+            action: "buy",
+            price: 1179.49,
+            total: 24.887239
+          },
         ]
       },
       {
@@ -1165,6 +1463,41 @@ export const COIN_LIST: CoinInterface[] = [
     symbol: "LINK",
     wallets: [
       {
+        name: "WhiteBit",
+        address: "whitebit_1",
+        transactions: [
+          {
+            date: "12.11.2022 02:09:53",
+            action: "buy",
+            price: 6.9871,
+            total: 74.901712,
+          },
+          {
+            date: "29.11.2022 20:21:38",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 10.376,
+            fee: 0.344,
+            // averagePrice: 29.322687921306237
+          },
+        ]
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        transactions: [
+          {
+            date: "29.11.2022 20:21:38",
+            action: "receive",
+            amount: 10.376,
+            fee: 0.344,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+        ],
+      },
+      {
         name: "Binance",
         address: "binance_1",
         transactions: [
@@ -1203,7 +1536,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 5.800,
             total: 24.998
-          }
+          },
+          {
+            date: "2022-12-17 19:28:50",
+            action: "buy",
+            price: 5.933,
+            total: 49.95586
+          },
         ]
       },
       {
@@ -1258,6 +1597,41 @@ export const COIN_LIST: CoinInterface[] = [
     symbol: "IMX",
     wallets: [
       {
+        name: "WhiteBit",
+        address: "whitebit_1",
+        transactions: [
+          {
+            date: "12.11.2022 01:46:21",
+            action: "buy",
+            price: 0.4412,
+            total: 49.9500168,
+          },
+          {
+            date: "29.11.2022 20:10:31",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 107.738,
+            fee: 5.476,
+            // averagePrice: 29.322687921306237
+          },
+        ]
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        transactions: [
+          {
+            date: "29.11.2022 20:10:31",
+            action: "receive",
+            amount: 107.738,
+            fee: 5.476,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+        ],
+      },
+      {
         name: "Binance",
         address: "binance_1",
         transactions: [
@@ -1283,6 +1657,41 @@ export const COIN_LIST: CoinInterface[] = [
     symbol: "FTM",
     wallets: [
       {
+        name: "WhiteBit",
+        address: "whitebit_1",
+        transactions: [
+          {
+            date: "13.11.2022 19:25:52",
+            action: "buy",
+            price: 0.181,
+            total: 47.9537961,
+          },
+          {
+            date: "29.11.2022 20:13:15",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 259.9381,
+            fee: 5,
+            // averagePrice: 29.322687921306237
+          },
+        ]
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        transactions: [
+          {
+            date: "29.11.2022 20:13:15",
+            action: "receive",
+            amount: 259.9381,
+            fee: 5,
+            // averagePrice: 0.01964100237799315,
+            // usdFee: 0.1
+          },
+        ],
+      },
+      {
         name: "Binance",
         address: "binance_1",
         transactions: [
@@ -1291,6 +1700,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 0.245,
             total: 24.99
+          },
+          {
+            date: "2022-12-17 19:32:38",
+            action: "buy",
+            price: 0.202,
+            total: 24.846
           },
         ]
       }
@@ -1309,7 +1724,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 3.8,
             total: 27.74
-          }
+          },
+          {
+            date: "2022-12-17 00:06:29",
+            action: "buy",
+            price: 1.488,
+            total: 24.9984
+          },
         ]
       }
     ]
@@ -1638,6 +2059,30 @@ export const COIN_LIST: CoinInterface[] = [
             price: 15.171,
             total: 76.214
           },
+          {
+            date: "2022-11-18 01:07:52",
+            action: "buy",
+            price: 5.69,
+            total: 24.0118
+          },
+          {
+            date: "2022-12-17 00:10:22",
+            action: "buy",
+            price: 4.971,
+            total: 24.95442
+          },
+          {
+            date: "2022-12-17 15:16:00",
+            action: "buy",
+            price: 4.684,
+            total: 24.96572
+          },
+          {
+            date: "2022-12-17 15:24:41",
+            action: "buy",
+            price: 4.678,
+            total: 24.98052
+          },
         ]
       }
     ]
@@ -1737,7 +2182,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
             amount: 1.07862,
             fee: 0.0003,
-            // averagePrice: 30.325129406389802
+            averagePrice: 125.49068702290076
           },
           {
             date: "2021-05-21 00:10",
@@ -1746,7 +2191,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
             amount: 1.1597,
             fee: 0.0003,
-            // averagePrice: 30.325129406389802
+            averagePrice: 125.49068702290076
           },
           {
             date: "2021-07-11 22:05",
@@ -1755,7 +2200,7 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
             amount: 2.9967,
             fee: 0.0003,
-            // averagePrice: 30.325129406389802
+            averagePrice: 125.49068702290076
           },
           {
             date: "2022-11-10 01:07:00",
@@ -1763,6 +2208,13 @@ export const COIN_LIST: CoinInterface[] = [
             price: 3.577,
             total: 24.03744,
             executed: 6.72
+          },
+          {
+            date: "2022-12-17 19:31:45",
+            action: "buy",
+            price: 3.614,
+            total: 49.98162,
+            // executed: 6.72
           },
         ]
       },
@@ -1955,6 +2407,12 @@ export const COIN_LIST: CoinInterface[] = [
             price: 0.045,
             total: 25,
           },
+          {
+            date: "2022-12-17 19:31:12",
+            action: "buy",
+            price: 0.01672,
+            total: 24.984792,
+          },
         ]
       }
     ]
@@ -1979,6 +2437,18 @@ export const COIN_LIST: CoinInterface[] = [
             price: 5.85,
             total: 130.689,
           },
+          {
+            date: "2022-12-17 00:09:38",
+            action: "buy",
+            price: 3.79,
+            total: 25.0898,
+          },
+          {
+            date: "2022-12-17 15:19:18",
+            action: "buy",
+            price: 3.042,
+            total: 49.98006,
+          },
         ]
       }
     ]
@@ -1996,6 +2466,126 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 0.59908,
             total: 530.006076,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "The Graph",
+    symbol: "GRT",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2022-11-22 02:13:46",
+            action: "buy",
+            price: 0.0544,
+            total: 28.1248,
+          },
+          {
+            date: "2022-12-17 19:33:43",
+            action: "buy",
+            price: 0.057,
+            total: 25.023,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Trust Wallet Token",
+    symbol: "TWT",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2022-12-17 15:19:03",
+            action: "buy",
+            price: 1.6049,
+            total: 24.0735,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Bitcoin Cash",
+    symbol: "BCH",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2022-12-17 00:10:43",
+            action: "buy",
+            price: 104.3,
+            total: 24.9277,
+          },
+          {
+            date: "2022-12-17 15:19:55",
+            action: "buy",
+            price: 101.6,
+            total: 24.9936,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Algorand",
+    symbol: "ALGO",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2022-12-17 00:08:42",
+            action: "buy",
+            price: 0.2003,
+            total: 25.0375,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Dash",
+    symbol: "DASH",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2022-12-17 00:06:59",
+            action: "buy",
+            price: 44.87,
+            total: 24.99259,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Secret",
+    symbol: "SCRT",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2022-11-24 11:58:56",
+            action: "buy",
+            price: 0.685,
+            total: 253.313,
           },
         ]
       }
@@ -2032,6 +2622,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 0.31224,
             total: 67.1322281301,
+          },
+          {
+            date: "2022-12-17 00:11:57",
+            action: "buy",
+            price: 0.0793,
+            total: 24.9002,
           },
         ]
       }
