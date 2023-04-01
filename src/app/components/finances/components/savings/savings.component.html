@@ -1,0 +1,26 @@
+<div class="flex flex-column">
+  <div *ngFor="let item of savings.list" class="flex">
+    <span style="margin-right: 20px;"> {{ item.period }} </span>
+    <span> {{ item.amount | number | imCurrency }} UAH </span>
+  </div>
+
+  <div *ngFor="let savings of list" class="flex">
+    <span style="margin-right: 20px;"> {{ savings.period }} </span>
+
+    <div *ngFor="let item of savings.list" class="flex">
+      <!-- <span style="margin-right: 20px;"> {{ item.period }} </span> -->
+      <span> {{ item.amount | number | imCurrency }} UAH </span>
+    </div>
+  </div>
+</div>
+
+<div class="flex flex-column" style="margin-top: 30px;">
+  Currencies
+	<div> 20 950 UAH (540 EURO, 38.8 UAH) </div>
+	<div> 68 875 UAH (1 839 USD, 37.453 UAH) </div>
+	<div> 17 700 UAH </div>
+</div>
+
+<div class="flex" style="margin-top: 30px;">
+  Total: {{ total.savings | number | imCurrency }} UAH
+</div>

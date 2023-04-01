@@ -30,6 +30,7 @@ import { CryptoComponent } from './components/crypto/crypto.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { ListComponent } from './components/list/list.component';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCjNMShCKpV1-EL5p73TYmAVm_lrnQjHVs",
@@ -49,6 +50,7 @@ const firebaseConfig = {
     WalletComponent,
     ListComponent,
     AppComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserAnimationsModule,

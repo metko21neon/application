@@ -2,7 +2,7 @@ import { CryptoHistoryInterface } from "../interfaces/crypto-history.interface";
 import { CoinHistoryActionEnum } from "../enums/coin-history-action.enum";
 import { CoinInterface } from "../interfaces/coin.interface";
 
-export function calculateAveragePrice(transactions: any[] = [], coin: CoinInterface): number {
+export function calculateAveragePrice(transactions: any[] = [], coin?: CoinInterface): number {
   let averagePrice = 0;
   let accValue = 0;
 

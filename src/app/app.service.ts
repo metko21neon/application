@@ -71,10 +71,11 @@ export class AppService {
         coinList.map((coin: CoinInterface) => {
           const coinData = this.coinDataService.getCoinDataBySymbol(coin);
 
-          this.setCoinInvestedAmountProperty(coin);
+          // Calculate average prices first
           this.setCoinAveragePriceProperty(coin);
-          this.setCoinQuantityProperty(coin);
 
+          this.setCoinInvestedAmountProperty(coin);
+          this.setCoinQuantityProperty(coin);
           this.setCoinTotalInCurrencyProperty(coin, coinData);
           this.setCoinCurrencyResultProperty(coin);
           this.setCoinPercentResultProperty(coin, coinData);
@@ -110,13 +111,13 @@ export class AppService {
 
   private setCoinInvestedAmountProperty(coin: CoinInterface): void {
     coin?.wallets?.map((wallet: WalletInterface) => {
-      wallet.investedAmount = this.calculateInvestedAmount(wallet?.transactions);
+      wallet.investedAmount = this.calculateInvestedAmount(wallet?.transactions, coin);
     });
 
     coin.investedAmount = coin?.wallets?.reduce((quantity: number, wallet: WalletInterface) => quantity += wallet.investedAmount! || 0, 0);
   }
 
-  private calculateInvestedAmount(transactions: CryptoHistoryInterface[] = []): number {
+  private calculateInvestedAmount(transactions: CryptoHistoryInterface[] = [], coin: CoinInterface): number {
     return transactions.reduce((acc: number, curr: CryptoHistoryInterface) => {
       if (curr.action === CoinHistoryActionEnum.RECEIVE) {
         return acc + curr.amount! * curr.averagePrice!;
@@ -127,7 +128,8 @@ export class AppService {
       }
 
       if (curr.action === CoinHistoryActionEnum.TRANSFER) {
-        return acc - ((curr.fee! || 0) * curr.averagePrice!) - (curr.amount! * curr.averagePrice!);
+        return acc;
+        // return acc - ((curr.fee! || 0) * curr.averagePrice!) - (curr.amount! * curr.averagePrice!);
       }
 
       if (curr.action === CoinHistoryActionEnum.SELL) {
@@ -156,6 +158,10 @@ export class AppService {
       if (wallet.hasOwnProperty('transactions')) {
         transactions = [...transactions, ...wallet.transactions!];
       }
+
+      wallet.transactions!.map((transaction: CryptoHistoryInterface, index: number) => {
+        transaction.averagePrice = calculateAveragePrice(wallet.transactions!.slice(0, index + 1));
+      });
     });
 
     coin.averagePrice = calculateAveragePrice(transactions, coin);
@@ -219,7 +225,7 @@ export class AppService {
       this.cashStatistic.depositUSDTotal - this.cashStatistic.withdrawalUSDTotal;
 
     this.investStatisticState.currencyDifference =
-      this.investStatisticState.totalSpendCurrency - this.investStatisticState.totalInCurrency;
+      this.investStatisticState.totalInCurrency - this.investStatisticState.totalSpendCurrency;
 
     this.investStatisticState.percentageDifference =
       this.investStatisticState.totalInCurrency / this.investStatisticState.totalSpendCurrency * 100 - 100;

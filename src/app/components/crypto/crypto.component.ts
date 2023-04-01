@@ -37,10 +37,11 @@ export class CryptoComponent implements OnInit, OnDestroy {
   columnList: ColumnInterface[] = [];
   displayedColumns: string[] = [];
 
+  isHideZeroBalances = true;
   isHideUntracked = true;
   isLoading = false;
 
-  updatedDate = '17.12.2022 23:59';
+  updatedDate = '2023-03-10 06:04:18';
 
   private subscription: Subscription = new Subscription();
   private coinList: CoinInterface[] = [];
@@ -95,6 +96,18 @@ export class CryptoComponent implements OnInit, OnDestroy {
     setTimeout(() => this.dataSource.sort = this.matSort);
   }
 
+  toggleZeroBalances(checked: boolean = this.isHideUntracked): void {
+    // const coinList = this.coinList.filter((coin: CoinInterface) => {
+    //   return checked ? coin.price !== null && coin.rank! <= 1000 : true;
+    // });
+
+    // this.dataSource = new MatTableDataSource(coinList);
+
+    // this.setSortingDataAccessor();
+
+    // setTimeout(() => this.dataSource.sort = this.matSort);
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
@@ -107,7 +120,20 @@ export class CryptoComponent implements OnInit, OnDestroy {
 
         return coin;
       });
-      this.toggleUntracked();
+
+      const trackedList = this.coinList.filter((coin: CoinInterface) => {
+        return this.isHideUntracked ? coin.price !== null && coin.rank! <= 1000 : true;
+      });
+
+      const notZeroBalanceList = trackedList.filter((coin: CoinInterface) => {
+        return this.isHideZeroBalances ? coin.quantity !== 0 : true;
+      });
+
+      this.dataSource = new MatTableDataSource(notZeroBalanceList);
+
+      this.setSortingDataAccessor();
+
+      setTimeout(() => this.dataSource.sort = this.matSort);
 
       // console.log('COIN_LIST:', coinList);
       // this.applyFilter(({ target: { value: 'link' } }) as any);

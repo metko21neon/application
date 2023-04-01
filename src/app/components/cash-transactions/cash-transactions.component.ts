@@ -13,7 +13,7 @@ import { CashTransactionsService } from './cash-transactions.service';
 export class CashTransactionsHistoryComponent implements OnInit {
 
   cashTransactions!: CashTransactionsInterface;
-  updatedDate = '17.12.2022 23:59';
+  updatedDate = '11.03.2023 20:30';
 
   private subscription: Subscription = new Subscription();
 

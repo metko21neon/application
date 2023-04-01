@@ -121,7 +121,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 1.585,
             total: 23.9652,
-            // executed: 15.29
+          },
+          {
+            date: "2023-03-10 06:14:06",
+            action: "buy",
+            price: 1.931,
+            total: 49.99359,
           },
         ]
       }
@@ -174,7 +179,13 @@ export const COIN_LIST: CoinInterface[] = [
             price: 5.95,
             filled: 4.20,
             averagePrice: 6.33
-          }
+          },
+          {
+            date: "2023-03-10 06:05:47",
+            action: "buy",
+            price: 5.668,
+            total: 49.93508
+          },
         ]
       }
     ]
@@ -224,7 +235,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 0.05924529,
             fee: 0.0098,
-            averagePrice: 29.322687921306237
           },
           {
             date: "2021-05-29 18:32",
@@ -233,7 +243,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 6.45804975,
             fee: 0.01,
-            averagePrice: 29.322687921306237
           },
           {
             date: "2021-05-31 08:12",
@@ -242,7 +251,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 7.41329184,
             fee: 0.01,
-            averagePrice: 29.322687921306237
           },
           {
             date: "2021-06-01 03:37",
@@ -251,7 +259,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 14.06935912,
             fee: 0.01,
-            averagePrice: 29.322687921306237
           },
           {
             date: "2021-06-05 23:01",
@@ -260,7 +267,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 11.978,
             fee: 0.01,
-            averagePrice: 29.322687921306237
           },
           {
             date: "2022-05-09 21:56:52",
@@ -275,7 +281,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 8.535,
             fee: 0.025,
-            averagePrice: 25.18079034845929
           },
           {
             date: "2022-05-12 08:55:27",
@@ -290,13 +295,18 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             amount: 14.6523,
             fee: 0.033,
-            averagePrice: 20.123810563224563
           },
           {
             date: "2022-12-17 19:33:24",
             action: "buy",
             price: 3.285,
             total: 24.99885
+          },
+          {
+            date: "2023-03-10 06:10:35",
+            action: "buy",
+            price: 3.529,
+            total: 49.97064
           },
         ]
       },
@@ -398,6 +408,12 @@ export const COIN_LIST: CoinInterface[] = [
             price: 1.412,
             total: 24.9924
           },
+          {
+            date: "2023-03-10 06:21:47",
+            action: "buy",
+            price: 2.009,
+            total: 24.99196
+          },
         ]
       }
     ]
@@ -487,7 +503,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-11-24 11:58:28",
             action: "sell",
             price: 0.3551,
-            filled: 713.4
+            filled: 708.2
           },
         ]
       }
@@ -511,8 +527,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-06-08 15:27:14",
             action: "sell",
             price: 34.6,
-            filled: 0.739,
-            averagePrice: 33.8
+            filled: 0.7396449704142013,
           }
         ]
       }
@@ -531,7 +546,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 1.473,
             total: 24.717
-          }
+          },
+          {
+            date: "2023-03-10 06:11:24",
+            action: "buy",
+            price: 0.918,
+            total: 49.99428
+          },
         ]
       }
     ]
@@ -573,6 +594,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 1.397,
             total: 24.867
+          },
+          {
+            date: "2023-03-10 06:12:36",
+            action: "buy",
+            price: 1.045,
+            total: 49.951
           }
         ]
       }
@@ -644,8 +671,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-05-13 20:24:26",
             action: "sell",
             price: 0.488,
-            filled: 83.05,
-            averagePrice: 0.460
+            filled: 83.12202517162471,
           },
         ]
       }
@@ -669,8 +695,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-05-13 21:58:16",
             action: "sell",
             price: 0.09617,
-            filled: 253,
-            averagePrice: 0.0985
+            filled: 253.99999999999997,
           }
         ]
       }
@@ -789,6 +814,12 @@ export const COIN_LIST: CoinInterface[] = [
             total: 24.99893,
             // executed: 88.5
           },
+          {
+            date: "2023-03-10 06:04:18",
+            action: "buy",
+            price: 0.3081,
+            total: 49.97382,
+          },
         ]
       },
       {
@@ -862,6 +893,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 8.983,
             total: 24.97274
+          },
+          {
+            date: "2023-03-10 05:58:57",
+            action: "buy",
+            price: 11.08,
+            total: 49.9708
           },
         ]
       }
@@ -1114,30 +1151,25 @@ export const COIN_LIST: CoinInterface[] = [
       },
       {
         name: "Ledger wallet",
-        quantity: 0.0005,
+        address: "ledger_1",
         transactions: [
           {
+            date: "",
             action: "receive",
             amount: 0.0005,
-            fee: 0.0005,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
+            fee: 0.0005
           },
           {
             date: "2022-11-15 01:33",
             action: "receive",
             amount: 0.001,
-            fee: 0.0004,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
+            fee: 0.0004
           },
           {
             date: "2022-11-15 12:09",
             action: "receive",
             amount: 0.016286,
-            fee: 0.0004,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
+            fee: 0.0004
           },
         ]
       },
@@ -1161,8 +1193,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-05-12 06:28:02",
             action: "sell",
             price: 0.617,
-            filled: 33.24,
-            averagePrice: 0.752
+            filled: 33.239999999999995,
           },
         ]
       }
@@ -1213,6 +1244,12 @@ export const COIN_LIST: CoinInterface[] = [
             total: 41.022,
             executed: 77.4
           },
+          {
+            date: "2023-03-10 06:15:14",
+            action: "buy",
+            price: 0.655,
+            total: 35.9595,
+          },
         ]
       }
     ]
@@ -1235,8 +1272,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-11-22 02:13:08",
             action: "sell",
             price: 0.425,
-            filled: 66.14,
-            // averagePrice: 1165.4575898543085
+            filled: 66.14021164021165,
           },
         ]
       }
@@ -1268,6 +1304,12 @@ export const COIN_LIST: CoinInterface[] = [
             price: 0.384,
             total: 24.9984
           },
+          {
+            date: "2023-03-10 06:12:41",
+            action: "buy",
+            price: 0.434,
+            total: 49.9968
+          },
         ]
       }
     ]
@@ -1297,7 +1339,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 12.44,
             total: 24.88
-          }
+          },
+          {
+            date: "2023-03-10 06:13:42",
+            action: "buy",
+            price: 14.46,
+            total: 49.887
+          },
         ]
       }
     ]
@@ -1542,6 +1590,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 5.933,
             total: 49.95586
+          },
+          {
+            date: "2023-03-10 06:13:21",
+            action: "buy",
+            price: 6.16,
+            total: 49.9576
           },
         ]
       },
@@ -1863,8 +1917,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-07-23 06:50:16",
             action: "sell",
             price: 0.83,
-            filled: 145.51,
-            // averagePrice: 11.25
+            filled: 145.50991907556835,
           }
         ]
       }
@@ -1949,7 +2002,6 @@ export const COIN_LIST: CoinInterface[] = [
             action: "sell",
             price: 4.7568,
             filled: 31.66,
-            averagePrice: 4.74912935027913
           },
           {
             date: "2022-05-11 18:08:51",
@@ -2039,8 +2091,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-05-30 14:12:13",
             action: "sell",
             price: 0.00015082,
-            filled: 457969.96,
-            averagePrice: 0.0011858497659332653
+            filled: 457995.74194013455,
           },
         ]
       }
@@ -2083,6 +2134,12 @@ export const COIN_LIST: CoinInterface[] = [
             price: 4.678,
             total: 24.98052
           },
+          {
+            date: "2023-03-10 06:00:16",
+            action: "buy",
+            price: 5.38,
+            total: 49.9802
+          },
         ]
       }
     ]
@@ -2114,7 +2171,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
             amount: 401.461742,
             fee: 0.25,
-            // averagePrice: 30.325129406389802
           },
           {
             date: "2021-07-02 15:53",
@@ -2123,7 +2179,34 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
             amount: 155.93366,
             fee: 0.25,
-            // averagePrice: 30.325129406389802
+          },
+          {
+            date: "2023-01-08 22:06",
+            action: "receive",
+            amount: 24.5,
+            fee: 0.5,
+          },
+          {
+            date: "2023-01-08 22:08",
+            action: "receive",
+            amount: 558.021343,
+            fee: 0.5,
+          },
+          {
+            date: "2023-01-08 22:20",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "ledger_1",
+            amount: 29.8,
+            fee: 0.2,
+          },
+          {
+            date: "2023-01-08 22:24",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "ledger_1",
+            amount: 552.321343,
+            fee: 0.2,
           },
         ]
       },
@@ -2136,17 +2219,49 @@ export const COIN_LIST: CoinInterface[] = [
             action: "receive",
             amount: 401.461742,
             fee: 0.25,
-            // averagePrice: 30.325129406389802
           },
           {
             date: "2021-07-02 15:53",
             action: "receive",
             amount: 155.93366,
             fee: 0.25,
-            // averagePrice: 30.325129406389802
+          },
+          {
+            date: "2023-01-08 22:05",
+            action: "transfer",
+            wallet: "Binance",
+            address: "binance_1",
+            amount: 24.5,
+            fee: 0.5,
+          },
+          {
+            date: "2023-01-08 22:07",
+            action: "transfer",
+            wallet: "Binance",
+            address: "binance_1",
+            amount: 558.021343,
+            fee: 0.5,
           },
         ]
-      }
+      },
+      {
+        name: "Ledger",
+        address: "ledger_1",
+        transactions: [
+          {
+            date: "2023-01-08 22:20",
+            action: "receive",
+            amount: 29.8,
+            fee: 0.2,
+          },
+          {
+            date: "2023-01-08 22:24",
+            action: "receive",
+            amount: 552.321343,
+            fee: 0.2,
+          },
+        ]
+      },
     ]
   },
   {
@@ -2214,7 +2329,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 3.614,
             total: 49.98162,
-            // executed: 6.72
+          },
+          {
+            date: "2023-03-10 06:09:17",
+            action: "buy",
+            price: 4.764,
+            total: 49.97436,
           },
         ]
       },
@@ -2361,9 +2481,7 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2022-11-09 12:00:49",
             action: "sell",
             price: 0.06042,
-            filled: 1785.9,
-            // averagePrice: 57.5,
-            // executed: 107.904078
+            filled: 1663.7,
           },
         ]
       }
@@ -2449,6 +2567,12 @@ export const COIN_LIST: CoinInterface[] = [
             price: 3.042,
             total: 49.98006,
           },
+          {
+            date: "2023-03-10 06:09:29",
+            action: "buy",
+            price: 5.405,
+            total: 49.99625,
+          },
         ]
       }
     ]
@@ -2509,6 +2633,12 @@ export const COIN_LIST: CoinInterface[] = [
             price: 1.6049,
             total: 24.0735,
           },
+          {
+            date: "2023-03-10 06:16:53",
+            action: "buy",
+            price: 1.1093,
+            total: 25.5139,
+          },
         ]
       }
     ]
@@ -2533,6 +2663,12 @@ export const COIN_LIST: CoinInterface[] = [
             price: 101.6,
             total: 24.9936,
           },
+          {
+            date: "2023-03-10 06:19:25",
+            action: "buy",
+            price: 108.7,
+            total: 24.8923,
+          },
         ]
       }
     ]
@@ -2551,6 +2687,48 @@ export const COIN_LIST: CoinInterface[] = [
             price: 0.2003,
             total: 25.0375,
           },
+          {
+            date: "2023-03-10 05:51:04",
+            action: "buy",
+            price: 0.1922,
+            total: 49.972,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Arweave",
+    symbol: "AR",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2023-03-10 05:52:50",
+            action: "buy",
+            price: 7.43,
+            total: 49.9296,
+          },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Aave",
+    symbol: "AAVE",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2023-03-10 06:01:25",
+            action: "buy",
+            price: 67.1,
+            total: 49.9895,
+          },
         ]
       }
     ]
@@ -2568,6 +2746,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 44.87,
             total: 24.99259,
+          },
+          {
+            date: "2023-03-10 06:19:16",
+            action: "buy",
+            price: 52.68,
+            total: 24.97032,
           },
         ]
       }

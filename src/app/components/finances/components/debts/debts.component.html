@@ -1,0 +1,78 @@
+<div class="flex flex-column" style="margin-top: 20px;">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="period">
+      <th mat-header-cell *matHeaderCellDef> Period </th>
+      <td mat-cell *matCellDef="let element">
+        <span> {{ element.period }} </span>
+        <div class="total-row"> {{ element.period }} Total: </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="startMonth">
+      <th mat-header-cell *matHeaderCellDef> Start month debts </th>
+      <td mat-cell *matCellDef="let element">
+        <div *ngFor="let debt of element.list" class="flex">
+          <span style="width: 120px;"> {{ debt.source }} </span>
+          <span class="property-amount"> {{ debt.amount | number | imCurrency }} UAH </span>
+        </div>
+
+        <div class="total-row">
+          <span style="width: 120px;"></span>
+          <span class="property-amount"> {{ element.debtsBeforePayingTotal | number | imCurrency }} UAH </span>
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="new">
+      <th mat-header-cell *matHeaderCellDef> New debts </th>
+      <td mat-cell *matCellDef="let element">
+        <div *ngFor="let debt of element.newDebts" class="flex">
+          <div class="flex flex-column">
+            <span style="width: 120px;"> {{ debt.source }} </span>
+            <div style="font-size: 12px;"> ({{ debt.description }}) </div>
+          </div>
+
+          <span class="property-amount"> {{ debt.amount | number | imCurrency }} UAH </span>
+        </div>
+
+        <div class="total-row">
+          <span style="width: 120px;"></span>
+          <span class="property-amount"> {{ element.newDebtsTotal | number | imCurrency }} UAH </span>
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="payed">
+      <th mat-header-cell *matHeaderCellDef> Payed debts </th>
+      <td mat-cell *matCellDef="let element">
+        <div *ngFor="let debt of element.payedDebts" class="flex">
+          <span style="width: 120px;"> {{ debt.source }} </span>
+          <span class="property-amount"> {{ debt.amount | number | imCurrency }} UAH </span>
+        </div>
+
+        <div class="total-row">
+          <span style="width: 120px;"></span>
+          <span class="property-amount"> {{ element.payedDebtsTotal | number | imCurrency }} UAH </span>
+        </div>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="endMonth">
+      <th mat-header-cell *matHeaderCellDef> End month debts </th>
+      <td mat-cell *matCellDef="let element">
+        <div *ngFor="let debt of element.debtsAfterPaying" class="flex">
+          <span style="width: 120px;"> {{ debt.source }} </span>
+          <span class="property-amount"> {{ debt.amount | number | imCurrency }} UAH </span>
+        </div>
+
+        <div class="total-row">
+          <span style="width: 120px;"></span>
+          <span class="property-amount"> {{ element.debtsAfterPayingTotal | number | imCurrency }} UAH </span>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

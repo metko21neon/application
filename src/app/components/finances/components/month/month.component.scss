@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.total-row {
+  background-color: #000;
+  font-weight: bold;
+  padding: 5px 0;
+  color: #fff;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-left: inherit;
+  height: 50px;
+
+  display: flex;
+}
+
+.property-amount {
+  text-align: right;
+  width: 120px;
+}

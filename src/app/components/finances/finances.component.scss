@@ -1,0 +1,33 @@
+.mat-cell {
+  padding-bottom: 60px !important;
+  padding-top: 5px !important;
+  vertical-align: baseline;
+  position: relative;
+}
+
+.mat-column-period {
+  width: 230px;
+}
+
+app-month {
+  .mat-column-period {
+    min-width: 140px;
+    width: 140px;
+  }
+
+  .mat-column-taxes {
+    max-width: 200px;
+  }
+}
+
+.mat-tab-group {
+  height: 100%;
+
+  .mat-tab-label-container {
+    flex-grow: 0;
+  }
+
+  .mat-tab-body-content {
+    overflow: hidden;
+  }
+}

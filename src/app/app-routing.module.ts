@@ -16,6 +16,10 @@ const routes: Routes = [
     component: CoinDataListComponent
   },
   {
+    path: 'finances',
+    loadChildren: () => import('./components/finances/finances.module').then((m) => m.FinancesModule),
+  },
+  {
     path: 'cash-history',
     loadChildren: () => import('./components/cash-transactions/cash-transactions.module').then((m) => m.CashTransactionsModule),
   },

@@ -5,7 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class RoundValuePipe implements PipeTransform {
 
-  transform(value: number): number {
+  transform(value: number, number: number | null = null): number {
+    if (number !== null) {
+      return Number.parseFloat(value.toFixed(number));
+    }
+
     if (value >= 1 || value <= -1) {
       return Number.parseFloat(value.toFixed(2));
     }
@@ -26,6 +30,6 @@ export class RoundValuePipe implements PipeTransform {
       return Number.parseFloat(value.toFixed(9));
     }
 
-    return value;
+    return Number.parseFloat(value.toFixed(17));
   }
 }

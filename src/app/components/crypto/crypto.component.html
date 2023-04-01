@@ -20,6 +20,10 @@
       <mat-checkbox class="ml-8" [checked]="isHideUntracked" (change)="toggleUntracked($event.checked)">
         Hide all untracked
       </mat-checkbox>
+
+      <mat-checkbox class="ml-8" [checked]="isHideZeroBalances" (change)="toggleZeroBalances($event.checked)">
+        Hide zero balances
+      </mat-checkbox>
     </div>
 
     <div style="overflow: auto;">
@@ -42,7 +46,7 @@
         <ng-container matColumnDef="percantageFromDeposit">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> percantageFromDeposit </th>
           <td mat-cell *matCellDef="let element">
-            {{ element.percantageFromDeposit | roundValue }}%
+            {{ element.percantageFromDeposit | roundValue: 2 }}%
           </td>
         </ng-container>
 

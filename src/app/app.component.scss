@@ -1,3 +1,10 @@
+.app-root {
+  & > *:not(app-dashboard):not(router-outlet) {
+    display: block;
+    width: 100%;
+  }
+}
+
 .im-app {
   padding: 16px;
   height: 100%;
@@ -33,4 +40,12 @@
   td.mat-footer-cell {
     border-top: 1px solid #ffffff;
   }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }

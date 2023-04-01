@@ -1,0 +1,40 @@
+<div class="im-app">
+  <div class="im-header">
+    <h1> Finances </h1>
+  </div>
+
+  <div class="im-content">
+    <!-- <div class="flex">
+      <div class="flex flex-column" style="width: 200px;">
+        <div> Savings </div>
+        <div> {{ savings }} UAH </div>
+      </div>
+
+      <div class="flex flex-column" style="width: 200px;">
+        <div> Total debts </div>
+        <div> {{ total_debts }} UAH </div>
+      </div>
+    </div> -->
+
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab label="Distribution">
+        <app-month [state]="state"></app-month>
+      </mat-tab>
+
+      <mat-tab label="Debts">
+        <app-debts [state]="state" style="margin-bottom: 40px; display: block;"></app-debts>
+      </mat-tab>
+
+      <mat-tab label="Third">
+        <app-spends [state]="state"></app-spends>
+      </mat-tab>
+
+      <mat-tab label="Savings">
+        <app-savings [state]="state"></app-savings>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <div class="im-footer">
+  </div>
+</div>
