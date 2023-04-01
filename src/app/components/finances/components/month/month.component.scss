@@ -3,6 +3,20 @@
   height: 100%;
 }
 
+.is-quarter-row {
+  background-color: #7b1fa2;
+  color: #ffffff;
+
+  .mat-cell {
+    padding-bottom: 5px !important;
+    vertical-align: middle;
+  }
+
+  .total-row {
+    display: none;
+  }
+}
+
 .total-row {
   background-color: #000;
   font-weight: bold;
@@ -16,6 +30,7 @@
   padding-left: inherit;
   height: 50px;
 
+  flex-direction: column;
   display: flex;
 }
 

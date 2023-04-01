@@ -1,0 +1,4 @@
+export enum TAX_ENUM {
+  SINGLE_SOCIAL_CONTRIBUTION,
+  SINGLE_TAX
+}

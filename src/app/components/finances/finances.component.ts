@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { StateInterface } from './interfaces/state.interface';
-import { STATE } from '../../states/finances.state';
+import { Observable } from 'rxjs';
+import { FinancesService } from './finances.service';
 
 export interface DebtInterface {
   source: string;
@@ -22,28 +23,12 @@ export interface IncomeInterface {
 })
 export class FinancesComponent implements OnInit {
 
-  state: StateInterface[] = STATE;
-  savings = 97_000;
-  total_debts = 0;
+  finances$!: Observable<StateInterface[]>;
 
-  constructor() { }
+  constructor(private financesService: FinancesService) {
+    this.finances$ = this.financesService.state$;
+  }
 
   ngOnInit(): void {
-    this.calculateTotalDebts();
-  }
-
-  calculateMonthTotalIncome(list: IncomeInterface[]): number {
-    return list.reduce((acc: number, debt: IncomeInterface) => (acc + debt.amount), 0);
-  }
-
-  calculateMonthTotalDebt(list: DebtInterface[]): number {
-    return list.reduce((acc: number, debt: DebtInterface) => (acc + debt.amount), 0);
-  }
-
-  private calculateTotalDebts(): void {
-    this.total_debts = this.state.reduce((acc: number, item: StateInterface) => {
-      const debt = this.calculateMonthTotalDebt(item.debt.list);
-      return acc + debt;
-    }, 0);
   }
 }

@@ -1,4 +1,4 @@
-<div class="flex flex-column" style="margin-top: 20px;">
+<div class="flex flex-column" style="height: 100%; overflow: auto;">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="period">
       <th mat-header-cell *matHeaderCellDef> Period </th>
@@ -72,7 +72,7 @@
       </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>

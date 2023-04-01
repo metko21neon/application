@@ -1,4 +1,5 @@
 import { DebtInterface, IncomeInterface } from "../finances.component";
+import { TAX_ENUM } from "../enums/tax.enum";
 
 export interface StateInterface {
   period: {
@@ -32,10 +33,13 @@ export interface StateInterface {
     list: any[];
   },
   taxes: {
-    singleSocialContribution: number;
-    singleTaxPercentage: number;
-    singleTax?: number;
+    list: {
+      percentage?: number;
+      payed: boolean;
+      amount: number;
+      type: TAX_ENUM;
+      source: string;
+    }[];
     total?: number;
-    payed: false;
   },
 }

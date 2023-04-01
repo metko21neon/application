@@ -25,16 +25,16 @@ export class SpendsComponent implements OnInit {
     this.dataSource = this.state.map((item: any) => {
       let categories: any[] = [];
 
-      if (!item.taxes.payed) {
-        item.taxes.singleTax = item.taxes.singleTaxPercentage * item.income.total;
-        item.taxes.total = item.taxes.singleSocialContribution + item.taxes.singleTax;
+      const taxesTotal = this.calculateTotalAmount(this.filterUnpaidBills(item.taxes.list));
+
+      if (taxesTotal) {
+        this.total.taxes = this.total.taxes + taxesTotal;
 
         categories.push({
+          list: this.filterUnpaidBills(item.taxes.list),
           total: item.taxes.total,
           name: 'Taxes'
         });
-
-        this.total.taxes = this.total.taxes + item.taxes.total;
       }
 
       const debtsTotal = this.calculateTotalAmount(this.filterUnpaidBills(item.debt.payed.list));
