@@ -54,15 +54,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 17.4,
             total: 107.88,
-            executed: 6.2
           },
           {
             date: "2022-11-09 19:55:24",
             action: "sell",
             price: 15,
             filled: 6.2,
-            // averagePrice: 57.5,
-            // executed: 93
           },
         ]
       }
@@ -128,8 +125,42 @@ export const COIN_LIST: CoinInterface[] = [
             price: 1.931,
             total: 49.99359,
           },
+          {
+            date: "2023-03-10 18:59",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+            amount: 0.0016,
+            fee: 0.0016
+          },
+          {
+            date: "2023-03-10 19:04",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+            amount: 67.185505,
+            fee: 0.0016
+          },
         ]
-      }
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        transactions: [
+          {
+            date: "2023-03-10 18:59",
+            action: "receive",
+            amount: 0.0016,
+            fee: 0.0016
+          },
+          {
+            date: "2023-03-10 19:04",
+            action: "receive",
+            amount: 67.185505,
+            fee: 0.0016
+          },
+        ]
+      },
     ]
   },
   {
@@ -308,6 +339,14 @@ export const COIN_LIST: CoinInterface[] = [
             price: 3.529,
             total: 49.97064
           },
+          {
+            date: "2023-03-10 06:40",
+            action: "transfer",
+            wallet: "Trust Wallet (Main)",
+            address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            amount: 21.73939,
+            fee: 0.023
+          },
         ]
       },
       {
@@ -383,6 +422,12 @@ export const COIN_LIST: CoinInterface[] = [
             action: "receive",
             amount: 14.6523,
             fee: 0.033,
+          },
+          {
+            date: "2023-03-10 06:40",
+            action: "receive",
+            amount: 21.73939,
+            fee: 0.023
           },
         ]
       },
@@ -600,7 +645,13 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 1.045,
             total: 49.951
-          }
+          },
+          {
+            date: "2023-04-09 11:16:26",
+            action: "sell",
+            price: 1.069,
+            filled: 81
+          },
         ]
       }
     ]
@@ -820,6 +871,14 @@ export const COIN_LIST: CoinInterface[] = [
             price: 0.3081,
             total: 49.97382,
           },
+          {
+            date: "2023-03-10 06:36",
+            action: "transfer",
+            wallet: "Ledger",
+            address: "",
+            amount: 344.1057,
+            fee: 0.8,
+          },
         ]
       },
       {
@@ -831,32 +890,30 @@ export const COIN_LIST: CoinInterface[] = [
             action: "receive",
             amount: 16,
             fee: 2,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
           },
           {
             date: "2022-11-15 12:09",
             action: "receive",
             amount: 191.17,
             fee: 2,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
           },
           {
             date: "2022-11-15 00:20",
             action: "receive",
             amount: 9.2,
             fee: 0.8,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
           },
           {
             date: "2022-11-15 01:19",
             action: "receive",
             amount: 510.001788,
             fee: 0.8,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
+          },
+          {
+            date: "2023-03-10 06:26",
+            action: "receive",
+            amount: 344.1057,
+            fee: 0.8,
           },
         ]
       },
@@ -900,8 +957,42 @@ export const COIN_LIST: CoinInterface[] = [
             price: 11.08,
             total: 49.9708
           },
+          {
+            date: "2023-03-10 19:20",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
+            amount: 0.006,
+            fee: 0.004
+          },
+          {
+            date: "2023-03-10 19:23",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
+            amount: 12.13701,
+            fee: 0.004
+          },
         ]
-      }
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        transactions: [
+          {
+            date: "2023-03-10 19:20",
+            action: "receive",
+            amount: 0.006,
+            fee: 0.004
+          },
+          {
+            date: "2023-03-10 19:23",
+            action: "receive",
+            amount: 12.13701,
+            fee: 0.004
+          },
+        ]
+      },
     ]
   },
   {
@@ -1310,8 +1401,42 @@ export const COIN_LIST: CoinInterface[] = [
             price: 0.434,
             total: 49.9968
           },
+          {
+            date: "2023-03-10 19:31",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 0.16,
+            fee: 0.16
+          },
+          {
+            date: "2023-03-10 19:34",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 272.13,
+            fee: 0.16
+          },
         ]
-      }
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        transactions: [
+          {
+            date: "2023-03-10 19:31",
+            action: "receive",
+            amount: 0.16,
+            fee: 0.16
+          },
+          {
+            date: "2023-03-10 19:34",
+            action: "receive",
+            amount: 272.13,
+            fee: 0.16
+          },
+        ]
+      },
     ]
   },
   {
@@ -1539,9 +1664,19 @@ export const COIN_LIST: CoinInterface[] = [
             date: "29.11.2022 20:21:38",
             action: "receive",
             amount: 10.376,
-            fee: 0.344,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
+            fee: 0.344
+          },
+          {
+            date: "2023-03-10 19:41",
+            action: "receive",
+            amount: 0.013,
+            fee: 0.013
+          },
+          {
+            date: "2023-03-10 19:42",
+            action: "receive",
+            amount: 20.78827,
+            fee: 0.013
           },
         ],
       },
@@ -1596,6 +1731,22 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 6.16,
             total: 49.9576
+          },
+          {
+            date: "2023-03-10 19:41",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 0.013,
+            fee: 0.013
+          },
+          {
+            date: "2023-03-10 19:42",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 20.78827,
+            fee: 0.013
           },
         ]
       },
@@ -2279,10 +2430,26 @@ export const COIN_LIST: CoinInterface[] = [
             total: 389.88,
           },
           {
+            date: "2021-05-13 02:28",
+            action: "transfer",
+            wallet: "ICP wallet",
+            address: "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
+            amount: 1.07862,
+            fee: 0.0003,
+          },
+          {
             date: "2021-05-21 00:10",
             action: "buy",
             price: 127.32,
             total: 147.6912,
+          },
+          {
+            date: "2021-05-21 00:14",
+            action: "transfer",
+            wallet: "ICP wallet",
+            address: "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
+            amount: 1.1597,
+            fee: 0.0003,
           },
           {
             date: "2021-07-11 22:05",
@@ -2291,38 +2458,18 @@ export const COIN_LIST: CoinInterface[] = [
             total: 120,
           },
           {
-            date: "2021-05-13 02:26",
-            action: "transfer",
-            wallet: "YouHolder Wallet",
-            address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
-            amount: 1.07862,
-            fee: 0.0003,
-            averagePrice: 125.49068702290076
-          },
-          {
-            date: "2021-05-21 00:10",
-            action: "transfer",
-            wallet: "YouHolder Wallet",
-            address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
-            amount: 1.1597,
-            fee: 0.0003,
-            averagePrice: 125.49068702290076
-          },
-          {
             date: "2021-07-11 22:05",
             action: "transfer",
-            wallet: "YouHolder Wallet",
-            address: "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
+            wallet: "ICP wallet",
+            address: "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
             amount: 2.9967,
             fee: 0.0003,
-            averagePrice: 125.49068702290076
           },
           {
             date: "2022-11-10 01:07:00",
             action: "buy",
             price: 3.577,
             total: 24.03744,
-            executed: 6.72
           },
           {
             date: "2022-12-17 19:31:45",
@@ -2335,6 +2482,14 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 4.764,
             total: 49.97436,
+          },
+          {
+            date: "2023-03-10 06:26",
+            action: "transfer",
+            wallet: "ICP wallet",
+            address: "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
+            amount: 31.02599524,
+            fee: 0.0003,
           },
         ]
       },
@@ -2358,6 +2513,12 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2021-07-02 15:53",
             action: "receive",
             amount: 2.9967,
+            fee: 0.0003,
+          },
+          {
+            date: "2023-03-10 06:26",
+            action: "receive",
+            amount: 31.02599524,
             fee: 0.0003,
           },
         ]
@@ -2402,8 +2563,42 @@ export const COIN_LIST: CoinInterface[] = [
             price: 1.69556,
             total: 149.887504,
           },
+          {
+            date: "2023-03-11 11:53",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 9.9,
+            fee: 0.1
+          },
+          {
+            date: "2023-03-11 11:55",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            amount: 96.8650187,
+            fee: 0.1
+          },
         ]
-      }
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        transactions: [
+          {
+            date: "2023-03-11 11:53",
+            action: "receive",
+            amount: 9.9,
+            fee: 0.1
+          },
+          {
+            date: "2023-03-11 11:55",
+            action: "receive",
+            amount: 96.8650187,
+            fee: 0.1
+          },
+        ]
+      },
     ]
   },
   {
@@ -2573,8 +2768,42 @@ export const COIN_LIST: CoinInterface[] = [
             price: 5.405,
             total: 49.99625,
           },
+          {
+            date: "2023-03-10 16:32",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
+            amount: 0.009,
+            fee: 0.001
+          },
+          {
+            date: "2023-03-10 16:36",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
+            amount: 57.00520819,
+            fee: 0.001
+          },
         ]
-      }
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
+        transactions: [
+          {
+            date: "2023-03-10 16:32",
+            action: "receive",
+            amount: 0.009,
+            fee: 0.001
+          },
+          {
+            date: "2023-03-10 16:36",
+            action: "receive",
+            amount: 57.00520819,
+            fee: 0.001
+          },
+        ]
+      },
     ]
   },
   {
@@ -2693,8 +2922,94 @@ export const COIN_LIST: CoinInterface[] = [
             price: 0.1922,
             total: 49.972,
           },
+          {
+            date: "2023-03-11 15:35",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
+            amount: 9.992,
+            fee: 0.008
+          },
+          {
+            date: "2023-03-11 15:37",
+            action: "transfer",
+            wallet: "Trust Wallet (Savings)",
+            address: "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
+            amount: 374.992,
+            fee: 0.008
+          },
         ]
-      }
+      },
+      {
+        name: "Trust Wallet (Savings)",
+        address: "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
+        transactions: [
+          {
+            date: "2023-03-11 15:35",
+            action: "receive",
+            amount: 9.992,
+            fee: 0.008
+          },
+          {
+            date: "2023-03-11 15:37",
+            action: "receive",
+            amount: 374.992,
+            fee: 0.008
+          },
+        ]
+      },
+    ]
+  },
+  {
+    name: "TetherUS",
+    symbol: "USDT",
+    wallets: [
+      {
+        name: "Binance",
+        address: "binance_1",
+        transactions: [
+          {
+            date: "2023/03/30 11:02",
+            action: "buy",
+            price: 1,
+            total: 620.68,
+          },
+          {
+            date: "2023-03-30 11:10",
+            action: "transfer",
+            wallet: "Trust Wallet (Main)",
+            address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            amount: 9.71,
+            fee: 0.29
+          },
+          {
+            date: "2023-03-30 11:13",
+            action: "transfer",
+            wallet: "Trust Wallet (Main)",
+            address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            amount: 610.39,
+            fee: 0.29
+          },
+        ]
+      },
+      {
+        name: "Trust Wallet (Main)",
+        address: "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        transactions: [
+          {
+            date: "2023-03-30 11:10",
+            action: "receive",
+            amount: 9.71,
+            fee: 0.29
+          },
+          {
+            date: "2023-03-30 11:13",
+            action: "receive",
+            amount: 610.39,
+            fee: 0.29
+          },
+        ]
+      },
     ]
   },
   {

@@ -41,7 +41,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   isHideUntracked = true;
   isLoading = false;
 
-  updatedDate = '2023-03-10 06:04:18';
+  updatedDate = '12.04.2023 00:30';
 
   private subscription: Subscription = new Subscription();
   private coinList: CoinInterface[] = [];
@@ -136,7 +136,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
       setTimeout(() => this.dataSource.sort = this.matSort);
 
       // console.log('COIN_LIST:', coinList);
-      // this.applyFilter(({ target: { value: 'link' } }) as any);
+      // this.applyFilter(({ target: { value: 'SUSHI' } }) as any);
     });
 
     this.subscription.add(stream$);
