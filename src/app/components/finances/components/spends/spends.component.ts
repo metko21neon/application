@@ -32,7 +32,7 @@ export class SpendsComponent implements OnInit {
 
         categories.push({
           list: this.filterUnpaidBills(item.taxes.list),
-          total: item.taxes.total,
+          total: taxesTotal,
           name: 'Taxes'
         });
       }

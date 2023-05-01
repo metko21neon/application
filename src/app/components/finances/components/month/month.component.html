@@ -1,141 +1,4 @@
 <div class="flex flex-column" style="height: 100%; overflow: auto;">
-  <!-- <h3> Information </h3>
-
-  <div class="flex" style="margin-bottom: 10px;">
-    <span style="width: 200px;"> Period </span>
-    <span style="width: 200px;"> Incomes </span>
-    <span style="width: 200px;"> Taxes </span>
-    <span style="width: 200px;"> Savings </span>
-    <span style="width: 200px;"> New Debts </span>
-    <span style="width: 200px;"> Payed debts </span>
-    <span style="width: 200px;"> Life costs </span>
-    <span style="width: 200px;"> Investing </span>
-  </div>
-
-  <ng-container *ngFor="let item of dataSource">
-    <div class="flex" style="margin-bottom: 5px; border: 1px solid #000;">
-      <span style="width: 200px;"> {{ item.period }} </span>
-
-      <div style="width: 200px;">
-        <div *ngFor="let debt of item.income.list">
-          {{ debt.source }} {{ debt.amount | number | imCurrency }} UAH
-        </div>
-      </div>
-
-      <div class="flex flex-column" style="width: 200px;" [style.color]="item.taxes.payed ? 'inherit' : 'red'">
-        <span> ЄП {{ item.taxes.singleTax | number | imCurrency }} UAH </span>
-        <span> ЄСВ {{ item.taxes.singleSocialContribution | number | imCurrency }} UAH </span>
-      </div>
-
-      <span style="width: 200px;">
-        <div *ngFor="let savings of item.savings.list" [style.color]="savings.payed ? 'inherit' : 'red'">
-          {{ savings.source }} {{ savings.amount | number | imCurrency }} UAH
-        </div>
-      </span>
-
-      <div style="width: 200px;">
-        <div *ngFor="let debt of item.newDebts.list">
-          {{ debt.source }} {{ debt.amount | number | imCurrency }} UAH
-          <div style="font-size: 12px;"> ({{ debt.description }}) </div>
-        </div>
-      </div>
-
-      <div style="width: 200px;">
-        <div *ngFor="let debt of item.payedDebts.list">
-          {{ debt.source }} {{ debt.amount | number | imCurrency }} UAH
-        </div>
-      </div>
-
-      <span style="width: 200px;"></span>
-
-      <div style="width: 200px;">
-        <div *ngFor="let debt of item.investing.list" [style.color]="debt.payed ? 'inherit' : 'red'">
-          {{ debt.source }} {{ debt.amount | number | imCurrency }} UAH
-        </div>
-      </div>
-    </div>
-
-    <div class="flex" style="margin-bottom: 15px;">
-      <span style="width: 200px;"></span>
-
-      <span style="width: 200px; font-weight: bold;">
-        Total {{ item.income.total | number | imCurrency }} UAH
-      </span>
-
-      <span class="flex flex-column" style="width: 200px; font-weight: bold;">
-        <span [style.color]="item.taxes.payed ? 'inherit' : 'red'">
-          Total {{ item.taxes.total | number | imCurrency }} UAH
-        </span>
-
-        <span> Rest {{ item.taxes.rest | number | imCurrency }} UAH </span>
-      </span>
-
-      <div class="flex flex-column" style="width: 200px; font-weight: bold;">
-        <span> Total {{ item.savings.total | number | imCurrency }} UAH </span>
-        <span> Rest {{ item.savings.rest | number | imCurrency }} UAH </span>
-      </div>
-
-      <div class="flex flex-column" style="width: 200px; font-weight: bold;">
-        <span> Total {{ item.newDebts.total | number | imCurrency }} UAH </span>
-        <span> Rest {{ item.newDebts.rest | number | imCurrency }} UAH </span>
-      </div>
-
-      <div class="flex flex-column" style="width: 200px; font-weight: bold;">
-        <span> Total {{ item.payedDebts.total | number | imCurrency }} UAH </span>
-        <span> Rest {{ item.payedDebts.rest | number | imCurrency }} UAH </span>
-      </div>
-
-      <div class="flex flex-column" style="width: 200px; font-weight: bold;">
-        <span> Total {{ item.lifeCosts.total | number | imCurrency }} UAH </span>
-        <span> Rest {{ item.lifeCosts.rest | number | imCurrency }} UAH </span>
-      </div>
-
-      <div class="flex flex-column" style="width: 200px; font-weight: bold;">
-        <span> Total {{ item.investing.total | number | imCurrency }} UAH </span>
-        <span> Rest {{ item.investing.rest | number | imCurrency }} UAH </span>
-      </div>
-    </div>
-  </ng-container>
-
-  <div class="flex" style="border: 1px solid #000; background-color: #000000;">
-    <span style="width: 200px;"> January 2023 - now </span>
-
-    <span style="width: 200px; font-weight: bold;">
-      Total {{ total.income | number | imCurrency }} UAH
-    </span>
-
-    <span style="width: 200px; font-weight: bold;">
-      Total {{ total.taxes | number | imCurrency }} UAH
-    </span>
-
-    <span style="width: 200px; font-weight: bold;">
-      Total {{ total.savings | number | imCurrency }} UAH
-    </span>
-
-    <span style="width: 200px; font-weight: bold;">
-      Total {{ total.newDebts | number | imCurrency }} UAH
-    </span>
-
-    <span style="width: 200px; font-weight: bold;">
-      Total {{ total.payedDebts | number | imCurrency }} UAH
-    </span>
-
-    <span style="width: 200px; font-weight: bold;">
-      Total {{ total.lifeCosts | number | imCurrency }} UAH
-    </span>
-
-    <span style="width: 200px; font-weight: bold;">
-      Total {{ total.investing | number | imCurrency }} UAH
-    </span>
-  </div> -->
-
-  <ng-template #totalTemplate let-data="data" let-type="type">
-    <div *ngIf="type === 1" class="flex" style="padding: 0 10px;">
-      <span style="flex-grow: 1;"></span>
-      <span class="property-amount"> {{ data.total | number | imCurrency }} UAH </span>
-    </div>
-  </ng-template>
-
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="period">
       <th mat-header-cell *matHeaderCellDef> Period </th>
@@ -193,11 +56,6 @@
     <ng-container matColumnDef="taxes">
       <th mat-header-cell *matHeaderCellDef> Taxes </th>
       <td mat-cell *matCellDef="let element">
-        <ng-container
-          [ngTemplateOutlet]="totalTemplate"
-          [ngTemplateOutletContext]="{ data: element.taxes, type: element.type }">
-        </ng-container>
-
         <div *ngFor="let item of element.taxes.list" class="flex" [style.color]="item.payed ? 'inherit' : 'red'">
           <span style="width: 40px;"> {{ item.source }} </span>
           <span class="property-amount"> {{ item.amount | number | imCurrency }} UAH </span>
@@ -214,6 +72,11 @@
             <span class="property-amount"> {{ element.taxes.rest | number | imCurrency }} UAH </span>
           </div>
         </div>
+
+        <ng-container
+          [ngTemplateOutlet]="totalTemplate"
+          [ngTemplateOutletContext]="{ data: element.taxes, type: element.type }">
+        </ng-container>
       </td>
 
       <td mat-footer-cell *matFooterCellDef>
@@ -425,3 +288,10 @@
     <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
   </table>
 </div>
+
+<ng-template #totalTemplate let-data="data" let-type="type">
+  <div *ngIf="type === 1" class="flex" style="padding: 0 10px;">
+    <span style="flex-grow: 1;"></span>
+    <span class="property-amount"> {{ data.total | number | imCurrency }} UAH </span>
+  </div>
+</ng-template>

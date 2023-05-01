@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { StateInterface } from '../../interfaces/state.interface';
 import { DebtInterface } from '../../finances.component';
-import { DEBT_STATE } from '../../../../states/finances.state';
+import { DEBT_STATE } from '../../states/debts.state';
 
 @Component({
   selector: 'app-debts',

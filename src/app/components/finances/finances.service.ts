@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StateInterface } from './interfaces/state.interface';
-import { FINANCES_STATE } from 'src/app/states/finances.state';
+import { FINANCES_STATE } from 'src/app/components/finances/states/finances.state';
 import { TAX_ENUM } from './enums/tax.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
 const SAVINGS_PERCENTAGE = 0.1;

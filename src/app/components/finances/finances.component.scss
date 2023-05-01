@@ -1,5 +1,18 @@
+.is-not-payed {
+  color: red;
+}
+
+app-debts,
+app-month {
+  .mat-cell {
+    padding-bottom: 60px !important;
+    padding-top: 5px !important;
+    vertical-align: baseline;
+    position: relative;
+  }
+}
+
 .mat-cell {
-  padding-bottom: 60px !important;
   padding-top: 5px !important;
   vertical-align: baseline;
   position: relative;

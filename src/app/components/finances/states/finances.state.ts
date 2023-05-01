@@ -1,63 +1,5 @@
-import { TAX_ENUM } from "../components/finances/enums/tax.enum";
-import { StateInterface } from "../components/finances/interfaces/state.interface";
-
-export const SAVINGS_STATE = {
-  list: [
-    {
-      period: "June 2022",
-      amount: 9_000
-    },
-    {
-      period: "July 2022",
-      amount: 9_000
-    },
-    {
-      period: "August 2022",
-      amount: 11_000
-    },
-    {
-      period: "September 2022",
-      amount: 11_000
-    },
-    {
-      period: "October 2022",
-      amount: 11_000
-    },
-    {
-      period: "November 2022",
-      amount: 11_000
-    },
-    {
-      period: "December 2022",
-      amount: 11_000
-    },
-  ]
-};
-
-export const DEBT_STATE = {
-  list: [
-    {
-      source: "Privatbank",
-      amount: 100_000
-    },
-    {
-      source: "Mom's credit",
-      amount: 30_000
-    },
-    {
-      source: "Kitty",
-      amount: 20_000
-    },
-    {
-      source: "Taxes",
-      amount: 16_800
-    },
-    {
-      source: "Mentukh",
-      amount: 17_500
-    },
-  ]
-};
+import { TAX_ENUM } from "../enums/tax.enum";
+import { StateInterface } from "../interfaces/state.interface";
 
 export const FINANCES_STATE: StateInterface[] = [
   {
@@ -81,9 +23,9 @@ export const FINANCES_STATE: StateInterface[] = [
       payed: {
         list: [
           {
-            source: "Privatbank",
+            source: "Taxes",
             payed: true,
-            amount: 22_000,
+            amount: 10_500,
           }
         ]
       }
@@ -94,10 +36,6 @@ export const FINANCES_STATE: StateInterface[] = [
           source: 'Crosssoft',
           amount: 111_806.3
         },
-        // {
-        //   source: 'Rest',
-        //   amount: 5_500
-        // }
       ]
     },
     taxes: {
@@ -127,7 +65,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 22_200
+          amount: 33_700
         }
       ]
     },
@@ -152,8 +90,13 @@ export const FINANCES_STATE: StateInterface[] = [
       list: [
         {
           source: "Savings",
-          amount: 12_000,
+          amount: 6_300,
           payed: true,
+        },
+        {
+          source: "Savings",
+          amount: 5_700,
+          payed: false,
         }
       ]
     },
@@ -161,12 +104,17 @@ export const FINANCES_STATE: StateInterface[] = [
       list: [
         {
           source: "Privatbank",
-          amount: 18_000,
+          amount: 20_000,
           description: "Returned debt Kitty"
         },
         {
           source: "Privatbank",
-          amount: 16_800,
+          amount: 10_000,
+          description: "Mom's credit"
+        },
+        {
+          source: "Privatbank",
+          amount: 6_300,
           description: "Taxes"
         },
       ],
@@ -185,7 +133,7 @@ export const FINANCES_STATE: StateInterface[] = [
           {
             source: "Taxes",
             payed: true,
-            amount: 16_800,
+            amount: 6_300,
           },
         ]
       }
@@ -229,7 +177,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 30_700
+          amount: 42_700
         },
       ]
     },
@@ -255,7 +203,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Savings",
           amount: 12_000,
-          payed: true,
+          payed: false,
         }
       ]
     },
@@ -264,10 +212,10 @@ export const FINANCES_STATE: StateInterface[] = [
       payed: {
         list: [
           {
-            source: "Privatbank",
+            source: "Mentukh",
+            amount: 12_000,
             payed: true,
-            amount: 24_000,
-          }
+          },
         ]
       }
     },
@@ -306,12 +254,12 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 6_600
+          amount: 24_600
         },
         {
           source: "Cryptocurrency",
           payed: false,
-          amount: 21_200
+          amount: 9_200
         },
       ]
     },
@@ -320,91 +268,96 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "",
           payed: true,
-          amount: 44_000
+          amount: 50_000
         }
       ]
     },
   },
-  // {
-  //   period: {
-  //     month: 3,
-  //     year: 2023,
-  //     string: "April 2023"
-  //   },
-  //   savings: {
-  //     percentage: 0.1,
-  //     list: [
-  //       {
-  //         source: "Savings",
-  //         amount: 12_000,
-  //         payed: true,
-  //       }
-  //     ]
-  //   },
-  //   debt: {
-  //     list: [],
-  //     payed: {
-  //       list: [
-  //         {
-  //           source: "Mentukh",
-  //           amount: 17_500,
-  //           payed: true,
-  //         },
-  //         {
-  //           source: "Privatbank",
-  //           amount: 6_500,
-  //           payed: true,
-  //         }
-  //       ]
-  //     }
-  //   },
-  //   income: {
-  //     list: [
-  //       {
-  //         source: 'Crosssoft',
-  //         amount: 127_990.1
-  //       },
-  //     ]
-  //   },
-  //   taxes: {
-  //     list: [
-  //       {
-  //         type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
-  //         source: "Єдиний соціальний внесок",
-  //         amount: 1_475,
-  //         payed: false,
-  //       },
-  //       {
-  //         type: TAX_ENUM.SINGLE_TAX,
-  //         source: "Єдиний податок",
-  //         percentage: 0.05,
-  //         payed: false,
-  //         amount: 0,
-  //       },
-  //     ]
-  //   },
-  //   investing: {
-  //     list: [
-  //       {
-  //         source: "Military bonds",
-  //         payed: false,
-  //         amount: 12_300
-  //       },
-  //       {
-  //         source: "Cryptocurrency",
-  //         payed: false,
-  //         amount: 27_800
-  //       },
-  //     ]
-  //   },
-  //   lifeCosts: {
-  //     list: [
-  //       {
-  //         source: "",
-  //         payed: true,
-  //         amount: 44_000
-  //       }
-  //     ]
-  //   },
-  // }
+  {
+    period: {
+      month: 3,
+      year: 2023,
+      string: "April 2023"
+    },
+    savings: {
+      percentage: 0.1,
+      list: [
+        {
+          source: "Savings",
+          amount: 12_000,
+          payed: false,
+        }
+      ]
+    },
+    debt: {
+      list: [],
+      payed: {
+        list: [
+          {
+            source: "Privatbank",
+            amount: 6_500,
+            payed: true,
+          },
+          {
+            source: "Mentukh",
+            amount: 5_500,
+            payed: true,
+          },
+        ]
+      }
+    },
+    income: {
+      list: [
+        {
+          source: 'Crosssoft',
+          amount: 127_990.1
+        },
+      ]
+    },
+    taxes: {
+      list: [
+        {
+          type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
+          source: "Єдиний соціальний внесок",
+          amount: 1_475,
+          payed: false,
+        },
+        {
+          type: TAX_ENUM.SINGLE_TAX,
+          source: "Єдиний податок",
+          percentage: 0.05,
+          payed: false,
+          amount: 0,
+        },
+      ]
+    },
+    investing: {
+      list: [
+        {
+          source: "Military bonds",
+          payed: true,
+          amount: 12_500
+        },
+        {
+          source: "Crypto CREW",
+          payed: true,
+          amount: 3_300
+        },
+        {
+          source: "Cryptocurrency",
+          payed: false,
+          amount: 30_300
+        },
+      ]
+    },
+    lifeCosts: {
+      list: [
+        {
+          source: "",
+          payed: true,
+          amount: 50_000
+        }
+      ]
+    },
+  }
 ];

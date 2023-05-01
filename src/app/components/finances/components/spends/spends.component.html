@@ -1,17 +1,17 @@
-<div class="flex flex-column">
+<div class="im-spends flex flex-column">
   <h3 style="margin: 0 0 10px;"> Future Spends </h3>
 
   <div class="flex flex-column">
     <div class="flex" style="margin-bottom: 10px;">
       <span style="width: 200px;"> Period </span>
-      <span style="width: 200px;"> List </span>
+      <span style="width: 400px;"> List </span>
     </div>
 
     <ng-container *ngFor="let item of dataSource">
       <div class="flex" style="margin-bottom: 5px; border: 1px solid #000;">
         <span style="width: 200px;"> {{ item.period }} </span>
 
-        <div style="width: 200px;">
+        <div style="width: 400px;">
           <div *ngFor="let category of item.categories">
             <div> {{ category.name }} </div>
 
@@ -28,11 +28,11 @@
     </ng-container>
 
     <div class="flex flex-column" style="margin-left: 200px; margin-bottom: 15px;">
-      <span style="width: 200px; font-weight: bold;">
-        Total taxes {{ total.taxes | number | imCurrency }} UAH
-        Total investing {{ total.investing | number | imCurrency }} UAH
-        Total savings {{ total.savings | number | imCurrency }} UAH
-      </span>
+      <div class="flex flex-column" style="width: 400px; font-weight: bold;">
+        <span> Total taxes {{ total.taxes | number | imCurrency }} UAH </span>
+        <span> Total investing {{ total.investing | number | imCurrency }} UAH </span>
+        <span> Total savings {{ total.savings | number | imCurrency }} UAH </span>
+      </div>
 
       <div style="margin-top: 10px; font-weight: bold;">
         Total {{ total.taxes + total.investing + total.savings | number | imCurrency }} UAH

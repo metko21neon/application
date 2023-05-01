@@ -13,12 +13,16 @@
         <app-debts [state]="finances"></app-debts>
       </mat-tab>
 
-      <mat-tab label="Third">
+      <mat-tab label="Spends">
         <app-spends [state]="finances"></app-spends>
       </mat-tab>
 
       <mat-tab label="Savings">
         <app-savings [state]="finances"></app-savings>
+      </mat-tab>
+
+      <mat-tab label="Capital">
+        <app-capital [state]="finances"></app-capital>
       </mat-tab>
     </mat-tab-group>
   </div>

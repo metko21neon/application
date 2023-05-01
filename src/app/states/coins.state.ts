@@ -1143,7 +1143,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "",
             amount: 0.001,
             fee: 0.0004,
-            // averagePrice: 29.322687921306237
           },
           {
             date: "15.11.2022 01:32:31",
@@ -1152,7 +1151,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "",
             amount: 0.016286,
             fee: 0.0004,
-            // averagePrice: 29.322687921306237
           },
         ]
       },
@@ -1165,78 +1163,67 @@ export const COIN_LIST: CoinInterface[] = [
             action: "buy",
             price: 32578.27,
             total: 99.72208447,
-            averagePrice: 32578.27
           },
           {
             date: "2021",
             action: "buy",
             price: 32500,
             total: 99.97,
-            averagePrice: 32539.039
           },
           {
             date: "2021",
             action: "sell",
             price: 40000,
             filled: 0.00126219,
-            averagePrice: 32539.039
           },
           {
-            date: "2021",
+            date: "24.09.2021 11:51:00",
             action: "transfer",
             wallet: "Ledger",
             amount: 0.0005,
             fee: 0.0005,
-            averagePrice: 32539.039
           },
           {
             date: "2022-06-13 12:39:28",
             action: "buy",
             price: 24000,
             total: 24.96,
-            averagePrice: 31037.62156301424
           },
           {
             date: "2022-06-13 17:42:51",
             action: "buy",
             price: 23050,
             total: 70.07,
-            averagePrice: 28326.016094807976
           },
           {
             date: "2022-06-17 10:47:15",
             action: "buy",
             price: 20200,
             total: 46.06,
-            averagePrice: 26676.789954917
           },
           {
             date: "2022-06-18 10:03:59",
             action: "buy",
             price: 19350,
             total: 46.25,
-            averagePrice: 25391.48925891212
           },
           {
             date: "2022-07-19 20:16:48",
             action: "sell",
             price: 23040.6,
             filled: 0.00273,
-            averagePrice: 25391.48925891212
           },
           {
             date: "2022-07-23 07:00:54",
             action: "sell",
             price: 22000,
             filled: 0.00592,
-            averagePrice: 25391.48925891212
           },
           {
             date: "2022-12-17 15:16:44",
             action: "buy",
             price: 16696.21,
             total: 49.9216679,
-            // averagePrice: 25391.48925891212
           },
         ]
       },
@@ -1245,7 +1232,7 @@ export const COIN_LIST: CoinInterface[] = [
         address: "ledger_1",
         transactions: [
           {
-            date: "",
+            date: "24.09.2021 11:51:00",
             action: "receive",
             amount: 0.0005,
             fee: 0.0005
@@ -1496,7 +1483,6 @@ export const COIN_LIST: CoinInterface[] = [
             address: "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             amount: 0.0796563,
             fee: 0.0015537,
-            // averagePrice: 29.322687921306237
           },
         ]
       },
@@ -1509,8 +1495,6 @@ export const COIN_LIST: CoinInterface[] = [
             action: "receive",
             amount: 0.0796563,
             fee: 0.0015537,
-            // averagePrice: 0.01964100237799315,
-            // usdFee: 0.1
           },
         ],
       },
@@ -1604,8 +1588,6 @@ export const COIN_LIST: CoinInterface[] = [
           {
             action: "receive",
             amount: 0.0134,
-            // averagePrice: 554.94,
-            // usdFee: 0.6
           }
         ]
       },
@@ -1617,15 +1599,11 @@ export const COIN_LIST: CoinInterface[] = [
             date: "2021",
             action: "receive",
             amount: 0.09775855,
-            // amount: 0.06207,
-            // averagePrice: 554.94,
-            // usdFee: 0.6
           },
           {
             date: "2021",
             action: "spend",
             amount: 0.03568501,
-            // averagePrice: 3076.45
           },
         ]
       },

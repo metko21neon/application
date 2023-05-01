@@ -1,6 +1,6 @@
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Params } from '@angular/router';
 
 import { map, Subscription } from 'rxjs';
 
@@ -32,19 +32,44 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
 
   actionHistoryEnum = CoinHistoryActionEnum;
 
+  prevWalletAddress = '';
+  nextWalletAddress = '';
+
   private subscription: Subscription = new Subscription();
 
   constructor(
     private appService: AppService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.getTokenByAddress();
   }
 
+  back(): void {
+    this.router.navigate(['..']);
+  }
+
+  prevWallet(): void {
+    this.router.navigate(['./wallet/', this.prevWalletAddress, 'coin', this.tokenDetails?.symbol]);
+  }
+
+  nextWallet(): void {
+    this.router.navigate(['./wallet/', this.nextWalletAddress, 'coin', this.tokenDetails?.symbol]);
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  private reset(): void {
+    this.totalEarnedCurrency = 0;
+    this.totalSpendCurrency = 0;
+
+    this.totalRest = 0;
+    this.totalSell = 0;
+    this.totalBuy = 0;
   }
 
   private getTokenByAddress(): void {
@@ -54,70 +79,90 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
         return this.appService.getTokenBySymbol(params['symbol']);
       })
     ).subscribe((tokenDetails: CoinInterface) => {
-      console.log('tokenDetails:', tokenDetails);
-      this.wallet = tokenDetails.wallets.find((wallet: WalletInterface) => wallet.address === this.params['walletAddress'])!;
-
       this.tokenDetails = tokenDetails;
+      console.log('tokenDetails:', tokenDetails);
 
-      this.wallet?.transactions?.map((history: CryptoHistoryInterface, index: number) => {
-        const previousTotal = (this.wallet?.transactions as any)[index - 1]?.totalQuantity! || 0;
+      const walletIndex = tokenDetails.wallets
+        .findIndex((wallet: WalletInterface) => wallet.address === this.params['walletAddress'])!;
 
-        if (history.action === CoinHistoryActionEnum.RECEIVE) {
-          history.totalQuantity = previousTotal + history.amount!;
+      this.wallet = tokenDetails.wallets[walletIndex];
 
-          this.totalEarnedCurrency -= history.total;
-          this.totalSpendCurrency += history.total;
+      if (walletIndex > 0) {
+        this.prevWalletAddress = tokenDetails.wallets[walletIndex - 1].address;
+      } else {
+        this.prevWalletAddress = '';
+      }
 
-          this.totalBuy += history.total;
-        }
+      if (walletIndex < tokenDetails.wallets.length - 1) {
+        this.nextWalletAddress = tokenDetails.wallets[walletIndex + 1].address;
+      } else {
+        this.nextWalletAddress = '';
+      }
 
-        if (history.action === CoinHistoryActionEnum.BUY) {
-          if (previousTotal === 0) {
-            history.totalQuantityPercentage = 100;
-          } else {
-            history.totalQuantityPercentage = (history.total / history.price) / (previousTotal / 100);
-          }
-
-          history.totalQuantity = previousTotal + history.total / history.price;
-
-          this.totalEarnedCurrency -= history.total;
-          this.totalSpendCurrency += history.total;
-
-          this.totalBuy += history.total;
-        }
-
-        if (history.action === CoinHistoryActionEnum.SELL) {
-          history.totalQuantityPercentage = history.filled! / (previousTotal / 100);
-
-          history.totalQuantity = previousTotal - history.filled!;
-
-          this.totalEarnedCurrency += history.filled! * history.price;
-
-          this.totalSell += history.filled! * history.price;
-        }
-
-        if (history.action === CoinHistoryActionEnum.TRANSFER) {
-          history.totalQuantityPercentage = (history.amount! + history.fee!) / (previousTotal / 100);
-          history.totalQuantity = previousTotal - history.amount! - history.fee!;
-        }
-
-        if (history.action === CoinHistoryActionEnum.SPEND) {
-          history.totalQuantityPercentage = history.amount! / (previousTotal / 100);
-          history.totalQuantity = previousTotal - history.amount!;
-        }
-
-        if (history.totalQuantity! < 0.000001) {
-          history.totalQuantity = 0;
-        }
-      });
-
-      const totalQuantity = this.wallet.transactions![this.wallet.transactions!.length - 1].totalQuantity;
-      this.totalRest = totalQuantity * this.tokenDetails?.price!;
-
-      this.dataSource = new MatTableDataSource(this.wallet.transactions);
+      this.reset();
+      this.setWalletTransactions();
     });
 
     this.subscription.add(stream$);
+  }
+
+  private setWalletTransactions(): void {
+    this.wallet?.transactions?.map((history: CryptoHistoryInterface, index: number) => {
+      const previousTotal = (this.wallet?.transactions as any)[index - 1]?.totalQuantity! || 0;
+
+      if (history.action === CoinHistoryActionEnum.RECEIVE) {
+        history.totalQuantity = previousTotal + history.amount!;
+
+        this.totalEarnedCurrency -= history.total;
+        this.totalSpendCurrency += history.total;
+
+        this.totalBuy += history.total;
+      }
+
+      if (history.action === CoinHistoryActionEnum.BUY) {
+        if (previousTotal === 0) {
+          history.totalQuantityPercentage = 100;
+        } else {
+          history.totalQuantityPercentage = (history.total / history.price) / (previousTotal / 100);
+        }
+
+        history.totalQuantity = previousTotal + history.total / history.price;
+
+        this.totalEarnedCurrency -= history.total;
+        this.totalSpendCurrency += history.total;
+
+        this.totalBuy += history.total;
+      }
+
+      if (history.action === CoinHistoryActionEnum.SELL) {
+        history.totalQuantityPercentage = history.filled! / (previousTotal / 100);
+
+        history.totalQuantity = previousTotal - history.filled!;
+
+        this.totalEarnedCurrency += history.filled! * history.price;
+
+        this.totalSell += history.filled! * history.price;
+      }
+
+      if (history.action === CoinHistoryActionEnum.TRANSFER) {
+        history.totalQuantityPercentage = (history.amount! + history.fee!) / (previousTotal / 100);
+        history.totalQuantity = previousTotal - history.amount! - history.fee!;
+      }
+
+      if (history.action === CoinHistoryActionEnum.SPEND) {
+        history.totalQuantityPercentage = history.amount! / (previousTotal / 100);
+        history.totalQuantity = previousTotal - history.amount!;
+      }
+
+      if (history.totalQuantity! < 0.000001) {
+        history.totalQuantity = 0;
+      }
+    });
+
+    const totalQuantity = this.wallet.transactions![this.wallet.transactions!.length - 1].totalQuantity;
+    this.totalRest = totalQuantity * this.tokenDetails?.price!;
+
+    this.dataSource = new MatTableDataSource(this.wallet.transactions);
   }
 
 }

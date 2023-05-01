@@ -15,6 +15,7 @@ import { DebtsComponent } from './components/debts/debts.component';
 import { SpendsComponent } from './components/spends/spends.component';
 import { ImCurrencyPipe } from './pipes/im-currency.pipe';
 import { SavingsComponent } from './components/savings/savings.component';
+import { CapitalComponent } from './components/capital/capital.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SavingsComponent } from './components/savings/savings.component';
     SpendsComponent,
     ImCurrencyPipe,
     SavingsComponent,
+    CapitalComponent,
   ],
   imports: [
     FinancesRoutingModule,

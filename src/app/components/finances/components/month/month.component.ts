@@ -64,7 +64,10 @@ export class MonthComponent implements OnInit {
             list: this.calculate(list, 'investing'),
           },
           newDebts: { total: this.calculateQuarterTotal(list, 'newDebts') },
-          savings: { total: this.calculateQuarterTotal(list, 'savings') },
+          savings: {
+            total: this.calculateQuarterTotal(list, 'savings'),
+            list: this.calculate(list, 'savings'),
+          },
           income: { total: this.calculateQuarterTotal(list, 'income') },
           taxes: {
             total: this.calculateQuarterTotal(list, 'taxes'),
@@ -81,7 +84,7 @@ export class MonthComponent implements OnInit {
 
     list.map((month: any) => {
       month[property].list.map((item: any) => {
-        const index = groupList.findIndex((group: any) => group.source === item.source);
+        const index = groupList.findIndex((group: any) => group.source === item.source && group.payed === item.payed);
 
         if (index === -1) {
           groupList = [...groupList, {
