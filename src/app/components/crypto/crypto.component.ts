@@ -70,6 +70,14 @@ export class CryptoComponent implements OnInit, OnDestroy {
     this.subscription.add(stream$);
   }
 
+  synchronizeOrders(): void {
+    const stream$ = this.appService.synchronizeOrders().subscribe((data: any[]) => {
+      console.log('synchronizeOrders:', data);
+    });
+
+    this.subscription.add(stream$);
+  }
+
   selectCrypto(crypto: any): void {
     console.log('selectCrypto:', crypto);
   }
@@ -112,8 +120,32 @@ export class CryptoComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  private getInitCoinList(coinList: any[]): void {
+    const list = coinList.map((coin: any) => {
+      return {
+        name: coin.name,
+        symbol: coin.symbol,
+        wallets: coin.wallets.map((wallet: any) => {
+          return {
+            name: wallet.name || "",
+            address: wallet.address || "",
+            transactions: wallet.transactions.map((transaction: any) => {
+              const { averagePrice, ...other } = transaction;
+              return other;
+            }),
+          };
+        }),
+        token_address: coin.token_address || "",
+      };
+    })
+
+    console.log('getInitCoinList:', list);
+  }
+
   private getCoinList(): void {
     const stream$ = this.appService.coinList$.subscribe((coinList: CoinInterface[]) => {
+      this.getInitCoinList(coinList);
+
       this.coinList = coinList.map((coin: CoinInterface) => {
         const value = this.statistic.totalSpendCurrency - coin.quantity * coin.averagePrice;
         coin.percantageFromDeposit = 100 - (value / this.statistic.totalSpendCurrency * 100);

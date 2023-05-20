@@ -23,7 +23,9 @@
       <td mat-cell *matCellDef="let element">
         <div *ngFor="let item of element.income.list" class="flex">
           <span style="width: 70px;"> {{ item.source }} </span>
-          <span class="property-amount"> {{ item.amount | number | imCurrency }} UAH </span>
+          <span class="property-amount">
+            {{ item.amount | number | imCurrency }} UAH
+          </span>
         </div>
 
         <div class="total-row">

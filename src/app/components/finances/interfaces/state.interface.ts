@@ -1,5 +1,6 @@
 import { DebtInterface, IncomeInterface } from "../finances.component";
 import { TAX_ENUM } from "../enums/tax.enum";
+import { CURRENCY_ENUM } from "../enums/currency.enum";
 
 export interface StateInterface {
   period: {
@@ -17,7 +18,7 @@ export interface StateInterface {
     list: DebtInterface[];
   },
   income: {
-    list: IncomeInterface[];
+    list: FinanceIncomeInterface[];
     total?: number;
   },
   pureIncome?: {
@@ -42,4 +43,11 @@ export interface StateInterface {
     }[];
     total?: number;
   },
+}
+
+export interface FinanceIncomeInterface {
+  currency?: CURRENCY_ENUM;
+  exchangeRate?: number;
+  source: string;
+  amount: number;
 }

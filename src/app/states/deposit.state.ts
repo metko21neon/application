@@ -3,6 +3,54 @@ import { DepositInterface } from "../components/cash-transactions/interfaces/dep
 export const DEPOSIT: DepositInterface[] = [
   {
     "method": "Bank Transfer",
+    "orderNo": "550b135930484595ab1977fce9532ef8",
+    "fiatCurrency": "USD",
+    "totalFee": "0",
+    "status": "Successful",
+    "updateTime": 1683027180000,
+    "indicatedAmount": "1800",
+    "usdPrice": "37.45",
+    "amount": "1800",
+    "createTime": 1683027180000
+  },
+  {
+    "method": "Bank Transfer",
+    "orderNo": "a273d25b9ecd48b5a97924a6ce49ffdb",
+    "fiatCurrency": "UAH",
+    "totalFee": "0",
+    "status": "Successful",
+    "updateTime": 1682695960000,
+    "indicatedAmount": "10000",
+    "usdPrice": "38.11",
+    "amount": "10000",
+    "createTime": 1682695960000
+  },
+  {
+    "method": "Bank Transfer",
+    "orderNo": "a273d25b9ecd48b5a97924a6ce49ffdb",
+    "fiatCurrency": "UAH",
+    "totalFee": "693.21",
+    "status": "Successful",
+    "updateTime": 1682370135000,
+    "indicatedAmount": "23800",
+    "usdPrice": "38.70",
+    "amount": "23106.79",
+    "createTime": 1682370135000
+  },
+  {
+    "method": "Bank Transfer",
+    "orderNo": "a273d25b9ecd48b5a97924a6ce49ffdb",
+    "fiatCurrency": "UAH",
+    "totalFee": "0",
+    "status": "Successful",
+    "updateTime": 1682348419000,
+    "indicatedAmount": "7702.68",
+    "usdPrice": "38.55",
+    "amount": "7702.68",
+    "createTime": 1682348419000
+  },
+  {
+    "method": "Bank Transfer",
     "orderNo": "a273d25b9ecd48b5a97924a6ce49ffdb",
     "fiatCurrency": "UAH",
     "totalFee": "0",

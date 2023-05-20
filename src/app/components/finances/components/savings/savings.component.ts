@@ -6,18 +6,39 @@ import { SAVINGS_STATE } from '../../states/savings.state';
 const STATE = [
   {
     label: 'EURO',
-    amount: 540,
-    exchangeRate: 38.8
+    amount: 500,
+    exchangeRate: 38.8,
+    desctiption: 'Home'
+  },
+  {
+    label: 'EURO',
+    amount: 40,
+    exchangeRate: 38.8,
+    desctiption: 'Wallet'
+  },
+  {
+    label: 'EURO',
+    amount: 150,
+    exchangeRate: 40,
+    desctiption: 'Wallet'
   },
   {
     label: 'USD',
     amount: 1_840,
-    exchangeRate: 37.453
+    exchangeRate: 37.453,
+    desctiption: 'Privatbank'
   },
   {
     label: 'UAH',
-    amount: 0,
-    exchangeRate: 1
+    amount: 2000,
+    exchangeRate: 1,
+    desctiption: 'Monobank jar'
+  },
+  {
+    label: 'UAH',
+    amount: 1000,
+    exchangeRate: 1,
+    desctiption: 'Wallet'
   },
 ];
 

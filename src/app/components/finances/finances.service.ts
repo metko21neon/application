@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { StateInterface } from './interfaces/state.interface';
+import { FinanceIncomeInterface, StateInterface } from './interfaces/state.interface';
 import { FINANCES_STATE } from 'src/app/components/finances/states/finances.state';
 import { TAX_ENUM } from './enums/tax.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { CURRENCY_ENUM } from './enums/currency.enum';
 const SAVINGS_PERCENTAGE = 0.1;
 
 @Injectable({
@@ -25,8 +26,19 @@ export class FinancesService {
     return list.reduce((acc: number, { amount }: { amount: number }) => (acc + amount), 0);
   }
 
+  private manageIncome(list: FinanceIncomeInterface[]): any[] {
+    return list.map((item: FinanceIncomeInterface) => {
+      if (item?.currency === CURRENCY_ENUM.USD) {
+        item.amount = item.amount * item.exchangeRate!;
+      }
+
+      return item;
+    });
+  }
+
   private setDataSource(): void {
     this.state = this.state.map((item: any) => {
+      item.income.list = this.manageIncome(item.income.list);
       item.income.total = this.calculateTotalAmount(item.income.list);
 
       this.calculateTaxes(item.income.total, item.taxes);

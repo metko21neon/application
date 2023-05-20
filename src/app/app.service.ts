@@ -17,7 +17,11 @@ import { STATE } from './states/invest-statistic.state';
 import { WALLET_LIST } from './states/wallet.state';
 import { COLUMN_LIST } from './states/column.state';
 import { COIN_LIST } from './states/coins.state';
+import { ORDERS } from 'src/assets/orders';
 import { Api } from './api/api';
+
+import moment from 'moment';
+const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
 @Injectable({
   providedIn: 'root'
@@ -64,9 +68,123 @@ export class AppService {
     return this.api.getTransactionList();
   }
 
-  getCoinList(): Observable<CoinInterface[]> {
+  synchronizeOrders(): Observable<CoinInterface[]> {
+    const coins = JSON.parse(JSON.stringify(COIN_LIST));
+
+    // const orders = ORDERS.filter((order: any) => order.Type === 'BUY');
+
+    const DATE = '1683550417000';
+
+    // && order.Status === 'Filled'
+    const orders = ORDERS
+      .filter((order: any) => order.Type === 'SELL' || order.Type === 'BUY')
+    // .map((order: any) => {
+    //   order.date = new Date(order['Date(UTC)']).getTime();
+    //   return order;
+    // })
+    // .filter((order: any) => order.date > DATE);
+
+    orders.map((order: any) => {
+      const symbol = order.Pair.replace('USDT', '');
+      const coinIndex = coins.findIndex((item: any) => item.symbol === symbol);
+
+      order['Date(UTC)'] = moment(order['Date(UTC)'], DATE_FORMAT).add({ hours: 3 }).format(DATE_FORMAT);
+
+      if (coinIndex !== -1) {
+        const coin = coins[coinIndex];
+        order.rank = coin.rank;
+        const walletIndex = coin.wallets?.findIndex((wallet: any) => wallet.name === "Binance")!;
+
+        if (walletIndex !== -1) {
+          const wallet = coin.wallets![walletIndex];
+
+          const transactionIndex = wallet.transactions.findIndex((transaction: any) => {
+            return new Date(transaction.date).getTime() === new Date(order['Date(UTC)']).getTime();
+          });
+
+          if (transactionIndex === -1) {
+            let formatted: any = {
+              date: order['Date(UTC)'],
+              price: +order['AvgTrading Price'],
+            };
+
+            switch (order.Type) {
+              case 'BUY':
+                formatted.action = 'buy';
+                formatted.total = +order['Total'];
+                break;
+              case 'SELL':
+                formatted.action = 'sell';
+                formatted.filled = +order['Filled'];
+                break;
+
+              default:
+                break;
+            }
+
+            wallet.transactions.push(formatted);
+          }
+
+        } else {
+          const wallet = {
+            "name": "Binance",
+            "address": "binance_1",
+            "transactions": [
+              {
+                date: order['Date(UTC)'],
+                action: 'buy',
+                total: +order['Total'],
+                price: +order['AvgTrading Price'],
+              }
+            ]
+          };
+
+          coin.wallets.push(wallet);
+        }
+      } else {
+        console.log('not:');
+        const coin = {
+          name: '',
+          symbol: symbol,
+          "token_address": "",
+          "wallets": [
+            {
+              "name": "Binance",
+              "address": "binance_1",
+              "transactions": [
+                {
+                  date: order['Date(UTC)'],
+                  action: 'buy',
+                  total: +order['Total'],
+                  price: +order['AvgTrading Price'],
+                }
+              ]
+            }
+          ],
+        }
+
+        console.log('coin:', coin);
+        coins.push(coin);
+      }
+    });
+
+
+    orders.sort((a: any, b: any) => {
+      if (a.rank < b.rank) return -1;
+      if (a.rank > b.rank) return 1;
+
+      return 0;
+    });
+
+    console.log('ORDERS:', orders);
+    // console.log('coins:', coins);
+
+    return this.getCoinList(coins);
+  }
+
+  getCoinList(coins = COIN_LIST): Observable<CoinInterface[]> {
     // return (this.dbService.getAll('coinList') as Observable<CoinInterface[]>).pipe(
-    return (of(COIN_LIST) as Observable<any[]>).pipe(
+    return (of(coins) as Observable<any[]>).pipe(
       tap((coinList: CoinInterface[]) => {
         coinList.map((coin: CoinInterface) => {
           const coinData = this.coinDataService.getCoinDataBySymbol(coin);
@@ -120,7 +238,8 @@ export class AppService {
   private calculateInvestedAmount(transactions: CryptoHistoryInterface[] = [], coin: CoinInterface): number {
     return transactions.reduce((acc: number, curr: CryptoHistoryInterface) => {
       if (curr.action === CoinHistoryActionEnum.RECEIVE) {
-        return acc + curr.amount! * curr.averagePrice!;
+        return acc;
+        // return acc + curr.amount! * curr.averagePrice!;
       }
 
       if (curr.action === CoinHistoryActionEnum.SPEND) {
@@ -133,7 +252,7 @@ export class AppService {
       }
 
       if (curr.action === CoinHistoryActionEnum.SELL) {
-        return acc - curr.filled! * curr.averagePrice!;
+        return acc - curr.filled! * curr.price!;
       }
 
       if (curr.action === CoinHistoryActionEnum.BUY) {
@@ -145,10 +264,36 @@ export class AppService {
   }
 
   private setCoinPercentResultProperty(coin: CoinInterface, coinData: CoinDataInterface): void {
-    const priceDifference = coinData?.price - (coin.averagePrice ?? coinData?.price);
-    const percentageResult = (priceDifference / ((coin.averagePrice ?? coinData?.price) / 100));
+    // totalInCurrency
+    // investedAmount
+    // const priceDifference = coinData?.price - (coin.averagePrice ?? coinData?.price);
+    const percentageResult = (coin.totalInCurrency / coin.investedAmount - 1) * 100;
 
     coin.percentageResult = coin.averagePrice !== 0 ? percentageResult : 0;
+  }
+
+  private getTime(fullDate: string): number {
+    if (fullDate?.includes('-')) {
+      const [date, time] = fullDate.split(' ');
+      const [year, month, day] = date.split('-');
+      const [hour, minute, second] = time.split(':');
+
+      const newDate = new Date(+year, +month - 1, +day, +hour || 0, +minute || 0, +second || 0);
+
+      return newDate.getTime();
+    }
+
+    if (fullDate?.includes('.')) {
+      const [date, time] = fullDate.split(' ');
+      const [day, month, year] = date.split('.');
+      const [hour, minute, second] = time.split(':');
+
+      const newDate = new Date(+year, +month - 1, +day, +hour || 0, +minute || 0, +second || 0);
+
+      return newDate.getTime();
+    }
+
+    return new Date(fullDate).getTime();
   }
 
   private setCoinAveragePriceProperty(coin: CoinInterface): void {
@@ -158,10 +303,23 @@ export class AppService {
       if (wallet.hasOwnProperty('transactions')) {
         transactions = [...transactions, ...wallet.transactions!];
       }
+    });
 
-      wallet.transactions!.map((transaction: CryptoHistoryInterface, index: number) => {
-        transaction.averagePrice = calculateAveragePrice(wallet.transactions!.slice(0, index + 1));
-      });
+    transactions.sort((a: any, b: any) => {
+      const aDate = this.getTime(a.date);
+      const bDate = this.getTime(b.date);
+
+      if (aDate < bDate) return -1;
+      if (aDate > bDate) return 1;
+
+      return 0;
+    });
+
+    // if (coin.symbol === 'BTC') {
+    //   console.log('transactions:', transactions);
+    // }
+    transactions!.map((transaction: CryptoHistoryInterface, index: number) => {
+      transaction.averagePrice = calculateAveragePrice(transactions!.slice(0, index + 1));
     });
 
     coin.averagePrice = calculateAveragePrice(transactions, coin);
@@ -215,6 +373,8 @@ export class AppService {
   }
 
   private setInvestStatisticState(coinList: CoinInterface[]): void {
+    this.investStatisticState = JSON.parse(JSON.stringify(STATE));
+
     coinList.map((coin: CoinInterface) => {
       coin.wallets.map((wallet: WalletInterface) => {
         this.investStatisticState.totalInCurrency += wallet.totalInCurrency! || 0;

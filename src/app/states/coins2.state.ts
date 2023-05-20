@@ -3152,7 +3152,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
-    "name": "SafePal",
+    "name": "",
     "symbol": "SFP",
     "wallets": [
       {
