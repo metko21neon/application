@@ -1,21 +1,10 @@
 export interface CoinStateInterface {
-  token_address?: string;
-  address?: string;
+  name: string;
   symbol: string;
-  name?: string;
+  token_address: string;
   wallets?: {
-  }[];
-  history?: {
-    averagePrice?: number;
-    executed?: number;
-    filled?: number;
-    amount?: number;
-    total?: number;
-    price?: number;
-    fee?: number;
-
-    wallet?: string;
-    action: string;
-    date: string;
+    name: string;
+    address: string;
+    transactions: any[];
   }[];
 }

@@ -10,7 +10,7 @@ import { AppService } from '../app.service';
 
 import moment from 'moment';
 
-const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
+export const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
 @Injectable({
   providedIn: 'root'
