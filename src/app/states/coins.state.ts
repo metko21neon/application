@@ -99,13 +99,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "filled": 0.00592
           },
           {
-            "date": "2022-12-17 15:16:44",
+            "date": "2022-12-17 16:16:44",
             "action": "buy",
             "price": 16696.21,
             "total": 49.9216679
           },
           {
-            "date": "2023-05-08 18:43:08",
+            "date": "2023-05-08 18:38:27",
             "action": "buy",
             "price": 27880,
             "total": 94.792
@@ -242,19 +242,19 @@ export const COIN_LIST: CoinStateInterface[] = [
             "filled": 0.0784
           },
           {
-            "date": "2022-12-17 15:16:20",
+            "date": "2022-12-17 16:16:20",
             "action": "buy",
             "price": 1179.93,
             "total": 49.911039
           },
           {
-            "date": "2022-12-17 15:22:39",
+            "date": "2022-12-17 16:22:39",
             "action": "buy",
             "price": 1179.49,
             "total": 24.887239
           },
           {
-            "date": "2023-05-08 18:40:59",
+            "date": "2023-05-08 18:40:26",
             "action": "buy",
             "price": 1865.08,
             "total": 47.373032
@@ -294,11 +294,6 @@ export const COIN_LIST: CoinStateInterface[] = [
     "name": "TetherUS",
     "symbol": "USDT",
     "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": []
-      },
       {
         "name": "Trust Wallet (Main)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
@@ -555,38 +550,38 @@ export const COIN_LIST: CoinStateInterface[] = [
             "fee": 0.8
           },
           {
-            "date": "2022-12-17 00:03:44",
+            "date": "2022-12-17 01:03:44",
             "action": "buy",
             "price": 0.2823,
             "total": 24.98355,
             "executed": 88.5
           },
           {
-            "date": "2022-12-17 15:24:00",
+            "date": "2022-12-17 16:24:00",
             "action": "buy",
             "price": 0.2651,
             "total": 24.99893
           },
           {
-            "date": "2023-03-10 06:04:18",
+            "date": "2023-03-10 07:04:06",
             "action": "buy",
             "price": 0.3081,
             "total": 49.97382
           },
           {
-            "date": "2023-03-10 06:36",
             "action": "transfer",
-            "wallet": "Ledger",
-            "address": "",
+            "address": "addr1q98z2sksmtnmepf7a6gpteqfuwa5z8ffah34mnnx8ne0dl8sssl3xjnx5jt60hak7267cy6c9svuc2ntfpd722szkpgqgcxf24",
             "amount": 344.1057,
-            "fee": 0.8
+            "date": "2023-03-10 07:36:15",
+            "fee": 0.8,
+            "network": "ADA"
           },
           {
-            "date": "2023-05-08 18:42:18",
+            "date": "2023-05-08 18:41:57",
             "action": "buy",
             "price": 0.3744,
             "total": 47.47392
-          }
+          },
         ]
       },
       {
@@ -662,20 +657,20 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 149.887504
           },
           {
-            "date": "2023-03-11 11:53",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 9.9,
-            "fee": 0.1
+            "date": "2023-03-11 12:53:26",
+            "fee": 0.1,
+            "network": "MATIC"
           },
           {
-            "date": "2023-03-11 11:55",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 96.8650187,
-            "fee": 0.1
+            "date": "2023-03-11 12:55:06",
+            "fee": 0.1,
+            "network": "MATIC"
           },
           {
             "date": "2023-05-08 18:48:09",
@@ -801,25 +796,25 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.0118
           },
           {
-            "date": "2022-12-17 00:10:22",
+            "date": "2022-12-17 01:10:22",
             "action": "buy",
             "price": 4.971,
             "total": 24.95442
           },
           {
-            "date": "2022-12-17 15:16:00",
+            "date": "2022-12-17 16:16:00",
             "action": "buy",
             "price": 4.684,
             "total": 24.96572
           },
           {
-            "date": "2022-12-17 15:24:41",
+            "date": "2022-12-17 16:24:41",
             "action": "buy",
             "price": 4.678,
             "total": 24.98052
           },
           {
-            "date": "2023-03-10 06:00:16",
+            "date": "2023-03-10 07:00:16",
             "action": "buy",
             "price": 5.38,
             "total": 49.9802
@@ -881,22 +876,38 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.96
           },
           {
-            "date": "2022-12-17 00:04:35",
+            "date": "2022-12-17 01:04:35",
             "action": "buy",
             "price": 12.44,
             "total": 24.88
           },
           {
-            "date": "2023-03-10 06:13:42",
+            "date": "2023-03-10 07:07:18",
             "action": "buy",
             "price": 14.46,
             "total": 49.887
           },
           {
-            "date": "2023-04-21 22:07:33",
+            "date": "2023-04-21 00:37:21",
             "action": "buy",
             "price": 17,
             "total": 74.97
+          },
+          {
+            "action": "transfer",
+            "address": "X-avax1sxnpzqdk5g7etd9853fvn4gcxjj4wl98vlx52z",
+            "amount": 0.092,
+            "date": "2023-04-22 19:58:16",
+            "fee": 0.008,
+            "network": "AVAX"
+          },
+          {
+            "action": "transfer",
+            "address": "X-avax1sxnpzqdk5g7etd9853fvn4gcxjj4wl98vlx52z",
+            "amount": 11.45706872,
+            "date": "2023-04-22 20:02:48",
+            "fee": 0.008,
+            "network": "AVAX"
           },
           {
             "date": "2023-05-08 18:53:04",
@@ -909,7 +920,25 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 41.4528,
             "price": 15.24
-          }
+          },
+        ]
+      },
+      {
+        "name": "Avalanche Wallet",
+        "address": "X-avax1sxnpzqdk5g7etd9853fvn4gcxjj4wl98vlx52z",
+        "transactions": [
+          {
+            "date": "2023-04-22 19:58:16",
+            "action": "receive",
+            "amount": 0.092,
+            "fee": 0.008,
+          },
+          {
+            "date": "2023-04-22 20:02:48",
+            "action": "receive",
+            "amount": 11.45706872,
+            "fee": 0.008,
+          },
         ]
       }
     ],
@@ -960,7 +989,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "receive",
             "amount": 20.78827,
             "fee": 0.013
-          }
+          },
+          {
+            "date": "2023-04-22 19:27:07",
+            "action": "receive",
+            "amount": 6.627,
+            "fee": 0.013,
+          },
         ]
       },
       {
@@ -1002,32 +1037,32 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.998
           },
           {
-            "date": "2022-12-17 19:28:50",
+            "date": "2022-12-17 20:28:50",
             "action": "buy",
             "price": 5.933,
             "total": 49.95586
           },
           {
-            "date": "2023-03-10 06:13:21",
+            "date": "2023-03-10 07:13:20",
             "action": "buy",
             "price": 6.16,
             "total": 49.9576
           },
           {
-            "date": "2023-03-10 19:41",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 0.013,
-            "fee": 0.013
+            "date": "2023-03-10 20:41:14",
+            "fee": 0.013,
+            "network": "BSC"
           },
           {
-            "date": "2023-03-10 19:42",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 20.78827,
-            "fee": 0.013
+            "date": "2023-03-10 20:42:57",
+            "fee": 0.013,
+            "network": "BSC"
           },
           {
             "date": "2023-04-21 00:35:54",
@@ -1036,11 +1071,19 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 49.9992
           },
           {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 6.627,
+            "date": "2023-04-22 19:27:07",
+            "fee": 0.013,
+            "network": "BSC"
+          },
+          {
             "date": "2023-05-08 18:53:16",
             "action": "buy",
             "price": 6.723,
             "total": 14.18553
-          }
+          },
         ]
       },
       {
@@ -1085,7 +1128,7 @@ export const COIN_LIST: CoinStateInterface[] = [
             "filled": 4.2
           },
           {
-            "date": "2023-03-10 06:05:47",
+            "date": "2023-03-10 07:05:47",
             "action": "buy",
             "price": 5.668,
             "total": 49.93508
@@ -1128,38 +1171,46 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.953
           },
           {
-            "date": "2022-12-17 00:05:03",
+            "date": "2022-12-17 01:05:03",
             "action": "buy",
             "price": 8.983,
             "total": 24.97274
           },
           {
-            "date": "2023-03-10 05:58:57",
+            "date": "2023-03-10 06:58:57",
             "action": "buy",
             "price": 11.08,
             "total": 49.9708
           },
           {
-            "date": "2023-03-10 19:20",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
             "amount": 0.006,
-            "fee": 0.004
+            "date": "2023-03-10 20:20:36",
+            "fee": 0.004,
+            "network": "ATOM"
           },
           {
-            "date": "2023-03-10 19:23",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
             "amount": 12.13701,
-            "fee": 0.004
+            "date": "2023-03-10 20:23:06",
+            "fee": 0.004,
+            "network": "ATOM"
           },
           {
             "date": "2023-04-21 00:36:23",
             "action": "buy",
             "price": 11.438,
             "total": 74.9189
+          },
+          {
+            "action": "transfer",
+            "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
+            "amount": 6.546,
+            "date": "2023-04-21 00:51:20",
+            "fee": 0.004,
+            "network": "ATOM"
           },
           {
             "date": "2023-05-08 18:53:37",
@@ -1184,7 +1235,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "receive",
             "amount": 12.13701,
             "fee": 0.004
-          }
+          },
+          {
+            "date": "2023-04-21 00:51:20",
+            "action": "receive",
+            "amount": 6.546,
+            "fee": 0.004
+          },
         ]
       }
     ],
@@ -1205,7 +1262,7 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 67.1322281301
           },
           {
-            "date": "2022-12-17 00:11:57",
+            "date": "2022-12-17 01:11:57",
             "action": "buy",
             "price": 0.0793,
             "total": 24.9002
@@ -1278,24 +1335,24 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.03744
           },
           {
-            "date": "2022-12-17 19:31:45",
+            "date": "2022-12-17 20:31:45",
             "action": "buy",
             "price": 3.614,
             "total": 49.98162
           },
           {
-            "date": "2023-03-10 06:09:17",
+            "date": "2023-03-10 07:09:00",
             "action": "buy",
             "price": 4.764,
             "total": 49.97436
           },
           {
-            "date": "2023-03-10 06:26",
             "action": "transfer",
-            "wallet": "ICP wallet",
             "address": "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
             "amount": 31.02599524,
-            "fee": 0.0003
+            "date": "2023-03-10 07:26:40",
+            "fee": 0.0003,
+            "network": "ICP"
           },
           {
             "date": "2023-05-08 18:54:59",
@@ -1347,19 +1404,19 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2022-12-17 00:10:43",
+            "date": "2022-12-17 01:10:43",
             "action": "buy",
             "price": 104.3,
             "total": 24.9277
           },
           {
-            "date": "2022-12-17 15:19:55",
+            "date": "2022-12-17 16:19:55",
             "action": "buy",
             "price": 101.6,
             "total": 24.9936
           },
           {
-            "date": "2023-03-10 06:19:25",
+            "date": "2023-03-10 07:18:47",
             "action": "buy",
             "price": 108.7,
             "total": 24.8923
@@ -1396,38 +1453,38 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 130.689
           },
           {
-            "date": "2022-12-17 00:09:38",
+            "date": "2022-12-17 01:09:38",
             "action": "buy",
             "price": 3.79,
             "total": 25.0898
           },
           {
-            "date": "2022-12-17 15:19:18",
+            "date": "2022-12-17 16:19:18",
             "action": "buy",
             "price": 3.042,
             "total": 49.98006
           },
           {
-            "date": "2023-03-10 06:09:29",
+            "date": "2023-03-10 07:08:13",
             "action": "buy",
             "price": 5.405,
             "total": 49.99625
           },
           {
-            "date": "2023-03-10 16:32",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
             "amount": 0.009,
-            "fee": 0.001
+            "date": "2023-03-10 17:32:37",
+            "fee": 0.001,
+            "network": "FIL"
           },
           {
-            "date": "2023-03-10 16:36",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
             "amount": 57.00520819,
-            "fee": 0.001
+            "date": "2023-03-10 17:36:10",
+            "fee": 0.001,
+            "network": "FIL"
           },
           {
             "date": "2023-04-21 00:36:46",
@@ -1436,7 +1493,15 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 74.97425
           },
           {
-            "date": "2023-05-08 18:51:17",
+            "action": "transfer",
+            "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
+            "amount": 13.569,
+            "date": "2023-04-21 00:55:44",
+            "fee": 0.001,
+            "network": "FIL"
+          },
+          {
+            "date": "2023-05-08 18:45:59",
             "action": "buy",
             "price": 4.79,
             "total": 14.2263
@@ -1458,7 +1523,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "receive",
             "amount": 57.00520819,
             "fee": 0.001
-          }
+          },
+          {
+            "date": "2023-04-21 00:55:44",
+            "action": "receive",
+            "amount": 13.569,
+            "fee": 0.001
+          },
         ]
       }
     ],
@@ -1541,7 +1612,7 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 27.74
           },
           {
-            "date": "2022-12-17 00:06:29",
+            "date": "2022-12-17 01:06:29",
             "action": "buy",
             "price": 1.488,
             "total": 24.9984
@@ -1566,13 +1637,13 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2023-04-21 00:38:05",
+            "date": "2023-04-21 00:38:04",
             "action": "buy",
             "price": 1.4278,
             "total": 24.9865
           },
           {
-            "date": "2023-05-08 04:43:37",
+            "date": "2023-04-21 00:38:15",
             "action": "buy",
             "price": 1.2,
             "total": 49.92
@@ -1609,7 +1680,7 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 25
           },
           {
-            "date": "2022-12-17 19:31:12",
+            "date": "2022-12-17 20:31:12",
             "action": "buy",
             "price": 0.01672,
             "total": 24.984792
@@ -1628,32 +1699,32 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2022-12-17 00:08:42",
+            "date": "2022-12-17 01:08:42",
             "action": "buy",
             "price": 0.2003,
             "total": 25.0375
           },
           {
-            "date": "2023-03-10 05:51:04",
+            "date": "2023-03-10 06:51:04",
             "action": "buy",
             "price": 0.1922,
             "total": 49.972
           },
           {
-            "date": "2023-03-11 15:35",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
             "amount": 9.992,
-            "fee": 0.008
+            "date": "2023-03-11 16:35:38",
+            "fee": 0.008,
+            "network": "ALGO"
           },
           {
-            "date": "2023-03-11 15:37",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
             "amount": 374.992,
-            "fee": 0.008
+            "date": "2023-03-11 16:37:48",
+            "fee": 0.008,
+            "network": "ALGO"
           },
           {
             "date": "2023-05-08 18:57:34",
@@ -1693,13 +1764,13 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2022-11-22 02:13:46",
+            "date": "2022-11-22 03:13:46",
             "action": "buy",
             "price": 0.0544,
             "total": 28.1248
           },
           {
-            "date": "2022-12-17 19:33:43",
+            "date": "2022-12-17 20:33:43",
             "action": "buy",
             "price": 0.057,
             "total": 25.023
@@ -1754,7 +1825,19 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "receive",
             "amount": 259.9381,
             "fee": 5
-          }
+          },
+          {
+            "date": "2023-04-23 02:49:36",
+            "action": "receive",
+            "amount": 9.7,
+            "fee": 0.3,
+          },
+          {
+            "date": "2023-04-23 02:51:10",
+            "action": "receive",
+            "amount": 215.84956251,
+            "fee": 0.3,
+          },
         ]
       },
       {
@@ -1768,17 +1851,33 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.99
           },
           {
-            "date": "2022-12-17 19:32:38",
+            "date": "2022-12-17 20:32:38",
             "action": "buy",
             "price": 0.202,
             "total": 24.846
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 9.7,
+            "date": "2023-04-23 02:49:36",
+            "fee": 0.3,
+            "network": "FTM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 215.84956251,
+            "date": "2023-04-23 02:51:10",
+            "fee": 0.3,
+            "network": "FTM"
           },
           {
             "date": "2023-05-08 18:58:02",
             "action": "buy",
             "total": 13.9046,
             "price": 0.3758
-          }
+          },
         ]
       }
     ],
@@ -1818,7 +1917,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2023-03-10 06:01:25",
+            "date": "2023-03-10 06:56:37",
             "action": "buy",
             "price": 67.1,
             "total": 49.9895
@@ -1855,10 +1954,10 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 25.001
           },
           {
-            "date": "2022-11-22 02:13:08",
+            "date": "2022-11-22 03:13:08",
             "action": "sell",
             "price": 0.425,
-            "filled": 66.14021164021165
+            "filled": 66.14
           }
         ]
       }
@@ -2194,7 +2293,7 @@ export const COIN_LIST: CoinStateInterface[] = [
             "executed": 77.4
           },
           {
-            "date": "2023-03-10 06:15:14",
+            "date": "2023-03-10 07:14:46",
             "action": "buy",
             "price": 0.655,
             "total": 35.9595
@@ -2263,13 +2362,13 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2022-12-17 00:06:59",
+            "date": "2022-12-17 01:06:59",
             "action": "buy",
             "price": 44.87,
             "total": 24.99259
           },
           {
-            "date": "2023-03-10 06:19:16",
+            "date": "2023-03-10 07:19:16",
             "action": "buy",
             "price": 52.68,
             "total": 24.97032
@@ -2288,13 +2387,13 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2022-12-17 15:19:03",
+            "date": "2022-12-17 16:19:03",
             "action": "buy",
             "price": 1.6049,
             "total": 24.0735
           },
           {
-            "date": "2023-03-10 06:16:53",
+            "date": "2023-03-10 07:16:09",
             "action": "buy",
             "price": 1.1093,
             "total": 25.5139
@@ -2493,24 +2592,24 @@ export const COIN_LIST: CoinStateInterface[] = [
             "fee": 0.033
           },
           {
-            "date": "2022-12-17 19:33:24",
+            "date": "2022-12-17 20:33:24",
             "action": "buy",
             "price": 3.285,
             "total": 24.99885
           },
           {
-            "date": "2023-03-10 06:10:35",
+            "date": "2023-03-10 07:10:35",
             "action": "buy",
             "price": 3.529,
             "total": 49.97064
           },
           {
-            "date": "2023-03-10 06:40",
             "action": "transfer",
-            "wallet": "Trust Wallet (Main)",
             "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
             "amount": 21.73939,
-            "fee": 0.023
+            "date": "2023-03-10 07:40:11",
+            "fee": 0.023,
+            "network": "BSC"
           },
           {
             "date": "2023-04-24 22:48:37",
@@ -2523,6 +2622,14 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 39.99306,
             "price": 1.787
+          },
+          {
+            "action": "transfer",
+            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            "amount": 39.607,
+            "date": "2023-05-12 09:07:49",
+            "fee": 0.023,
+            "network": "BSC"
           }
         ]
       },
@@ -2582,7 +2689,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "receive",
             "amount": 21.73939,
             "fee": 0.023
-          }
+          },
+          {
+            "date": "2023-05-12 09:07:49",
+            "action": "receive",
+            "amount": 39.607,
+            "fee": 0.023
+          },
         ]
       }
     ],
@@ -2603,13 +2716,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 49.818
           },
           {
-            "date": "2022-12-17 15:20:47",
+            "date": "2022-12-17 16:20:47",
             "action": "buy",
             "price": 1.412,
             "total": 24.9924
           },
           {
-            "date": "2023-03-10 06:21:47",
+            "date": "2023-03-10 07:21:26",
             "action": "buy",
             "price": 2.009,
             "total": 24.99196
@@ -2646,13 +2759,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 44.946
           },
           {
-            "date": "2022-12-17 15:25:36",
+            "date": "2022-12-17 16:25:36",
             "action": "buy",
             "price": 0.384,
             "total": 24.9984
           },
           {
-            "date": "2023-03-10 06:12:41",
+            "date": "2023-03-10 07:12:41",
             "action": "buy",
             "price": 0.434,
             "total": 49.9968
@@ -2666,12 +2779,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "fee": 0.16
           },
           {
-            "date": "2023-03-10 19:34",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 272.13,
-            "fee": 0.16
+            "date": "2023-03-10 20:34:36",
+            "fee": 0.16,
+            "network": "BSC"
           },
           {
             "date": "2023-05-08 21:33:46",
@@ -2831,7 +2944,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2023-03-10 05:52:50",
+            "date": "2023-03-10 06:52:46",
             "action": "buy",
             "price": 7.43,
             "total": 49.9296
@@ -2881,7 +2994,7 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.867
           },
           {
-            "date": "2023-03-10 06:12:36",
+            "date": "2023-03-10 07:12:00",
             "action": "buy",
             "price": 1.045,
             "total": 49.951
@@ -2959,45 +3072,53 @@ export const COIN_LIST: CoinStateInterface[] = [
             "executed": 7.92
           },
           {
-            "date": "2022-12-17 00:07:34",
+            "date": "2022-12-17 01:07:34",
             "action": "buy",
             "price": 1.633,
             "total": 24.96857,
             "executed": 15.29
           },
           {
-            "date": "2022-12-17 15:26:46",
+            "date": "2022-12-17 16:26:46",
             "action": "buy",
             "price": 1.585,
             "total": 23.9652
           },
           {
-            "date": "2023-03-10 06:14:06",
+            "date": "2023-03-10 07:14:06",
             "action": "buy",
             "price": 1.931,
             "total": 49.99359
           },
           {
-            "date": "2023-03-10 18:59",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
             "amount": 0.0016,
-            "fee": 0.0016
+            "date": "2023-03-10 19:59:49",
+            "fee": 0.0016,
+            "network": "WAVES"
           },
           {
-            "date": "2023-03-10 19:04",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
             "amount": 67.185505,
-            "fee": 0.0016
+            "date": "2023-03-10 20:04:38",
+            "fee": 0.0016,
+            "network": "WAVES"
           },
           {
-            "date": "2023-04-21 00:42:49",
+            "date": "2023-04-21 00:40:11",
             "action": "buy",
             "price": 1.999,
             "total": 82.51872
+          },
+          {
+            "action": "transfer",
+            "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+            "amount": 46.29750475,
+            "date": "2023-04-21 01:01:39",
+            "fee": 0.0016,
+            "network": "WAVES"
           },
           {
             "date": "2023-05-08 21:41:25",
@@ -3022,7 +3143,13 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "receive",
             "amount": 67.185505,
             "fee": 0.0016
-          }
+          },
+          {
+            "date": "2023-04-21 01:01:39",
+            "action": "receive",
+            "amount": 46.29750475,
+            "fee": 0.0016
+          },
         ]
       }
     ],
@@ -3067,10 +3194,10 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 99.954
           },
           {
-            "date": "2022-11-24 11:58:28",
+            "date": "2022-11-24 12:58:28",
             "action": "sell",
             "price": 0.3551,
-            "filled": 708.2
+            "filled": 713.4
           }
         ]
       }
@@ -3092,7 +3219,7 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.717
           },
           {
-            "date": "2023-03-10 06:11:24",
+            "date": "2023-03-10 07:11:24",
             "action": "buy",
             "price": 0.918,
             "total": 49.99428
@@ -3235,7 +3362,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2022-11-24 11:58:56",
+            "date": "2022-11-24 12:58:56",
             "action": "buy",
             "price": 0.685,
             "total": 253.313

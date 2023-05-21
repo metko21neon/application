@@ -1,4 +1,5 @@
 import { CashTransactionsInterface } from '../cash-transactions/interfaces/cash-transactions.interface';
+import { BinanceSynchronizationService } from '../../services/binance-synchronization.service';
 import { InvestStatisticInterface } from '../../interfaces/invest-statistic.interface';
 import { CoinDataInterface } from '../../interfaces/coin-data.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
@@ -47,6 +48,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   private coinList: CoinInterface[] = [];
 
   constructor(
+    private binanceSynchronizationService: BinanceSynchronizationService,
     private coinDataService: CoinDataService,
     private appService: AppService
   ) { }
@@ -71,7 +73,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   }
 
   synchronizeOrders(): void {
-    const stream$ = this.appService.synchronizeOrders().subscribe((data: any[]) => {
+    const stream$ = this.binanceSynchronizationService.synchronizeOrders().subscribe((data: any[]) => {
       console.log('synchronizeOrders:', data);
     });
 

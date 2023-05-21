@@ -17,11 +17,7 @@ import { STATE } from './states/invest-statistic.state';
 import { WALLET_LIST } from './states/wallet.state';
 import { COLUMN_LIST } from './states/column.state';
 import { COIN_LIST } from './states/coins.state';
-import { ORDERS } from 'src/assets/orders';
 import { Api } from './api/api';
-
-import moment from 'moment';
-const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
 @Injectable({
   providedIn: 'root'
@@ -66,120 +62,6 @@ export class AppService {
 
   getTransactionList(): Observable<any> {
     return this.api.getTransactionList();
-  }
-
-  synchronizeOrders(): Observable<CoinInterface[]> {
-    const coins = JSON.parse(JSON.stringify(COIN_LIST));
-
-    // const orders = ORDERS.filter((order: any) => order.Type === 'BUY');
-
-    const DATE = '1683550417000';
-
-    // && order.Status === 'Filled'
-    const orders = ORDERS
-      .filter((order: any) => order.Type === 'SELL' || order.Type === 'BUY')
-    // .map((order: any) => {
-    //   order.date = new Date(order['Date(UTC)']).getTime();
-    //   return order;
-    // })
-    // .filter((order: any) => order.date > DATE);
-
-    orders.map((order: any) => {
-      const symbol = order.Pair.replace('USDT', '');
-      const coinIndex = coins.findIndex((item: any) => item.symbol === symbol);
-
-      order['Date(UTC)'] = moment(order['Date(UTC)'], DATE_FORMAT).add({ hours: 3 }).format(DATE_FORMAT);
-
-      if (coinIndex !== -1) {
-        const coin = coins[coinIndex];
-        order.rank = coin.rank;
-        const walletIndex = coin.wallets?.findIndex((wallet: any) => wallet.name === "Binance")!;
-
-        if (walletIndex !== -1) {
-          const wallet = coin.wallets![walletIndex];
-
-          const transactionIndex = wallet.transactions.findIndex((transaction: any) => {
-            return new Date(transaction.date).getTime() === new Date(order['Date(UTC)']).getTime();
-          });
-
-          if (transactionIndex === -1) {
-            let formatted: any = {
-              date: order['Date(UTC)'],
-              price: +order['AvgTrading Price'],
-            };
-
-            switch (order.Type) {
-              case 'BUY':
-                formatted.action = 'buy';
-                formatted.total = +order['Total'];
-                break;
-              case 'SELL':
-                formatted.action = 'sell';
-                formatted.filled = +order['Filled'];
-                break;
-
-              default:
-                break;
-            }
-
-            wallet.transactions.push(formatted);
-          }
-
-        } else {
-          const wallet = {
-            "name": "Binance",
-            "address": "binance_1",
-            "transactions": [
-              {
-                date: order['Date(UTC)'],
-                action: 'buy',
-                total: +order['Total'],
-                price: +order['AvgTrading Price'],
-              }
-            ]
-          };
-
-          coin.wallets.push(wallet);
-        }
-      } else {
-        console.log('not:');
-        const coin = {
-          name: '',
-          symbol: symbol,
-          "token_address": "",
-          "wallets": [
-            {
-              "name": "Binance",
-              "address": "binance_1",
-              "transactions": [
-                {
-                  date: order['Date(UTC)'],
-                  action: 'buy',
-                  total: +order['Total'],
-                  price: +order['AvgTrading Price'],
-                }
-              ]
-            }
-          ],
-        }
-
-        console.log('coin:', coin);
-        coins.push(coin);
-      }
-    });
-
-
-    orders.sort((a: any, b: any) => {
-      if (a.rank < b.rank) return -1;
-      if (a.rank > b.rank) return 1;
-
-      return 0;
-    });
-
-    console.log('ORDERS:', orders);
-    // console.log('coins:', coins);
-
-    return this.getCoinList(coins);
   }
 
   getCoinList(coins = COIN_LIST): Observable<CoinInterface[]> {
