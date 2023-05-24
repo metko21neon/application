@@ -42,7 +42,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   isHideUntracked = true;
   isLoading = false;
 
-  updatedDate = '12.04.2023 00:30';
+  updatedDate = '24.05.2023 20:00';
 
   private subscription: Subscription = new Subscription();
   private coinList: CoinInterface[] = [];

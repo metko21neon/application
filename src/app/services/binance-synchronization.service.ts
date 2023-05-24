@@ -46,14 +46,19 @@ export class BinanceSynchronizationService {
     const coins = JSON.parse(JSON.stringify(COIN_LIST));
 
     // && order.Status === 'Filled'
-    const orders = ORDERS.filter((order: any) => order.Type === 'SELL' || order.Type === 'BUY');
+    const orders = ORDERS
+      .filter((order: any) => order.Type === 'SELL' || order.Type === 'BUY')
+      .filter((order: any) => order.Total !== '0');
 
     orders.map((order: any) => {
       const symbol = order.Pair.replace('USDT', '');
+      if (symbol === 'UAH') return;
+
+      order['Date(UTC)'] = moment(order['Date(UTC)'], DATE_FORMAT).add({ hours: 3 }).format(DATE_FORMAT);
+
       const coinIndex = coins.findIndex((item: any) => item.symbol === symbol);
       const transaction = this.prepareTransaction(order);
 
-      order['Date(UTC)'] = moment(order['Date(UTC)'], DATE_FORMAT).add({ hours: 3 }).format(DATE_FORMAT);
 
       if (coinIndex !== -1) {
         const coin = coins[coinIndex];
@@ -69,6 +74,16 @@ export class BinanceSynchronizationService {
 
           if (transactionIndex === -1) {
             wallet.transactions.push(transaction);
+
+            wallet.transactions.sort((a: any, b: any) => {
+              const aDate = this.appService.getTime(a.date);
+              const bDate = this.appService.getTime(b.date);
+
+              if (aDate < bDate) return -1;
+              if (aDate > bDate) return 1;
+
+              return 0;
+            });
           }
 
         } else {
@@ -119,10 +134,11 @@ export class BinanceSynchronizationService {
 
     withdrawals.map((withdrawal: any) => {
       const symbol = withdrawal.Coin;
-      const coinIndex = coins.findIndex((item: any) => item.symbol === symbol);
+      if (symbol === 'UAH') return;
 
       withdrawal['Date(UTC)'] = moment(withdrawal['Date(UTC)'], DATE_FORMAT).add({ hours: 3 }).format(DATE_FORMAT);
 
+      const coinIndex = coins.findIndex((item: any) => item.symbol === symbol);
       const transaction = this.prepareWithdrawal(withdrawal);
 
       if (coinIndex !== -1) {
@@ -139,6 +155,16 @@ export class BinanceSynchronizationService {
 
           if (transactionIndex === -1) {
             wallet.transactions.push(transaction);
+
+            wallet.transactions.sort((a: any, b: any) => {
+              const aDate = this.appService.getTime(a.date);
+              const bDate = this.appService.getTime(b.date);
+
+              if (aDate < bDate) return -1;
+              if (aDate > bDate) return 1;
+
+              return 0;
+            });
           }
 
         } else {

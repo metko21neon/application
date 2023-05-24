@@ -109,6 +109,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "price": 27880,
             "total": 94.792
+          },
+          {
+            "date": "2023-05-24 19:19:27",
+            "price": 26197.75,
+            "action": "buy",
+            "total": 49.775725
           }
         ]
       },
@@ -297,9 +303,65 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "USDT",
     "wallets": [
       {
+        "name": "Binance",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2023-04-28 20:12",
+            "action": "receive",
+            "amount": 620.68,
+            "fee": 0
+          },
+          {
+            "action": "transfer",
+            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            "amount": 9.71,
+            "date": "2023-03-30 11:10:07",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            "amount": 610.39,
+            "date": "2023-03-30 11:13:59",
+            "fee": 0.29,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
         "name": "Trust Wallet (Main)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
+          {
+            "date": "2023-03-30 11:10:07",
+            "action": "receive",
+            "amount": 9.71,
+            "fee": 0.29
+          },
+          {
+            "date": "2023-03-30 11:13:59",
+            "action": "receive",
+            "amount": 610.39,
+            "fee": 0.29
+          },
+          {
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 1,
+            "date": "2023-04-20 20:57:10",
+            "fee": 0,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 619.1,
+            "date": "2023-04-20 20:58:20",
+            "fee": 0,
+            "network": "BSC"
+          },
           {
             "date": "2023-05-02 14:33:00",
             "action": "receive",
@@ -924,6 +986,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 41.4528,
             "price": 15.24
+          },
+          {
+            "date": "2023-05-24 19:23:32",
+            "price": 14.07,
+            "action": "buy",
+            "total": 49.9485
           }
         ]
       },
@@ -1087,6 +1155,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "price": 6.723,
             "total": 14.18553
+          },
+          {
+            "date": "2023-05-24 19:23:51",
+            "price": 6.252,
+            "action": "buy",
+            "total": 49.95348
           }
         ]
       },
@@ -1221,6 +1295,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "price": 11.011,
             "total": 14.20419
+          },
+          {
+            "date": "2023-05-24 19:24:19",
+            "price": 10.341,
+            "action": "buy",
+            "total": 49.94703
           }
         ]
       },
@@ -1657,6 +1737,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 14.22597,
             "price": 1.1757
+          },
+          {
+            "date": "2023-05-24 19:22:56",
+            "price": 1.0994,
+            "action": "buy",
+            "total": 49.91276
           }
         ]
       }
@@ -1790,6 +1876,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 14.161,
             "price": 0.119
+          },
+          {
+            "date": "2023-05-24 19:22:18",
+            "price": 0.1139,
+            "action": "buy",
+            "total": 49.8882
           }
         ]
       }
@@ -2059,16 +2151,22 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 24.91563
           },
           {
+            "date": "2023-05-08 21:36:15",
+            "action": "buy",
+            "total": 19.98624,
+            "price": 1.0464
+          },
+          {
             "date": "2023-05-08 21:36:36",
             "action": "buy",
             "total": 19.95,
             "price": 1.05
           },
           {
-            "date": "2023-05-08 21:36:15",
+            "date": "2023-05-24 19:20:59",
+            "price": 0.9662,
             "action": "buy",
-            "total": 19.98624,
-            "price": 1.0464
+            "total": 49.95254
           }
         ]
       }
@@ -2307,6 +2405,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 19.981,
             "price": 0.53
+          },
+          {
+            "date": "2023-05-24 19:21:56",
+            "price": 0.547,
+            "action": "buy",
+            "total": 49.9958
           }
         ]
       }
@@ -2332,6 +2436,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "sell",
             "price": 0.00004732,
             "filled": 528317
+          },
+          {
+            "date": "2023-05-08 21:38:48",
+            "price": 0.0000253,
+            "action": "buy",
+            "total": 19.9999789
           }
         ]
       }
@@ -2736,6 +2846,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 19.99173,
             "price": 2.089
+          },
+          {
+            "date": "2023-05-24 19:21:33",
+            "price": 2.01,
+            "action": "buy",
+            "total": 49.9887
           }
         ]
       }
@@ -3351,6 +3467,12 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 49.99912,
             "price": 0.00302
+          },
+          {
+            "date": "2023-05-24 19:25:33",
+            "price": 0.002558,
+            "action": "buy",
+            "total": 54.623532
           }
         ]
       }

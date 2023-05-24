@@ -154,7 +154,7 @@ export class AppService {
     coin.percentageResult = coin.averagePrice !== 0 ? percentageResult : 0;
   }
 
-  private getTime(fullDate: string): number {
+  getTime(fullDate: string): number {
     if (fullDate?.includes('-')) {
       const [date, time] = fullDate.split(' ');
       const [year, month, day] = date.split('-');

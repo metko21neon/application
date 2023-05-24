@@ -250,12 +250,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 24_600
-        },
-        {
-          source: "Cryptocurrency",
-          payed: false,
-          amount: 9_200
+          amount: 33_800
         },
       ]
     },
@@ -341,8 +336,13 @@ export const FINANCES_STATE: StateInterface[] = [
         },
         {
           source: "Cryptocurrency",
+          payed: true,
+          amount: 10_150
+        },
+        {
+          source: "Cryptocurrency",
           payed: false,
-          amount: 20_300
+          amount: 10_150
         },
       ]
     },

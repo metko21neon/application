@@ -4,6 +4,18 @@ export const DEPOSIT: DepositInterface[] = [
   {
     "method": "Bank Transfer",
     "orderNo": "550b135930484595ab1977fce9532ef8",
+    "fiatCurrency": "UAH",
+    "totalFee": "0",
+    "status": "Successful",
+    "updateTime": 1684847673000,
+    "indicatedAmount": "19363",
+    "usdPrice": "38.42",
+    "amount": "19363",
+    "createTime": 1684847673000
+  },
+  {
+    "method": "Bank Transfer",
+    "orderNo": "550b135930484595ab1977fce9532ef8",
     "fiatCurrency": "USD",
     "totalFee": "0",
     "status": "Successful",
