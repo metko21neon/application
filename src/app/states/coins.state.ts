@@ -6,7 +6,49 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BTC",
     "wallets": [
       {
-        "name": "WhiteBit",
+        "name": "Ledger (Ledger wallet)",
+        "address": "ledger_1",
+        "transactions": [
+          {
+            "date": "2021-09-24 11:51:00",
+            "action": "receive",
+            "amount": 0.0005,
+            "fee": 0.0005
+          },
+          {
+            "date": "2022-11-15 01:33:00",
+            "action": "receive",
+            "amount": 0.001,
+            "fee": 0.0004
+          },
+          {
+            "date": "2022-11-15 12:09:00",
+            "action": "receive",
+            "amount": 0.016286,
+            "fee": 0.0004
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 0.0000039,
+            "date": "2023-05-24 23:41:28",
+            "fee": 0.0000039
+          },
+          {
+            "action": "receive",
+            "amount": 0.01237842,
+            "date": "2023-05-24 23:43:38",
+            "fee": 0.0000039
+          }
+        ]
+      },
+      {
+        "name": "WhiteBit (WhiteBit wallet)",
         "address": "whitebit_1",
         "transactions": [
           {
@@ -34,7 +76,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         ]
       },
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -115,30 +157,22 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 26197.75,
             "action": "buy",
             "total": 49.775725
-          }
-        ]
-      },
-      {
-        "name": "Ledger wallet",
-        "address": "ledger_1",
-        "transactions": [
-          {
-            "date": "2021-09-24 11:51:00",
-            "action": "receive",
-            "amount": 0.0005,
-            "fee": 0.0005
           },
           {
-            "date": "2022-11-15 01:33:00",
-            "action": "receive",
-            "amount": 0.001,
-            "fee": 0.0004
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 0.0000039,
+            "date": "2023-05-24 23:41:28",
+            "fee": 0.0000039,
+            "network": "BSC"
           },
           {
-            "date": "2022-11-15 12:09:00",
-            "action": "receive",
-            "amount": 0.016286,
-            "fee": 0.0004
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 0.01237842,
+            "date": "2023-05-24 23:43:38",
+            "fee": 0.0000039,
+            "network": "BSC"
           }
         ]
       }
@@ -150,39 +184,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ETH",
     "wallets": [
       {
-        "name": "WhiteBit",
-        "address": "whitebit_1",
-        "transactions": [
-          {
-            "date": "2022-11-13 19:07:39",
-            "action": "buy",
-            "price": 1230,
-            "total": 99.8883
-          },
-          {
-            "date": "2022-11-29 20:25:46",
-            "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
-            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
-            "amount": 0.0796563,
-            "fee": 0.0015537
-          }
-        ]
-      },
-      {
-        "name": "Trust Wallet (Savings)",
-        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
-        "transactions": [
-          {
-            "date": "2022-11-29 20:25:46",
-            "action": "receive",
-            "amount": 0.0796563,
-            "fee": 0.0015537
-          }
-        ]
-      },
-      {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -268,19 +270,19 @@ export const COIN_LIST: CoinStateInterface[] = [
         ]
       },
       {
-        "name": "Trust Wallet (Main)",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
         "transactions": [
           {
-            "date": "2022-06-16 13:21:00",
+            "date": "2022-11-29 20:25:46",
             "action": "receive",
-            "amount": 0.0134,
-            "fee": 0.0005
+            "amount": 0.0796563,
+            "fee": 0.0015537
           }
         ]
       },
       {
-        "name": "Metamask wallet",
+        "name": "Metamask (Metamask wallet)",
         "address": "metamask_1",
         "transactions": [
           {
@@ -294,6 +296,38 @@ export const COIN_LIST: CoinStateInterface[] = [
             "amount": 0.03568501
           }
         ]
+      },
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2022-06-16 13:21:00",
+            "action": "receive",
+            "amount": 0.0134,
+            "fee": 0.0005
+          }
+        ]
+      },
+      {
+        "name": "WhiteBit (WhiteBit wallet)",
+        "address": "whitebit_1",
+        "transactions": [
+          {
+            "date": "2022-11-13 19:07:39",
+            "action": "buy",
+            "price": 1230,
+            "total": 99.8883
+          },
+          {
+            "date": "2022-11-29 20:25:46",
+            "action": "transfer",
+            "wallet": "Trust Wallet (Savings)",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 0.0796563,
+            "fee": 0.0015537
+          }
+        ]
       }
     ],
     "token_address": ""
@@ -303,35 +337,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "USDT",
     "wallets": [
       {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2023-04-28 20:12",
-            "action": "receive",
-            "amount": 620.68,
-            "fee": 0
-          },
-          {
-            "action": "transfer",
-            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-            "amount": 9.71,
-            "date": "2023-03-30 11:10:07",
-            "fee": 0.29,
-            "network": "BSC"
-          },
-          {
-            "action": "transfer",
-            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-            "amount": 610.39,
-            "date": "2023-03-30 11:13:59",
-            "fee": 0.29,
-            "network": "BSC"
-          }
-        ]
-      },
-      {
-        "name": "Trust Wallet (Main)",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -369,6 +375,34 @@ export const COIN_LIST: CoinStateInterface[] = [
             "fee": 0
           }
         ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2023-04-28 20:12",
+            "action": "receive",
+            "amount": 620.68,
+            "fee": 0
+          },
+          {
+            "action": "transfer",
+            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            "amount": 9.71,
+            "date": "2023-03-30 11:10:07",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            "amount": 610.39,
+            "date": "2023-03-30 11:13:59",
+            "fee": 0.29,
+            "network": "BSC"
+          }
+        ]
       }
     ],
     "token_address": ""
@@ -378,7 +412,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BNB",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -396,7 +430,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         ]
       },
       {
-        "name": "Trust Wallet (main)",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -415,7 +449,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "XRP",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Ledger (Ledger wallet)",
+        "address": "ledger_1",
+        "transactions": [
+          {
+            "date": "2023-01-08 22:20:00",
+            "action": "receive",
+            "amount": 29.8,
+            "fee": 0.2
+          },
+          {
+            "date": "2023-01-08 22:24:00",
+            "action": "receive",
+            "amount": 552.321343,
+            "fee": 0.2
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -483,7 +535,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         ]
       },
       {
-        "name": "YouHolder Wallet",
+        "name": "YouHolder (YouHolder wallet)",
         "address": "you_holder_1",
         "transactions": [
           {
@@ -515,24 +567,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "fee": 0.5
           }
         ]
-      },
-      {
-        "name": "Ledger",
-        "address": "ledger_1",
-        "transactions": [
-          {
-            "date": "2023-01-08 22:20:00",
-            "action": "receive",
-            "amount": 29.8,
-            "fee": 0.2
-          },
-          {
-            "date": "2023-01-08 22:24:00",
-            "action": "receive",
-            "amount": 552.321343,
-            "fee": 0.2
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -542,35 +576,43 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ADA",
     "wallets": [
       {
-        "name": "WhiteBit",
-        "address": "whitebit_1",
+        "name": "Ledger (Ledger wallet)",
+        "address": "ledger_1",
         "transactions": [
           {
-            "date": "2022-11-12 01:53:14",
-            "action": "buy",
-            "price": 0.354803,
-            "total": 74.92374951
-          },
-          {
-            "date": "2022-11-14 23:58:21",
-            "action": "transfer",
-            "wallet": "Ledger",
-            "address": "",
+            "date": "2022-11-15 12:01:00",
+            "action": "receive",
             "amount": 16,
             "fee": 2
           },
           {
-            "date": "2022-11-15 00:05:08",
-            "action": "transfer",
-            "wallet": "Ledger",
-            "address": "",
+            "date": "2022-11-15 12:09:00",
+            "action": "receive",
             "amount": 191.17,
             "fee": 2
+          },
+          {
+            "date": "2022-11-15 00:20:00",
+            "action": "receive",
+            "amount": 9.2,
+            "fee": 0.8
+          },
+          {
+            "date": "2022-11-15 01:19:00",
+            "action": "receive",
+            "amount": 510.001788,
+            "fee": 0.8
+          },
+          {
+            "date": "2023-03-10 06:26:00",
+            "action": "receive",
+            "amount": 344.1057,
+            "fee": 0.8
           }
         ]
       },
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -650,38 +692,30 @@ export const COIN_LIST: CoinStateInterface[] = [
         ]
       },
       {
-        "name": "Ledger",
-        "address": "ledger_1",
+        "name": "WhiteBit (WhiteBit wallet)",
+        "address": "whitebit_1",
         "transactions": [
           {
-            "date": "2022-11-15 12:01:00",
-            "action": "receive",
+            "date": "2022-11-12 01:53:14",
+            "action": "buy",
+            "price": 0.354803,
+            "total": 74.92374951
+          },
+          {
+            "date": "2022-11-14 23:58:21",
+            "action": "transfer",
+            "wallet": "Ledger",
+            "address": "",
             "amount": 16,
             "fee": 2
           },
           {
-            "date": "2022-11-15 12:09:00",
-            "action": "receive",
+            "date": "2022-11-15 00:05:08",
+            "action": "transfer",
+            "wallet": "Ledger",
+            "address": "",
             "amount": 191.17,
             "fee": 2
-          },
-          {
-            "date": "2022-11-15 00:20:00",
-            "action": "receive",
-            "amount": 9.2,
-            "fee": 0.8
-          },
-          {
-            "date": "2022-11-15 01:19:00",
-            "action": "receive",
-            "amount": 510.001788,
-            "fee": 0.8
-          },
-          {
-            "date": "2023-03-10 06:26:00",
-            "action": "receive",
-            "amount": 344.1057,
-            "fee": 0.8
           }
         ]
       }
@@ -693,7 +727,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "DOGE",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 76,
+            "date": "2023-05-25 22:06:08",
+            "fee": 4
+          },
+          {
+            "action": "receive",
+            "amount": 818.55940968,
+            "date": "2023-05-25 22:10:09",
+            "fee": 4
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -701,6 +753,22 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "price": 0.59908,
             "total": 530.006076
+          },
+          {
+            "action": "transfer",
+            "address": "DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp",
+            "amount": 76,
+            "date": "2023-05-25 22:06:08",
+            "fee": 4,
+            "network": "DOGE"
+          },
+          {
+            "action": "transfer",
+            "address": "DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp",
+            "amount": 818.55940968,
+            "date": "2023-05-25 22:10:09",
+            "fee": 4,
+            "network": "DOGE"
           }
         ]
       }
@@ -712,7 +780,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MATIC",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "date": "2023-03-11 11:53:00",
+            "action": "receive",
+            "amount": 9.9,
+            "fee": 0.1
+          },
+          {
+            "date": "2023-03-11 11:55:00",
+            "action": "receive",
+            "amount": 96.8650187,
+            "fee": 0.1
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -744,24 +830,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 14.19984
           }
         ]
-      },
-      {
-        "name": "Trust Wallet (Savings)",
-        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
-        "transactions": [
-          {
-            "date": "2023-03-11 11:53:00",
-            "action": "receive",
-            "amount": 9.9,
-            "fee": 0.1
-          },
-          {
-            "date": "2023-03-11 11:55:00",
-            "action": "receive",
-            "amount": 96.8650187,
-            "fee": 0.1
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -771,7 +839,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SOL",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -798,30 +866,11 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
-    "name": "Litecoin",
-    "symbol": "LTC",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2023-05-08 18:49:46",
-            "action": "buy",
-            "price": 81.15,
-            "total": 14.20125
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
     "name": "Tron",
     "symbol": "TRX",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -842,11 +891,30 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
+    "name": "Litecoin",
+    "symbol": "LTC",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2023-05-08 18:49:46",
+            "action": "buy",
+            "price": 81.15,
+            "total": 14.20125
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
     "name": "Polkadot",
     "symbol": "DOT",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -907,7 +975,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHIB",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -926,7 +994,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "AVAX",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Avalanche (Avalanche wallet)",
+        "address": "X-avax1sxnpzqdk5g7etd9853fvn4gcxjj4wl98vlx52z",
+        "transactions": [
+          {
+            "date": "2023-04-22 19:58:16",
+            "action": "receive",
+            "amount": 0.092,
+            "fee": 0.008
+          },
+          {
+            "date": "2023-04-22 20:02:48",
+            "action": "receive",
+            "amount": 11.45706872,
+            "fee": 0.008
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -994,24 +1080,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 49.9485
           }
         ]
-      },
-      {
-        "name": "Avalanche Wallet",
-        "address": "X-avax1sxnpzqdk5g7etd9853fvn4gcxjj4wl98vlx52z",
-        "transactions": [
-          {
-            "date": "2023-04-22 19:58:16",
-            "action": "receive",
-            "amount": 0.092,
-            "fee": 0.008
-          },
-          {
-            "date": "2023-04-22 20:02:48",
-            "action": "receive",
-            "amount": 11.45706872,
-            "fee": 0.008
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -1021,27 +1089,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LINK",
     "wallets": [
       {
-        "name": "WhiteBit",
-        "address": "whitebit_1",
-        "transactions": [
-          {
-            "date": "2022-11-12 02:09:53",
-            "action": "buy",
-            "price": 6.9871,
-            "total": 74.901712
-          },
-          {
-            "date": "2022-11-29 20:21:38",
-            "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
-            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
-            "amount": 10.376,
-            "fee": 0.344
-          }
-        ]
-      },
-      {
-        "name": "Trust Wallet (Savings)",
+        "name": "Trust Wallet (Savings wallet)",
         "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
         "transactions": [
           {
@@ -1067,11 +1115,35 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "receive",
             "amount": 6.627,
             "fee": 0.013
+          },
+          {
+            "action": "receive",
+            "amount": 10.07901,
+            "date": "2023-05-24 23:26:01",
+            "fee": 0.013
           }
         ]
       },
       {
-        "name": "Binance",
+        "name": "YouHolder (YouHolder wallet)",
+        "address": "you_holder_1",
+        "transactions": [
+          {
+            "date": "2021-06-05 23:12:00",
+            "action": "receive",
+            "amount": 10.06969471,
+            "fee": 0.0069
+          },
+          {
+            "date": "2021-07-02 15:59:00",
+            "action": "receive",
+            "amount": 5.1882,
+            "fee": 0.0078
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1161,61 +1233,34 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 6.252,
             "action": "buy",
             "total": 49.95348
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 10.07901,
+            "date": "2023-05-24 23:26:01",
+            "fee": 0.013,
+            "network": "BSC"
           }
         ]
       },
       {
-        "name": "YouHolder Wallet",
-        "address": "you_holder_1",
+        "name": "WhiteBit (WhiteBit wallet)",
+        "address": "whitebit_1",
         "transactions": [
           {
-            "date": "2021-06-05 23:12:00",
-            "action": "receive",
-            "amount": 10.06969471,
-            "fee": 0.0069
-          },
-          {
-            "date": "2021-07-02 15:59:00",
-            "action": "receive",
-            "amount": 5.1882,
-            "fee": 0.0078
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
-    "name": "Uniswap",
-    "symbol": "UNI",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-05-09 21:56:13",
+            "date": "2022-11-12 02:09:53",
             "action": "buy",
-            "price": 6.33,
-            "total": 49.94
+            "price": 6.9871,
+            "total": 74.901712
           },
           {
-            "date": "2022-05-11 13:50:36",
-            "action": "sell",
-            "price": 5.95,
-            "filled": 4.2
-          },
-          {
-            "date": "2023-03-10 07:05:47",
-            "action": "buy",
-            "price": 5.668,
-            "total": 49.93508
-          },
-          {
-            "date": "2023-05-08 18:54:36",
-            "action": "buy",
-            "total": 14.2197,
-            "price": 5.115
+            "date": "2022-11-29 20:21:38",
+            "action": "transfer",
+            "wallet": "Trust Wallet (Savings)",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 10.376,
+            "fee": 0.344
           }
         ]
       }
@@ -1227,7 +1272,31 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ATOM",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        "transactions": [
+          {
+            "date": "2023-03-10 19:20:00",
+            "action": "receive",
+            "amount": 0.006,
+            "fee": 0.004
+          },
+          {
+            "date": "2023-03-10 19:23:00",
+            "action": "receive",
+            "amount": 12.13701,
+            "fee": 0.004
+          },
+          {
+            "date": "2023-04-21 00:51:20",
+            "action": "receive",
+            "amount": 6.546,
+            "fee": 0.004
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1303,28 +1372,75 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 49.94703
           }
         ]
-      },
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "wallets": [
       {
-        "name": "Trust Wallet (Savings)",
-        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
         "transactions": [
           {
-            "date": "2023-03-10 19:20:00",
             "action": "receive",
-            "amount": 0.006,
-            "fee": 0.004
+            "amount": 0.014,
+            "date": "2023-05-25 21:58:11",
+            "fee": 0.014
           },
           {
-            "date": "2023-03-10 19:23:00",
             "action": "receive",
-            "amount": 12.13701,
-            "fee": 0.004
+            "amount": 15.2385056,
+            "date": "2023-05-25 21:59:41",
+            "fee": 0.014
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2022-05-09 21:56:13",
+            "action": "buy",
+            "price": 6.33,
+            "total": 49.94
           },
           {
-            "date": "2023-04-21 00:51:20",
-            "action": "receive",
-            "amount": 6.546,
-            "fee": 0.004
+            "date": "2022-05-11 13:50:36",
+            "action": "sell",
+            "price": 5.95,
+            "filled": 4.2
+          },
+          {
+            "date": "2023-03-10 07:05:47",
+            "action": "buy",
+            "price": 5.668,
+            "total": 49.93508
+          },
+          {
+            "date": "2023-05-08 18:54:36",
+            "action": "buy",
+            "total": 14.2197,
+            "price": 5.115
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 0.014,
+            "date": "2023-05-25 21:58:11",
+            "fee": 0.014,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 15.2385056,
+            "date": "2023-05-25 21:59:41",
+            "fee": 0.014,
+            "network": "BSC"
           }
         ]
       }
@@ -1336,7 +1452,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "XLM",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1363,11 +1479,78 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
+    "name": "Bitcoin Cash",
+    "symbol": "BCH",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2022-12-17 01:10:43",
+            "action": "buy",
+            "price": 104.3,
+            "total": 24.9277
+          },
+          {
+            "date": "2022-12-17 16:19:55",
+            "action": "buy",
+            "price": 101.6,
+            "total": 24.9936
+          },
+          {
+            "date": "2023-03-10 07:18:47",
+            "action": "buy",
+            "price": 108.7,
+            "total": 24.8923
+          },
+          {
+            "date": "2023-05-08 18:55:30",
+            "action": "buy",
+            "total": 14.1375,
+            "price": 113.1
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
     "name": "Internet Computer",
     "symbol": "ICP",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Internet Computer (Internet Computer wallet)",
+        "address": "internet_computer_1",
+        "transactions": [
+          {
+            "date": "2021-06-06 10:16:00",
+            "action": "receive",
+            "amount": 1.07862,
+            "fee": 0.0003
+          },
+          {
+            "date": "2021-07-02 15:53:00",
+            "action": "receive",
+            "amount": 1.1597,
+            "fee": 0.0003
+          },
+          {
+            "date": "2021-07-02 15:53:00",
+            "action": "receive",
+            "amount": 2.9967,
+            "fee": 0.0003
+          },
+          {
+            "date": "2023-03-10 06:26:00",
+            "action": "receive",
+            "amount": 31.02599524,
+            "fee": 0.0003
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1445,73 +1628,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 5.545
           }
         ]
-      },
-      {
-        "name": "Internet Computer",
-        "address": "internet_computer_1",
-        "transactions": [
-          {
-            "date": "2021-06-06 10:16:00",
-            "action": "receive",
-            "amount": 1.07862,
-            "fee": 0.0003
-          },
-          {
-            "date": "2021-07-02 15:53:00",
-            "action": "receive",
-            "amount": 1.1597,
-            "fee": 0.0003
-          },
-          {
-            "date": "2021-07-02 15:53:00",
-            "action": "receive",
-            "amount": 2.9967,
-            "fee": 0.0003
-          },
-          {
-            "date": "2023-03-10 06:26:00",
-            "action": "receive",
-            "amount": 31.02599524,
-            "fee": 0.0003
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
-    "name": "Bitcoin Cash",
-    "symbol": "BCH",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-12-17 01:10:43",
-            "action": "buy",
-            "price": 104.3,
-            "total": 24.9277
-          },
-          {
-            "date": "2022-12-17 16:19:55",
-            "action": "buy",
-            "price": 101.6,
-            "total": 24.9936
-          },
-          {
-            "date": "2023-03-10 07:18:47",
-            "action": "buy",
-            "price": 108.7,
-            "total": 24.8923
-          },
-          {
-            "date": "2023-05-08 18:55:30",
-            "action": "buy",
-            "total": 14.1375,
-            "price": 113.1
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -1521,7 +1637,31 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FIL",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
+        "transactions": [
+          {
+            "date": "2023-03-10 16:32:00",
+            "action": "receive",
+            "amount": 0.009,
+            "fee": 0.001
+          },
+          {
+            "date": "2023-03-10 16:36:00",
+            "action": "receive",
+            "amount": 57.00520819,
+            "fee": 0.001
+          },
+          {
+            "date": "2023-04-21 00:55:44",
+            "action": "receive",
+            "amount": 13.569,
+            "fee": 0.001
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1591,30 +1731,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "total": 14.2263
           }
         ]
-      },
-      {
-        "name": "Trust Wallet (Savings)",
-        "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
-        "transactions": [
-          {
-            "date": "2023-03-10 16:32:00",
-            "action": "receive",
-            "amount": 0.009,
-            "fee": 0.001
-          },
-          {
-            "date": "2023-03-10 16:36:00",
-            "action": "receive",
-            "amount": 57.00520819,
-            "fee": 0.001
-          },
-          {
-            "date": "2023-04-21 00:55:44",
-            "action": "receive",
-            "amount": 13.569,
-            "fee": 0.001
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -1624,7 +1740,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LDO",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1661,7 +1777,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "APT",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1686,7 +1802,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NEAR",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1717,7 +1833,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ARB",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 1.7,
+            "date": "2023-05-24 23:03:40",
+            "fee": 0.3
+          },
+          {
+            "action": "receive",
+            "amount": 114.2546,
+            "date": "2023-05-24 23:06:10",
+            "fee": 0.3
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1743,6 +1877,22 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 1.0994,
             "action": "buy",
             "total": 49.91276
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 1.7,
+            "date": "2023-05-24 23:03:40",
+            "fee": 0.3,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 114.2546,
+            "date": "2023-05-24 23:06:10",
+            "fee": 0.3,
+            "network": "ARBITRUM"
           }
         ]
       }
@@ -1754,7 +1904,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "VET",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1785,7 +1935,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ALGO",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
+        "transactions": [
+          {
+            "date": "2023-03-11 15:35:00",
+            "action": "receive",
+            "amount": 9.992,
+            "fee": 0.008
+          },
+          {
+            "date": "2023-03-11 15:37:00",
+            "action": "receive",
+            "amount": 374.992,
+            "fee": 0.008
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1823,24 +1991,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 0.169
           }
         ]
-      },
-      {
-        "name": "Trust Wallet (Savings)",
-        "address": "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
-        "transactions": [
-          {
-            "date": "2023-03-11 15:35:00",
-            "action": "receive",
-            "amount": 9.992,
-            "fee": 0.008
-          },
-          {
-            "date": "2023-03-11 15:37:00",
-            "action": "receive",
-            "amount": 374.992,
-            "fee": 0.008
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -1850,7 +2000,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "GRT",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1893,27 +2043,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FTM",
     "wallets": [
       {
-        "name": "WhiteBit",
-        "address": "whitebit_1",
-        "transactions": [
-          {
-            "date": "2022-11-13 19:25:52",
-            "action": "buy",
-            "price": 0.181,
-            "total": 47.9537961
-          },
-          {
-            "date": "2022-11-29 20:13:15",
-            "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
-            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
-            "amount": 259.9381,
-            "fee": 5
-          }
-        ]
-      },
-      {
-        "name": "Trust Wallet (Savings)",
+        "name": "Trust Wallet (Savings wallet)",
         "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
         "transactions": [
           {
@@ -1937,7 +2067,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         ]
       },
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -1975,6 +2105,51 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 0.3758
           }
         ]
+      },
+      {
+        "name": "WhiteBit (WhiteBit wallet)",
+        "address": "whitebit_1",
+        "transactions": [
+          {
+            "date": "2022-11-13 19:25:52",
+            "action": "buy",
+            "price": 0.181,
+            "total": 47.9537961
+          },
+          {
+            "date": "2022-11-29 20:13:15",
+            "action": "transfer",
+            "wallet": "Trust Wallet (Savings)",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 259.9381,
+            "fee": 5
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "Render Token",
+    "symbol": "RNDR",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2022-06-13 12:47:39",
+            "action": "buy",
+            "price": 0.378,
+            "total": 25.001
+          },
+          {
+            "date": "2022-11-22 03:13:08",
+            "action": "sell",
+            "price": 0.425,
+            "filled": 66.14
+          }
+        ]
       }
     ],
     "token_address": ""
@@ -1984,7 +2159,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "EGLD",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2009,7 +2184,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "AAVE",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2036,36 +2211,11 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
-    "name": "Render Token",
-    "symbol": "RNDR",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-06-13 12:47:39",
-            "action": "buy",
-            "price": 0.378,
-            "total": 25.001
-          },
-          {
-            "date": "2022-11-22 03:13:08",
-            "action": "sell",
-            "price": 0.425,
-            "filled": 66.14
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
     "name": "Chiliz",
     "symbol": "CHZ",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2084,7 +2234,19 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "IMX",
     "wallets": [
       {
-        "name": "WhiteBit",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "date": "2022-11-29 20:10:31",
+            "action": "receive",
+            "amount": 107.738,
+            "fee": 5.476
+          }
+        ]
+      },
+      {
+        "name": "WhiteBit (WhiteBit wallet)",
         "address": "whitebit_1",
         "transactions": [
           {
@@ -2104,19 +2266,7 @@ export const COIN_LIST: CoinStateInterface[] = [
         ]
       },
       {
-        "name": "Trust Wallet (Savings)",
-        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
-        "transactions": [
-          {
-            "date": "2022-11-29 20:10:31",
-            "action": "receive",
-            "amount": 107.738,
-            "fee": 5.476
-          }
-        ]
-      },
-      {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2137,36 +2287,18 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
-    "name": "Sui",
-    "symbol": "SUI",
+    "name": "IOTA",
+    "symbol": "MIOTA",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
-            "date": "2023-05-08 11:41:46",
+            "date": "2021-01-01 02:00:00",
             "action": "buy",
-            "price": 1.1377,
-            "total": 24.91563
-          },
-          {
-            "date": "2023-05-08 21:36:15",
-            "action": "buy",
-            "total": 19.98624,
-            "price": 1.0464
-          },
-          {
-            "date": "2023-05-08 21:36:36",
-            "action": "buy",
-            "total": 19.95,
-            "price": 1.05
-          },
-          {
-            "date": "2023-05-24 19:20:59",
-            "price": 0.9662,
-            "action": "buy",
-            "total": 49.95254
+            "price": 0.72,
+            "total": 54.3846153816
           }
         ]
       }
@@ -2178,7 +2310,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "OP",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2229,11 +2361,48 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
+    "name": "Sui",
+    "symbol": "SUI",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2023-05-08 11:41:46",
+            "action": "buy",
+            "price": 1.1377,
+            "total": 24.91563
+          },
+          {
+            "date": "2023-05-08 21:36:15",
+            "action": "buy",
+            "total": 19.98624,
+            "price": 1.0464
+          },
+          {
+            "date": "2023-05-08 21:36:36",
+            "action": "buy",
+            "total": 19.95,
+            "price": 1.05
+          },
+          {
+            "date": "2023-05-24 19:20:59",
+            "price": 0.9662,
+            "action": "buy",
+            "total": 49.95254
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
     "name": "Luna Classic",
     "symbol": "LUNC",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2378,7 +2547,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MINA",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2422,7 +2591,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "XEC",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2449,30 +2618,11 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
-    "name": "IOTA",
-    "symbol": "MIOTA",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2021-01-01 02:00:00",
-            "action": "buy",
-            "price": 0.72,
-            "total": 54.3846153816
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
     "name": "Dash",
     "symbol": "DASH",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2497,7 +2647,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "TWT",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 0.063,
+            "date": "2023-05-25 22:15:49",
+            "fee": 0.067
+          },
+          {
+            "action": "receive",
+            "amount": 55.788,
+            "date": "2023-05-25 22:16:59",
+            "fee": 0.067
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2517,6 +2685,22 @@ export const COIN_LIST: CoinStateInterface[] = [
             "action": "buy",
             "total": 19.3716,
             "price": 1.0762
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 0.063,
+            "date": "2023-05-25 22:15:49",
+            "fee": 0.067,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 55.788,
+            "date": "2023-05-25 22:16:59",
+            "fee": 0.067,
+            "network": "BSC"
           }
         ]
       }
@@ -2528,7 +2712,31 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ZIL",
     "wallets": [
       {
-        "name": "WhiteBit",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "date": "2022-11-29 20:16:12",
+            "action": "receive",
+            "amount": 2185.4726,
+            "fee": 25
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2023-05-08 21:38:58",
+            "action": "buy",
+            "total": 19.998249,
+            "price": 0.02309
+          }
+        ]
+      },
+      {
+        "name": "WhiteBit (WhiteBit wallet)",
         "address": "whitebit_1",
         "transactions": [
           {
@@ -2546,30 +2754,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "fee": 25
           }
         ]
-      },
-      {
-        "name": "Trust Wallet (Savings)",
-        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
-        "transactions": [
-          {
-            "date": "2022-11-29 20:16:12",
-            "action": "receive",
-            "amount": 2185.4726,
-            "fee": 25
-          }
-        ]
-      },
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2023-05-08 21:38:58",
-            "action": "buy",
-            "total": 19.998249,
-            "price": 0.02309
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -2579,7 +2763,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "RUNE",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2604,7 +2788,72 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CAKE",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-05-28 01:04:00",
+            "action": "receive",
+            "amount": 0.05924529,
+            "fee": 0.0098
+          },
+          {
+            "date": "2021-05-29 18:32:00",
+            "action": "receive",
+            "amount": 6.45804975,
+            "fee": 0.01
+          },
+          {
+            "date": "2021-05-31 08:12:00",
+            "action": "receive",
+            "amount": 7.41329184,
+            "fee": 0.01
+          },
+          {
+            "date": "2021-05-31 08:16:00",
+            "action": "spend",
+            "amount": 6.5342
+          },
+          {
+            "date": "2021-06-01 03:37:00",
+            "action": "receive",
+            "amount": 14.06935912,
+            "fee": 0.01
+          },
+          {
+            "date": "2021-06-05 23:01:00",
+            "action": "receive",
+            "amount": 11.978,
+            "fee": 0.01
+          },
+          {
+            "date": "2022-05-09 22:19:00",
+            "action": "receive",
+            "amount": 8.535,
+            "fee": 0.025
+          },
+          {
+            "date": "2022-05-16 12:15:00",
+            "action": "receive",
+            "amount": 14.6523,
+            "fee": 0.033
+          },
+          {
+            "date": "2023-03-10 06:40:00",
+            "action": "receive",
+            "amount": 21.73939,
+            "fee": 0.023
+          },
+          {
+            "date": "2023-05-12 09:07:49",
+            "action": "receive",
+            "amount": 39.607,
+            "fee": 0.023
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2746,114 +2995,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "network": "BSC"
           }
         ]
-      },
-      {
-        "name": "Trust Wallet (Main)",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-05-28 01:04:00",
-            "action": "receive",
-            "amount": 0.05924529,
-            "fee": 0.0098
-          },
-          {
-            "date": "2021-05-29 18:32:00",
-            "action": "receive",
-            "amount": 6.45804975,
-            "fee": 0.01
-          },
-          {
-            "date": "2021-05-31 08:12:00",
-            "action": "receive",
-            "amount": 7.41329184,
-            "fee": 0.01
-          },
-          {
-            "date": "2021-05-31 08:16:00",
-            "action": "spend",
-            "amount": 6.5342
-          },
-          {
-            "date": "2021-06-01 03:37:00",
-            "action": "receive",
-            "amount": 14.06935912,
-            "fee": 0.01
-          },
-          {
-            "date": "2021-06-05 23:01:00",
-            "action": "receive",
-            "amount": 11.978,
-            "fee": 0.01
-          },
-          {
-            "date": "2022-05-09 22:19:00",
-            "action": "receive",
-            "amount": 8.535,
-            "fee": 0.025
-          },
-          {
-            "date": "2022-05-16 12:15:00",
-            "action": "receive",
-            "amount": 14.6523,
-            "fee": 0.033
-          },
-          {
-            "date": "2023-03-10 06:40:00",
-            "action": "receive",
-            "amount": 21.73939,
-            "fee": 0.023
-          },
-          {
-            "date": "2023-05-12 09:07:49",
-            "action": "receive",
-            "amount": 39.607,
-            "fee": 0.023
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
-    "name": "dYdX",
-    "symbol": "DYDX",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-05-09 21:57:34",
-            "action": "buy",
-            "price": 3.079,
-            "total": 49.818
-          },
-          {
-            "date": "2022-12-17 16:20:47",
-            "action": "buy",
-            "price": 1.412,
-            "total": 24.9924
-          },
-          {
-            "date": "2023-03-10 07:21:26",
-            "action": "buy",
-            "price": 2.009,
-            "total": 24.99196
-          },
-          {
-            "date": "2023-05-08 21:33:31",
-            "action": "buy",
-            "total": 19.99173,
-            "price": 2.089
-          },
-          {
-            "date": "2023-05-24 19:21:33",
-            "price": 2.01,
-            "action": "buy",
-            "total": 49.9887
-          }
-        ]
       }
     ],
     "token_address": ""
@@ -2863,7 +3004,25 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "1INCH",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        "transactions": [
+          {
+            "date": "2023-03-10 19:31:00",
+            "action": "receive",
+            "amount": 0.16,
+            "fee": 0.16
+          },
+          {
+            "date": "2023-03-10 19:34:00",
+            "action": "receive",
+            "amount": 272.13,
+            "fee": 0.16
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2913,22 +3072,47 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 0.4
           }
         ]
-      },
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "dYdX",
+    "symbol": "DYDX",
+    "wallets": [
       {
-        "name": "Trust Wallet (Savings)",
-        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
         "transactions": [
           {
-            "date": "2023-03-10 19:31:00",
-            "action": "receive",
-            "amount": 0.16,
-            "fee": 0.16
+            "date": "2022-05-09 21:57:34",
+            "action": "buy",
+            "price": 3.079,
+            "total": 49.818
           },
           {
-            "date": "2023-03-10 19:34:00",
-            "action": "receive",
-            "amount": 272.13,
-            "fee": 0.16
+            "date": "2022-12-17 16:20:47",
+            "action": "buy",
+            "price": 1.412,
+            "total": 24.9924
+          },
+          {
+            "date": "2023-03-10 07:21:26",
+            "action": "buy",
+            "price": 2.009,
+            "total": 24.99196
+          },
+          {
+            "date": "2023-05-08 21:33:31",
+            "action": "buy",
+            "total": 19.99173,
+            "price": 2.089
+          },
+          {
+            "date": "2023-05-24 19:21:33",
+            "price": 2.01,
+            "action": "buy",
+            "total": 49.9887
           }
         ]
       }
@@ -2940,7 +3124,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "XEM",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2960,7 +3144,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "COMP",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -2985,7 +3169,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "DCR",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3010,7 +3194,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LUNA",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3041,7 +3225,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "T",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3056,125 +3240,35 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": ""
   },
   {
-    "name": "Arweave",
-    "symbol": "AR",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2023-03-10 06:52:46",
-            "action": "buy",
-            "price": 7.43,
-            "total": 49.9296
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
-    "name": "Harmony",
-    "symbol": "ONE",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-05-12 08:42:40",
-            "action": "buy",
-            "price": 0.034,
-            "total": 24.9968
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
-    "name": "SushiSwap",
-    "symbol": "SUSHI",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-05-09 22:02:13",
-            "action": "buy",
-            "price": 1.804,
-            "total": 24.895
-          },
-          {
-            "date": "2022-05-13 13:48:03",
-            "action": "buy",
-            "price": 1.397,
-            "total": 24.867
-          },
-          {
-            "date": "2023-03-10 07:12:00",
-            "action": "buy",
-            "price": 1.045,
-            "total": 49.951
-          },
-          {
-            "date": "2023-04-09 11:16:26",
-            "action": "sell",
-            "price": 1.069,
-            "filled": 81
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
-    "name": "JUST",
-    "symbol": "JST",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-06-13 13:25:29",
-            "action": "buy",
-            "price": 0.02948,
-            "total": 29.99885
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
-    "name": "Helium",
-    "symbol": "HNT",
-    "wallets": [
-      {
-        "name": "Binance",
-        "address": "binance_1",
-        "transactions": [
-          {
-            "date": "2022-09-05 14:33:37",
-            "action": "buy",
-            "price": 3.9,
-            "total": 299.988,
-            "executed": 76.92
-          }
-        ]
-      }
-    ],
-    "token_address": ""
-  },
-  {
     "name": "Waves",
     "symbol": "WAVES",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        "transactions": [
+          {
+            "date": "2023-03-10 18:59:00",
+            "action": "receive",
+            "amount": 0.0016,
+            "fee": 0.0016
+          },
+          {
+            "date": "2023-03-10 19:04:00",
+            "action": "receive",
+            "amount": 67.185505,
+            "fee": 0.0016
+          },
+          {
+            "date": "2023-04-21 01:01:39",
+            "action": "receive",
+            "amount": 46.29750475,
+            "fee": 0.0016
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3247,28 +3341,118 @@ export const COIN_LIST: CoinStateInterface[] = [
             "price": 1.6
           }
         ]
-      },
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "Arweave",
+    "symbol": "AR",
+    "wallets": [
       {
-        "name": "Trust Wallet (Savings)",
-        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
         "transactions": [
           {
-            "date": "2023-03-10 18:59:00",
-            "action": "receive",
-            "amount": 0.0016,
-            "fee": 0.0016
+            "date": "2023-03-10 06:52:46",
+            "action": "buy",
+            "price": 7.43,
+            "total": 49.9296
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "JUST",
+    "symbol": "JST",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2022-06-13 13:25:29",
+            "action": "buy",
+            "price": 0.02948,
+            "total": 29.99885
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "Helium",
+    "symbol": "HNT",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2022-09-05 14:33:37",
+            "action": "buy",
+            "price": 3.9,
+            "total": 299.988,
+            "executed": 76.92
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "Harmony",
+    "symbol": "ONE",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2022-05-12 08:42:40",
+            "action": "buy",
+            "price": 0.034,
+            "total": 24.9968
+          }
+        ]
+      }
+    ],
+    "token_address": ""
+  },
+  {
+    "name": "SushiSwap",
+    "symbol": "SUSHI",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "binance_1",
+        "transactions": [
+          {
+            "date": "2022-05-09 22:02:13",
+            "action": "buy",
+            "price": 1.804,
+            "total": 24.895
           },
           {
-            "date": "2023-03-10 19:04:00",
-            "action": "receive",
-            "amount": 67.185505,
-            "fee": 0.0016
+            "date": "2022-05-13 13:48:03",
+            "action": "buy",
+            "price": 1.397,
+            "total": 24.867
           },
           {
-            "date": "2023-04-21 01:01:39",
-            "action": "receive",
-            "amount": 46.29750475,
-            "fee": 0.0016
+            "date": "2023-03-10 07:12:00",
+            "action": "buy",
+            "price": 1.045,
+            "total": 49.951
+          },
+          {
+            "date": "2023-04-09 11:16:26",
+            "action": "sell",
+            "price": 1.069,
+            "filled": 81
           }
         ]
       }
@@ -3280,7 +3464,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "GLMR",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3329,7 +3513,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "KDA",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3366,7 +3550,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BICO",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3403,7 +3587,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SFP",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3422,7 +3606,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FLUX",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3447,7 +3631,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "AMP",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3484,7 +3668,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SCRT",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3503,7 +3687,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BETA",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3528,7 +3712,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BSW",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3547,7 +3731,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MOVR",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3584,7 +3768,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "POLS",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3603,7 +3787,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "QUICK",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3628,7 +3812,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CLV",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3647,7 +3831,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "REI",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3672,7 +3856,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "TRB",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3697,7 +3881,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ANC",
     "wallets": [
       {
-        "name": "Binance",
+        "name": "Binance (Binance wallet)",
         "address": "binance_1",
         "transactions": [
           {
@@ -3716,7 +3900,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CRACE",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3736,7 +3920,19 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "STEMX",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
+        "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
+        "transactions": [
+          {
+            "date": "2021-11-02 23:42:00",
+            "action": "receive",
+            "amount": 212.242516372913,
+            "usdFee": 0.1
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3754,18 +3950,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "usdFee": 0.1
           }
         ]
-      },
-      {
-        "name": "",
-        "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
-        "transactions": [
-          {
-            "date": "2021-11-02 23:42:00",
-            "action": "receive",
-            "amount": 212.242516372913,
-            "usdFee": 0.1
-          }
-        ]
       }
     ],
     "token_address": "0x26734ADd0650719eA29087fe5CC0AaB81b4f237D"
@@ -3775,7 +3959,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SPY",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3791,11 +3975,31 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0x17fd3cAa66502C6F1CbD5600D8448f3aF8f2ABA1"
   },
   {
+    "name": "Stabledoc Token",
+    "symbol": "SDT",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-10-29 13:51:00",
+            "action": "buy",
+            "total": 10,
+            "price": 0.0198949286,
+            "usdFee": 0.57
+          }
+        ]
+      }
+    ],
+    "token_address": "0x543C7eBb52D56985f63F246A5b3558AFF79037d7"
+  },
+  {
     "name": "Cpos Cloud Payment",
     "symbol": "CPOS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3822,7 +4026,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CGU",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3842,7 +4046,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHIBARMY",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3862,7 +4066,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ALTB",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3878,91 +4082,11 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0x9B3a01F8b4aBD2E2a74597B21b7C269ABf4E9f41"
   },
   {
-    "name": "Stabledoc Token",
-    "symbol": "SDT",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-10-29 13:51:00",
-            "action": "buy",
-            "total": 10,
-            "price": 0.0198949286,
-            "usdFee": 0.57
-          }
-        ]
-      }
-    ],
-    "token_address": "0x543C7eBb52D56985f63F246A5b3558AFF79037d7"
-  },
-  {
-    "name": "MetaWars",
-    "symbol": "WARS",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-10-27 18:37:00",
-            "action": "buy",
-            "total": 10,
-            "price": 0.20708690199,
-            "usdFee": 0.41
-          }
-        ]
-      }
-    ],
-    "token_address": "0x50e756a22ff5cEE3559D18B9D9576bc38F09Fa7c"
-  },
-  {
-    "name": "DVX",
-    "symbol": "DRIVENx",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-10-28 08:26:00",
-            "action": "buy",
-            "total": 10,
-            "price": 0.00953052356,
-            "usdFee": 1.86
-          }
-        ]
-      }
-    ],
-    "token_address": "0x6db3972c6a5535708e7A4F7Ad52F24d178D9A93e"
-  },
-  {
-    "name": "CoinMooner",
-    "symbol": "MOONER",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-10-28 08:07:00",
-            "action": "buy",
-            "total": 10,
-            "price": 0.04621214594,
-            "usdFee": 1.06
-          }
-        ]
-      }
-    ],
-    "token_address": "0x34E942859469c9dB9C22F4eAF866E2c2401BB795"
-  },
-  {
     "name": "Doge Floki Coin",
     "symbol": "DOFI",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3978,11 +4102,51 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0xF9d6DDF44016953dBf7aB135A0F64d7A41870EDE"
   },
   {
+    "name": "CoinMooner",
+    "symbol": "MOONER",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-10-28 08:07:00",
+            "action": "buy",
+            "total": 10,
+            "price": 0.04621214594,
+            "usdFee": 1.06
+          }
+        ]
+      }
+    ],
+    "token_address": "0x34E942859469c9dB9C22F4eAF866E2c2401BB795"
+  },
+  {
+    "name": "PulseDoge",
+    "symbol": "PulseDoge",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-11-01 21:10:00",
+            "action": "buy",
+            "total": 10,
+            "price": 0.03966198056,
+            "usdFee": 0.54
+          }
+        ]
+      }
+    ],
+    "token_address": "0xD4d55B811d9eDe2aDce61a98d67d7f91bFfcE495"
+  },
+  {
     "name": "GreenTrust",
     "symbol": "GNT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -3998,51 +4162,71 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0xF750A26EB0aCf95556e8529E72eD530f3b60f348"
   },
   {
-    "name": "Relay Token",
-    "symbol": "RELAY",
+    "name": "MetaWars",
+    "symbol": "WARS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
-            "date": "2021-12-01 15:30:00",
-            "action": "buy",
-            "total": 30.03,
-            "price": 3.17032385575,
-            "usdFee": 0.3
-          }
-        ]
-      }
-    ],
-    "token_address": "0x5d843fa9495d23de997c394296ac7b4d721e841c"
-  },
-  {
-    "name": "Afrostar",
-    "symbol": "AFRO",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-11-02 20:09:00",
+            "date": "2021-10-27 18:37:00",
             "action": "buy",
             "total": 10,
-            "price": 7.58839451e-8,
-            "usdFee": 0.86
+            "price": 0.20708690199,
+            "usdFee": 0.41
           }
         ]
       }
     ],
-    "token_address": "0x2F4e9c97aAFFD67D98A640062d90e355B4a1C539"
+    "token_address": "0x50e756a22ff5cEE3559D18B9D9576bc38F09Fa7c"
+  },
+  {
+    "name": "POLYX",
+    "symbol": "PXT",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "action": "buy",
+            "total": 10,
+            "price": 0.00303693325,
+            "usdFee": 1.59,
+            "date": "Invalid date"
+          }
+        ]
+      }
+    ],
+    "token_address": "0x6B226E4F3eF5708D496cD1b9E582ea090F3fFf70"
+  },
+  {
+    "name": "DVX",
+    "symbol": "DRIVENx",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-10-28 08:26:00",
+            "action": "buy",
+            "total": 10,
+            "price": 0.00953052356,
+            "usdFee": 1.86
+          }
+        ]
+      }
+    ],
+    "token_address": "0x6db3972c6a5535708e7A4F7Ad52F24d178D9A93e"
   },
   {
     "name": "CZFarm",
     "symbol": "CZF",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4058,51 +4242,51 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0x7c1608C004F20c3520f70b924E2BfeF092dA0043"
   },
   {
-    "name": "Wanaka Wai Token",
-    "symbol": "WAI",
+    "name": "Omni Consumer Protocols",
+    "symbol": "OCP",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
-            "date": "2021-10-28 13:57:00",
+            "date": "2021-10-28 11:31:00",
             "action": "buy",
             "total": 10,
-            "price": 0.13544872433,
-            "usdFee": 0.44
+            "price": 0.09204737086,
+            "usdFee": 0.51
           }
         ]
       }
     ],
-    "token_address": "0x934C9198582Bf2631128c5D4b051aacEF9a6224F"
+    "token_address": "0x3C70260eEe0a2bFc4b375feB810325801f289fBd"
   },
   {
-    "name": "Baby Squid Game",
-    "symbol": "BSG",
+    "name": "GamingDoge",
+    "symbol": "GamingDoge",
     "wallets": [
       {
-        "name": "",
-        "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
-            "date": "2021-11-04 01:30:00",
             "action": "buy",
-            "total": 23.2,
-            "price": 0.00000433583,
-            "usdFee": 0.87
+            "total": 10,
+            "price": 7.6636017e-11,
+            "usdFee": 0.74,
+            "date": "Invalid date"
           }
         ]
       }
     ],
-    "token_address": "0xe8993eA85B9AA3E864fEf4F7685966c485546161"
+    "token_address": "0x536627083e216C3Cf4476ec504eb51Bbd47cA4ac"
   },
   {
     "name": "Crypto Classic",
     "symbol": "CRC",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4118,31 +4302,91 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0xf7bcac494fd9530c183dae30db48d45144ff2c77"
   },
   {
-    "name": "BuffedShiba",
-    "symbol": "BSHIB",
+    "name": "Wanaka Wai Token",
+    "symbol": "WAI",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
-            "date": "2021-11-02 20:12:00",
+            "date": "2021-10-28 13:57:00",
             "action": "buy",
             "total": 10,
-            "price": 7.42594134e-8,
-            "usdFee": 0.64
+            "price": 0.13544872433,
+            "usdFee": 0.44
           }
         ]
       }
     ],
-    "token_address": "0xD8F61cdECA41dEF1a7923F308a042F678109f54B"
+    "token_address": "0x934C9198582Bf2631128c5D4b051aacEF9a6224F"
+  },
+  {
+    "name": "Relay Token",
+    "symbol": "RELAY",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-12-01 15:30:00",
+            "action": "buy",
+            "total": 30.03,
+            "price": 3.17032385575,
+            "usdFee": 0.3
+          }
+        ]
+      }
+    ],
+    "token_address": "0x5d843fa9495d23de997c394296ac7b4d721e841c"
+  },
+  {
+    "name": "Baby Squid Game",
+    "symbol": "BSG",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Additional wallet)",
+        "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
+        "transactions": [
+          {
+            "date": "2021-11-04 01:30:00",
+            "action": "buy",
+            "total": 23.2,
+            "price": 0.00000433583,
+            "usdFee": 0.87
+          }
+        ]
+      }
+    ],
+    "token_address": "0xe8993eA85B9AA3E864fEf4F7685966c485546161"
+  },
+  {
+    "name": "CashCow",
+    "symbol": "COW",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-10-28 08:28:00",
+            "action": "buy",
+            "total": 10,
+            "price": 5.00059404557,
+            "usdFee": 0.67
+          }
+        ]
+      }
+    ],
+    "token_address": "0x8B6fA031c7D2E60fbFe4E663EC1B8f37Df1ba483"
   },
   {
     "name": "PicArtNFT Token",
     "symbol": "PANFT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4162,7 +4406,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MGT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4182,7 +4426,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BRAND",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4202,7 +4446,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LOVE",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4222,7 +4466,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NFS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4238,71 +4482,11 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0x6eE002Ce31Ce4E52211EEfb2d3986082663D5F60"
   },
   {
-    "name": "CashCow",
-    "symbol": "COW",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-10-28 08:28:00",
-            "action": "buy",
-            "total": 10,
-            "price": 5.00059404557,
-            "usdFee": 0.67
-          }
-        ]
-      }
-    ],
-    "token_address": "0x8B6fA031c7D2E60fbFe4E663EC1B8f37Df1ba483"
-  },
-  {
-    "name": "Omni Consumer Protocols",
-    "symbol": "OCP",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-10-28 11:31:00",
-            "action": "buy",
-            "total": 10,
-            "price": 0.09204737086,
-            "usdFee": 0.51
-          }
-        ]
-      }
-    ],
-    "token_address": "0x3C70260eEe0a2bFc4b375feB810325801f289fBd"
-  },
-  {
-    "name": "PulseDoge",
-    "symbol": "PulseDoge",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "date": "2021-11-01 21:10:00",
-            "action": "buy",
-            "total": 10,
-            "price": 0.03966198056,
-            "usdFee": 0.54
-          }
-        ]
-      }
-    ],
-    "token_address": "0xD4d55B811d9eDe2aDce61a98d67d7f91bFfcE495"
-  },
-  {
     "name": "Baby White Hamster",
     "symbol": "$BWH",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4318,51 +4502,11 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0x4ed2bBfc2fC7b0B7400D8D12248649045e82c708"
   },
   {
-    "name": "POLYX",
-    "symbol": "PXT",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "action": "buy",
-            "total": 10,
-            "price": 0.00303693325,
-            "usdFee": 1.59,
-            "date": "Invalid date"
-          }
-        ]
-      }
-    ],
-    "token_address": "0x6B226E4F3eF5708D496cD1b9E582ea090F3fFf70"
-  },
-  {
-    "name": "GamingDoge",
-    "symbol": "GamingDoge",
-    "wallets": [
-      {
-        "name": "",
-        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
-        "transactions": [
-          {
-            "action": "buy",
-            "total": 10,
-            "price": 7.6636017e-11,
-            "usdFee": 0.74,
-            "date": "Invalid date"
-          }
-        ]
-      }
-    ],
-    "token_address": "0x536627083e216C3Cf4476ec504eb51Bbd47cA4ac"
-  },
-  {
     "name": "TaiChi",
     "symbol": "TAC",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4382,7 +4526,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BABYX",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4398,11 +4542,51 @@ export const COIN_LIST: CoinStateInterface[] = [
     "token_address": "0x234003FFa399E8bc53236AC777F4C781B10D1344"
   },
   {
+    "name": "Afrostar",
+    "symbol": "AFRO",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-11-02 20:09:00",
+            "action": "buy",
+            "total": 10,
+            "price": 7.58839451e-8,
+            "usdFee": 0.86
+          }
+        ]
+      }
+    ],
+    "token_address": "0x2F4e9c97aAFFD67D98A640062d90e355B4a1C539"
+  },
+  {
+    "name": "BuffedShiba",
+    "symbol": "BSHIB",
+    "wallets": [
+      {
+        "name": "Trust Wallet (Main wallet)",
+        "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+        "transactions": [
+          {
+            "date": "2021-11-02 20:12:00",
+            "action": "buy",
+            "total": 10,
+            "price": 7.42594134e-8,
+            "usdFee": 0.64
+          }
+        ]
+      }
+    ],
+    "token_address": "0xD8F61cdECA41dEF1a7923F308a042F678109f54B"
+  },
+  {
     "name": "Cockapoo",
     "symbol": "CPOO",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4422,7 +4606,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "INFO",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4442,7 +4626,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MUSC",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4462,7 +4646,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "YTZ",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4482,7 +4666,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "DICK",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4502,7 +4686,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BRGB",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4522,7 +4706,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CBUNNY",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4542,7 +4726,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ZOO",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4562,7 +4746,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FIN",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4582,7 +4766,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MAGGOT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4602,7 +4786,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LUMI",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4629,7 +4813,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "GSHIB",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4649,7 +4833,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHIBU",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4669,7 +4853,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "WLVR",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4689,7 +4873,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "Ape",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4709,7 +4893,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHIP",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4729,7 +4913,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "Drive",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4749,7 +4933,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MOON",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
         "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
         "transactions": [
           {
@@ -4769,7 +4953,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "PROMISE",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4789,7 +4973,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CLEANOCEAN",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4809,7 +4993,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NFTBS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4843,7 +5027,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHREW",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4863,7 +5047,19 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ARTEX",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Additional wallet)",
+        "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 2942.116196874578,
+            "usdFee": 0.1,
+            "date": "Invalid date"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4916,18 +5112,6 @@ export const COIN_LIST: CoinStateInterface[] = [
             "date": "Invalid date"
           }
         ]
-      },
-      {
-        "name": "",
-        "address": "0x02c18f708358887cb4993a9608e37216b71fe2a2",
-        "transactions": [
-          {
-            "action": "receive",
-            "amount": 2942.116196874578,
-            "usdFee": 0.1,
-            "date": "Invalid date"
-          }
-        ]
       }
     ],
     "token_address": "0xf1B032e7225D1c9068Ce317A956a0e8007591bA0"
@@ -4937,7 +5121,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHIBAWITCH",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4957,7 +5141,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "RMX",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4977,7 +5161,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "B1TC",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -4997,7 +5181,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "STKD",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5017,7 +5201,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5037,7 +5221,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "HOOD",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5057,7 +5241,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "$ELONOM",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5077,7 +5261,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SUG",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5097,7 +5281,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "GrmZilla",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5117,7 +5301,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BooCake",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5137,7 +5321,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "GUMMY",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5157,7 +5341,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "DGAT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5177,7 +5361,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BABYFD",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5197,7 +5381,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CakeZilla",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5217,7 +5401,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "PXLC",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5237,7 +5421,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MDB",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5257,7 +5441,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "DMGK",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5277,7 +5461,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "Waifer",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5297,7 +5481,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FlokiElon",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5317,7 +5501,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "IGN",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5337,7 +5521,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BabyDogeZilla",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5357,7 +5541,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SEADOG",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5377,7 +5561,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHIBAZ",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5397,7 +5581,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "HMOON",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5417,7 +5601,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "GODZ",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5437,7 +5621,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MGPX",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5457,7 +5641,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FACTORY",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5477,7 +5661,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "Shibosu",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5497,7 +5681,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BOOST",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5517,7 +5701,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NRT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5537,7 +5721,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "TITS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5557,7 +5741,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NFS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5577,7 +5761,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FLOKACHU",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5597,7 +5781,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SHIO",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5617,7 +5801,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MIRAI",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5637,7 +5821,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "DBT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5657,7 +5841,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BFK",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5677,7 +5861,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MFLOKI",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5697,7 +5881,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "uCHAD",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5717,7 +5901,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SEA",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5737,7 +5921,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "OTIUM",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5757,7 +5941,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LEAFTY",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5777,7 +5961,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NOFUD",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5797,7 +5981,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LAMA",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5817,7 +6001,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SDBY",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5837,7 +6021,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "BOOMSHIBA",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5857,7 +6041,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MCAT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5884,7 +6068,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "ORIO",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5904,7 +6088,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CSCT",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5924,7 +6108,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "JFM",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5951,7 +6135,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "cEvo",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5971,7 +6155,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NEKO",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -5991,7 +6175,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "NAC",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6011,7 +6195,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SYMBULL",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6031,7 +6215,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "FBNB",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6058,7 +6242,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SATO",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6078,7 +6262,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "Rotten",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6098,7 +6282,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LVBD",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6118,7 +6302,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "LEON",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6138,7 +6322,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "Shibarmy",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6158,7 +6342,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "MEALS",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6178,7 +6362,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "UMG",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6198,7 +6382,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "CRN",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6218,7 +6402,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "HIPPIE",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6238,7 +6422,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "$CINU",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6258,7 +6442,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "$MLNX",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6278,7 +6462,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "Spark",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {
@@ -6298,7 +6482,7 @@ export const COIN_LIST: CoinStateInterface[] = [
     "symbol": "SD",
     "wallets": [
       {
-        "name": "",
+        "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
           {

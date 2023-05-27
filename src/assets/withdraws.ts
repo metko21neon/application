@@ -1,5 +1,115 @@
 export const BINANCE_WITHDRAW = [
   {
+    "Date(UTC)": "2023-05-25 19:16:59",
+    "Coin": "TWT",
+    "Network": "BSC",
+    "Amount": "55.788",
+    "TransactionFee": "0.067",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0x7be0c9b3fad7d76d38b8a041b479b0c3aff554660d59f23cc895fe10ea93713f",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-25 19:15:49",
+    "Coin": "TWT",
+    "Network": "BSC",
+    "Amount": "0.063",
+    "TransactionFee": "0.067",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0x608413723c8da2440fac05bcac788dffdc884dc51b278a3d3324082b45f6b74d",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-25 19:10:09",
+    "Coin": "DOGE",
+    "Network": "DOGE",
+    "Amount": "818.55940968",
+    "TransactionFee": "4",
+    "Address": "DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp",
+    "TXID": "5010e0a007c7d8ac0ea120b86b4278a0b11c54e6decf122e96aa162886c0f6a5",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-25 19:06:08",
+    "Coin": "DOGE",
+    "Network": "DOGE",
+    "Amount": "76",
+    "TransactionFee": "4",
+    "Address": "DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp",
+    "TXID": "97fde7cb5425c20ca5631602e84f7607e699093e3fd274c670597736d44a36a9",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-25 18:59:41",
+    "Coin": "UNI",
+    "Network": "BSC",
+    "Amount": "15.2385056",
+    "TransactionFee": "0.014",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0x0103a60ddb5e6a7a30c55d7b749b6e546e0de879035af9d50c7b346d27128765",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-25 18:58:11",
+    "Coin": "UNI",
+    "Network": "BSC",
+    "Amount": "0.014",
+    "TransactionFee": "0.014",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0x17ea16e686fb9af2c9b4de7e23b9c9cfc29b95b37667084b3f66b966736e342e",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-24 20:43:38",
+    "Coin": "BTC",
+    "Network": "BSC",
+    "Amount": "0.01237842",
+    "TransactionFee": "0.0000039",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0xa48905ca15dd4877e2760f26c249645422c6b9ad1c656c7390b563654a4b2309",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-24 20:41:28",
+    "Coin": "BTC",
+    "Network": "BSC",
+    "Amount": "0.0000039",
+    "TransactionFee": "0.0000039",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0x92227a1f00defc6e904fc676569d929182289f72ed8bab0c99dfd7aa53170410",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-24 20:26:01",
+    "Coin": "LINK",
+    "Network": "BSC",
+    "Amount": "10.07901",
+    "TransactionFee": "0.013",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0xe1687de60b6c189d23792d520bfec6395b7f7c908a9e3c87a04482e1fc8bfdf9",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-24 20:06:10",
+    "Coin": "ARB",
+    "Network": "ARBITRUM",
+    "Amount": "114.2546",
+    "TransactionFee": "0.3",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0xd741e45d7cba0ad75faf53a0e35d4f4e016940b86ca5c9c9cccc1f8e5faf088d",
+    "Status": "Completed"
+  },
+  {
+    "Date(UTC)": "2023-05-24 20:03:40",
+    "Coin": "ARB",
+    "Network": "ARBITRUM",
+    "Amount": "1.7",
+    "TransactionFee": "0.3",
+    "Address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+    "TXID": "0x665d9c5fc0a7b19b88e2548934515a7f646e95626b1c38e9bec915abeb49f1f5",
+    "Status": "Completed"
+  },
+  {
     "Date(UTC)": "2023-05-12 06:07:49",
     "Coin": "CAKE",
     "Network": "BSC",

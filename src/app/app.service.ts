@@ -81,6 +81,8 @@ export class AppService {
           this.setCoinPercentResultProperty(coin, coinData);
           this.setCoinPriceProperty(coin, coinData);
           this.setCoinRankProperty(coin, coinData);
+
+          this.sortWalletsByQuantity(coin.wallets);
         });
 
         this.setInvestStatisticState(coinList);
@@ -91,9 +93,9 @@ export class AppService {
     );
   }
 
-  getWalletList(): Observable<WalletInterface[]> {
-    return of(WALLET_LIST);
-  }
+  // getWalletList(): Observable<WalletInterface[]> {
+  //   return of(WALLET_LIST);
+  // }
 
   private setCoinTotalInCurrencyProperty(coin: CoinInterface, coinData: CoinDataInterface): void {
     coin?.wallets?.map((wallet: WalletInterface) => {
@@ -282,6 +284,15 @@ export class AppService {
 
       if (a.rank! < b.rank!) return -1;
       if (a.rank! > b.rank!) return 1;
+
+      return 0;
+    });
+  }
+
+  private sortWalletsByQuantity(walletList: WalletInterface[]): void {
+    walletList.sort((a: WalletInterface, b: WalletInterface) => {
+      if (a.quantity! < b.quantity!) return 1;
+      if (a.quantity! > b.quantity!) return -1;
 
       return 0;
     });

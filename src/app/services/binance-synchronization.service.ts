@@ -42,6 +42,10 @@ export class BinanceSynchronizationService {
     return formatted;
   }
 
+  private findWalletIndex(wallets: any[] = []): number {
+    return wallets.findIndex((wallet: any) => wallet.address === "binance_1")!;
+  }
+
   synchronizeOrders(): Observable<CoinInterface[]> {
     const coins = JSON.parse(JSON.stringify(COIN_LIST));
 
@@ -63,7 +67,7 @@ export class BinanceSynchronizationService {
       if (coinIndex !== -1) {
         const coin = coins[coinIndex];
         order.rank = coin.rank;
-        const walletIndex = coin.wallets?.findIndex((wallet: any) => wallet.name === "Binance")!;
+        const walletIndex = this.findWalletIndex(coin.wallets);
 
         if (walletIndex !== -1) {
           const wallet = coin.wallets![walletIndex];
@@ -144,7 +148,7 @@ export class BinanceSynchronizationService {
       if (coinIndex !== -1) {
         const coin = coins[coinIndex];
         withdrawal.rank = coin.rank;
-        const walletIndex = coin.wallets?.findIndex((wallet: any) => wallet.name === "Binance")!;
+        const walletIndex = this.findWalletIndex(coin.wallets);
 
         if (walletIndex !== -1) {
           const wallet = coin.wallets![walletIndex];
@@ -155,16 +159,9 @@ export class BinanceSynchronizationService {
 
           if (transactionIndex === -1) {
             wallet.transactions.push(transaction);
+            wallet.transactions.sort(this.SORT_BY_DATE);
 
-            wallet.transactions.sort((a: any, b: any) => {
-              const aDate = this.appService.getTime(a.date);
-              const bDate = this.appService.getTime(b.date);
-
-              if (aDate < bDate) return -1;
-              if (aDate > bDate) return 1;
-
-              return 0;
-            });
+            this.addReceiveTransaction(coin, transaction);
           }
 
         } else {
@@ -193,5 +190,52 @@ export class BinanceSynchronizationService {
         coins.push(coin);
       }
     });
+  }
+
+  private addReceiveTransaction(coin: any, transaction: any): void {
+    const targetWalletIndex = coin.wallets?.findIndex((wallet: any) => wallet.address === transaction.address)!;
+
+    if (targetWalletIndex === -1) {
+      coin.wallets.push({
+        "address": transaction.address,
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": transaction.amount,
+            "date": transaction.date,
+            "fee": transaction.fee,
+          }
+        ]
+      });
+    } else {
+      const transactionIndex = this.findTransactionIndex(coin.wallets![targetWalletIndex].transactions, transaction.date);
+
+      if (transactionIndex === -1) {
+        coin.wallets![targetWalletIndex].transactions.push({
+          "action": "receive",
+          "amount": transaction.amount,
+          "date": transaction.date,
+          "fee": transaction.fee,
+        });
+
+        coin.wallets![targetWalletIndex].transactions.sort(this.SORT_BY_DATE);
+      }
+    }
+  }
+
+  private findTransactionIndex(transactions: any[], date: string): number {
+    return transactions.findIndex((transaction: any) => {
+      return new Date(transaction.date).getTime() === new Date(date).getTime();
+    });
+  }
+
+  private SORT_BY_DATE(a: any, b: any): number {
+    const aDate = new Date(a.date).getTime();
+    const bDate = new Date(b.date).getTime();
+
+    if (aDate < bDate) return -1;
+    if (aDate > bDate) return 1;
+
+    return 0;
   }
 }

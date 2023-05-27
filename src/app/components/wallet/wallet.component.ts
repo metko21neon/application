@@ -111,13 +111,13 @@ export class WalletComponent implements OnInit, OnDestroy {
   }
 
   private getWalletList(): void {
-    const stream$ = this.appService.getWalletList().subscribe((walletList: WalletInterface[]) => {
-      this.walletList = walletList;
+    // const stream$ = this.appService.getWalletList().subscribe((walletList: WalletInterface[]) => {
+    //   this.walletList = walletList;
 
-      this.selectWallet(walletList[0]);
-    });
+    //   this.selectWallet(walletList[0]);
+    // });
 
-    this.subscription.add(stream$);
+    // this.subscription.add(stream$);
   }
 
   private setColumnList(): void {

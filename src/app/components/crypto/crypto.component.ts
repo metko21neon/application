@@ -5,6 +5,7 @@ import { CoinDataInterface } from '../../interfaces/coin-data.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
 import { CoinDataService } from '../../services/coin-data.service';
 import { CoinInterface } from '../../interfaces/coin.interface';
+import { WalletNamePipe } from '../../pipes/wallet-name.pipe';
 import { AppService } from '../../app.service';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
@@ -18,6 +19,7 @@ import { Subscription, switchMap } from 'rxjs';
   selector: 'app-crypto',
   templateUrl: './crypto.component.html',
   styleUrls: ['./crypto.component.scss'],
+  providers: [WalletNamePipe],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({ height: '0px', minHeight: '0' })),
@@ -50,7 +52,8 @@ export class CryptoComponent implements OnInit, OnDestroy {
   constructor(
     private binanceSynchronizationService: BinanceSynchronizationService,
     private coinDataService: CoinDataService,
-    private appService: AppService
+    private walletNamePipe: WalletNamePipe,
+    private appService: AppService,
   ) { }
 
   ngOnInit(): void {
@@ -129,7 +132,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
         symbol: coin.symbol,
         wallets: coin.wallets.map((wallet: any) => {
           return {
-            name: wallet.name || "",
+            name: this.walletNamePipe.transform(wallet.address),
             address: wallet.address || "",
             transactions: wallet.transactions.map((transaction: any) => {
               const { averagePrice, ...other } = transaction;
