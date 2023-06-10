@@ -143,16 +143,18 @@ export class CryptoComponent implements OnInit, OnDestroy {
           name: coin.name,
           symbol: coin.symbol,
           token_address: coin.token_address || "",
-          wallets: coin.wallets.map((wallet: any) => {
-            return {
-              name: this.walletNamePipe.transform(wallet.address),
-              address: wallet.address || "",
-              transactions: wallet.transactions.map((transaction: any) => {
-                const { averagePrice, ...other } = transaction;
-                return other;
-              }),
-            };
-          }),
+          wallets: coin.wallets
+            .map((wallet: any) => {
+              return {
+                name: this.walletNamePipe.transform(wallet.address),
+                address: wallet.address || "",
+                transactions: wallet.transactions.map((transaction: any) => {
+                  const { averagePrice, ...other } = transaction;
+                  return other;
+                }),
+              };
+            })
+            .sort(this.sortCoinsByName)
         };
       })
 
