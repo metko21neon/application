@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 
 import { CoinInterface } from '../interfaces/coin.interface';
 import { BINANCE_WITHDRAW } from '../../assets/withdraws';
-import { COIN_LIST } from '../states/coins.state';
 import { ORDERS } from '../../assets/orders';
 import { AppService } from '../app.service';
 
 import moment from 'moment';
+
+import * as COIN_LIST from "./../jsons/coins.json";
 
 export const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
@@ -47,7 +48,7 @@ export class BinanceSynchronizationService {
   }
 
   synchronizeOrders(): Observable<CoinInterface[]> {
-    const coins = JSON.parse(JSON.stringify(COIN_LIST));
+    const coins = JSON.parse(JSON.stringify((COIN_LIST as any).default));
 
     // && order.Status === 'Filled'
     const orders = ORDERS

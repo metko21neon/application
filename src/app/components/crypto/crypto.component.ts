@@ -125,24 +125,36 @@ export class CryptoComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  private sortCoinsByName(a: CoinInterface, b: CoinInterface): number {
+    const aName = a.name.toUpperCase();
+    const bName = b.name.toUpperCase();
+
+    if (aName < bName) return -1;
+    if (aName > bName) return 1;
+
+    return 0;
+  }
+
   private getInitCoinList(coinList: any[]): void {
-    const list = coinList.map((coin: any) => {
-      return {
-        name: coin.name,
-        symbol: coin.symbol,
-        wallets: coin.wallets.map((wallet: any) => {
-          return {
-            name: this.walletNamePipe.transform(wallet.address),
-            address: wallet.address || "",
-            transactions: wallet.transactions.map((transaction: any) => {
-              const { averagePrice, ...other } = transaction;
-              return other;
-            }),
-          };
-        }),
-        token_address: coin.token_address || "",
-      };
-    })
+    const list = coinList
+      .sort(this.sortCoinsByName)
+      .map((coin: any) => {
+        return {
+          name: coin.name,
+          symbol: coin.symbol,
+          token_address: coin.token_address || "",
+          wallets: coin.wallets.map((wallet: any) => {
+            return {
+              name: this.walletNamePipe.transform(wallet.address),
+              address: wallet.address || "",
+              transactions: wallet.transactions.map((transaction: any) => {
+                const { averagePrice, ...other } = transaction;
+                return other;
+              }),
+            };
+          }),
+        };
+      })
 
     console.log('getInitCoinList:', list);
   }

@@ -16,8 +16,9 @@ import { CoinInterface } from './interfaces/coin.interface';
 import { STATE } from './states/invest-statistic.state';
 import { WALLET_LIST } from './states/wallet.state';
 import { COLUMN_LIST } from './states/column.state';
-import { COIN_LIST } from './states/coins.state';
 import { Api } from './api/api';
+
+import * as COIN_LIST from "./jsons/coins.json";
 
 @Injectable({
   providedIn: 'root'
@@ -64,7 +65,7 @@ export class AppService {
     return this.api.getTransactionList();
   }
 
-  getCoinList(coins = COIN_LIST): Observable<CoinInterface[]> {
+  getCoinList(coins = (COIN_LIST as any).default): Observable<CoinInterface[]> {
     // return (this.dbService.getAll('coinList') as Observable<CoinInterface[]>).pipe(
     return (of(coins) as Observable<any[]>).pipe(
       tap((coinList: CoinInterface[]) => {

@@ -23,6 +23,7 @@ export const WALLET_LIST: WalletInterface[] = [
     name: "Ledger wallet",
     company: "Ledger",
     addresses: [
+      'rLoEMuZG3EnhTSVHpo4vVEHu1QH3gMYxcA',
       'ledger_1'
     ]
   },
@@ -30,7 +31,15 @@ export const WALLET_LIST: WalletInterface[] = [
     name: "Metamask wallet",
     company: "Metamask",
     addresses: [
+      '0x2387Eb22e73F85d80966CEd83C323482122Ccf92',
       'metamask_1'
+    ]
+  },
+  {
+    name: "Koala wallet",
+    company: "Kadena",
+    addresses: [
+      'k:dc626bb50c84c0e700e7a3eaa11486267a8598b79e14fd7df965bb5e191c9fe6',
     ]
   },
   {
@@ -65,7 +74,8 @@ export const WALLET_LIST: WalletInterface[] = [
     name: "Main wallet",
     company: "Trust Wallet",
     addresses: [
-      '0xDc56ed4117C7d1350e9c7164220f6342F85BEA95'
+      '0xDc56ed4117C7d1350e9c7164220f6342F85BEA95',
+      'bnb1puldy0etv45fa5s9c5jn23e8pxt86eze7uv35k',
     ]
   },
   {
