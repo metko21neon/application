@@ -7,7 +7,7 @@ export const BINANCE_WITHDRAW = [
     "TransactionFee": "0.5",
     "Address": "B62qpigbgFCsbt4kGiBVU6B4LsjzJUeB26zay9FKWkbdw9eKSgYr2x8",
     "TXID": "CkpZcmbRJErfGCYpt5qpFMkJjKv5Sip1s7zvNgsiY5GZ5ZxrkoKGK",
-    "Status": "Processing"
+    "Status": "Completed"
   },
   {
     "Date(UTC)": "2023-06-10 16:22:40",
@@ -37,7 +37,7 @@ export const BINANCE_WITHDRAW = [
     "TransactionFee": "0.5",
     "Address": "B62qpigbgFCsbt4kGiBVU6B4LsjzJUeB26zay9FKWkbdw9eKSgYr2x8",
     "TXID": "CkpYiN8BQAHBvWe8oFFvkLmrBDbECYPgsFkX1Cvn1GE7BwZN2WyVS",
-    "Status": "Processing"
+    "Status": "Completed"
   },
   {
     "Date(UTC)": "2023-06-10 15:56:57",

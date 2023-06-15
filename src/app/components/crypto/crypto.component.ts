@@ -136,7 +136,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   }
 
   private getInitCoinList(coinList: any[]): void {
-    const list = coinList
+    const list = JSON.parse(JSON.stringify(coinList))
       .sort(this.sortCoinsByName)
       .map((coin: any) => {
         return {
@@ -145,6 +145,13 @@ export class CryptoComponent implements OnInit, OnDestroy {
           token_address: coin.token_address || "",
           wallets: coin.wallets
             .map((wallet: any) => {
+              const walletName = this.walletNamePipe.transform(wallet.address);
+
+              if (!walletName) {
+                console.log('Not found wallet name:', coin.name, `(${coin.symbol})`);
+                console.log('Wallet address:', wallet.address);
+              }
+
               return {
                 name: this.walletNamePipe.transform(wallet.address),
                 address: wallet.address || "",

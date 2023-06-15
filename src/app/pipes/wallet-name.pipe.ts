@@ -9,9 +9,9 @@ export class WalletNamePipe implements PipeTransform {
 
   transform(address: string): string {
     const wallet = WALLET_LIST.find((wallet: WalletInterface) => {
-      return wallet.addresses.some((item: string) => item === address);
+      return wallet.addresses.some((item: { address: string }) => item.address === address);
     });
 
-    return `${wallet?.company} (${wallet?.name})`;
+    return wallet ? `${wallet?.company} (${wallet?.name})` : '';
   }
 }
