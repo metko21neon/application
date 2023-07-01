@@ -16,6 +16,10 @@ import { SpendsComponent } from './components/spends/spends.component';
 import { ImCurrencyPipe } from './pipes/im-currency.pipe';
 import { SavingsComponent } from './components/savings/savings.component';
 import { CapitalComponent } from './components/capital/capital.component';
+import { CostsComponent } from './components/costs/costs.component';
+import { BondsComponent } from './components/bonds/bonds.component';
+import { BondsTableComponent } from './components/bonds/components/bonds-table/bonds-table.component';
+import { BalanceHistoryTableComponent } from './components/bonds/components/balance-history-table/balance-history-table.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { CapitalComponent } from './components/capital/capital.component';
     ImCurrencyPipe,
     SavingsComponent,
     CapitalComponent,
+    CostsComponent,
+    BondsComponent,
+    BondsTableComponent,
+    BalanceHistoryTableComponent,
   ],
   imports: [
     FinancesRoutingModule,

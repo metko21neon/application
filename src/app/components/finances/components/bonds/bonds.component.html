@@ -1,0 +1,93 @@
+<div class="flex flex-column p-20" style="height: 100%;">
+  <div class="flex flex-column">
+    <div *ngFor="let item of statistics | keyvalue" class="statistics-block flex mb-10">
+      <div class="flex">{{ item.key | uppercase }}</div>
+
+      <div class="flex flex-column">
+        <div class="flex">
+          <span style="width: 200px;">Balance:</span>
+          <span class="property-amount">
+            {{ $any(item.value).balance | number | imCurrency }}
+            {{ item.key | uppercase }}
+          </span>
+        </div>
+
+        <div class="flex">
+          <span style="width: 200px;">Total:</span>
+          <span class="property-amount">
+            {{ $any(item.value).balance + $any(item.value).active | number | imCurrency }}
+            {{ item.key | uppercase }}
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-column">
+        <div class="flex">
+          <span style="width: 200px;">Active Total:</span>
+          <span class="property-amount">
+            {{ $any(item.value).active | number | imCurrency }}
+            {{ item.key | uppercase }}
+          </span>
+        </div>
+
+        <div class="flex">
+          <span style="width: 200px;">Potential Income:</span>
+          <span class="property-amount">
+            {{ $any(item.value).potencialIncome | number | imCurrency }}
+            {{ item.key | uppercase }}
+          </span>
+        </div>
+
+        <div class="flex">
+          <span style="width: 200px;">Earned Income:</span>
+          <span class="property-amount">
+            {{ $any(item.value).earnedIncome | number | imCurrency }}
+            {{ item.key | uppercase }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="statistics-block flex mb-10">
+      <div class="flex flex-column">
+        <span style="width: 200px;">Total amount:</span>
+        <div *ngFor="let item of total.full | keyvalue" class="flex">
+          <span class="property-amount">
+            {{ $any(item).value | number | imCurrency }}
+            {{ $any(item).key | uppercase }}
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-column">
+        <span style="width: 200px;">Invested amount:</span>
+        <div *ngFor="let item of total.invested | keyvalue" class="flex">
+          <span class="property-amount">
+            {{ $any(item).value | number | imCurrency }}
+            {{ $any(item).key | uppercase }}
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-column">
+        <span style="width: 200px;">Earned amount:</span>
+        <div *ngFor="let item of total.earned | keyvalue" class="flex">
+          <span class="property-amount">
+            {{ $any(item).value | number | imCurrency }}
+            {{ $any(item).key | uppercase }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-tab-group style="min-height: 0;">
+    <mat-tab label="Bonds">
+      <app-bonds-table [bonds]="dataSource"></app-bonds-table>
+    </mat-tab>
+
+    <mat-tab label="Balance history">
+      <app-balance-history-table [balanceHistory]="balanceHistory"></app-balance-history-table>
+    </mat-tab>
+  </mat-tab-group>
+</div>

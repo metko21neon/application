@@ -7,7 +7,7 @@ export const DEBT_STATE = {
     },
     {
       source: "Mom's credit",
-      amount: 30_000
+      amount: 27_000
     },
     {
       source: "Kitty",

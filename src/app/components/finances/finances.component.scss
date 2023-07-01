@@ -2,6 +2,10 @@
   color: red;
 }
 
+.im-finances {
+  grid-template-rows: 30px minmax(0, 1fr);
+}
+
 app-debts,
 app-month {
   .mat-cell {
@@ -43,4 +47,8 @@ app-month {
   .mat-tab-body-content {
     overflow: hidden;
   }
+}
+
+.mat-table {
+  width: 100%;
 }

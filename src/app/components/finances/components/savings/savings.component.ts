@@ -5,40 +5,46 @@ import { SAVINGS_STATE } from '../../states/savings.state';
 
 const STATE = [
   {
+    label: 'USD',
+    amount: 1_000,
+    exchangeRate: 37.453,
+    description: 'Parents'
+  },
+  {
     label: 'EURO',
     amount: 500,
     exchangeRate: 38.8,
-    desctiption: 'Home'
+    description: 'Parents'
   },
   {
     label: 'EURO',
     amount: 40,
     exchangeRate: 38.8,
-    desctiption: 'Wallet'
+    description: 'Wallet'
   },
   {
     label: 'EURO',
     amount: 150,
     exchangeRate: 40,
-    desctiption: 'Wallet'
+    description: 'Wallet'
   },
   {
     label: 'USD',
-    amount: 1_840,
+    amount: 835,
     exchangeRate: 37.453,
-    desctiption: 'Privatbank'
+    description: 'Wallet'
+  },
+  {
+    label: 'USD',
+    amount: 5,
+    exchangeRate: 37.453,
+    description: 'Privatbank'
   },
   {
     label: 'UAH',
-    amount: 2000,
+    amount: 3000,
     exchangeRate: 1,
-    desctiption: 'Monobank jar'
-  },
-  {
-    label: 'UAH',
-    amount: 1000,
-    exchangeRate: 1,
-    desctiption: 'Wallet'
+    description: 'Monobank jar'
   },
 ];
 
@@ -51,7 +57,7 @@ export class SavingsComponent implements OnInit {
 
   @Input() state!: StateInterface[];
 
-  displayedCurrencyColumns: string[] = ['currency', 'amount', 'exchangeRate', 'amountUAH']
+  displayedCurrencyColumns: string[] = ['description', 'currency', 'amount', 'exchangeRate', 'amountUAH']
   displayedColumns: string[] = ['period', 'amount']
   dataSource: any[] = [];
   savings = {

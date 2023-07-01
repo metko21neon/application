@@ -15,7 +15,7 @@ export interface StateInterface {
     }
   },
   investing: {
-    list: DebtInterface[];
+    list: any[];
   },
   income: {
     list: FinanceIncomeInterface[];
@@ -26,6 +26,11 @@ export interface StateInterface {
     total: number;
   },
   savings?: {
+    percentage: number;
+    list: any[];
+    total?: number;
+  },
+  costs?: {
     percentage: number;
     list: any[];
     total?: number;

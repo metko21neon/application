@@ -77,6 +77,12 @@
         </td>
       </ng-container>
 
+      <ng-container matColumnDef="description">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
       <tr mat-header-row *matHeaderRowDef="displayedCurrencyColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedCurrencyColumns;"></tr>
       <tr mat-footer-row *matFooterRowDef="displayedCurrencyColumns; sticky: true"></tr>

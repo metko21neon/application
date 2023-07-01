@@ -1,0 +1,76 @@
+<pre>
+Dental
+	9100 Front teeth, remove 8s
+	1 775 Equipements
+	43 000 Braces
+Total: 53850 UAH
+
+Savings debt
+	Home 3600
+	Clothes 2200
+	Sunglasses 2300
+	Car 12500
+	Event 8700
+	Emily 8000
+Savings debt total: 37300
+
+Kitty 30000
+
+Total: 91150 Borrowing
+</pre>
+
+<div class="app-costs">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="period">
+      <th mat-header-cell *matHeaderCellDef> Period </th>
+      <td mat-cell *matCellDef="let element">
+        <span> {{ element.period.string }} </span>
+      </td>
+
+      <td mat-footer-cell *matFooterCellDef>Total:</td>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let element">
+        <div *ngFor="let item of element.costs.list" class="flex" [style.color]="item.payed ? 'inherit' : 'red'">
+          <span style="width: 60px;"> {{ item.source }} </span>
+          <span>{{ item.amount | number | imCurrency }} UAH</span>
+        </div>
+      </td>
+
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="spend">
+      <th mat-header-cell *matHeaderCellDef>Spend</th>
+      <td mat-cell *matCellDef="let element">
+
+      </td>
+
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="rest">
+      <th mat-header-cell *matHeaderCellDef>Rest</th>
+      <td mat-cell *matCellDef="let element">
+
+      </td>
+
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <ng-container matColumnDef="debt">
+      <th mat-header-cell *matHeaderCellDef>Debt</th>
+      <td mat-cell *matCellDef="let element">
+
+      </td>
+
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+  </table>
+</div>

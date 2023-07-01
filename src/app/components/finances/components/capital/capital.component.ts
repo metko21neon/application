@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { StateInterface } from '../../interfaces/state.interface';
 import { CAPITAL_STATE } from '../../states/capital.state';
+import { BondsService } from '../bonds/bonds.service';
 
 @Component({
   selector: 'app-capital',
@@ -20,9 +21,11 @@ export class CapitalComponent implements OnInit {
     amountUAH: 0,
   };
 
-  constructor() { }
+  constructor(private bondsService: BondsService) { }
 
   ngOnInit(): void {
+    this.initBonds();
+
     this.list = this.capital.list.map((item: any) => {
       if (item.price.currency === 'UAH') {
         return {
@@ -50,5 +53,13 @@ export class CapitalComponent implements OnInit {
   private calculateCapitalTotal(): void {
     this.total.amountUSD = this.list.reduce((acc: number, item: any) => acc + item.amountUSD, 0);
     this.total.amountUAH = this.list.reduce((acc: number, item: any) => acc + item.amountUAH, 0);
+  }
+
+  private initBonds(): void {
+    const bondItem = this.capital.list.find((item: any) => item.category === "Investments" && item.name === "Bonds")!;
+    const total = this.bondsService.calculateFullTotal();
+
+    bondItem.price.previous = total.full.uah;
+    bondItem.price.current = total.full.uah;
   }
 }

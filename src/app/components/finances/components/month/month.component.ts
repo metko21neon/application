@@ -14,7 +14,7 @@ export class MonthComponent implements OnInit {
 
   @Input() state!: StateInterface[];
 
-  displayedColumns = ['period', 'incomes', 'taxes', 'savings', 'newDebts', 'payedDebts', 'lifeCosts', 'investing'];
+  displayedColumns = ['period', 'incomes', 'taxes', 'savings', 'costs', 'newDebts', 'payedDebts', 'investing', 'lifeCosts'];
   dataSource: any[] = [];
   total: any;
 
@@ -68,6 +68,10 @@ export class MonthComponent implements OnInit {
             total: this.calculateQuarterTotal(list, 'savings'),
             list: this.calculate(list, 'savings'),
           },
+          costs: {
+            total: this.calculateQuarterTotal(list, 'costs'),
+            list: this.calculate(list, 'costs'),
+          },
           income: { total: this.calculateQuarterTotal(list, 'income') },
           taxes: {
             total: this.calculateQuarterTotal(list, 'taxes'),
@@ -108,6 +112,7 @@ export class MonthComponent implements OnInit {
       lifeCosts: this.calculateFullTotal('lifeCosts'),
       investing: this.calculateFullTotal('investing'),
       savings: this.calculateFullTotal('savings'),
+      costs: this.calculateFullTotal('costs'),
       income: this.calculateFullTotal('income'),
       taxes: this.calculateFullTotal('taxes'),
       newDebts: this.calculateFullTotal('newDebts'),

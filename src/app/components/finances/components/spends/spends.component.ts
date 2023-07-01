@@ -16,7 +16,8 @@ export class SpendsComponent implements OnInit {
   total: any = {
     investing: 0,
     taxes: 0,
-    savings: 0
+    savings: 0,
+    costs: 0,
   };
 
   constructor() { }
@@ -68,6 +69,18 @@ export class SpendsComponent implements OnInit {
           list: this.filterUnpaidBills(item.savings.list),
           name: 'Savings',
           total: savingsTotal,
+        });
+      }
+
+      const costsTotal = this.calculateTotalAmount(this.filterUnpaidBills(item.costs.list));
+
+      if (costsTotal) {
+        this.total.costs = this.total.costs + costsTotal;
+
+        categories.push({
+          list: this.filterUnpaidBills(item.costs.list),
+          name: 'Costs',
+          total: costsTotal,
         });
       }
 

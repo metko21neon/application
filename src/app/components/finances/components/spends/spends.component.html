@@ -32,10 +32,11 @@
         <span> Total taxes {{ total.taxes | number | imCurrency }} UAH </span>
         <span> Total investing {{ total.investing | number | imCurrency }} UAH </span>
         <span> Total savings {{ total.savings | number | imCurrency }} UAH </span>
+        <span> Total costs {{ total.costs | number | imCurrency }} UAH </span>
       </div>
 
       <div style="margin-top: 10px; font-weight: bold;">
-        Total {{ total.taxes + total.investing + total.savings | number | imCurrency }} UAH
+        Total {{ total.taxes + total.investing + total.savings + total.costs | number | imCurrency }} UAH
       </div>
     </div>
   </div>
