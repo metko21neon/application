@@ -358,7 +358,7 @@ export const FINANCES_STATE: StateInterface[] = [
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
           amount: 1_475,
-          payed: false,
+          payed: true,
         },
         {
           type: TAX_ENUM.SINGLE_TAX,
@@ -463,7 +463,7 @@ export const FINANCES_STATE: StateInterface[] = [
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
           amount: 1_475,
-          payed: false,
+          payed: true,
         },
         {
           type: TAX_ENUM.SINGLE_TAX,
@@ -563,7 +563,7 @@ export const FINANCES_STATE: StateInterface[] = [
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
           amount: 1_475,
-          payed: false,
+          payed: true,
         },
         {
           type: TAX_ENUM.SINGLE_TAX,
