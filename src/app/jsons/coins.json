@@ -15,22 +15,39 @@
             "total": 25.2
           },
           {
-            "date": "2022-06-12 16:32:03",
             "action": "buy",
+            "date": "2022-06-12 14:33:01",
             "price": 0.66,
-            "total": 44.946
+            "total": 13.002
           },
           {
-            "date": "2022-12-17 16:25:36",
+            "action": "buy",
+            "date": "2022-06-12 16:29:20",
+            "price": 0.66,
+            "total": 26.268
+          },
+          {
+            "action": "buy",
+            "date": "2022-06-12 16:32:03",
+            "price": 0.66,
+            "total": 5.676
+          },
+          {
+            "date": "2022-12-17 15:31:30",
             "action": "buy",
             "price": 0.384,
             "total": 24.9984
           },
           {
-            "date": "2023-03-10 07:12:41",
+            "date": "2023-03-10 06:12:41",
             "action": "buy",
             "price": 0.434,
             "total": 49.9968
+          },
+          {
+            "date": "2023-03-10 19:30:59",
+            "action": "stake",
+            "amount": 0.21
           },
           {
             "date": "2023-03-10 19:31:00",
@@ -49,16 +66,56 @@
             "network": "BSC"
           },
           {
-            "date": "2023-05-08 21:33:46",
+            "date": "2023-05-08 21:34:07",
             "action": "buy",
             "total": 20,
             "price": 0.4
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-15 00:11:37",
+            "price": 0.262,
+            "total": 49.9896
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 240.64,
+            "date": "2023-06-15 19:04:13",
+            "fee": 0.16,
+            "network": "BSC"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:40:44",
+            "price": 0.314,
+            "total": 12.5286
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:41:08",
+            "price": 0.314,
+            "total": 12.3716
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:41:22",
+            "price": 0.314,
+            "total": 75.0774
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 318.24,
+            "date": "2023-07-06 01:45:38",
+            "fee": 0.16,
+            "network": "BSC"
           }
         ]
       },
       {
         "name": "Trust Wallet (Savings wallet)",
-        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
         "transactions": [
           {
             "date": "2023-03-10 19:31:00",
@@ -70,6 +127,20 @@
             "date": "2023-03-10 19:34:00",
             "action": "receive",
             "amount": 272.13,
+            "fee": 0.16
+          },
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 240.64,
+            "date": "2023-06-15 19:04:13",
+            "fee": 0.16
+          },
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 318.24,
+            "date": "2023-07-06 01:45:38",
             "fee": 0.16
           }
         ]
@@ -86,7 +157,7 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2023-03-10 06:56:37",
+            "date": "2023-03-10 06:01:25",
             "action": "buy",
             "price": 67.1,
             "total": 49.9895
@@ -98,16 +169,10 @@
             "total": 49.9593
           },
           {
-            "date": "2023-05-08 19:00:02",
+            "date": "2023-05-08 19:04:17",
             "action": "buy",
             "total": 14.19,
             "price": 66
-          },
-          {
-            "date": "2023-06-10 12:54:28",
-            "price": 52,
-            "action": "buy",
-            "total": 52
           },
           {
             "action": "transfer",
@@ -124,6 +189,12 @@
             "date": "2023-06-10 15:41:07",
             "fee": 0.0011,
             "network": "BSC"
+          },
+          {
+            "date": "2023-06-10 16:02:08",
+            "price": 52,
+            "action": "buy",
+            "total": 52
           },
           {
             "action": "transfer",
@@ -191,13 +262,13 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-12-17 01:08:42",
+            "date": "2022-12-17 00:08:42",
             "action": "buy",
             "price": 0.2003,
             "total": 25.0375
           },
           {
-            "date": "2023-03-10 06:51:04",
+            "date": "2023-03-10 05:51:04",
             "action": "buy",
             "price": 0.1922,
             "total": 49.972
@@ -219,7 +290,7 @@
             "network": "ALGO"
           },
           {
-            "date": "2023-05-08 18:57:34",
+            "date": "2023-05-08 19:00:36",
             "action": "buy",
             "total": 14.196,
             "price": 0.169
@@ -235,6 +306,32 @@
             "address": "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
             "amount": 791.992,
             "date": "2023-06-10 14:03:27",
+            "fee": 0.008,
+            "network": "ALGO"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:38:57",
+            "price": 0.12,
+            "total": 78
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:38:57",
+            "price": 0.12,
+            "total": 8.88
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:38:57",
+            "price": 0.12,
+            "total": 113.04
+          },
+          {
+            "action": "transfer",
+            "address": "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
+            "amount": 1665.992,
+            "date": "2023-07-06 01:44:10",
             "fee": 0.008,
             "network": "ALGO"
           }
@@ -260,6 +357,13 @@
             "action": "receive",
             "amount": 791.992,
             "date": "2023-06-10 14:03:27",
+            "fee": 0.008
+          },
+          {
+            "action": "receive",
+            "network": "ALGO",
+            "amount": 1665.992,
+            "date": "2023-07-06 01:44:10",
             "fee": 0.008
           }
         ]
@@ -296,10 +400,16 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2023-04-21 00:39:13",
             "action": "buy",
+            "date": "2023-04-21 00:39:13",
             "price": 0.00366,
-            "total": 74.99706
+            "total": 10.5408
+          },
+          {
+            "action": "buy",
+            "date": "2023-04-21 00:39:13",
+            "price": 0.00366,
+            "total": 64.45626
           },
           {
             "date": "2023-04-28 20:13:07",
@@ -326,6 +436,18 @@
             "date": "2023-06-08 21:21:15",
             "fee": 1496,
             "network": "ETH"
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-15 00:01:37",
+            "price": 0.001994,
+            "total": 24.721612
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-15 00:01:48",
+            "price": 0.001994,
+            "total": 25.277938
           }
         ]
       },
@@ -398,7 +520,7 @@
             "total": 14.167548
           },
           {
-            "date": "2023-05-08 18:55:38",
+            "date": "2023-05-08 18:56:04",
             "action": "buy",
             "total": 14.17095,
             "price": 8.7475
@@ -416,6 +538,25 @@
             "date": "2023-06-10 19:18:46",
             "fee": 0.01,
             "network": "APT"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:41:18",
+            "price": 7.39,
+            "total": 69.9833
+          },
+          {
+            "action": "stake",
+            "date": "2023-07-07 19:35:50",
+            "amount": 0.0036423
+          },
+          {
+            "action": "transfer",
+            "address": "0x894c54c013cb4822fb70c540684ec921935019bc216e19a5440d302905f5e9e7",
+            "amount": 9.46,
+            "date": "2023-07-07 19:35:51",
+            "fee": 0.01,
+            "network": "APT"
           }
         ]
       },
@@ -427,6 +568,13 @@
             "action": "receive",
             "amount": 11.59364233,
             "date": "2023-06-10 19:18:46",
+            "fee": 0.01
+          },
+          {
+            "action": "receive",
+            "network": "APT",
+            "amount": 9.46,
+            "date": "2023-07-07 19:35:51",
             "fee": 0.01
           }
         ]
@@ -443,28 +591,30 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2023-04-21 00:38:04",
+            "date": "2023-04-21 00:38:05",
             "action": "buy",
             "price": 1.4278,
             "total": 24.9865
           },
           {
-            "date": "2023-04-21 00:38:15",
+            "date": "2023-05-08 04:43:37",
             "action": "buy",
             "price": 1.2,
             "total": 49.92
           },
           {
-            "date": "2023-05-08 18:56:41",
+            "date": "2023-05-08 19:00:22",
             "action": "buy",
             "total": 14.22597,
             "price": 1.1757
           },
           {
-            "date": "2023-05-24 19:22:56",
+            "date": "2023-05-24 19:28:49",
             "price": 1.0994,
             "action": "buy",
-            "total": 49.91276
+            "total": 49.91276,
+            "fee": "0.04540000",
+            "network": "ARBITRUM"
           },
           {
             "action": "transfer",
@@ -608,7 +758,7 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2023-03-10 06:52:46",
+            "date": "2023-03-10 05:52:50",
             "action": "buy",
             "price": 7.43,
             "total": 49.9296
@@ -637,6 +787,13 @@
             "action": "receive",
             "amount": 11.45706872,
             "fee": 0.008
+          },
+          {
+            "action": "receive",
+            "network": "AVAX",
+            "amount": 18.06336512,
+            "date": "2023-07-06 02:02:33",
+            "fee": 0.008
           }
         ]
       },
@@ -657,22 +814,27 @@
             "total": 24.96
           },
           {
-            "date": "2022-12-17 01:04:35",
+            "date": "2022-12-17 00:04:35",
             "action": "buy",
             "price": 12.44,
             "total": 24.88
           },
           {
-            "date": "2023-03-10 07:07:18",
+            "date": "2023-03-10 06:13:42",
             "action": "buy",
             "price": 14.46,
             "total": 49.887
           },
           {
-            "date": "2023-04-21 00:37:21",
+            "date": "2023-04-21 22:07:33",
             "action": "buy",
             "price": 17,
             "total": 74.97
+          },
+          {
+            "date": "2023-04-22 19:58:15",
+            "action": "stake",
+            "amount": 0.0849949
           },
           {
             "action": "transfer",
@@ -697,13 +859,13 @@
             "total": 14.175
           },
           {
-            "date": "2023-05-08 21:48:13",
+            "date": "2023-05-08 21:51:31",
             "action": "buy",
             "total": 41.4528,
             "price": 15.24
           },
           {
-            "date": "2023-05-24 19:23:32",
+            "date": "2023-05-24 19:29:45",
             "price": 14.07,
             "action": "buy",
             "total": 49.9485
@@ -715,10 +877,18 @@
             "total": 74.8991
           },
           {
-            "date": "2023-06-10 13:01:45",
+            "date": "2023-06-10 13:05:01",
             "price": 11.4,
             "action": "buy",
             "total": 49.932
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 18.07135236,
+            "date": "2023-06-12 16:31:14",
+            "fee": 0.0051,
+            "network": "BSC"
           },
           {
             "action": "receive",
@@ -726,6 +896,14 @@
             "amount": 18.07135236,
             "date": "2023-07-06 02:01:10",
             "fee": 0.000116649
+          },
+          {
+            "action": "transfer",
+            "address": "X-avax1sxnpzqdk5g7etd9853fvn4gcxjj4wl98vlx52z",
+            "amount": 18.06336512,
+            "date": "2023-07-06 02:02:33",
+            "fee": 0.008,
+            "network": "AVAX"
           }
         ]
       },
@@ -734,18 +912,17 @@
         "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
         "transactions": [
           {
-            "date": "2023-04-22 19:58:16",
             "action": "receive",
+            "network": "BSC",
             "amount": 18.07135236,
-            "fee": 0
+            "date": "2023-06-12 16:31:14"
           },
           {
             "action": "transfer",
             "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
             "amount": 18.07135236,
             "date": "2023-07-06 02:01:10",
-            "network": "BSC",
-            "fee": 0.000116649
+            "network": "BSC"
           }
         ]
       }
@@ -967,6 +1144,38 @@
             "action": "buy",
             "price": 0.795,
             "total": 29.415
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-15 00:16:33",
+            "price": 0.0842,
+            "total": 49.99796
+          },
+          {
+            "action": "stake",
+            "date": "2023-06-23 20:33:25",
+            "amount": 6.50136657
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 636.88136657,
+            "date": "2023-06-23 20:33:26",
+            "fee": 0.42,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 636.88136657,
+            "date": "2023-06-23 20:33:26",
+            "fee": 0.42
           }
         ]
       }
@@ -1160,19 +1369,19 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-12-17 01:10:43",
+            "date": "2022-12-17 00:10:43",
             "action": "buy",
             "price": 104.3,
             "total": 24.9277
           },
           {
-            "date": "2022-12-17 16:19:55",
+            "date": "2022-12-17 15:20:06",
             "action": "buy",
             "price": 101.6,
             "total": 24.9936
           },
           {
-            "date": "2023-03-10 07:18:47",
+            "date": "2023-03-10 06:19:25",
             "action": "buy",
             "price": 108.7,
             "total": 24.8923
@@ -1182,6 +1391,11 @@
             "action": "buy",
             "total": 14.1375,
             "price": 113.1
+          },
+          {
+            "date": "2023-06-08 21:25:42",
+            "action": "stake",
+            "amount": 0.00437366
           },
           {
             "action": "transfer",
@@ -1459,6 +1673,11 @@
             "executed": 151.3
           },
           {
+            "date": "2022-11-15 00:19:59",
+            "action": "stake",
+            "amount": 21.911788
+          },
+          {
             "date": "2022-11-15 00:20:00",
             "action": "transfer",
             "wallet": "Ledger",
@@ -1650,16 +1869,15 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2021-04-22 01:28:29",
             "action": "buy",
             "price": 37,
             "total": 372.59
           },
           {
-            "date": "2021-01-01 02:00:00",
-            "action": "buy",
-            "price": 17.389,
-            "total": 90.353
+            "date": "2021-06-05 23:11:59",
+            "action": "stake",
+            "amount": 0.0065947
           },
           {
             "date": "2021-06-05 23:12:00",
@@ -1668,6 +1886,12 @@
             "address": "0xfc0eb51db6222d46b6bcb5de81018298809319c3",
             "amount": 10.06969471,
             "fee": 0.0069
+          },
+          {
+            "date": "2021-07-02 15:00:11",
+            "action": "buy",
+            "price": 17.389,
+            "total": 90.353244
           },
           {
             "date": "2021-07-02 15:59:00",
@@ -1684,13 +1908,13 @@
             "total": 24.998
           },
           {
-            "date": "2022-12-17 20:28:50",
+            "date": "2022-12-17 19:28:50",
             "action": "buy",
             "price": 5.933,
             "total": 49.95586
           },
           {
-            "date": "2023-03-10 07:13:20",
+            "date": "2023-03-10 06:13:21",
             "action": "buy",
             "price": 6.16,
             "total": 49.9576
@@ -1712,7 +1936,7 @@
             "network": "BSC"
           },
           {
-            "date": "2023-04-21 00:35:54",
+            "date": "2023-04-21 02:20:17",
             "action": "buy",
             "price": 7.53,
             "total": 49.9992
@@ -1732,7 +1956,7 @@
             "total": 14.18553
           },
           {
-            "date": "2023-05-24 19:23:51",
+            "date": "2023-05-24 19:24:06",
             "price": 6.252,
             "action": "buy",
             "total": 49.95348
@@ -1873,6 +2097,30 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
+            "action": "buy",
+            "date": "2021-05-06 10:13:41",
+            "price": 0.50621,
+            "total": 529.191934
+          },
+          {
+            "action": "sell",
+            "date": "2021-05-10 03:41:34",
+            "price": 0.48773,
+            "filled": 311.8
+          },
+          {
+            "action": "sell",
+            "date": "2021-05-10 03:41:34",
+            "price": 0.48773,
+            "filled": 510.2
+          },
+          {
+            "action": "sell",
+            "date": "2021-05-10 05:39:04",
+            "price": 0.49816,
+            "filled": 222.3
+          },
+          {
             "date": "2022-05-09 22:11:48",
             "action": "buy",
             "price": 0.1379,
@@ -2011,16 +2259,16 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
             "action": "buy",
-            "price": 95,
-            "total": 25
+            "date": "2022-01-24 12:35:49",
+            "price": 113,
+            "total": 24.973
           },
           {
-            "date": "2021-01-01 02:00:00",
             "action": "buy",
-            "price": 113,
-            "total": 25
+            "date": "2022-02-24 07:44:57",
+            "price": 95,
+            "total": 24.985
           }
         ]
       }
@@ -2056,16 +2304,16 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2022-01-24 12:51:10",
+            "action": "buy",
+            "price": 30,
+            "total": 24.9
+          },
+          {
+            "date": "2022-02-21 15:09:27",
             "action": "buy",
             "price": 25,
             "total": 44.25
-          },
-          {
-            "date": "2021-01-01 02:00:00",
-            "action": "buy",
-            "price": 30,
-            "total": 25
           },
           {
             "date": "2022-05-09 22:10:57",
@@ -2074,13 +2322,13 @@
             "total": 24.953
           },
           {
-            "date": "2022-12-17 01:05:03",
+            "date": "2022-12-17 00:06:52",
             "action": "buy",
             "price": 8.983,
             "total": 24.97274
           },
           {
-            "date": "2023-03-10 06:58:57",
+            "date": "2023-03-10 05:58:57",
             "action": "buy",
             "price": 11.08,
             "total": 49.9708
@@ -2102,7 +2350,7 @@
             "network": "ATOM"
           },
           {
-            "date": "2023-04-21 00:36:23",
+            "date": "2023-04-21 00:38:42",
             "action": "buy",
             "price": 11.438,
             "total": 74.9189
@@ -2128,10 +2376,16 @@
             "total": 49.94703
           },
           {
-            "date": "2023-06-10 12:50:56",
-            "price": 7.83,
             "action": "buy",
-            "total": 74.9331
+            "date": "2023-06-10 12:52:15",
+            "price": 7.83,
+            "total": 42.5169
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-10 12:52:19",
+            "price": 7.83,
+            "total": 32.4162
           },
           {
             "action": "transfer",
@@ -2140,30 +2394,25 @@
             "date": "2023-06-10 13:53:29",
             "fee": 0.004,
             "network": "ATOM"
-          }
-        ]
-      },
-      {
-        "name": "Trust Wallet (Savings wallet)",
-        "address": "3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2",
-        "transactions": [
-          {
-            "date": "2023-03-10 19:20:00",
-            "action": "receive",
-            "amount": 0.006,
-            "fee": 0.004
           },
           {
-            "date": "2023-03-10 19:23:00",
-            "action": "receive",
-            "amount": 12.13701,
-            "fee": 0.004
+            "action": "buy",
+            "date": "2023-07-06 01:35:28",
+            "price": 9.36,
+            "total": 99.9648
           },
           {
-            "date": "2023-04-21 00:51:20",
-            "action": "receive",
-            "amount": 6.546,
-            "fee": 0.004
+            "action": "stake",
+            "date": "2023-07-06 01:44:49",
+            "amount": 0.4661833
+          },
+          {
+            "action": "transfer",
+            "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
+            "amount": 10.67603,
+            "date": "2023-07-06 01:44:50",
+            "fee": 0.004,
+            "network": "ATOM"
           }
         ]
       },
@@ -2172,9 +2421,37 @@
         "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
         "transactions": [
           {
+            "date": "2023-03-10 19:20:00",
+            "action": "receive",
+            "amount": 0.006,
+            "network": "ATOM",
+            "fee": 0.004
+          },
+          {
+            "date": "2023-03-10 19:23:00",
+            "action": "receive",
+            "amount": 12.13701,
+            "network": "ATOM",
+            "fee": 0.004
+          },
+          {
+            "action": "receive",
+            "network": "ATOM",
+            "amount": 6.546,
+            "date": "2023-04-21 00:51:20",
+            "fee": 0.004
+          },
+          {
             "action": "receive",
             "amount": 15.681172,
             "date": "2023-06-10 13:53:29",
+            "fee": 0.004
+          },
+          {
+            "action": "receive",
+            "network": "ATOM",
+            "amount": 10.67603,
+            "date": "2023-07-06 01:44:50",
             "fee": 0.004
           }
         ]
@@ -2338,13 +2615,19 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-12-17 01:06:59",
             "action": "buy",
+            "date": "2022-12-17 00:07:13",
             "price": 44.87,
-            "total": 24.99259
+            "total": 11.84568
           },
           {
-            "date": "2023-03-10 07:19:16",
+            "action": "buy",
+            "date": "2022-12-17 00:07:45",
+            "price": 44.87,
+            "total": 13.14691
+          },
+          {
+            "date": "2023-03-10 06:19:16",
             "action": "buy",
             "price": 52.68,
             "total": 24.97032
@@ -2474,6 +2757,11 @@
             "total": 530.006076
           },
           {
+            "action": "stake",
+            "date": "2023-05-25 22:06:07",
+            "amount": 17.85940968
+          },
+          {
             "action": "transfer",
             "address": "DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp",
             "amount": 76,
@@ -2544,16 +2832,16 @@
             "date": "2022-05-09 21:57:34",
             "action": "buy",
             "price": 3.079,
-            "total": 49.818
+            "total": 49.81822
           },
           {
-            "date": "2022-12-17 16:20:47",
+            "date": "2022-12-17 15:20:47",
             "action": "buy",
             "price": 1.412,
             "total": 24.9924
           },
           {
-            "date": "2023-03-10 07:21:26",
+            "date": "2023-03-10 06:21:47",
             "action": "buy",
             "price": 2.009,
             "total": 24.99196
@@ -2613,7 +2901,9 @@
             "date": "2022-05-12 08:36:36",
             "action": "buy",
             "price": 0.0000288,
-            "total": 24.999984
+            "total": 24.999984,
+            "fee": "868.06",
+            "network": "XEC"
           },
           {
             "date": "2022-05-28 22:37:29",
@@ -2622,7 +2912,7 @@
             "filled": 528317
           },
           {
-            "date": "2023-05-08 21:38:48",
+            "date": "2023-05-22 03:46:44",
             "price": 0.0000253,
             "action": "buy",
             "total": 19.9999789
@@ -2892,10 +3182,21 @@
             "total": 24.99
           },
           {
-            "date": "2022-12-17 20:32:38",
             "action": "buy",
+            "date": "2022-12-17 19:32:38",
             "price": 0.202,
-            "total": 24.846
+            "total": 16.564
+          },
+          {
+            "action": "buy",
+            "date": "2022-12-17 19:32:38",
+            "price": 0.202,
+            "total": 8.282
+          },
+          {
+            "action": "stake",
+            "date": "2023-04-23 02:49:35",
+            "amount": 1.1495625
           },
           {
             "action": "transfer",
@@ -2914,13 +3215,13 @@
             "network": "FTM"
           },
           {
-            "date": "2023-05-08 18:58:02",
+            "date": "2023-05-08 19:00:33",
             "action": "buy",
             "total": 13.9046,
             "price": 0.3758
           },
           {
-            "date": "2023-06-10 12:48:26",
+            "date": "2023-06-10 12:50:17",
             "price": 0.2383,
             "action": "buy",
             "total": 49.8047
@@ -2997,34 +3298,39 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2021-05-20 07:11:49",
             "action": "buy",
             "price": 71.35,
             "total": 149.513925
           },
           {
-            "date": "2022-09-15 15:19:29",
+            "date": "2022-09-15 15:36:26",
             "action": "buy",
             "price": 5.85,
             "total": 130.689
           },
           {
-            "date": "2022-12-17 01:09:38",
+            "date": "2022-12-17 00:09:38",
             "action": "buy",
             "price": 3.79,
             "total": 25.0898
           },
           {
-            "date": "2022-12-17 16:19:18",
+            "date": "2022-12-17 15:19:18",
             "action": "buy",
             "price": 3.042,
             "total": 49.98006
           },
           {
-            "date": "2023-03-10 07:08:13",
+            "date": "2023-03-10 06:09:29",
             "action": "buy",
             "price": 5.405,
             "total": 49.99625
+          },
+          {
+            "date": "2023-03-10 17:32:36",
+            "action": "stake",
+            "amount": 0.2807082
           },
           {
             "action": "transfer",
@@ -3043,7 +3349,7 @@
             "network": "FIL"
           },
           {
-            "date": "2023-04-21 00:36:46",
+            "date": "2023-04-21 00:38:13",
             "action": "buy",
             "price": 5.525,
             "total": 74.97425
@@ -3057,13 +3363,13 @@
             "network": "FIL"
           },
           {
-            "date": "2023-05-08 18:45:59",
+            "date": "2023-05-08 18:51:17",
             "action": "buy",
             "price": 4.79,
             "total": 14.2263
           },
           {
-            "date": "2023-06-10 12:49:52",
+            "date": "2023-06-10 12:50:44",
             "price": 3.37,
             "action": "buy",
             "total": 49.9771
@@ -3073,6 +3379,32 @@
             "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
             "amount": 17.799,
             "date": "2023-06-10 14:25:50",
+            "fee": 0.001,
+            "network": "FIL"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:41:24",
+            "price": 4.62,
+            "total": 25.872
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:41:25",
+            "price": 4.62,
+            "total": 25.872
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:41:25",
+            "price": 4.62,
+            "total": 48.2328
+          },
+          {
+            "action": "transfer",
+            "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
+            "amount": 21.639,
+            "date": "2023-07-06 01:47:34",
             "fee": 0.001,
             "network": "FIL"
           }
@@ -3104,6 +3436,13 @@
             "action": "receive",
             "amount": 17.799,
             "date": "2023-06-10 14:25:50",
+            "fee": 0.001
+          },
+          {
+            "action": "receive",
+            "network": "FIL",
+            "amount": 21.639,
+            "date": "2023-07-06 01:47:34",
             "fee": 0.001
           }
         ]
@@ -3374,8 +3713,48 @@
             "date": "2022-09-05 14:33:37",
             "action": "buy",
             "price": 3.9,
-            "total": 299.988,
-            "executed": 76.92
+            "total": 299.988
+          },
+          {
+            "date": "2023-06-23 20:18:59",
+            "action": "stake",
+            "amount": 0.0024
+          },
+          {
+            "action": "transfer",
+            "address": "DAra9JDjuMYXHb1yH9F6LcoLcVY6JgUHW5mkLzdcGNMd",
+            "amount": 0.11,
+            "date": "2023-06-23 20:19:00",
+            "fee": 0.11,
+            "network": "SOL"
+          },
+          {
+            "action": "transfer",
+            "address": "DAra9JDjuMYXHb1yH9F6LcoLcVY6JgUHW5mkLzdcGNMd",
+            "amount": 76.5924,
+            "date": "2023-06-23 20:24:50",
+            "fee": 0.11,
+            "network": "SOL"
+          }
+        ]
+      },
+      {
+        "name": "Helium (Helium wallet)",
+        "address": "DAra9JDjuMYXHb1yH9F6LcoLcVY6JgUHW5mkLzdcGNMd",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "SOL",
+            "amount": 0.11,
+            "date": "2023-06-23 20:19:00",
+            "fee": 0.11
+          },
+          {
+            "action": "receive",
+            "network": "SOL",
+            "amount": 76.5924,
+            "date": "2023-06-23 20:24:50",
+            "fee": 0.11
           }
         ]
       }
@@ -3451,10 +3830,16 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-05-12 06:06:33",
             "action": "buy",
-            "price": 0.788,
-            "total": 20.858
+            "date": "2022-01-24 12:49:57",
+            "price": 2.05,
+            "total": 24.9895
+          },
+          {
+            "action": "buy",
+            "date": "2022-02-21 14:34:09",
+            "price": 1.75,
+            "total": 24.99
           },
           {
             "date": "2022-05-12 06:06:33",
@@ -3489,7 +3874,6 @@
           {
             "date": "2022-11-29 20:10:31",
             "action": "transfer",
-            "wallet": "Trust Wallet (Savings)",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 107.738,
             "fee": 5.476
@@ -3548,7 +3932,7 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-05-13 02:26:00",
+            "date": "2021-05-12 14:43:03",
             "action": "buy",
             "price": 361,
             "total": 389.88
@@ -3562,7 +3946,7 @@
             "fee": 0.0003
           },
           {
-            "date": "2021-05-21 00:10:00",
+            "date": "2021-05-20 07:10:35",
             "action": "buy",
             "price": 127.32,
             "total": 147.6912
@@ -3576,7 +3960,7 @@
             "fee": 0.0003
           },
           {
-            "date": "2021-07-11 22:05:00",
+            "date": "2021-07-08 17:33:40",
             "action": "buy",
             "price": 40,
             "total": 120
@@ -3596,13 +3980,13 @@
             "total": 24.03744
           },
           {
-            "date": "2022-12-17 20:31:45",
+            "date": "2022-12-17 19:31:45",
             "action": "buy",
             "price": 3.614,
             "total": 49.98162
           },
           {
-            "date": "2023-03-10 07:09:00",
+            "date": "2023-03-10 06:09:17",
             "action": "buy",
             "price": 4.764,
             "total": 49.97436
@@ -3616,10 +4000,44 @@
             "network": "ICP"
           },
           {
-            "date": "2023-05-08 18:54:59",
             "action": "buy",
-            "total": 14.1952,
-            "price": 5.545
+            "date": "2023-05-08 18:55:36",
+            "price": 5.545,
+            "total": 11.92175
+          },
+          {
+            "action": "buy",
+            "date": "2023-05-08 18:55:37",
+            "price": 5.545,
+            "total": 2.27345
+          },
+          {
+            "action": "transfer",
+            "address": "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
+            "amount": 2.5597,
+            "date": "2023-06-23 20:54:23",
+            "fee": 0.0003,
+            "network": "ICP"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:26:46",
+            "price": 4.227,
+            "total": 3.17025
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:26:46",
+            "price": 4.227,
+            "total": 96.7983
+          },
+          {
+            "action": "transfer",
+            "address": "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
+            "amount": 23.6497,
+            "date": "2023-07-06 01:46:17",
+            "fee": 0.0003,
+            "network": "ICP"
           }
         ]
       },
@@ -3650,6 +4068,20 @@
             "action": "receive",
             "amount": 31.02599524,
             "fee": 0.0003
+          },
+          {
+            "action": "receive",
+            "network": "ICP",
+            "amount": 2.5597,
+            "date": "2023-06-23 20:54:23",
+            "fee": 0.0003
+          },
+          {
+            "action": "receive",
+            "network": "ICP",
+            "amount": 23.6497,
+            "date": "2023-07-06 01:46:17",
+            "fee": 0.0003
           }
         ]
       }
@@ -3665,10 +4097,16 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
             "action": "buy",
+            "date": "2022-01-24 12:51:06",
             "price": 0.72,
-            "total": 54.3846153816
+            "total": 24.48
+          },
+          {
+            "action": "buy",
+            "date": "2022-04-26 23:14:50",
+            "price": 0.6,
+            "total": 24.6
           }
         ]
       }
@@ -3683,6 +4121,18 @@
         "name": "Binance (Binance wallet)",
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
+          {
+            "action": "buy",
+            "date": "2021-02-06 12:37:18",
+            "price": 0.036,
+            "total": 100.0656
+          },
+          {
+            "action": "sell",
+            "date": "2021-02-08 16:01:20",
+            "price": 0.03758,
+            "filled": 2776.8
+          },
           {
             "date": "2022-06-13 13:25:29",
             "action": "buy",
@@ -3733,10 +4183,10 @@
             "date": "2022-05-12 09:10:30",
             "action": "buy",
             "price": 1.473,
-            "total": 24.717
+            "total": 24.71694
           },
           {
-            "date": "2023-03-10 07:11:24",
+            "date": "2023-03-10 06:11:24",
             "action": "buy",
             "price": 0.918,
             "total": 49.99428
@@ -3752,6 +4202,11 @@
             "action": "buy",
             "total": 19.9989,
             "price": 0.81
+          },
+          {
+            "date": "2023-06-08 20:20:58",
+            "action": "stake",
+            "amount": 0.026395
           },
           {
             "action": "transfer",
@@ -3879,7 +4334,7 @@
             "filled": 27.43
           },
           {
-            "date": "2023-05-08 18:57:12",
+            "date": "2023-05-08 18:58:13",
             "action": "buy",
             "total": 14.2464,
             "price": 1.696
@@ -4346,32 +4801,49 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-06-12 16:29:13",
             "action": "buy",
+            "date": "2022-06-12 16:29:06",
             "price": 0.65,
-            "total": 44.98
+            "total": 5.2
+          },
+          {
+            "action": "buy",
+            "date": "2022-06-12 16:29:06",
+            "price": 0.65,
+            "total": 14.82
+          },
+          {
+            "action": "buy",
+            "date": "2022-06-12 16:29:13",
+            "price": 0.65,
+            "total": 24.96
           },
           {
             "date": "2022-10-21 09:58:17",
             "action": "buy",
             "price": 0.53,
-            "total": 41.022,
-            "executed": 77.4
+            "total": 41.022
           },
           {
-            "date": "2023-03-10 07:14:46",
+            "date": "2023-03-10 06:15:14",
             "action": "buy",
             "price": 0.655,
             "total": 35.9595
           },
           {
-            "date": "2023-05-08 21:35:17",
             "action": "buy",
-            "total": 19.981,
-            "price": 0.53
+            "date": "2023-05-08 21:36:04",
+            "price": 0.53,
+            "total": 7.42
           },
           {
-            "date": "2023-05-24 19:21:56",
+            "action": "buy",
+            "date": "2023-05-08 21:36:09",
+            "price": 0.53,
+            "total": 12.561
+          },
+          {
+            "date": "2023-05-24 19:22:12",
             "price": 0.547,
             "action": "buy",
             "total": 49.9958
@@ -4381,6 +4853,11 @@
             "price": 0.405,
             "action": "buy",
             "total": 49.977
+          },
+          {
+            "date": "2023-06-10 19:11:58",
+            "action": "stake",
+            "amount": 11.0939369
           },
           {
             "action": "transfer",
@@ -4395,6 +4872,25 @@
             "address": "B62qpigbgFCsbt4kGiBVU6B4LsjzJUeB26zay9FKWkbdw9eKSgYr2x8",
             "amount": 462.0939369,
             "date": "2023-06-10 19:26:30",
+            "fee": 0.5,
+            "network": "MINA"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:35:28",
+            "price": 0.483,
+            "total": 99.981
+          },
+          {
+            "date": "2023-07-06 01:43:26",
+            "action": "stake",
+            "amount": 0.0010564
+          },
+          {
+            "action": "transfer",
+            "address": "B62qpigbgFCsbt4kGiBVU6B4LsjzJUeB26zay9FKWkbdw9eKSgYr2x8",
+            "amount": 206.5010564,
+            "date": "2023-07-06 01:43:27",
             "fee": 0.5,
             "network": "MINA"
           }
@@ -4414,6 +4910,13 @@
             "action": "receive",
             "amount": 462.0939369,
             "date": "2023-06-10 19:26:30",
+            "fee": 0.5
+          },
+          {
+            "action": "receive",
+            "network": "MINA",
+            "amount": 206.5010564,
+            "date": "2023-07-06 01:43:27",
             "fee": 0.5
           }
         ]
@@ -4476,31 +4979,36 @@
             "total": 24.9067
           },
           {
-            "date": "2022-08-18 06:30:46",
+            "date": "2022-08-18 06:58:25",
             "action": "buy",
             "price": 0.67,
             "total": 299.959
           },
           {
-            "date": "2022-08-18 08:03:31",
+            "date": "2022-08-19 09:37:36",
             "action": "sell",
             "price": 0.6098,
             "filled": 468.4
           },
           {
-            "date": "2022-08-26 10:57:19",
+            "date": "2022-08-26 14:07:52",
             "action": "buy",
             "price": 0.575,
             "total": 299.9775
           },
           {
-            "date": "2022-08-27 19:09:49",
+            "date": "2022-08-27 19:15:54",
             "action": "buy",
             "price": 0.54,
             "total": 99.954
           },
           {
-            "date": "2022-11-24 12:58:28",
+            "date": "2022-11-24 11:58:27",
+            "action": "stake",
+            "amount": 5.2
+          },
+          {
+            "date": "2022-11-24 11:58:28",
             "action": "sell",
             "price": 0.3551,
             "filled": 713.4
@@ -4539,22 +5047,22 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2022-02-24 06:13:43",
             "action": "buy",
             "price": 60,
-            "total": 25
+            "total": 24.96
           },
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2022-01-24 12:50:11",
             "action": "buy",
             "price": 71,
-            "total": 25
+            "total": 24.992
           },
           {
             "date": "2022-05-09 22:05:03",
             "action": "buy",
             "price": 27.2,
-            "total": 25
+            "total": 24.9968
           },
           {
             "date": "2022-09-15 17:46:43",
@@ -4602,7 +5110,7 @@
             "total": 27.74
           },
           {
-            "date": "2022-12-17 01:06:29",
+            "date": "2022-12-17 00:06:35",
             "action": "buy",
             "price": 1.488,
             "total": 24.9984
@@ -4612,6 +5120,74 @@
             "action": "buy",
             "total": 14.1355,
             "price": 1.663
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-15 00:21:18",
+            "price": 1.18,
+            "total": 99.946
+          },
+          {
+            "action": "stake",
+            "date": "2023-06-15 18:55:48",
+            "amount": 0.4181906
+          },
+          {
+            "action": "transfer",
+            "address": "4131d6da87b7f9bfd4d30b4dbe0f63ab67703de0336bdaac21e8946f1f36a699",
+            "amount": 0.19,
+            "date": "2023-06-15 18:55:49",
+            "fee": 0.01,
+            "network": "NEAR"
+          },
+          {
+            "action": "transfer",
+            "address": "4131d6da87b7f9bfd4d30b4dbe0f63ab67703de0336bdaac21e8946f1f36a699",
+            "amount": 117.50811202,
+            "date": "2023-06-15 19:01:07",
+            "fee": 0.01,
+            "network": "NEAR"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:23:02",
+            "price": 1.35,
+            "total": 199.935
+          },
+          {
+            "action": "transfer",
+            "address": "4131d6da87b7f9bfd4d30b4dbe0f63ab67703de0336bdaac21e8946f1f36a699",
+            "amount": 148.09007854,
+            "date": "2023-07-06 01:42:32",
+            "fee": 0.01,
+            "network": "NEAR"
+          }
+        ]
+      },
+      {
+        "name": "Ledger (Ledger wallet)",
+        "address": "4131d6da87b7f9bfd4d30b4dbe0f63ab67703de0336bdaac21e8946f1f36a699",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "NEAR",
+            "amount": 0.19,
+            "date": "2023-06-15 18:55:49",
+            "fee": 0.01
+          },
+          {
+            "action": "receive",
+            "network": "NEAR",
+            "amount": 117.50811202,
+            "date": "2023-06-15 19:01:07",
+            "fee": 0.01
+          },
+          {
+            "action": "receive",
+            "network": "NEAR",
+            "amount": 148.09007854,
+            "date": "2023-07-06 01:42:32",
+            "fee": 0.01
           }
         ]
       }
@@ -4822,37 +5398,56 @@
             "date": "2022-06-12 14:19:19",
             "action": "buy",
             "price": 0.68,
-            "total": 39.998
+            "total": 39.9976
           },
           {
             "date": "2022-06-13 12:48:00",
             "action": "buy",
             "price": 0.53,
-            "total": 25
+            "total": 25.0001
           },
           {
-            "date": "2022-07-23 06:50:16",
+            "date": "2022-07-25 19:30:18",
             "action": "sell",
             "price": 0.83,
-            "filled": 145.50991907556835
+            "filled": 146.15
           },
           {
-            "date": "2023-05-08 21:34:36",
+            "date": "2023-05-08 21:34:48",
             "action": "buy",
             "total": 19.99689,
             "price": 1.679
           },
           {
-            "date": "2023-06-10 12:46:15",
+            "date": "2023-06-10 12:52:33",
             "price": 1.086,
             "action": "buy",
             "total": 49.99944
+          },
+          {
+            "date": "2023-06-10 19:22:39",
+            "action": "stake",
+            "amount": 0.6404805
           },
           {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 57.86,
             "date": "2023-06-10 19:22:40",
+            "fee": 0.09,
+            "network": "OPTIMISM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-15 00:09:13",
+            "price": 1.087,
+            "total": 49.99113
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 45.9,
+            "date": "2023-06-23 20:19:46",
             "fee": 0.09,
             "network": "OPTIMISM"
           }
@@ -4866,6 +5461,13 @@
             "action": "receive",
             "amount": 57.86,
             "date": "2023-06-10 19:22:40",
+            "fee": 0.09
+          },
+          {
+            "action": "receive",
+            "network": "OPTIMISM",
+            "amount": 45.9,
+            "date": "2023-06-23 20:19:46",
             "fee": 0.09
           }
         ]
@@ -4902,34 +5504,28 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2021-05-02 19:53:26",
             "action": "buy",
-            "price": 19.055,
-            "total": 228.66
+            "price": 40.5,
+            "total": 305.289
           },
           {
-            "date": "2021-01-01 02:00:00",
-            "action": "buy",
-            "price": 17.728,
-            "total": 99.98592
-          },
-          {
-            "date": "2021-01-01 02:00:00",
-            "action": "buy",
-            "price": 17.694,
-            "total": 11.005668
-          },
-          {
-            "date": "2021-01-01 02:00:00",
+            "date": "2021-05-06 18:41:35",
             "action": "buy",
             "price": 37.151,
             "total": 529.550354
           },
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2021-05-20 07:09:16",
             "action": "buy",
-            "price": 40.5,
-            "total": 305.289
+            "price": 17.694,
+            "total": 11.005668
+          },
+          {
+            "date": "2021-05-20 07:11:49",
+            "action": "buy",
+            "price": 17.728,
+            "total": 99.98592
           },
           {
             "date": "2021-05-28 01:04:00",
@@ -4964,6 +5560,12 @@
             "fee": 0.01
           },
           {
+            "date": "2021-06-05 22:45:05",
+            "action": "buy",
+            "price": 19.055,
+            "total": 228.66
+          },
+          {
             "date": "2021-06-05 23:01:00",
             "action": "transfer",
             "wallet": "Trust Wallet (Main)",
@@ -4986,10 +5588,16 @@
             "fee": 0.025
           },
           {
-            "date": "2022-05-12 08:55:27",
             "action": "buy",
+            "date": "2022-05-12 08:55:27",
             "price": 3.4,
-            "total": 49.98
+            "total": 25.058
+          },
+          {
+            "action": "buy",
+            "date": "2022-05-12 08:55:27",
+            "price": 3.4,
+            "total": 24.922
           },
           {
             "date": "2022-05-16 12:15:00",
@@ -5000,13 +5608,13 @@
             "fee": 0.033
           },
           {
-            "date": "2022-12-17 20:33:24",
+            "date": "2022-12-17 19:33:24",
             "action": "buy",
             "price": 3.285,
             "total": 24.99885
           },
           {
-            "date": "2023-03-10 07:10:35",
+            "date": "2023-03-10 06:10:35",
             "action": "buy",
             "price": 3.529,
             "total": 49.97064
@@ -5026,7 +5634,7 @@
             "total": 49.9905
           },
           {
-            "date": "2023-05-12 09:02:54",
+            "date": "2023-05-12 09:03:14",
             "action": "buy",
             "total": 39.99306,
             "price": 1.787
@@ -5170,25 +5778,31 @@
             "total": 24.0118
           },
           {
-            "date": "2022-12-17 01:10:22",
+            "date": "2022-12-17 00:10:22",
             "action": "buy",
             "price": 4.971,
             "total": 24.95442
           },
           {
-            "date": "2022-12-17 16:16:00",
+            "date": "2022-12-17 15:16:59",
             "action": "buy",
             "price": 4.684,
             "total": 24.96572
           },
           {
-            "date": "2022-12-17 16:24:41",
             "action": "buy",
+            "date": "2022-12-17 15:24:49",
             "price": 4.678,
-            "total": 24.98052
+            "total": 17.5425
           },
           {
-            "date": "2023-03-10 07:00:16",
+            "action": "buy",
+            "date": "2022-12-17 15:24:52",
+            "price": 4.678,
+            "total": 7.43802
+          },
+          {
+            "date": "2023-03-10 06:00:16",
             "action": "buy",
             "price": 5.38,
             "total": 49.9802
@@ -5218,6 +5832,20 @@
             "date": "2023-06-10 14:02:20",
             "fee": 0.08,
             "network": "DOT"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-07 03:02:20",
+            "price": 5,
+            "total": 100
+          },
+          {
+            "action": "transfer",
+            "address": "13tWubJx5KK36MDVTWYAVoEXa8Ks7cciBfvkLsep77NkEA2w",
+            "amount": 19.9222671,
+            "date": "2023-07-07 19:35:01",
+            "fee": 0.08,
+            "network": "DOT"
           }
         ]
       },
@@ -5229,6 +5857,13 @@
             "action": "receive",
             "amount": 60.33052591,
             "date": "2023-06-10 14:02:20",
+            "fee": 0.08
+          },
+          {
+            "action": "receive",
+            "network": "DOT",
+            "amount": 19.9222671,
+            "date": "2023-07-07 19:35:01",
             "fee": 0.08
           }
         ]
@@ -5264,10 +5899,15 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2021-05-20 07:13:32",
             "action": "buy",
             "price": 1.69556,
             "total": 149.887504
+          },
+          {
+            "action": "stake",
+            "date": "2023-03-11 12:53:26",
+            "amount": 18.5650187
           },
           {
             "action": "transfer",
@@ -5403,16 +6043,48 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-05-11 10:55:26",
             "action": "buy",
+            "date": "2022-05-11 10:55:20",
             "price": 93.2,
-            "total": 25
+            "total": 15.0052
+          },
+          {
+            "action": "buy",
+            "date": "2022-05-11 10:55:26",
+            "price": 93.2,
+            "total": 9.9724
           },
           {
             "date": "2022-06-12 14:45:15",
             "action": "buy",
             "price": 53.5,
-            "total": 42.9
+            "total": 42.8535
+          },
+          {
+            "date": "2023-06-23 20:51:00",
+            "action": "stake",
+            "amount": 0.014479
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 1.080579,
+            "date": "2023-06-23 20:51:01",
+            "fee": 0.0029,
+            "network": "MATIC"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "MATIC",
+            "amount": 1.080579,
+            "date": "2023-06-23 20:51:01",
+            "fee": 0.0029
           }
         ]
       }
@@ -5496,13 +6168,19 @@
             "date": "2022-06-13 12:47:39",
             "action": "buy",
             "price": 0.378,
-            "total": 25.001
+            "total": 25.00092
           },
           {
-            "date": "2022-11-22 03:13:08",
             "action": "sell",
+            "date": "2022-11-22 02:13:08",
             "price": 0.425,
-            "filled": 66.14
+            "filled": 40
+          },
+          {
+            "action": "sell",
+            "date": "2022-11-22 02:13:08",
+            "price": 0.425,
+            "filled": 26.14
           }
         ]
       }
@@ -5578,10 +6256,90 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2023-05-08 21:42:50",
+            "action": "buy",
+            "date": "2021-02-08 16:07:17",
+            "price": 1.55,
+            "total": 104.346,
+            "fee": "0.06732000",
+            "network": "SFP"
+          },
+          {
+            "action": "sell",
+            "date": "2021-04-08 21:46:45",
+            "price": 2.8006,
+            "filled": 16.81
+          },
+          {
+            "action": "sell",
+            "date": "2021-04-08 21:48:03",
+            "price": 2.806,
+            "filled": 12.61
+          },
+          {
+            "action": "sell",
+            "date": "2021-05-02 16:16:04",
+            "price": 2.7281,
+            "filled": 37.83
+          },
+          {
+            "action": "buy",
+            "date": "2021-05-02 18:50:34",
+            "price": 2.8599,
+            "total": 114.396
+          },
+          {
+            "action": "sell",
+            "date": "2021-05-10 12:48:57",
+            "price": 2.4424,
+            "filled": 40
+          },
+          {
+            "date": "2023-05-08 21:45:33",
             "action": "buy",
             "total": 19.6392,
             "price": 0.4008
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-15 00:02:59",
+            "price": 0.3501,
+            "total": 49.7142
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 0.17,
+            "date": "2023-06-23 20:23:55",
+            "fee": 0.17,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 190.49,
+            "date": "2023-06-23 20:26:24",
+            "fee": 0.17,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 0.17,
+            "date": "2023-06-23 20:23:55",
+            "fee": 0.17
+          },
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 190.49,
+            "date": "2023-06-23 20:26:24",
+            "fee": 0.17
           }
         ]
       }
@@ -5677,10 +6435,49 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-11-24 12:58:56",
             "action": "buy",
+            "date": "2022-11-24 11:58:56",
             "price": 0.685,
-            "total": 253.313
+            "total": 29.9345
+          },
+          {
+            "action": "buy",
+            "date": "2022-11-24 11:58:56",
+            "price": 0.685,
+            "total": 100.01
+          },
+          {
+            "action": "buy",
+            "date": "2022-11-24 11:58:56",
+            "price": 0.685,
+            "total": 100.01
+          },
+          {
+            "action": "buy",
+            "date": "2022-11-24 11:58:56",
+            "price": 0.685,
+            "total": 23.3585
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "date": "2022-11-29 20:44:00",
+            "amount": 369.69,
+            "fee": 0.11,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 369.69,
+            "date": "2022-11-29 20:44:00",
+            "fee": 0.11
           }
         ]
       }
@@ -5740,6 +6537,32 @@
             "action": "buy",
             "price": 0.000033,
             "total": 168.459357
+          },
+          {
+            "date": "2023-06-23 20:44:57",
+            "action": "stake",
+            "amount": 297790.89
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 5395313.89,
+            "date": "2023-06-23 20:44:58",
+            "fee": 7306,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 5395313.89,
+            "date": "2023-06-23 20:44:58",
+            "fee": 7306
           }
         ]
       }
@@ -5915,6 +6738,60 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
+            "action": "buy",
+            "date": "2021-07-12 10:10:41",
+            "price": 32.288,
+            "total": 99.995936
+          },
+          {
+            "action": "sell",
+            "date": "2021-10-20 22:25:06",
+            "price": 173.14,
+            "filled": 0.52
+          },
+          {
+            "action": "sell",
+            "date": "2021-10-23 20:40:28",
+            "price": 196,
+            "filled": 0.51
+          },
+          {
+            "action": "sell",
+            "date": "2021-10-27 20:14:02",
+            "price": 190.48,
+            "filled": 0.11
+          },
+          {
+            "action": "sell",
+            "date": "2021-10-27 20:15:02",
+            "price": 190.12,
+            "filled": 0.52
+          },
+          {
+            "action": "sell",
+            "date": "2021-10-28 08:15:15",
+            "price": 189.77,
+            "filled": 0.47
+          },
+          {
+            "action": "sell",
+            "date": "2021-11-25 13:17:55",
+            "price": 207.88,
+            "filled": 0.09
+          },
+          {
+            "action": "sell",
+            "date": "2021-11-25 13:17:56",
+            "price": 207.88,
+            "filled": 0.09
+          },
+          {
+            "action": "sell",
+            "date": "2021-11-25 13:17:57",
+            "price": 207.88,
+            "filled": 0.787
+          },
+          {
             "date": "2022-11-09 12:01:38",
             "action": "buy",
             "price": 17.4,
@@ -5933,7 +6810,7 @@
             "total": 14.1973
           },
           {
-            "date": "2023-06-10 12:45:25",
+            "date": "2023-06-10 12:58:13",
             "price": 14.63,
             "action": "buy",
             "total": 74.9056
@@ -6052,13 +6929,13 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2021-05-23 21:47:28",
             "action": "buy",
             "price": 0.31224,
             "total": 67.1322281301
           },
           {
-            "date": "2022-12-17 01:11:57",
+            "date": "2022-12-17 00:11:57",
             "action": "buy",
             "price": 0.0793,
             "total": 24.9002
@@ -6068,6 +6945,11 @@
             "action": "buy",
             "total": 14.22,
             "price": 0.09
+          },
+          {
+            "date": "2023-06-08 21:37:34",
+            "action": "stake",
+            "amount": 0.5871729
           },
           {
             "action": "transfer",
@@ -6148,7 +7030,7 @@
             "total": 24.91563
           },
           {
-            "date": "2023-05-08 21:36:15",
+            "date": "2023-05-08 21:38:47",
             "action": "buy",
             "total": 19.98624,
             "price": 1.0464
@@ -6160,10 +7042,15 @@
             "price": 1.05
           },
           {
-            "date": "2023-05-24 19:20:59",
+            "date": "2023-05-24 19:21:36",
             "price": 0.9662,
             "action": "buy",
             "total": 49.95254
+          },
+          {
+            "date": "2023-06-08 20:36:37",
+            "action": "stake",
+            "amount": 0.7376046
           },
           {
             "action": "transfer",
@@ -6174,7 +7061,7 @@
             "network": "SUI"
           },
           {
-            "date": "2023-06-10 12:46:49",
+            "date": "2023-06-10 12:47:09",
             "price": 0.5955,
             "action": "buy",
             "total": 74.97345
@@ -6184,6 +7071,20 @@
             "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
             "amount": 125.88,
             "date": "2023-06-10 14:05:04",
+            "fee": 0.02,
+            "network": "SUI"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-06 01:30:14",
+            "price": 0.66,
+            "total": 199.98
+          },
+          {
+            "action": "transfer",
+            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
+            "amount": 302.98,
+            "date": "2023-07-06 01:41:44",
             "fee": 0.02,
             "network": "SUI"
           }
@@ -6203,6 +7104,13 @@
             "action": "receive",
             "amount": 125.88,
             "date": "2023-06-10 14:05:04",
+            "fee": 0.02
+          },
+          {
+            "action": "receive",
+            "network": "SUI",
+            "amount": 302.98,
+            "date": "2023-07-06 01:41:44",
             "fee": 0.02
           }
         ]
@@ -6242,19 +7150,24 @@
             "date": "2022-05-09 22:02:13",
             "action": "buy",
             "price": 1.804,
-            "total": 24.895
+            "total": 24.8952
           },
           {
             "date": "2022-05-13 13:48:03",
             "action": "buy",
             "price": 1.397,
-            "total": 24.867
+            "total": 24.8666
           },
           {
-            "date": "2023-03-10 07:12:00",
+            "date": "2023-03-10 06:12:36",
             "action": "buy",
             "price": 1.045,
             "total": 49.951
+          },
+          {
+            "date": "2023-04-09 11:16:25",
+            "action": "stake",
+            "amount": 1.6
           },
           {
             "date": "2023-04-09 11:16:26",
@@ -6363,7 +7276,7 @@
     ]
   },
   {
-    "name": "TetherUS",
+    "name": "Tether",
     "symbol": "USDT",
     "token_address": "",
     "wallets": [
@@ -6407,7 +7320,15 @@
           {
             "date": "2023-06-11 23:59:59",
             "action": "spend",
-            "amount": 1800
+            "amount": 1350
+          },
+          {
+            "action": "transfer",
+            "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
+            "amount": 449.43961664,
+            "date": "2023-06-12 16:32:15",
+            "fee": 0.29,
+            "network": "BSC"
           },
           {
             "action": "receive",
@@ -6436,9 +7357,51 @@
             "fee": 0
           },
           {
+            "action": "transfer",
+            "address": "0x1983485e140bbfcd5193d7988ae6f93b90935fff",
+            "amount": 109.71,
+            "date": "2023-07-06 00:03:31",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
             "date": "2023-07-10 23:59:59",
             "action": "spend",
-            "amount": 1480
+            "amount": 1370
+          },
+          {
+            "action": "transfer",
+            "address": "0xee43db2a99bc599d4f7c9d886437828e167fc987",
+            "amount": 309,
+            "date": "2023-07-15 12:02:01",
+            "fee": 1,
+            "network": "ARBITRUM"
+          }
+        ]
+      },
+      {
+        "name": "Bybit (Web3 wallet)",
+        "address": "0xee43db2a99bc599d4f7c9d886437828e167fc987",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "ARBITRUM",
+            "amount": 309,
+            "date": "2023-07-15 12:02:01",
+            "fee": 1
+          }
+        ]
+      },
+      {
+        "name": "Bybit (Bybit wallet)",
+        "address": "0x1983485e140bbfcd5193d7988ae6f93b90935fff",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "BSC",
+            "amount": 109.71,
+            "date": "2023-07-06 00:03:31",
+            "fee": 0.29
           }
         ]
       },
@@ -6475,10 +7438,11 @@
             "fee": 0
           },
           {
-            "date": "2023-05-02 14:33:00",
             "action": "receive",
-            "amount": 449.44023564,
-            "fee": 0
+            "network": "BSC",
+            "amount": 449.43961664,
+            "date": "2023-06-12 16:32:15",
+            "fee": 0.29
           },
           {
             "action": "transfer",
@@ -6561,13 +7525,13 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-11-22 03:13:46",
+            "date": "2022-11-22 02:19:15",
             "action": "buy",
             "price": 0.0544,
             "total": 28.1248
           },
           {
-            "date": "2022-12-17 20:33:43",
+            "date": "2022-12-17 19:33:43",
             "action": "buy",
             "price": 0.057,
             "total": 25.023
@@ -6579,13 +7543,13 @@
             "total": 24.9612
           },
           {
-            "date": "2023-05-08 18:57:49",
+            "date": "2023-05-08 19:00:13",
             "action": "buy",
             "total": 14.161,
             "price": 0.119
           },
           {
-            "date": "2023-05-24 19:22:18",
+            "date": "2023-05-24 19:29:29",
             "price": 0.1139,
             "action": "buy",
             "total": 49.8882
@@ -6595,6 +7559,11 @@
             "price": 0.0948,
             "action": "buy",
             "total": 74.892
+          },
+          {
+            "date": "2023-06-10 14:21:43",
+            "action": "stake",
+            "amount": 9.4760837
           },
           {
             "action": "transfer",
@@ -6609,6 +7578,20 @@
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 2480.47439084,
             "date": "2023-06-10 14:23:03",
+            "fee": 5,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-10 11:20:23",
+            "price": 0.11,
+            "total": 99.99
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 904.0016929,
+            "date": "2023-07-10 19:37:09",
             "fee": 5,
             "network": "ARBITRUM"
           }
@@ -6628,6 +7611,13 @@
             "action": "receive",
             "amount": 2480.47439084,
             "date": "2023-06-10 14:23:03",
+            "fee": 5
+          },
+          {
+            "action": "receive",
+            "network": "ARBITRUM",
+            "amount": 904.0016929,
+            "date": "2023-07-10 19:37:09",
             "fee": 5
           }
         ]
@@ -6733,13 +7723,37 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-12-17 16:19:03",
             "action": "buy",
-            "price": 1.6049,
-            "total": 24.0735
+            "date": "2021-02-11 13:59:33",
+            "price": 0.6565,
+            "total": 62.636665,
+            "fee": "0.09541000",
+            "network": "TWT"
           },
           {
-            "date": "2023-03-10 07:16:09",
+            "action": "buy",
+            "date": "2021-02-11 13:59:37",
+            "price": 0.6565,
+            "total": 39.449085,
+            "fee": "0.06009000",
+            "network": "TWT"
+          },
+          {
+            "action": "sell",
+            "date": "2021-04-18 21:58:56",
+            "price": 0.6903,
+            "filled": 155.34
+          },
+          {
+            "date": "2022-12-17 15:19:03",
+            "action": "buy",
+            "price": 1.6049,
+            "total": 24.0735,
+            "fee": "0.01500000",
+            "network": "TWT"
+          },
+          {
+            "date": "2023-03-10 06:16:53",
             "action": "buy",
             "price": 1.1093,
             "total": 25.5139
@@ -6767,7 +7781,7 @@
             "network": "BSC"
           },
           {
-            "date": "2023-06-10 12:54:57",
+            "date": "2023-06-10 12:55:03",
             "price": 0.7823,
             "action": "buy",
             "total": 49.2849
@@ -6858,6 +7872,18 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
+            "action": "buy",
+            "date": "2021-05-20 07:13:50",
+            "price": 24.377,
+            "total": 150.089189
+          },
+          {
+            "action": "sell",
+            "date": "2021-06-01 17:05:41",
+            "price": 27.438,
+            "filled": 6.157
+          },
+          {
             "date": "2022-05-09 21:56:13",
             "action": "buy",
             "price": 6.33,
@@ -6870,7 +7896,7 @@
             "filled": 4.2
           },
           {
-            "date": "2023-03-10 07:05:47",
+            "date": "2023-03-10 06:05:47",
             "action": "buy",
             "price": 5.668,
             "total": 49.93508
@@ -6880,6 +7906,11 @@
             "action": "buy",
             "total": 14.2197,
             "price": 5.115
+          },
+          {
+            "date": "2023-05-25 21:58:10",
+            "action": "stake",
+            "amount": 0.0010901
           },
           {
             "action": "transfer",
@@ -6929,22 +7960,45 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2022-01-24 12:59:00",
+            "action": "buy",
+            "price": 0.045,
+            "total": 24.9975
+          },
+          {
+            "date": "2022-02-24 07:37:35",
             "action": "buy",
             "price": 0.04,
             "total": 25
           },
           {
-            "date": "2021-01-01 02:00:00",
+            "date": "2022-12-17 19:31:12",
             "action": "buy",
-            "price": 0.045,
-            "total": 25
+            "price": 0.01671,
+            "total": 24.984792,
+            "fee": 1.4952,
+            "network": "VET"
           },
           {
-            "date": "2022-12-17 20:31:12",
-            "action": "buy",
-            "price": 0.01672,
-            "total": 24.984792
+            "action": "transfer",
+            "address": "0x2509a9F644A1b1bDAC512088426De7ED842EE177",
+            "amount": 2654.2048,
+            "date": "2023-06-23 20:41:03",
+            "fee": 20,
+            "network": "VET"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0x2509a9F644A1b1bDAC512088426De7ED842EE177",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "VET",
+            "amount": 2654.2048,
+            "date": "2023-06-23 20:41:03",
+            "fee": 20
           }
         ]
       }
@@ -7020,34 +8074,49 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
+            "action": "buy",
+            "date": "2021-02-09 21:04:34",
+            "price": 10.3467,
+            "total": 107.502213
+          },
+          {
+            "action": "sell",
+            "date": "2021-04-21 19:05:06",
+            "price": 15.0413,
+            "filled": 6.7
+          },
+          {
+            "action": "sell",
+            "date": "2021-04-21 19:05:06",
+            "price": 15.0413,
+            "filled": 3.67
+          },
+          {
             "date": "2022-10-21 09:54:40",
             "action": "buy",
             "price": 3.155,
-            "total": 24.9876,
-            "executed": 7.92
+            "total": 24.9876
           },
           {
             "date": "2022-10-21 09:55:38",
             "action": "buy",
             "price": 3.155,
-            "total": 24.9876,
-            "executed": 7.92
+            "total": 24.9876
           },
           {
-            "date": "2022-12-17 01:07:34",
+            "date": "2022-12-17 00:07:34",
             "action": "buy",
             "price": 1.633,
-            "total": 24.96857,
-            "executed": 15.29
+            "total": 24.96857
           },
           {
-            "date": "2022-12-17 16:26:46",
+            "date": "2022-12-17 15:26:46",
             "action": "buy",
             "price": 1.585,
             "total": 23.9652
           },
           {
-            "date": "2023-03-10 07:14:06",
+            "date": "2023-03-10 06:14:06",
             "action": "buy",
             "price": 1.931,
             "total": 49.99359
@@ -7069,10 +8138,15 @@
             "network": "WAVES"
           },
           {
-            "date": "2023-04-21 00:40:11",
+            "date": "2023-04-21 00:42:49",
             "action": "buy",
             "price": 1.999,
             "total": 82.51872
+          },
+          {
+            "date": "2023-04-21 01:01:38",
+            "action": "stake",
+            "amount": 0.04940975
           },
           {
             "action": "transfer",
@@ -7083,13 +8157,13 @@
             "network": "WAVES"
           },
           {
-            "date": "2023-05-08 21:41:25",
+            "date": "2023-05-08 21:41:27",
             "action": "buy",
             "total": 20,
             "price": 1.6
           },
           {
-            "date": "2023-06-10 12:57:30",
+            "date": "2023-06-10 12:58:19",
             "price": 1.301,
             "action": "buy",
             "total": 49.99743
@@ -7172,6 +8246,11 @@
             "total": 501.5
           },
           {
+            "action": "stake",
+            "date": "2021-06-06 10:15:59",
+            "amount": 0.511742
+          },
+          {
             "date": "2021-06-06 10:16:00",
             "action": "transfer",
             "wallet": "YouHolder Wallet",
@@ -7226,6 +8305,11 @@
             "action": "buy",
             "price": 0.434,
             "total": 47.306
+          },
+          {
+            "action": "stake",
+            "date": "2023-06-08 21:34:06",
+            "amount": 0.025792
           },
           {
             "action": "transfer",
@@ -7286,6 +8370,11 @@
             "fee": 0.5
           },
           {
+            "date": "2023-01-08 22:06:59",
+            "action": "stake",
+            "amount": 26.125941
+          },
+          {
             "date": "2023-01-08 22:07:00",
             "action": "transfer",
             "wallet": "Binance",
@@ -7327,7 +8416,7 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2023-05-08 21:38:58",
+            "date": "2023-05-08 21:39:02",
             "action": "buy",
             "total": 19.998249,
             "price": 0.02309
