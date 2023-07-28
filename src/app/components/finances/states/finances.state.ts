@@ -54,7 +54,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
-          amount: 1_475,
+          amount: 1_474,
           payed: true,
         },
         {
@@ -73,12 +73,12 @@ export const FINANCES_STATE: StateInterface[] = [
           currency: CURRENCY_ENUM.UAH,
           creation_date: '2023-01',
           payed: true,
-          amount: 10_000
+          amount: 10_500
         },
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 33_700
+          amount: 33_200
         }
       ]
     },
@@ -169,7 +169,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
-          amount: 1_475,
+          amount: 1_474,
           payed: true,
         },
         {
@@ -188,12 +188,12 @@ export const FINANCES_STATE: StateInterface[] = [
           currency: CURRENCY_ENUM.UAH,
           creation_date: '2023-02',
           payed: true,
-          amount: 13_400
+          amount: 12_000
         },
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 42_700
+          amount: 44_100
         },
       ]
     },
@@ -218,13 +218,8 @@ export const FINANCES_STATE: StateInterface[] = [
       list: [
         {
           source: "Savings",
-          amount: 3_300,
+          amount: 12_000,
           payed: true,
-        },
-        {
-          source: "Savings",
-          amount: 8_700,
-          payed: false,
         }
       ]
     },
@@ -263,7 +258,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
-          amount: 1_475,
+          amount: 1_474,
           payed: true,
         },
         {
@@ -282,13 +277,13 @@ export const FINANCES_STATE: StateInterface[] = [
           currency: CURRENCY_ENUM.UAH,
           creation_date: '2023-03',
           payed: true,
-          amount: 12_300
+          amount: 12_000
         },
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 33_800
-        },
+          amount: 34_100
+        }
       ]
     },
     lifeCosts: {
@@ -313,7 +308,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Savings",
           amount: 12_000,
-          payed: false,
+          payed: true,
         }
       ]
     },
@@ -357,14 +352,14 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
-          amount: 1_475,
+          amount: 1_474,
           payed: true,
         },
         {
           type: TAX_ENUM.SINGLE_TAX,
           source: "Єдиний податок",
           percentage: 0.05,
-          payed: false,
+          payed: true,
           amount: 0,
         },
       ]
@@ -376,7 +371,7 @@ export const FINANCES_STATE: StateInterface[] = [
           currency: CURRENCY_ENUM.UAH,
           creation_date: '2023-04',
           payed: true,
-          amount: 12_500
+          amount: 12_000
         },
         {
           source: "Crypto CREW",
@@ -386,13 +381,8 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Cryptocurrency",
           payed: true,
-          amount: 10_150
-        },
-        {
-          source: "Cryptocurrency",
-          payed: false,
-          amount: 10_150
-        },
+          amount: 20_800
+        }
       ]
     },
     lifeCosts: {
@@ -417,7 +407,7 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Savings",
           amount: 12_000,
-          payed: false,
+          payed: true,
         }
       ]
     },
@@ -462,14 +452,14 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
-          amount: 1_475,
+          amount: 1_474,
           payed: true,
         },
         {
           type: TAX_ENUM.SINGLE_TAX,
           source: "Єдиний податок",
           percentage: 0.05,
-          payed: false,
+          payed: true,
           amount: 0,
         },
       ]
@@ -481,12 +471,12 @@ export const FINANCES_STATE: StateInterface[] = [
           currency: CURRENCY_ENUM.UAH,
           creation_date: '2023-05',
           payed: true,
-          amount: 12_500,
+          amount: 12_000,
         },
         {
           source: "Cryptocurrency",
-          payed: false,
-          amount: 23_600
+          payed: true,
+          amount: 24_100
         },
       ]
     },
@@ -512,17 +502,17 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           source: "Savings",
           amount: 15_500,
-          payed: false,
+          payed: true,
         }
       ]
     },
     costs: {
-      percentage: 0.1,
+      percentage: 0,
       list: [
         {
           source: "Costs",
-          amount: 15_500,
-          payed: false,
+          amount: 0,
+          payed: true,
         }
       ]
     },
@@ -562,14 +552,14 @@ export const FINANCES_STATE: StateInterface[] = [
         {
           type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
           source: "Єдиний соціальний внесок",
-          amount: 1_475,
+          amount: 1_474,
           payed: true,
         },
         {
           type: TAX_ENUM.SINGLE_TAX,
           source: "Єдиний податок",
           percentage: 0.05,
-          payed: false,
+          payed: true,
           amount: 0,
         },
       ]
@@ -585,8 +575,113 @@ export const FINANCES_STATE: StateInterface[] = [
         },
         {
           source: "Cryptocurrency",
-          payed: false,
+          payed: true,
           amount: 37_800
+        },
+      ]
+    },
+    lifeCosts: {
+      list: [
+        {
+          source: "",
+          payed: true,
+          amount: 70_500
+        }
+      ]
+    },
+  },
+  {
+    period: {
+      month: 6,
+      year: 2023,
+      string: "July 2023"
+    },
+    savings: {
+      percentage: 0.1,
+      list: [
+        {
+          source: "Savings",
+          amount: 15_500,
+          payed: true,
+        }
+      ]
+    },
+    costs: {
+      percentage: 0.1,
+      list: [
+        {
+          source: "Costs",
+          amount: 15_500,
+          payed: true,
+        }
+      ]
+    },
+    debt: {
+      list: [],
+      payed: {
+        list: [
+          {
+            source: "Privatbank",
+            amount: 15_500,
+            payed: true,
+          },
+        ]
+      }
+    },
+    income: {
+      list: [
+        {
+          source: 'Crosssoft',
+          amount: 164_558.4
+        },
+        // {
+        //   source: 'Glafkos',
+        //   amount: 1_800,
+        //   exchangeRate: 37.8,
+        //   currency: CURRENCY_ENUM.USD,
+        // },
+      ]
+    },
+    taxes: {
+      list: [
+        {
+          type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
+          source: "Єдиний соціальний внесок",
+          amount: 1_474,
+          payed: true,
+        },
+        {
+          type: TAX_ENUM.SINGLE_TAX,
+          source: "Єдиний податок",
+          percentage: 0.05,
+          payed: true,
+          amount: 0,
+        },
+      ]
+    },
+    investing: {
+      list: [
+        {
+          source: "Military bonds",
+          currency: CURRENCY_ENUM.UAH,
+          creation_date: '2023-07',
+          amount: 15_500,
+          payed: true,
+        },
+        {
+          source: "Crypto CREW",
+          payed: true,
+          amount: 3_300
+        },
+        {
+          source: "Cryptocurrency",
+          payed: true,
+          amount: 14_500
+        },
+        {
+          source: "Cryptocurrency",
+          payed: false,
+          amount: 20_000
         },
       ]
     },

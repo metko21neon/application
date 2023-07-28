@@ -84,7 +84,7 @@ export class FinancesService {
   private calculateTaxes(total: number, taxes: any): void {
     taxes.list.map((item: any) => {
       if (item.type === TAX_ENUM.SINGLE_TAX) {
-        item.amount = Math.ceil(item.percentage * total);
+        item.amount = item.percentage * total;
       }
     });
   }

@@ -1,0 +1,5 @@
+export enum ACTION_TYPE_ENUM {
+  EXCHANGE = 'EXCHANGE',
+  RECEIVE = 'RECEIVE',
+  BORROW = 'BORROW',
+}
