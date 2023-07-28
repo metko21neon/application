@@ -221,6 +221,10 @@ export class AppService {
           return acc + curr.amount!;
         }
 
+        if (curr.action === CoinHistoryActionEnum.STAKE) {
+          return acc + curr.amount!;
+        }
+
         if (curr.action === CoinHistoryActionEnum.SPEND) {
           return acc - curr.amount! - (curr.fee! || 0);
         }

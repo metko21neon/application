@@ -1,0 +1,3 @@
+export enum WITHDRAWAL_STATUS_ENUM {
+  COMPLETED = 6
+}

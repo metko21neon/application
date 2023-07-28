@@ -1,10 +1,12 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Observable, of } from 'rxjs';
-import { BinanceCoinFlexiblePositionInterface } from '../components/binance/interfaces/binance-coin-flexible-position.interface';
+import { Observable } from 'rxjs';
 
-import { TimeRangeInterface } from '../interfaces/time-range.interface';
+import { BinanceCoinFlexiblePositionInterface } from '../components/binance/interfaces/binance-coin-flexible-position.interface';
+import { BinanceWithdrawalInterface } from '../components/binance/interfaces/binance-withdrawal.interface';
+
+import * as WITHDRRAWALS from "./../jsons/withdrawals.json";
 
 @Injectable({
   providedIn: 'root'
@@ -31,18 +33,20 @@ export class Api {
     return this.http.get<any>('/api.statistic.im/wallet');
   }
 
-  getDepositByRange(time: TimeRangeInterface): Observable<any> {
-    const params = new HttpParams()
-      .append('beginTime', time.beginTime)
-      .append('endTime', time.endTime);
+  getOrdersHistoryBySymbol(symbol: string, options: any): Observable<any> {
+    const params = new HttpParams().appendAll({ symbol, ...options });
 
-    return this.http.get<any>('/api.statistic.im/deposit-history', { params });
+    return this.http.get<any>('/api.statistic.im/orders-history', { params });
   }
 
-  getWithdrawalByRange(time: TimeRangeInterface): Observable<any> {
-    const params = new HttpParams()
-      .append('beginTime', time.beginTime)
-      .append('endTime', time.endTime);
+  getDepositsHistory(options: any = { status: 1 }): Observable<any> {
+    const params = new HttpParams().appendAll(options);
+
+    return this.http.get<any>('/api.statistic.im/deposits-history', { params });
+  }
+
+  getWithdrawalsHistory(options: any): Observable<BinanceWithdrawalInterface[]> {
+    const params = new HttpParams().appendAll(options);
 
     return this.http.get<any>('/api.statistic.im/withdrawals-history', { params });
   }

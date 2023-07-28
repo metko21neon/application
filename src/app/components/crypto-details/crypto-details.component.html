@@ -96,14 +96,18 @@
           </span>
 
           <span *ngIf="actionHistoryEnum.RECEIVE === element.action">
-            + {{ element.amount | roundValue }} USD
+            + {{ element.amount | roundValue }}
+          </span>
+
+          <span *ngIf="actionHistoryEnum.STAKE === element.action">
+            + {{ element.amount | roundValue }}
           </span>
 
           <span *ngIf="actionHistoryEnum.SPEND === element.action">
-            - {{ element.amount | roundValue }} USD
+            - {{ element.amount | roundValue }}
           </span>
 
-          ({{ element.totalQuantityPercentage | imRound }}%)
+          <!-- ({{ element.totalQuantityPercentage | imRound }}%) -->
           {{ tokenDetails.symbol }}
         </td>
       </ng-container>
@@ -131,7 +135,7 @@
       <ng-container matColumnDef="totalQuantity">
         <th mat-header-cell *matHeaderCellDef> Total quantity </th>
         <td mat-cell *matCellDef="let element">
-          {{ element.totalQuantity | roundValue }} {{ tokenDetails.symbol }}
+          {{ element.totalQuantity | roundValue: 8 }} {{ tokenDetails.symbol }}
         </td>
       </ng-container>
 

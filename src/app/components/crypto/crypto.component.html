@@ -19,7 +19,7 @@
       <mat-form-field class="mr-8" style="width: 300px;">
         <mat-label>Filter</mat-label>
 
-        <input matInput imFocus (keyup)="applyFilter($event)">
+        <input matInput imFocus [(ngModel)]="search" (keyup)="applyFilter($event)">
       </mat-form-field>
 
       <mat-checkbox class="ml-8" [checked]="isHideUntracked" (change)="toggleUntracked($event.checked)">

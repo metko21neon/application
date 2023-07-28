@@ -1,7 +1,12 @@
 export interface WalletInterface {
   name: string;
   company: string;
-  addresses: { network: NETORK_COIN_ENUM, address: string }[];
+  addresses: WalletAddressInterface[];
+}
+
+export interface WalletAddressInterface {
+  network: NETORK_COIN_ENUM;
+  address: string;
 }
 
 export enum NETORK_COIN_ENUM {
@@ -9,6 +14,7 @@ export enum NETORK_COIN_ENUM {
   ALGO = 'ALGO',
   AMP = 'AMP',
   APT = 'APT',
+  ARB = 'ARB',
   ATOM = 'ATOM',
   AVAX = 'AVAX',
   BNB = 'BNB',
@@ -17,24 +23,45 @@ export enum NETORK_COIN_ENUM {
   DOGE = 'DOGE',
   DOT = 'DOT',
   FIL = 'FIL',
+  HNT = 'HNT',
   ETH = 'ETH',
   ICP = 'ICP',
   INCH = '1INCH',
   KDA = 'KDA',
+  LTC = 'LTC',
   MINA = 'MINA',
+  NEAR = 'NEAR',
   SOL = 'SOL',
   SUI = 'SUI',
   XLM = 'XLM',
   XRP = 'XRP',
+  VET = 'VET',
+  USDT = 'USDT',
+  WAVES = 'WAVES',
   NOT_KNOWN = 'NOT_KNOWN'
 }
 
 export const WALLET_LIST: WalletInterface[] = [
   {
+    name: "Helium wallet",
+    company: "Helium",
+    addresses: [
+      { network: NETORK_COIN_ENUM.HNT, address: 'DAra9JDjuMYXHb1yH9F6LcoLcVY6JgUHW5mkLzdcGNMd' },
+    ]
+  },
+  {
+    name: "Internet Computer wallet",
+    company: "Internet Computer",
+    addresses: [
+      { network: NETORK_COIN_ENUM.ICP, address: 'fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71' },
+    ]
+  },
+  {
     name: "Binance wallet",
     company: "Binance",
     addresses: [
-      { network: NETORK_COIN_ENUM.NOT_KNOWN, address: 'binance_1' },
+      { network: NETORK_COIN_ENUM.BSC, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
+      { network: NETORK_COIN_ENUM.ETH, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
     ]
   },
   {
@@ -45,10 +72,26 @@ export const WALLET_LIST: WalletInterface[] = [
     ]
   },
   {
+    name: "Bybit wallet",
+    company: "Bybit",
+    addresses: [
+      { network: NETORK_COIN_ENUM.BSC, address: '0x1983485e140bbfcd5193d7988ae6f93b90935fff' },
+    ]
+  },
+  {
+    name: "Web3 wallet",
+    company: "Bybit",
+    addresses: [
+      { network: NETORK_COIN_ENUM.ARB, address: '0xee43db2a99bc599d4f7c9d886437828e167fc987' },
+    ]
+  },
+  {
     name: "Ledger wallet",
     company: "Ledger",
     addresses: [
       { network: NETORK_COIN_ENUM.ADA, address: 'addr1q98z2sksmtnmepf7a6gpteqfuwa5z8ffah34mnnx8ne0dl8sssl3xjnx5jt60hak7267cy6c9svuc2ntfpd722szkpgqgcxf24' },
+      { network: NETORK_COIN_ENUM.NEAR, address: '4131d6da87b7f9bfd4d30b4dbe0f63ab67703de0336bdaac21e8946f1f36a699' },
+      { network: NETORK_COIN_ENUM.LTC, address: 'ltc1qu42e2x2y32g254ghdglm9k352a3ydkmdvjt2sm' },
       { network: NETORK_COIN_ENUM.BTC, address: 'bc1qg59jlc2cwazzjvean5ms8y36n4l3my053w7pq7' },
       { network: NETORK_COIN_ENUM.XRP, address: 'rLoEMuZG3EnhTSVHpo4vVEHu1QH3gMYxcA' },
     ]
@@ -118,13 +161,15 @@ export const WALLET_LIST: WalletInterface[] = [
       { network: NETORK_COIN_ENUM.SUI, address: '0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b' },
       { network: NETORK_COIN_ENUM.XLM, address: 'GAE7COVEPYBUFPZYPO65CRZ2DZRPAH6AJJNQSVFGRZHGVX5I4HK3MHDX' },
       { network: NETORK_COIN_ENUM.ALGO, address: 'LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE' },
+      { network: NETORK_COIN_ENUM.BSC, address: '0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3' },
       { network: NETORK_COIN_ENUM.ETH, address: '0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3' },
       { network: NETORK_COIN_ENUM.FIL, address: 'f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq' },
       { network: NETORK_COIN_ENUM.SOL, address: '5zLnGa8VoxjabLMgB7vWxb5mwaq2jACz3xzCvVq3YyQe' },
       { network: NETORK_COIN_ENUM.APT, address: '0x894c54c013cb4822fb70c540684ec921935019bc216e19a5440d302905f5e9e7' },
       { network: NETORK_COIN_ENUM.ATOM, address: 'cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5' },
       { network: NETORK_COIN_ENUM.DOT, address: '13tWubJx5KK36MDVTWYAVoEXa8Ks7cciBfvkLsep77NkEA2w' },
-      { network: NETORK_COIN_ENUM.INCH, address: '3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2' },
+      { network: NETORK_COIN_ENUM.VET, address: '0x2509a9F644A1b1bDAC512088426De7ED842EE177' },
+      { network: NETORK_COIN_ENUM.WAVES, address: '3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2' },
       { network: NETORK_COIN_ENUM.DOGE, address: 'DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp' },
     ]
   },

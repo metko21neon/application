@@ -117,6 +117,7 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
         this.totalSpendCurrency += history.total;
 
         this.totalBuy += history.total;
+        return;
       }
 
       if (history.action === CoinHistoryActionEnum.BUY) {
@@ -132,6 +133,7 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
         this.totalSpendCurrency += history.total;
 
         this.totalBuy += history.total;
+        return;
       }
 
       if (history.action === CoinHistoryActionEnum.SELL) {
@@ -142,20 +144,30 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
         this.totalEarnedCurrency += history.filled! * history.price;
 
         this.totalSell += history.filled! * history.price;
+        return;
       }
 
       if (history.action === CoinHistoryActionEnum.TRANSFER) {
         history.totalQuantityPercentage = (history.amount! + history.fee!) / (previousTotal / 100);
         history.totalQuantity = previousTotal - history.amount! - history.fee!;
+        return;
       }
 
       if (history.action === CoinHistoryActionEnum.SPEND) {
         history.totalQuantityPercentage = history.amount! / (previousTotal / 100);
         history.totalQuantity = previousTotal - history.amount!;
+        return;
+      }
+
+      if (history.action === CoinHistoryActionEnum.STAKE) {
+        history.totalQuantityPercentage = history.amount! / (previousTotal / 100);
+        history.totalQuantity = previousTotal + history.amount!;
+        return;
       }
 
       if (history.totalQuantity! < 0.000001) {
         history.totalQuantity = 0;
+        return;
       }
     });
 

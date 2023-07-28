@@ -19,7 +19,10 @@ import { Subscription, switchMap } from 'rxjs';
   selector: 'app-crypto',
   templateUrl: './crypto.component.html',
   styleUrls: ['./crypto.component.scss'],
-  providers: [WalletNamePipe],
+  providers: [
+    BinanceSynchronizationService,
+    WalletNamePipe
+  ],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({ height: '0px', minHeight: '0' })),
@@ -45,6 +48,8 @@ export class CryptoComponent implements OnInit, OnDestroy {
   isLoading = false;
 
   updatedDate = '24.05.2023 20:00';
+
+  search = '';
 
   private subscription: Subscription = new Subscription();
   private coinList: CoinInterface[] = [];
@@ -76,8 +81,8 @@ export class CryptoComponent implements OnInit, OnDestroy {
   }
 
   synchronizeOrders(): void {
-    const stream$ = this.binanceSynchronizationService.synchronizeOrders().subscribe((data: any[]) => {
-      console.log('synchronizeOrders:', data);
+    const stream$ = this.binanceSynchronizationService.synchronize().subscribe((data: any[]) => {
+      console.log('synchronize:', data);
     });
 
     this.subscription.add(stream$);
@@ -194,7 +199,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
       setTimeout(() => this.dataSource.sort = this.matSort);
 
       // console.log('COIN_LIST:', coinList);
-      // this.applyFilter(({ target: { value: 'SUSHI' } }) as any);
+      // this.applyFilter(({ target: { value: this.search } }) as any);
     });
 
     this.subscription.add(stream$);

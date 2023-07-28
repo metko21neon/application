@@ -30,6 +30,7 @@ export class RoundValuePipe implements PipeTransform {
       return Number.parseFloat(value.toFixed(9));
     }
 
+    return 0;
     return Number.parseFloat(value.toFixed(17));
   }
 }

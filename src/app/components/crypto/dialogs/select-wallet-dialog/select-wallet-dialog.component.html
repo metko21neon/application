@@ -1,0 +1,28 @@
+<div class="app-select-wallet-dialog">
+  <h3 class="mb-5">Select wallet</h3>
+
+  <p>Deposit of <b>{{ +deposit.amount | roundValue }} {{ deposit.coin }}</b> at <b>{{ date }}</b> in <b>{{ deposit.network }}</b> network was made from:</p>
+
+  <form class="flex flex-column mt-10">
+    <mat-form-field>
+      <mat-label>Wallet</mat-label>
+
+      <mat-select name="wallet" [ngModel]="wallet" (ngModelChange)="selectDepositNetwork($event)">
+        <mat-option *ngFor="let wallet of walletList" [value]="wallet">
+          {{ wallet.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Fee</mat-label>
+      <input matInput name="fee" placeholder="Ex. 0.0005" [(ngModel)]="fee">
+    </mat-form-field>
+
+    <div>Available amount: {{ wallet?.quantity || 0 | roundValue }} {{ deposit.coin }}</div>
+  </form>
+
+  <div mat-dialog-actions class="flex" style="justify-content: flex-end;">
+    <button mat-button [disabled]="+deposit.amount > wallet?.quantity" (click)="save()">Save</button>
+  </div>
+</div>

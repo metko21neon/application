@@ -31,6 +31,8 @@ import { WalletComponent } from './components/wallet/wallet.component';
 import { ListComponent } from './components/list/list.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SelectWalletDialogComponent } from './components/crypto/dialogs/select-wallet-dialog/select-wallet-dialog.component';
+import { FillCoinDataDialogComponent } from './components/crypto/dialogs/fill-coin-data-dialog/fill-coin-data-dialog.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCjNMShCKpV1-EL5p73TYmAVm_lrnQjHVs",
@@ -51,6 +53,8 @@ const firebaseConfig = {
     ListComponent,
     AppComponent,
     DashboardComponent,
+    SelectWalletDialogComponent,
+    FillCoinDataDialogComponent,
   ],
   imports: [
     BrowserAnimationsModule,
