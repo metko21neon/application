@@ -4,6 +4,14 @@ import { CURRENCY_ENUM } from "../../../enums/currency.enum";
 export const EXCHANGES_STATE = [
   {
     action: ACTION_TYPE_ENUM.EXCHANGE,
+    period: '31 July 2023',
+    amount: 100,
+    from: CURRENCY_ENUM.USD,
+    to: CURRENCY_ENUM.UAH,
+    rate: 37.453
+  },
+  {
+    action: ACTION_TYPE_ENUM.EXCHANGE,
     period: '02 December 2022',
     amount: 44943.6,
     from: CURRENCY_ENUM.UAH,

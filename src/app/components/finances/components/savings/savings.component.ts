@@ -36,7 +36,7 @@ const STATE = [
   },
   {
     label: 'USD',
-    amount: 200,
+    amount: 100,
     exchangeRate: 37.453,
     description: 'Wallet'
   },
@@ -48,7 +48,7 @@ const STATE = [
   // },
   {
     label: 'UAH',
-    amount: 900,
+    amount: 700,
     exchangeRate: 1,
     description: 'Monobank jar'
   },

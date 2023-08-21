@@ -3,6 +3,12 @@ import { ACTION_TYPE_ENUM } from "../../../enums/action-type.enum";
 export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
+    amount: 4_000,
+    period: '31 July 2023 09:28:00',
+    description: 'Braces'
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
     amount: 1_775,
     period: '01 June 2023 17:59:00',
     description: 'Teeth equipements'
