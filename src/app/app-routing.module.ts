@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'finances',
-    loadChildren: () => import('./components/finances/finances.module').then((m) => m.FinancesModule),
+    loadChildren: () => import('./modules/finances/finances.module').then((m) => m.FinancesModule),
   },
   {
     path: 'cash-history',
@@ -26,10 +26,6 @@ const routes: Routes = [
   {
     path: 'binance',
     loadChildren: () => import('./components/binance/binance.module').then((m) => m.BinanceModule),
-  },
-  {
-    path: 'capital',
-    loadChildren: () => import('./components/capital/capital.module').then((m) => m.CapitalModule),
   },
   {
     path: 'coins',

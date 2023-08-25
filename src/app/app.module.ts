@@ -28,7 +28,6 @@ import { CryptoDetailsComponent } from './components/crypto-details/crypto-detai
 import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { WalletComponent } from './components/wallet/wallet.component';
-import { ListComponent } from './components/list/list.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SelectWalletDialogComponent } from './components/crypto/dialogs/select-wallet-dialog/select-wallet-dialog.component';
@@ -50,7 +49,6 @@ const firebaseConfig = {
     CoinDataListComponent,
     CryptoComponent,
     WalletComponent,
-    ListComponent,
     AppComponent,
     DashboardComponent,
     SelectWalletDialogComponent,

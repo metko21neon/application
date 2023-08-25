@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FinanceIncomeInterface, StateInterface } from './interfaces/state.interface';
-import { FINANCES_STATE } from 'src/app/components/finances/states/finances.state';
+import { FINANCES_STATE } from 'src/app/modules/finances/states/finances.state';
 import { TAX_ENUM } from './enums/tax.enum';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { CURRENCY_ENUM } from './enums/currency.enum';
