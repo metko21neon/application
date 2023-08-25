@@ -713,7 +713,13 @@ export const FINANCES_STATE: StateInterface[] = [
     debt: {
       list: [],
       payed: {
-        list: []
+        list: [
+          {
+            source: "Privatbank",
+            amount: 0,
+            payed: true,
+          },
+        ]
       }
     },
     income: {
