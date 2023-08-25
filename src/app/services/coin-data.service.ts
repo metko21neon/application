@@ -85,7 +85,7 @@ export class CoinDataService {
 
   private setCoinDataState(data: CoinSettingsInterface[]): void {
     const coinDataList: CoinDataInterface[] = data.map((coinData: CoinSettingsInterface) => ({
-      percent_change_90d: coinData.quote.USD.percent_change_90d,
+      // percent_change_90d: coinData.quote.USD.percent_change_90d,
       token_address: coinData.platform?.token_address,
       price: coinData.quote.USD.price,
       cmc_rank: coinData.cmc_rank,

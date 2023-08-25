@@ -46,16 +46,16 @@ export class BinanceListComponent implements OnInit, OnDestroy {
   }
 
   getCoinList(): void {
-    const stream$ = this.walletService.getCoinList().pipe(
-      switchMap(() => this.walletService.coinList$)
-    ).subscribe((coinList: BinanceCoinInterface[]) => {
-      this.coinDataSource = new MatTableDataSource(coinList);
-      setTimeout(() => this.coinDataSource.sort = this.sort);
+    // const stream$ = this.walletService.getCoinList().pipe(
+    //   switchMap(() => this.walletService.coinList$)
+    // ).subscribe((coinList: BinanceCoinInterface[]) => {
+    //   this.coinDataSource = new MatTableDataSource(coinList);
+    //   setTimeout(() => this.coinDataSource.sort = this.sort);
 
-      console.log('getCoinListMock:', coinList);
-    });
+    //   console.log('getCoinListMock:', coinList);
+    // });
 
-    this.subscription.add(stream$);
+    // this.subscription.add(stream$);
   }
 
   synchronizeCoinList(): void {

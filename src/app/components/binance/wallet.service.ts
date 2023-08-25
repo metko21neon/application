@@ -11,7 +11,7 @@ import { BinanceCoinFlexiblePositionInterface } from './interfaces/binance-coin-
 import { BinanceCoinFlexibleInterface } from './interfaces/binance-coin-flexible.interface';
 import { BinanceCoinDetailsInterface } from './interfaces/binance-coin-details.interface';
 import { BinanceCoinInterface } from './interfaces/binance-coin.interface';
-import { BINANCE_COIN_LIST } from '../../states/binance-coin-list.state';
+// import { BINANCE_COIN_LIST } from '../../states/binance-coin-list.state';
 import { FirebaseService } from '../../services/firebase.service';
 import { Api } from '../../api/api';
 
@@ -42,16 +42,16 @@ export class WalletService {
     this.fiatList$ = this.fiatListSubject.asObservable();
   }
 
-  getCoinList(): Observable<BinanceCoinInterface[]> {
-    return of(BINANCE_COIN_LIST).pipe(
-      // return this.firebaseService.getCoinList().pipe(
-      tap((coinList: BinanceCoinInterface[]) => {
-        this.setCoinListMetadata(coinList);
-        this.setCoinListState(coinList);
-        this.setInvestStatisticState();
-      })
-    );
-  }
+  // getCoinList(): Observable<BinanceCoinInterface[]> {
+  //   return of(BINANCE_COIN_LIST).pipe(
+  //     // return this.firebaseService.getCoinList().pipe(
+  //     tap((coinList: BinanceCoinInterface[]) => {
+  //       this.setCoinListMetadata(coinList);
+  //       this.setCoinListState(coinList);
+  //       this.setInvestStatisticState();
+  //     })
+  //   );
+  // }
 
   private setCoinListMetadata(coinList: BinanceCoinInterface[]): void {
     coinList
