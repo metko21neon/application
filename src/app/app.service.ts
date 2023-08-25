@@ -61,10 +61,6 @@ export class AppService {
     return COLUMN_LIST;
   }
 
-  getTransactionList(): Observable<any> {
-    return this.api.getTransactionList();
-  }
-
   getCoinList(coins = (COIN_LIST as any).default): Observable<CoinInterface[]> {
     // return (this.dbService.getAll('coinList') as Observable<CoinInterface[]>).pipe(
     return (of(coins) as Observable<any[]>).pipe(

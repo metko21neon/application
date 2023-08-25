@@ -203,6 +203,14 @@
             "date": "2023-06-10 18:56:57",
             "fee": 0.0011,
             "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 1.99890118,
+            "date": "2023-08-17 12:27:09",
+            "fee": 0.0011,
+            "network": "BSC"
           }
         ]
       },
@@ -227,6 +235,13 @@
             "amount": 0.9989,
             "date": "2023-06-10 18:56:57",
             "fee": 0.0011
+          },
+          {
+            "action": "receive",
+            "amount": 1.99890118,
+            "date": "2023-08-17 12:27:09",
+            "fee": 0.0011,
+            "network": "BSC"
           }
         ]
       }
@@ -334,6 +349,14 @@
             "date": "2023-07-06 01:44:10",
             "fee": 0.008,
             "network": "ALGO"
+          },
+          {
+            "action": "transfer",
+            "address": "LBHRI7C3IY6LBWNGHU7MZR5PJFNQXDMGXKCVPVAB4NEY36ZWU5QKNBMBVE",
+            "amount": 908.992,
+            "date": "2023-07-31 18:18:15",
+            "fee": 0.008,
+            "network": "ALGO"
           }
         ]
       },
@@ -365,6 +388,13 @@
             "amount": 1665.992,
             "date": "2023-07-06 01:44:10",
             "fee": 0.008
+          },
+          {
+            "action": "receive",
+            "amount": 908.992,
+            "date": "2023-07-31 18:18:15",
+            "fee": 0.008,
+            "network": "ALGO"
           }
         ]
       }
@@ -448,6 +478,14 @@
             "date": "2023-06-15 00:01:48",
             "price": 0.001994,
             "total": 25.277938
+          },
+          {
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 63952,
+            "date": "2023-08-17 12:44:26",
+            "fee": 1299,
+            "network": "ETH"
           }
         ]
       },
@@ -460,6 +498,13 @@
             "amount": 64087.646,
             "date": "2023-06-08 21:21:15",
             "fee": 1496
+          },
+          {
+            "action": "receive",
+            "amount": 63952,
+            "date": "2023-08-17 12:44:26",
+            "fee": 1299,
+            "network": "ETH"
           }
         ]
       }
@@ -510,6 +555,26 @@
     "token_address": "",
     "wallets": [
       {
+        "name": "Aptos (Martian wallet)",
+        "address": "0x5d9ed17878cf433f3dc4f3356fade5cc2b5e2910fff2c09617525e98fcdacb85",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 0.01,
+            "date": "2023-08-10 23:25:18",
+            "fee": 0.01,
+            "network": "APT"
+          },
+          {
+            "action": "receive",
+            "amount": 3.37,
+            "date": "2023-08-10 23:27:34",
+            "fee": 0.01,
+            "network": "APT"
+          }
+        ]
+      },
+      {
         "name": "Binance (Binance wallet)",
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
@@ -555,6 +620,22 @@
             "address": "0x894c54c013cb4822fb70c540684ec921935019bc216e19a5440d302905f5e9e7",
             "amount": 9.46,
             "date": "2023-07-07 19:35:51",
+            "fee": 0.01,
+            "network": "APT"
+          },
+          {
+            "action": "transfer",
+            "address": "0x5d9ed17878cf433f3dc4f3356fade5cc2b5e2910fff2c09617525e98fcdacb85",
+            "amount": 0.01,
+            "date": "2023-08-10 23:25:18",
+            "fee": 0.01,
+            "network": "APT"
+          },
+          {
+            "action": "transfer",
+            "address": "0x5d9ed17878cf433f3dc4f3356fade5cc2b5e2910fff2c09617525e98fcdacb85",
+            "amount": 3.37,
+            "date": "2023-08-10 23:27:34",
             "fee": 0.01,
             "network": "APT"
           }
@@ -645,6 +726,22 @@
             "date": "2023-06-10 14:07:33",
             "fee": 0.019,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 86.181,
+            "date": "2023-07-31 18:17:30",
+            "fee": 0.019,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 90.881,
+            "date": "2023-08-17 12:29:30",
+            "fee": 0.019,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -669,6 +766,20 @@
             "amount": 73.781,
             "date": "2023-06-10 14:07:33",
             "fee": 0.019
+          },
+          {
+            "action": "receive",
+            "amount": 86.181,
+            "date": "2023-07-31 18:17:30",
+            "fee": 0.019,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "receive",
+            "amount": 90.881,
+            "date": "2023-08-17 12:29:30",
+            "fee": 0.019,
+            "network": "ARBITRUM"
           }
         ]
       }
@@ -1343,7 +1454,6 @@
             "date": "2022-11-15 00:58:30",
             "action": "transfer",
             "wallet": "Ledger",
-            "address": "",
             "amount": 0.001,
             "fee": 0.0004
           },
@@ -1351,7 +1461,6 @@
             "date": "2022-11-15 01:32:31",
             "action": "transfer",
             "wallet": "Ledger",
-            "address": "",
             "amount": 0.016286,
             "fee": 0.0004
           }
@@ -1681,7 +1790,6 @@
             "date": "2022-11-15 00:20:00",
             "action": "transfer",
             "wallet": "Ledger",
-            "address": "",
             "amount": 9.2,
             "fee": 0.8
           },
@@ -1689,7 +1797,6 @@
             "date": "2022-11-15 01:19:00",
             "action": "transfer",
             "wallet": "Ledger",
-            "address": "",
             "amount": 510.001788,
             "fee": 0.8
           },
@@ -1744,6 +1851,14 @@
             "date": "2023-06-10 13:56:36",
             "fee": 0.8,
             "network": "ADA"
+          },
+          {
+            "action": "transfer",
+            "address": "addr1q98z2sksmtnmepf7a6gpteqfuwa5z8ffah34mnnx8ne0dl8sssl3xjnx5jt60hak7267cy6c9svuc2ntfpd722szkpgqgcxf24",
+            "amount": 336.500062,
+            "date": "2023-08-17 12:31:33",
+            "fee": 0.8,
+            "network": "ADA"
           }
         ]
       },
@@ -1751,18 +1866,6 @@
         "name": "Ledger (Ledger wallet)",
         "address": "addr1q98z2sksmtnmepf7a6gpteqfuwa5z8ffah34mnnx8ne0dl8sssl3xjnx5jt60hak7267cy6c9svuc2ntfpd722szkpgqgcxf24",
         "transactions": [
-          {
-            "date": "2022-11-15 12:01:00",
-            "action": "receive",
-            "amount": 16,
-            "fee": 2
-          },
-          {
-            "date": "2022-11-15 12:09:00",
-            "action": "receive",
-            "amount": 191.17,
-            "fee": 2
-          },
           {
             "date": "2022-11-15 00:20:00",
             "action": "receive",
@@ -1776,6 +1879,18 @@
             "fee": 0.8
           },
           {
+            "date": "2022-11-15 12:01:00",
+            "action": "receive",
+            "amount": 16,
+            "fee": 2
+          },
+          {
+            "date": "2022-11-15 12:09:00",
+            "action": "receive",
+            "amount": 191.17,
+            "fee": 2
+          },
+          {
             "date": "2023-03-10 06:26:00",
             "action": "receive",
             "amount": 344.1057,
@@ -1786,6 +1901,13 @@
             "amount": 438.500004,
             "date": "2023-06-10 13:56:36",
             "fee": 0.8
+          },
+          {
+            "action": "receive",
+            "amount": 336.500062,
+            "date": "2023-08-17 12:31:33",
+            "fee": 0.8,
+            "network": "ADA"
           }
         ]
       },
@@ -1803,7 +1925,6 @@
             "date": "2022-11-14 23:58:21",
             "action": "transfer",
             "wallet": "Ledger",
-            "address": "",
             "amount": 16,
             "fee": 2
           },
@@ -1811,7 +1932,6 @@
             "date": "2022-11-15 00:05:08",
             "action": "transfer",
             "wallet": "Ledger",
-            "address": "",
             "amount": 191.17,
             "fee": 2
           }
@@ -1854,6 +1974,44 @@
             "total": 10,
             "price": 5.00059404557,
             "usdFee": 0.67
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Celo",
+    "symbol": "CELO",
+    "token_address": "",
+    "wallets": [
+      {
+        "name": "Bybit (Bybit wallet)",
+        "address": "0x1983485e140bbfcd5193d7988ae6f93b90935fff",
+        "transactions": [
+          {
+            "date": "2023-07-31 15:24:02",
+            "action": "buy",
+            "price": 0.5206,
+            "total": 59.478550
+          },
+          {
+            "date": "2023-07-31 15:25:44",
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 30,
+            "fee": 0.11525
+          }
+        ]
+      },
+      {
+        "name": "Metamask (Metamask wallet)",
+        "address": "metamask_1",
+        "transactions": [
+          {
+            "date": "2023-07-31 15:25:44",
+            "action": "receive",
+            "amount": 30,
+            "fee": 0.11525
           }
         ]
       }
@@ -2275,6 +2433,44 @@
     ]
   },
   {
+    "name": "Core",
+    "symbol": "CORE",
+    "token_address": "",
+    "wallets": [
+      {
+        "name": "Bybit (Bybit wallet)",
+        "address": "0x1983485e140bbfcd5193d7988ae6f93b90935fff",
+        "transactions": [
+          {
+            "date": "2023-07-31 15:06:50",
+            "action": "buy",
+            "price": 0.8155,
+            "total": 49.99528
+          },
+          {
+            "date": "2023-07-31 15:17:45",
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 20,
+            "fee": 0.0613
+          }
+        ]
+      },
+      {
+        "name": "Metamask (Metamask wallet)",
+        "address": "metamask_1",
+        "transactions": [
+          {
+            "date": "2023-07-31 15:17:45",
+            "action": "receive",
+            "amount": 20,
+            "fee": 0.001
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "Corsac Token",
     "symbol": "CSCT",
     "token_address": "0x63aC1962FF47921Cbf66F444b907F8aB93da4F08",
@@ -2413,6 +2609,22 @@
             "date": "2023-07-06 01:44:50",
             "fee": 0.004,
             "network": "ATOM"
+          },
+          {
+            "action": "transfer",
+            "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
+            "amount": 10.08602,
+            "date": "2023-07-31 18:15:35",
+            "fee": 0.004,
+            "network": "ATOM"
+          },
+          {
+            "action": "transfer",
+            "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
+            "amount": 24.39602,
+            "date": "2023-08-17 12:24:33",
+            "fee": 0.004,
+            "network": "ATOM"
           }
         ]
       },
@@ -2453,6 +2665,20 @@
             "amount": 10.67603,
             "date": "2023-07-06 01:44:50",
             "fee": 0.004
+          },
+          {
+            "action": "receive",
+            "amount": 10.08602,
+            "date": "2023-07-31 18:15:35",
+            "fee": 0.004,
+            "network": "ATOM"
+          },
+          {
+            "action": "receive",
+            "amount": 24.39602,
+            "date": "2023-08-17 12:24:33",
+            "fee": 0.004,
+            "network": "ATOM"
           }
         ]
       }
@@ -2611,6 +2837,19 @@
     "token_address": "",
     "wallets": [
       {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "XgLGU88Her2GcgVam9n4AJwDK6AJx2og7U",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 1.0289288,
+            "date": "2023-08-17 12:50:47",
+            "fee": 0.0016,
+            "network": "DASH"
+          }
+        ]
+      },
+      {
         "name": "Binance (Binance wallet)",
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
@@ -2631,6 +2870,14 @@
             "action": "buy",
             "price": 52.68,
             "total": 24.97032
+          },
+          {
+            "action": "transfer",
+            "address": "XgLGU88Her2GcgVam9n4AJwDK6AJx2og7U",
+            "amount": 1.0289288,
+            "date": "2023-08-17 12:50:47",
+            "fee": 0.0016,
+            "network": "DASH"
           }
         ]
       }
@@ -2871,6 +3118,14 @@
             "price": 1.586,
             "action": "buy",
             "total": 74.98608
+          },
+          {
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 45.87,
+            "date": "2023-08-17 12:45:52",
+            "fee": 1.41,
+            "network": "ETH"
           }
         ]
       },
@@ -2883,6 +3138,13 @@
             "amount": 79.73323999,
             "date": "2023-06-08 19:54:12",
             "fee": 1.7
+          },
+          {
+            "action": "receive",
+            "amount": 45.87,
+            "date": "2023-08-17 12:45:52",
+            "fee": 1.41,
+            "network": "ETH"
           }
         ]
       }
@@ -3087,6 +3349,22 @@
             "date": "2023-06-15 19:33:45",
             "fee": 0.000056,
             "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 0.01665,
+            "date": "2023-07-31 18:22:58",
+            "fee": 0.00035,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 0.036,
+            "date": "2023-08-07 09:38:04",
+            "fee": 0.0007,
+            "network": "ETH"
           }
         ]
       },
@@ -3103,6 +3381,19 @@
             "date": "2021-01-01 02:00:00",
             "action": "spend",
             "amount": 0.03568501
+          }
+        ]
+      },
+      {
+        "name": "Metamask (Metamask wallet)",
+        "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 0.036,
+            "date": "2023-08-07 09:38:04",
+            "fee": 0.0007,
+            "network": "ETH"
           }
         ]
       },
@@ -3141,6 +3432,13 @@
             "amount": 0.244334,
             "date": "2023-06-15 19:33:45",
             "fee": 0.000056
+          },
+          {
+            "action": "receive",
+            "amount": 0.01665,
+            "date": "2023-07-31 18:22:58",
+            "fee": 0.00035,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -3233,6 +3531,14 @@
             "date": "2023-06-10 14:26:49",
             "fee": 0.3,
             "network": "FTM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 799.7,
+            "date": "2023-07-31 18:16:34",
+            "fee": 0.3,
+            "network": "FTM"
           }
         ]
       },
@@ -3263,6 +3569,13 @@
             "amount": 245.7,
             "date": "2023-06-10 14:26:49",
             "fee": 0.3
+          },
+          {
+            "action": "receive",
+            "amount": 799.7,
+            "date": "2023-07-31 18:16:34",
+            "fee": 0.3,
+            "network": "FTM"
           }
         ]
       },
@@ -3576,6 +3889,40 @@
             "price": 7.6636017e-11,
             "usdFee": 0.74,
             "date": "Invalid date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GMX",
+    "symbol": "GMX",
+    "token_address": "",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+        "transactions": [
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 8.604,
+            "date": "2023-08-17 12:35:58",
+            "fee": 0.006,
+            "network": "ARBITRUM"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 8.604,
+            "date": "2023-08-17 12:35:58",
+            "fee": 0.006,
+            "network": "ARBITRUM"
           }
         ]
       }
@@ -4038,6 +4385,14 @@
             "date": "2023-07-06 01:46:17",
             "fee": 0.0003,
             "network": "ICP"
+          },
+          {
+            "action": "transfer",
+            "address": "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
+            "amount": 24.9997,
+            "date": "2023-08-17 12:30:17",
+            "fee": 0.0003,
+            "network": "ICP"
           }
         ]
       },
@@ -4082,6 +4437,13 @@
             "amount": 23.6497,
             "date": "2023-07-06 01:46:17",
             "fee": 0.0003
+          },
+          {
+            "action": "receive",
+            "amount": 24.9997,
+            "date": "2023-08-17 12:30:17",
+            "fee": 0.0003,
+            "network": "ICP"
           }
         ]
       }
@@ -4223,6 +4585,14 @@
             "date": "2023-06-08 20:23:43",
             "fee": 0.1,
             "network": "KDA2"
+          },
+          {
+            "action": "transfer",
+            "address": "k:dc626bb50c84c0e700e7a3eaa11486267a8598b79e14fd7df965bb5e191c9fe6",
+            "amount": 190.01,
+            "date": "2023-08-17 12:32:16",
+            "fee": 0.1,
+            "network": "KDA2"
           }
         ]
       },
@@ -4241,6 +4611,13 @@
             "amount": 175.186395,
             "date": "2023-06-08 20:23:43",
             "fee": 0.1
+          },
+          {
+            "action": "receive",
+            "amount": 190.01,
+            "date": "2023-08-17 12:32:16",
+            "fee": 0.1,
+            "network": "KDA2"
           }
         ]
       }
@@ -4639,6 +5016,40 @@
             "price": 0.42624148496,
             "usdFee": 1.8,
             "date": "Invalid date"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mdex",
+    "symbol": "MDX",
+    "token_address": "",
+    "wallets": [
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+        "transactions": [
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 879.28,
+            "date": "2023-06-23 20:36:27",
+            "fee": 0.92,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 879.28,
+            "date": "2023-06-23 20:36:27",
+            "fee": 0.92,
+            "network": "BSC"
           }
         ]
       }
@@ -5161,6 +5572,14 @@
             "date": "2023-07-06 01:42:32",
             "fee": 0.01,
             "network": "NEAR"
+          },
+          {
+            "action": "transfer",
+            "address": "4131d6da87b7f9bfd4d30b4dbe0f63ab67703de0336bdaac21e8946f1f36a699",
+            "amount": 176.89011044,
+            "date": "2023-08-17 12:23:36",
+            "fee": 0.01,
+            "network": "NEAR"
           }
         ]
       },
@@ -5188,6 +5607,13 @@
             "amount": 148.09007854,
             "date": "2023-07-06 01:42:32",
             "fee": 0.01
+          },
+          {
+            "action": "receive",
+            "amount": 176.89011044,
+            "date": "2023-08-17 12:23:36",
+            "fee": 0.01,
+            "network": "NEAR"
           }
         ]
       }
@@ -7030,16 +7456,16 @@
             "total": 24.91563
           },
           {
-            "date": "2023-05-08 21:38:47",
-            "action": "buy",
-            "total": 19.98624,
-            "price": 1.0464
-          },
-          {
             "date": "2023-05-08 21:36:36",
             "action": "buy",
             "total": 19.95,
             "price": 1.05
+          },
+          {
+            "date": "2023-05-08 21:38:47",
+            "action": "buy",
+            "total": 19.98624,
+            "price": 1.0464
           },
           {
             "date": "2023-05-24 19:21:36",
@@ -7087,6 +7513,22 @@
             "date": "2023-07-06 01:41:44",
             "fee": 0.02,
             "network": "SUI"
+          },
+          {
+            "action": "transfer",
+            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
+            "amount": 159.38,
+            "date": "2023-08-07 09:36:09",
+            "fee": 0.02,
+            "network": "SUI"
+          },
+          {
+            "action": "transfer",
+            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
+            "amount": 470.18,
+            "date": "2023-08-17 12:22:42",
+            "fee": 0.02,
+            "network": "SUI"
           }
         ]
       },
@@ -7112,6 +7554,20 @@
             "amount": 302.98,
             "date": "2023-07-06 01:41:44",
             "fee": 0.02
+          },
+          {
+            "action": "receive",
+            "amount": 159.38,
+            "date": "2023-08-07 09:36:09",
+            "fee": 0.02,
+            "network": "SUI"
+          },
+          {
+            "action": "receive",
+            "amount": 470.18,
+            "date": "2023-08-17 12:22:42",
+            "fee": 0.02,
+            "network": "SUI"
           }
         ]
       }
@@ -7376,19 +7832,38 @@
             "date": "2023-07-15 12:02:01",
             "fee": 1,
             "network": "ARBITRUM"
-          }
-        ]
-      },
-      {
-        "name": "Bybit (Web3 wallet)",
-        "address": "0xee43db2a99bc599d4f7c9d886437828e167fc987",
-        "transactions": [
+          },
           {
-            "action": "receive",
-            "network": "ARBITRUM",
-            "amount": 309,
-            "date": "2023-07-15 12:02:01",
-            "fee": 1
+            "action": "transfer",
+            "address": "0x1983485e140bbfcd5193d7988ae6f93b90935fff",
+            "amount": 9.71,
+            "date": "2023-08-01 19:04:24",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0x1983485e140bbfcd5193d7988ae6f93b90935fff",
+            "amount": 999.71,
+            "date": "2023-08-01 19:08:35",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "THqDcXqKwmo7Tgg3fsGRF1NF58hennSfhu",
+            "amount": 9,
+            "date": "2023-08-03 23:58:58",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "0xaf74fa07f68d267a1167c52854b1263f2cf41c83",
+            "amount": 6.92522407,
+            "date": "2023-08-16 00:58:13",
+            "fee": 0.29,
+            "network": "BSC"
           }
         ]
       },
@@ -7402,6 +7877,38 @@
             "amount": 109.71,
             "date": "2023-07-06 00:03:31",
             "fee": 0.29
+          },
+          {
+            "action": "receive",
+            "amount": 9.71,
+            "date": "2023-08-01 19:04:24",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "receive",
+            "amount": 999.71,
+            "date": "2023-08-01 19:08:35",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "date": "2023-08-01 00:00:00",
+            "action": "spend",
+            "amount": 109.6937
+          }
+        ]
+      },
+      {
+        "name": "Bybit (Web3 wallet)",
+        "address": "0xee43db2a99bc599d4f7c9d886437828e167fc987",
+        "transactions": [
+          {
+            "action": "receive",
+            "network": "ARBITRUM",
+            "amount": 309,
+            "date": "2023-07-15 12:02:01",
+            "fee": 1
           }
         ]
       },
@@ -7594,6 +8101,14 @@
             "date": "2023-07-10 19:37:09",
             "fee": 5,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 947.00191862,
+            "date": "2023-08-17 12:30:55",
+            "fee": 5,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -7619,6 +8134,13 @@
             "amount": 904.0016929,
             "date": "2023-07-10 19:37:09",
             "fee": 5
+          },
+          {
+            "action": "receive",
+            "amount": 947.00191862,
+            "date": "2023-08-17 12:30:55",
+            "fee": 5,
+            "network": "ARBITRUM"
           }
         ]
       }
@@ -8412,6 +8934,19 @@
     "token_address": "",
     "wallets": [
       {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "zil1kk7ne57cfcx6v7wx9wmfhc8fsr5haae7u6cm7l",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 865.9,
+            "date": "2023-08-17 12:52:07",
+            "fee": 0.2,
+            "network": "ZIL"
+          }
+        ]
+      },
+      {
         "name": "Binance (Binance wallet)",
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
@@ -8420,6 +8955,14 @@
             "action": "buy",
             "total": 19.998249,
             "price": 0.02309
+          },
+          {
+            "action": "transfer",
+            "address": "zil1kk7ne57cfcx6v7wx9wmfhc8fsr5haae7u6cm7l",
+            "amount": 865.9,
+            "date": "2023-08-17 12:52:07",
+            "fee": 0.2,
+            "network": "ZIL"
           }
         ]
       },

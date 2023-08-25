@@ -2,7 +2,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Component, Inject } from '@angular/core';
 
 import { BinanceDepositInterface } from 'src/app/components/binance/interfaces/binance-deposit.interface';
-import { DATE_FORMAT } from 'src/app/services/binance-synchronization.service';
+import { DATE_FORMAT } from '../../../../app.component';
 
 import * as COIN_LIST from "./../../../../jsons/coins.json";
 

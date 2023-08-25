@@ -7,8 +7,9 @@ import { CashTransactionsInterface } from './interfaces/cash-transactions.interf
 import { CASH_TRANSACTIONS_STATE } from './states/cash-transactions.state';
 import { WithdrawalInterface } from './interfaces/withdrawal.interface';
 import { DepositInterface } from './interfaces/deposit.interface';
-import { WITHDRAWAL } from '../../states/withdrawal.state';
-import { DEPOSIT } from '../../states/deposit.state';
+
+import * as CASH_WITHDRAWALS from "./jsons/cash-withdrawals.json";
+import * as CASH_DEPOSITS from "./jsons/cash-deposits.json";
 
 export type TransactionsType = DepositInterface | WithdrawalInterface;
 
@@ -31,7 +32,7 @@ export class CashTransactionsService {
   }
 
   getCashTransactions(): Observable<[WithdrawalInterface[], DepositInterface[]]> {
-    return combineLatest([of(WITHDRAWAL), of(DEPOSIT)]).pipe(
+    return combineLatest([of((CASH_WITHDRAWALS as any).default), of((CASH_DEPOSITS as any).default)]).pipe(
       // return this.firebaseService.getWithdrawalHistory().pipe(
       // return this.firebaseService.getDepositHistory().pipe(
       tap(([withdrawals, deposits]: [WithdrawalInterface[], DepositInterface[]]) => {

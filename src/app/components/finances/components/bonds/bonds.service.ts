@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 
-import { DATE_FORMAT } from 'src/app/services/binance-synchronization.service';
 import { ExchangeInterface } from './interfaces/exchange.interface';
 import { REPLENISHMENT_STATE } from './states/replenishment.state';
 import { StateInterface } from '../../interfaces/state.interface';
@@ -8,6 +7,7 @@ import { BondInterface } from './interfaces/bond.interface';
 import { EXCHANGES_STATE } from './states/exchanges.state';
 import { CURRENCY_ENUM } from '../../enums/currency.enum';
 import { EXCHANGE_RATES } from '../../finances.service';
+import { DATE_FORMAT } from '../../../../app.component';
 import { BONDS_STATE } from './states/bonds.state';
 
 import moment from 'moment';

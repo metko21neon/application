@@ -6,6 +6,8 @@ import { CashTransactionsService } from './components/cash-transactions/cash-tra
 import { CoinDataService } from './services/coin-data.service';
 import { AppService } from './app.service';
 
+export const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

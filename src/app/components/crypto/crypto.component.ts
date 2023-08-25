@@ -1,6 +1,8 @@
 import { CashTransactionsInterface } from '../cash-transactions/interfaces/cash-transactions.interface';
-import { BinanceSynchronizationService } from '../../services/binance-synchronization.service';
+import { BinanceSynchronizationService } from '../binance/services/binance-synchronization.service';
+import { BinanceWithdrawalsService } from '../binance/services/binance-withdrawals.service';
 import { InvestStatisticInterface } from '../../interfaces/invest-statistic.interface';
+import { BinanceDepositsService } from '../binance/services/binance-deposits.service';
 import { CoinDataInterface } from '../../interfaces/coin-data.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
 import { CoinDataService } from '../../services/coin-data.service';
@@ -21,6 +23,8 @@ import { Subscription, switchMap } from 'rxjs';
   styleUrls: ['./crypto.component.scss'],
   providers: [
     BinanceSynchronizationService,
+    BinanceWithdrawalsService,
+    BinanceDepositsService,
     WalletNamePipe
   ],
   animations: [

@@ -1,8 +1,12 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, firstValueFrom } from 'rxjs';
-import * as COIN_LIST from "./../jsons/coins.json";
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Injectable } from '@angular/core';
+
+import { BehaviorSubject, Observable } from 'rxjs';
+
 import { FillCoinDataDialogComponent } from '../components/crypto/dialogs/fill-coin-data-dialog/fill-coin-data-dialog.component';
+import { CoinHistoryActionEnum } from '../enums/coin-history-action.enum';
+
+import * as COIN_LIST from "./../jsons/coins.json";
 
 @Injectable({
   providedIn: 'root'
@@ -22,19 +26,44 @@ export class CoinsService {
     return this.coinsSubject.getValue();
   }
 
-  async findCoinBySymbol(symbol: string): Promise<any> {
+  findCoinBySymbol(symbol: string): any {
     const coinIndex = this.coinsState.findIndex((item: any) => item.symbol === symbol);
-    return coinIndex === -1 ? await this.prepareCoin(symbol) : this.coinsState[coinIndex];
+    if (coinIndex === -1) {
+      console.log('ADD coin:', symbol);
+    }
+    return this.coinsState[coinIndex];
+    // return coinIndex === -1 ? this.prepareCoin(symbol) : this.coinsState[coinIndex];
   }
 
-  private async prepareCoin(symbol: string): Promise<any> {
+  findTransactionIndex(transactions: any[], date: string | number, amount: number): number {
+    return transactions.findIndex((transaction: any) => {
+      const isEqualDate = new Date(transaction.date).getTime() === new Date(date).getTime();
+      const property = this.getTransactionProprtyByAction(transaction.action);
+      return isEqualDate && transaction[property] === amount;
+    });
+  }
+
+  private getTransactionProprtyByAction(action: string): string {
+    switch (action) {
+      case CoinHistoryActionEnum.SELL:
+        return 'filled';
+
+      case CoinHistoryActionEnum.BUY:
+        return 'total';
+
+      default:
+        return 'amount';
+    }
+  }
+
+  private prepareCoin(symbol: string): any {
     const config: MatDialogConfig = {
       disableClose: true,
       data: symbol,
     };
 
-    const coin = await firstValueFrom(this.dialog.open(FillCoinDataDialogComponent, config).afterClosed());
-    this.coinsState.push(coin);
+    this.dialog.open(FillCoinDataDialogComponent, config).afterClosed();
+    this.coinsState.push();
 
     return this.findCoinBySymbol(symbol);
   }

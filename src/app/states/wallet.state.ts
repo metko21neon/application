@@ -20,6 +20,7 @@ export enum NETORK_COIN_ENUM {
   BNB = 'BNB',
   BSC = 'BSC',
   BTC = 'BTC',
+  DASH = 'DASH',
   DOGE = 'DOGE',
   DOT = 'DOT',
   FIL = 'FIL',
@@ -33,15 +34,24 @@ export enum NETORK_COIN_ENUM {
   NEAR = 'NEAR',
   SOL = 'SOL',
   SUI = 'SUI',
+  TRX = 'TRX',
   XLM = 'XLM',
   XRP = 'XRP',
   VET = 'VET',
   USDT = 'USDT',
   WAVES = 'WAVES',
+  ZIL = 'ZIL',
   NOT_KNOWN = 'NOT_KNOWN'
 }
 
 export const WALLET_LIST: WalletInterface[] = [
+  {
+    name: "Martian wallet",
+    company: "Aptos",
+    addresses: [
+      { network: NETORK_COIN_ENUM.APT, address: '0x5d9ed17878cf433f3dc4f3356fade5cc2b5e2910fff2c09617525e98fcdacb85' },
+    ]
+  },
   {
     name: "Helium wallet",
     company: "Helium",
@@ -169,8 +179,16 @@ export const WALLET_LIST: WalletInterface[] = [
       { network: NETORK_COIN_ENUM.ATOM, address: 'cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5' },
       { network: NETORK_COIN_ENUM.DOT, address: '13tWubJx5KK36MDVTWYAVoEXa8Ks7cciBfvkLsep77NkEA2w' },
       { network: NETORK_COIN_ENUM.VET, address: '0x2509a9F644A1b1bDAC512088426De7ED842EE177' },
+      { network: NETORK_COIN_ENUM.ZIL, address: 'zil1kk7ne57cfcx6v7wx9wmfhc8fsr5haae7u6cm7l' },
       { network: NETORK_COIN_ENUM.WAVES, address: '3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2' },
       { network: NETORK_COIN_ENUM.DOGE, address: 'DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp' },
+      { network: NETORK_COIN_ENUM.DASH, address: 'XgLGU88Her2GcgVam9n4AJwDK6AJx2og7U' },
     ]
   },
+];
+
+export const IGNORED_WALLET_LIST: WalletAddressInterface[] = [
+  { network: NETORK_COIN_ENUM.BSC, address: '0xaf74fa07f68d267a1167c52854b1263f2cf41c83' },
+  { network: NETORK_COIN_ENUM.TRX, address: 'TQ7XZ5wi25pvtecU4Y9We2Xqvr8xMseGmz' },
+  { network: NETORK_COIN_ENUM.TRX, address: 'THqDcXqKwmo7Tgg3fsGRF1NF58hennSfhu' },
 ];
