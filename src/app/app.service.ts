@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable, of, tap } from 'rxjs';
 
-import { CashTransactionsService } from './components/cash-transactions/cash-transactions.service';
+import { CashTransactionsService } from './modules/cryptocurrency/pages/cash-transactions/cash-transactions.service';
 import { InvestStatisticInterface } from './interfaces/invest-statistic.interface';
 import { CryptoHistoryInterface } from './interfaces/crypto-history.interface';
 import { calculateAveragePrice } from './utilities/average-price.utility';

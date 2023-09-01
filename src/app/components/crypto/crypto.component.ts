@@ -1,4 +1,4 @@
-import { CashTransactionsInterface } from '../cash-transactions/interfaces/cash-transactions.interface';
+import { CashTransactionsInterface } from '../../modules/cryptocurrency/pages/cash-transactions/interfaces/cash-transactions.interface';
 import { BinanceSynchronizationService } from '../binance/services/binance-synchronization.service';
 import { BinanceWithdrawalsService } from '../binance/services/binance-withdrawals.service';
 import { InvestStatisticInterface } from '../../interfaces/invest-statistic.interface';

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 // Modules
 import { CashTransactionsRoutingModule } from './cash-transactions-routing.module';
-import { PipesModule } from '../../pipes/pipes.module';
+import { PipesModule } from '../../../../pipes/pipes.module';
 
 // Components
 import { CashTransactionsTableComponent } from './components/cash-transactions-table/cash-transactions-table.component';

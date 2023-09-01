@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { combineLatest, Subscription } from 'rxjs';
 
-import { CashTransactionsService } from './components/cash-transactions/cash-transactions.service';
+import { CashTransactionsService } from './modules/cryptocurrency/pages/cash-transactions/cash-transactions.service';
 import { CoinDataService } from './services/coin-data.service';
 import { AppService } from './app.service';
 

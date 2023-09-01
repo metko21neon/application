@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'cash-history',
-    loadChildren: () => import('./components/cash-transactions/cash-transactions.module').then((m) => m.CashTransactionsModule),
+    loadChildren: () => import('./modules/cryptocurrency/pages/cash-transactions/cash-transactions.module').then((m) => m.CashTransactionsModule),
   },
   {
     path: 'binance',

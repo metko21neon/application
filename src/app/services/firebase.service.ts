@@ -4,9 +4,9 @@ import { FirebaseApp, initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { Observable } from 'rxjs';
 import { Firestore } from '@angular/fire/firestore';
-import { WithdrawalInterface } from '../components/cash-transactions/interfaces/withdrawal.interface';
+import { WithdrawalInterface } from '../modules/cryptocurrency/pages/cash-transactions/interfaces/withdrawal.interface';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { DepositInterface } from '../components/cash-transactions/interfaces/deposit.interface';
+import { DepositInterface } from '../modules/cryptocurrency/pages/cash-transactions/interfaces/deposit.interface';
 import { BinanceCoinInterface } from '../components/binance/interfaces/binance-coin.interface';
 
 const CONFIG = {
