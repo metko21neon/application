@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { Subscription, switchMap } from 'rxjs';
 import { CoinDataInterface } from 'src/app/interfaces/coin-data.interface';
 import { InvestStatisticInterface } from 'src/app/interfaces/invest-statistic.interface';

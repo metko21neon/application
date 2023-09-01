@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 
 import { BalanceInterface } from '../../interfaces/balance.interface';
 import { CURRENCY_ENUM } from '../../../../enums/currency.enum';
