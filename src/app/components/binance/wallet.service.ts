@@ -35,7 +35,7 @@ export class WalletService {
 
   constructor(
     private coinDataService: CoinDataService,
-    private firebaseService: FirebaseService,
+    // private firebaseService: FirebaseService,
     private api: Api) {
     this.investStatistic$ = this.investStatisticSubject.asObservable();
     this.coinList$ = this.coinListSubject.asObservable();

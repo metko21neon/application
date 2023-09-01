@@ -21,7 +21,7 @@
       </mat-form-field>
     </div>
 
-    <mat-form-field appearance="standard" style="width: 100%;">
+    <mat-form-field style="width: 100%;">
       <mat-label>Filter</mat-label>
       <input matInput (keyup)="searchCoin($event)" placeholder="Ex. ium" #input>
     </mat-form-field>
@@ -55,7 +55,7 @@
           </ng-container>
 
           <ng-container *ngIf="!element.hasOwnProperty('history')">
-            {{ getCurrentWallet(element)?.quantity! }}
+            {{ getCurrentWallet(element).quantity! }}
           </ng-container>
         </td>
       </ng-container>
