@@ -4,6 +4,7 @@ import { WALLET_LIST, WalletInterface } from '../states/wallet.state';
 
 @Pipe({
   name: 'imWalletName',
+  standalone: true
 })
 export class WalletNamePipe implements PipeTransform {
 

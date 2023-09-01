@@ -8,16 +8,18 @@ import { CurrencyPipe } from './currency.pipe';
 import { RoundPipe } from './round.pipe';
 
 const PIPES = [
-  WalletNamePipe,
-  RoundValuePipe,
   ParseDatePipe,
   CurrencyPipe,
-  RoundPipe
 ];
 
 @NgModule({
   declarations: [...PIPES],
   exports: [...PIPES],
-  imports: [CommonModule]
+  imports: [
+    RoundValuePipe,
+    WalletNamePipe,
+    CommonModule,
+    RoundPipe
+  ]
 })
 export class PipesModule { }

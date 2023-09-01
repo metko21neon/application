@@ -9,8 +9,7 @@ import { CoinInterface } from '../interfaces/coin.interface';
 import { Observable, of, tap, toArray } from 'rxjs';
 import { BehaviorSubject, concatMap } from 'rxjs';
 
-// import * as CRYPTO from "./../jsons/crypto.json";
-const CRYPTO: any[] = [];
+import * as CRYPTO from "./../jsons/crypto.json";
 
 let LIMIT = 5000;
 let START = 1;

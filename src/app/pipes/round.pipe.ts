@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'imRound'
+  name: 'imRound',
+  standalone: true
 })
 export class RoundPipe implements PipeTransform {
 

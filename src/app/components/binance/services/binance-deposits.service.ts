@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable, concatMap, tap, toArray } from 'rxjs';
 
-import { SelectWalletDialogComponent } from '../../../modules/cryptocurrency/pages/crypto/dialogs/select-wallet-dialog/select-wallet-dialog.component';
+import { SelectWalletDialogComponent } from '../../../modules/cryptocurrency/pages/coin-list/dialogs/select-wallet-dialog/select-wallet-dialog.component';
 import { BinanceDepositInterface } from '../interfaces/binance-deposit.interface';
 import { BinanceDepositModel } from '../models/binance-deposit.model';
 import { WalletNamePipe } from '../../../pipes/wallet-name.pipe';

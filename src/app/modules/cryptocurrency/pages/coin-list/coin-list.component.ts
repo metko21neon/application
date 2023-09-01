@@ -12,15 +12,36 @@ import { CoinsService } from '../../../../services/coins.service';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 
 import { Subscription, switchMap } from 'rxjs';
+import { RoundValuePipe } from 'src/app/pipes/round-value.pipe';
+import { CommonModule } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { RoundPipe } from 'src/app/pipes/round.pipe';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
-  selector: 'app-crypto',
-  templateUrl: './crypto.component.html',
-  styleUrls: ['./crypto.component.scss'],
+  selector: 'app-coin-list',
+  templateUrl: './coin-list.component.html',
+  styleUrls: ['./coin-list.component.scss'],
+  standalone: true,
+  imports: [
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatTableModule,
+    RoundValuePipe,
+    WalletNamePipe,
+    RouterModule,
+    CommonModule,
+    FormsModule,
+    RoundPipe,
+  ],
   providers: [
     BinanceSynchronizationService,
     BinanceWithdrawalsService,
@@ -35,7 +56,7 @@ import { Subscription, switchMap } from 'rxjs';
     ]),
   ],
 })
-export class CryptoComponent implements OnInit, OnDestroy {
+export class CoinListComponent implements OnInit, OnDestroy {
 
   @ViewChild(MatSort) matSort!: MatSort;
 
