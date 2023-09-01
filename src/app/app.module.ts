@@ -26,12 +26,12 @@ import { PipesModule } from './pipes/pipes.module';
 // Components
 import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
 import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
-import { CryptoComponent } from './components/crypto/crypto.component';
+import { CryptoComponent } from './modules/cryptocurrency/pages/crypto/crypto.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SelectWalletDialogComponent } from './components/crypto/dialogs/select-wallet-dialog/select-wallet-dialog.component';
-import { FillCoinDataDialogComponent } from './components/crypto/dialogs/fill-coin-data-dialog/fill-coin-data-dialog.component';
+import { SelectWalletDialogComponent } from './modules/cryptocurrency/pages/crypto/dialogs/select-wallet-dialog/select-wallet-dialog.component';
+import { FillCoinDataDialogComponent } from './modules/cryptocurrency/pages/crypto/dialogs/fill-coin-data-dialog/fill-coin-data-dialog.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCjNMShCKpV1-EL5p73TYmAVm_lrnQjHVs",

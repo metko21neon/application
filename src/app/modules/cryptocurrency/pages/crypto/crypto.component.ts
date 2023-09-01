@@ -1,14 +1,14 @@
-import { CashTransactionsInterface } from '../../modules/cryptocurrency/pages/cash-transactions/interfaces/cash-transactions.interface';
-import { BinanceSynchronizationService } from '../binance/services/binance-synchronization.service';
-import { BinanceWithdrawalsService } from '../binance/services/binance-withdrawals.service';
-import { InvestStatisticInterface } from '../../interfaces/invest-statistic.interface';
-import { BinanceDepositsService } from '../binance/services/binance-deposits.service';
-import { CoinDataInterface } from '../../interfaces/coin-data.interface';
-import { ColumnInterface } from '../../interfaces/column.interface';
-import { CoinDataService } from '../../services/coin-data.service';
-import { CoinInterface } from '../../interfaces/coin.interface';
-import { WalletNamePipe } from '../../pipes/wallet-name.pipe';
-import { CoinsService } from '../../services/coins.service';
+import { CashTransactionsInterface } from '../cash-transactions/interfaces/cash-transactions.interface';
+import { BinanceSynchronizationService } from '../../../../components/binance/services/binance-synchronization.service';
+import { BinanceWithdrawalsService } from '../../../../components/binance/services/binance-withdrawals.service';
+import { InvestStatisticInterface } from '../../../../interfaces/invest-statistic.interface';
+import { BinanceDepositsService } from '../../../../components/binance/services/binance-deposits.service';
+import { CoinDataInterface } from '../../../../interfaces/coin-data.interface';
+import { ColumnInterface } from '../../../../interfaces/column.interface';
+import { CoinDataService } from '../../../../services/coin-data.service';
+import { CoinInterface } from '../../../../interfaces/coin.interface';
+import { WalletNamePipe } from '../../../../pipes/wallet-name.pipe';
+import { CoinsService } from '../../../../services/coins.service';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';

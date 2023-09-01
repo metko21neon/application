@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { FillCoinDataDialogComponent } from '../components/crypto/dialogs/fill-coin-data-dialog/fill-coin-data-dialog.component';
+import { FillCoinDataDialogComponent } from '../modules/cryptocurrency/pages/crypto/dialogs/fill-coin-data-dialog/fill-coin-data-dialog.component';
 import { CoinHistoryActionEnum } from '../enums/coin-history-action.enum';
 
 import * as COIN_LIST from "../jsons/coins.json";

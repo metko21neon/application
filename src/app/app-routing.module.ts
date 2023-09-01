@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
 import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
-import { CryptoComponent } from './components/crypto/crypto.component';
+import { CryptoComponent } from './modules/cryptocurrency/pages/crypto/crypto.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 
 const routes: Routes = [
