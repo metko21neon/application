@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 import { WalletInterface } from '../../interfaces/wallet.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
@@ -20,7 +20,7 @@ export class WalletComponent implements OnInit, OnDestroy {
 
   @ViewChild(MatSort) matSort!: MatSort;
 
-  statusControl: FormControl = new FormControl('tracked');
+  statusControl: UntypedFormControl = new UntypedFormControl('tracked');
 
   dataSource!: MatTableDataSource<any>;
   walletList: WalletInterface[] = [];
