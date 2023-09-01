@@ -1992,7 +1992,7 @@
             "date": "2023-07-31 15:24:02",
             "action": "buy",
             "price": 0.5206,
-            "total": 59.478550
+            "total": 59.47855
           },
           {
             "date": "2023-07-31 15:25:44",
@@ -2837,19 +2837,6 @@
     "token_address": "",
     "wallets": [
       {
-        "name": "Trust Wallet (Savings wallet)",
-        "address": "XgLGU88Her2GcgVam9n4AJwDK6AJx2og7U",
-        "transactions": [
-          {
-            "action": "receive",
-            "amount": 1.0289288,
-            "date": "2023-08-17 12:50:47",
-            "fee": 0.0016,
-            "network": "DASH"
-          }
-        ]
-      },
-      {
         "name": "Binance (Binance wallet)",
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
@@ -2874,6 +2861,19 @@
           {
             "action": "transfer",
             "address": "XgLGU88Her2GcgVam9n4AJwDK6AJx2og7U",
+            "amount": 1.0289288,
+            "date": "2023-08-17 12:50:47",
+            "fee": 0.0016,
+            "network": "DASH"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "XgLGU88Her2GcgVam9n4AJwDK6AJx2og7U",
+        "transactions": [
+          {
+            "action": "receive",
             "amount": 1.0289288,
             "date": "2023-08-17 12:50:47",
             "fee": 0.0016,
@@ -7864,6 +7864,14 @@
             "date": "2023-08-16 00:58:13",
             "fee": 0.29,
             "network": "BSC"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 309,
+            "date": "2023-08-18 08:22:56",
+            "fee": 0,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -7909,6 +7917,14 @@
             "amount": 309,
             "date": "2023-07-15 12:02:01",
             "fee": 1
+          },
+          {
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 309,
+            "date": "2023-08-18 08:22:56",
+            "fee": 0,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -8934,19 +8950,6 @@
     "token_address": "",
     "wallets": [
       {
-        "name": "Trust Wallet (Savings wallet)",
-        "address": "zil1kk7ne57cfcx6v7wx9wmfhc8fsr5haae7u6cm7l",
-        "transactions": [
-          {
-            "action": "receive",
-            "amount": 865.9,
-            "date": "2023-08-17 12:52:07",
-            "fee": 0.2,
-            "network": "ZIL"
-          }
-        ]
-      },
-      {
         "name": "Binance (Binance wallet)",
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
@@ -8975,6 +8978,19 @@
             "action": "receive",
             "amount": 2185.4726,
             "fee": 25
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "zil1kk7ne57cfcx6v7wx9wmfhc8fsr5haae7u6cm7l",
+        "transactions": [
+          {
+            "action": "receive",
+            "amount": 865.9,
+            "date": "2023-08-17 12:52:07",
+            "fee": 0.2,
+            "network": "ZIL"
           }
         ]
       },

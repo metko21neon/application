@@ -14,7 +14,14 @@ const PIPES = [
 
 @NgModule({
   declarations: [...PIPES],
-  exports: [...PIPES],
+  exports: [
+    RoundValuePipe,
+    WalletNamePipe,
+    CommonModule,
+    RoundPipe,
+
+    ...PIPES,
+  ],
   imports: [
     RoundValuePipe,
     WalletNamePipe,
