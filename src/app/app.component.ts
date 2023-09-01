@@ -4,7 +4,7 @@ import { combineLatest, Subscription } from 'rxjs';
 
 import { CashTransactionsService } from './modules/cryptocurrency/pages/cash-transactions/cash-transactions.service';
 import { CoinDataService } from './services/coin-data.service';
-import { AppService } from './app.service';
+import { CoinsService } from './services/coins.service';
 
 export const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private cashTransactionsService: CashTransactionsService,
     private coinDataService: CoinDataService,
-    private appService: AppService,
+    private coinsService: CoinsService,
   ) { }
 
   ngOnInit(): void {
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit, OnDestroy {
     const stream$ = combineLatest([
       this.cashTransactionsService.getCashTransactions(),
       this.coinDataService.getCoinData(),
-      this.appService.getCoinList()
+      this.coinsService.getCoinList()
     ]).subscribe();
 
     this.subscription.add(stream$);

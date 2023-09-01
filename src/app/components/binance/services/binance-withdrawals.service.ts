@@ -3,7 +3,7 @@ import { BinanceWithdrawalInterface } from '../interfaces/binance-withdrawal.int
 import { WITHDRAWAL_STATUS_ENUM } from '../../../enums/withdrawal-status.enum';
 import { BinanceWithdrawalModel } from '../models/binance-withdrawal.model';
 import { WalletNamePipe } from '../../../pipes/wallet-name.pipe';
-import { CoinsService } from '../../../services/coins.service';
+import { CCCoinsService } from '../../../services/cccoins.service';
 import { DATE_FORMAT } from '../../../app.component';
 import { BinanceApi } from '../api/binance.api';
 
@@ -18,7 +18,7 @@ export class BinanceWithdrawalsService {
 
   constructor(
     private walletNamePipe: WalletNamePipe,
-    private coinsService: CoinsService,
+    private coinsService: CCCoinsService,
     private api: BinanceApi
   ) { }
 

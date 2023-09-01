@@ -8,11 +8,11 @@ import { ColumnInterface } from '../../interfaces/column.interface';
 import { CoinDataService } from '../../services/coin-data.service';
 import { CoinInterface } from '../../interfaces/coin.interface';
 import { WalletNamePipe } from '../../pipes/wallet-name.pipe';
-import { AppService } from '../../app.service';
+import { CoinsService } from '../../services/coins.service';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 
 import { Subscription, switchMap } from 'rxjs';
@@ -62,7 +62,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
     private binanceSynchronizationService: BinanceSynchronizationService,
     private coinDataService: CoinDataService,
     private walletNamePipe: WalletNamePipe,
-    private appService: AppService,
+    private coinsService: CoinsService
   ) { }
 
   ngOnInit(): void {
@@ -178,7 +178,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   }
 
   private getCoinList(): void {
-    const stream$ = this.appService.coinList$.subscribe((coinList: CoinInterface[]) => {
+    const stream$ = this.coinsService.coinList$.subscribe((coinList: CoinInterface[]) => {
       this.getInitCoinList(coinList);
 
       this.coinList = coinList.map((coin: CoinInterface) => {
@@ -210,7 +210,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   }
 
   private setColumnList(): void {
-    this.columnList = this.appService.getColumnListList();
+    this.columnList = this.coinsService.getColumnListList();
 
     this.displayedColumns = this.columnList
       .filter((column: ColumnInterface) => column.selected)
@@ -233,7 +233,7 @@ export class CryptoComponent implements OnInit, OnDestroy {
   }
 
   private setStatisticSubscription(): void {
-    const stream$ = this.appService.investStatistic$.subscribe((statistic: InvestStatisticInterface) => {
+    const stream$ = this.coinsService.investStatistic$.subscribe((statistic: InvestStatisticInterface) => {
       this.statistic = statistic;
     });
 

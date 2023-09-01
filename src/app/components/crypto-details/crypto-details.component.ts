@@ -1,6 +1,6 @@
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 
 import { map, Subscription } from 'rxjs';
 
@@ -8,7 +8,7 @@ import { CryptoHistoryInterface } from '../../interfaces/crypto-history.interfac
 import { CoinHistoryActionEnum } from '../../enums/coin-history-action.enum';
 import { WalletInterface } from '../../interfaces/wallet.interface';
 import { CoinInterface } from '../../interfaces/coin.interface';
-import { AppService } from '../../app.service';
+import { CoinsService } from '../../services/coins.service';
 
 @Component({
   selector: 'im-crypto-details',
@@ -38,7 +38,7 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
   private subscription: Subscription = new Subscription();
 
   constructor(
-    private appService: AppService,
+    private coinsService: CoinsService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -76,7 +76,7 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
     const stream$ = this.route.params.pipe(
       map((params: Params) => {
         this.params = params;
-        return this.appService.getTokenBySymbol(params['symbol']);
+        return this.coinsService.getTokenBySymbol(params['symbol']);
       })
     ).subscribe((tokenDetails: CoinInterface) => {
       this.tokenDetails = tokenDetails;

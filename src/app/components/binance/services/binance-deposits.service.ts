@@ -1,4 +1,4 @@
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Injectable } from '@angular/core';
 
 import { Observable, concatMap, tap, toArray } from 'rxjs';
@@ -7,7 +7,7 @@ import { SelectWalletDialogComponent } from '../../crypto/dialogs/select-wallet-
 import { BinanceDepositInterface } from '../interfaces/binance-deposit.interface';
 import { BinanceDepositModel } from '../models/binance-deposit.model';
 import { WalletNamePipe } from '../../../pipes/wallet-name.pipe';
-import { CoinsService } from '../../../services/coins.service';
+import { CCCoinsService } from '../../../services/cccoins.service';
 import { BinanceApi } from '../api/binance.api';
 
 @Injectable()
@@ -15,7 +15,7 @@ export class BinanceDepositsService {
 
   constructor(
     private walletNamePipe: WalletNamePipe,
-    private coinsService: CoinsService,
+    private coinsService: CCCoinsService,
     private dialog: MatDialog,
     private api: BinanceApi
   ) { }

@@ -6,10 +6,10 @@ import { CoinHistoryActionEnum } from '../../../enums/coin-history-action.enum';
 import { BinanceOrderInterface } from '../interfaces/binance-order.interface';
 import { BinanceWithdrawalsService } from './binance-withdrawals.service';
 import { BinanceDepositsService } from './binance-deposits.service';
+import { CCCoinsService } from '../../../services/cccoins.service';
 import { WalletNamePipe } from '../../../pipes/wallet-name.pipe';
 import { CoinsService } from '../../../services/coins.service';
 import { DATE_FORMAT } from '../../../app.component';
-import { AppService } from '../../../app.service';
 import { Api } from '../../../api/api';
 
 import moment from 'moment';
@@ -29,8 +29,8 @@ export class BinanceSynchronizationService {
     private binanceWithdrawalsService: BinanceWithdrawalsService,
     private binanceDepositsService: BinanceDepositsService,
     private walletNamePipe: WalletNamePipe,
+    private cccoinsService: CCCoinsService,
     private coinsService: CoinsService,
-    private appService: AppService,
     private api: Api
   ) { }
 
@@ -38,7 +38,7 @@ export class BinanceSynchronizationService {
     // return this.binanceDepositsService.getDepositsHistory().pipe(
     // return this.binanceWithdrawalsService.getWithdrawalsHistory().pipe(
     return this.getOrdersHistory().pipe(
-      switchMap(() => this.appService.getCoinList(this.coinsService.coins))
+      switchMap(() => this.coinsService.getCoinList(this.cccoinsService.coins))
     );
   }
 
@@ -64,7 +64,7 @@ export class BinanceSynchronizationService {
   }
 
   private getOrdersHistory(): Observable<any> {
-    return from(this.coinsService.coins).pipe(
+    return from(this.cccoinsService.coins).pipe(
       filter((coin: any) => !['USDT', 'BUSD'].includes(coin.symbol)),
       concatMap((coin: any) => this.getOrdersHistoryBySymbol(coin)),
       tap((item: BinanceResponseOrdersInterface) => {
@@ -123,14 +123,14 @@ export class BinanceSynchronizationService {
   }
 
   private prepareWallet(symbol: string, address: string): any {
-    const coinIndex = this.coinsService.coins.findIndex((item: any) => item.symbol === symbol);
+    const coinIndex = this.cccoinsService.coins.findIndex((item: any) => item.symbol === symbol);
 
-    this.coinsService.coins[coinIndex].wallets.push({
+    this.cccoinsService.coins[coinIndex].wallets.push({
       name: this.walletNamePipe.transform(address),
       transactions: [],
       address,
     });
 
-    return this.findWalletByAddress(this.coinsService.coins[coinIndex].wallets, symbol, address)
+    return this.findWalletByAddress(this.cccoinsService.coins[coinIndex].wallets, symbol, address)
   }
 }

@@ -1,13 +1,13 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
-import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { UntypedFormControl } from '@angular/forms';
+import { MatSort } from '@angular/material/sort';
 
 import { WalletInterface } from '../../interfaces/wallet.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
 import { COIN_STATUS_LIST } from '../../states/coin-status.state';
 import { CoinInterface } from '../../interfaces/coin.interface';
-import { AppService } from '../../app.service';
+import { CoinsService } from '../../services/coins.service';
 
 import { Subscription } from 'rxjs';
 
@@ -38,7 +38,7 @@ export class WalletComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription = new Subscription();
 
-  constructor(private appService: AppService) { }
+  constructor(private coinsService: CoinsService) { }
 
   ngOnInit(): void {
     this.setColumnList();
@@ -67,7 +67,7 @@ export class WalletComponent implements OnInit, OnDestroy {
   }
 
   selectWallet(wallet: WalletInterface): void {
-    this.coinList = this.appService.getCoinListByWalletAddress(wallet.address);
+    this.coinList = this.coinsService.getCoinListByWalletAddress(wallet.address);
     this.selectedWallet = wallet;
 
     setTimeout(() => this.dataSource.sort = this.matSort);
@@ -121,7 +121,7 @@ export class WalletComponent implements OnInit, OnDestroy {
   }
 
   private setColumnList(): void {
-    this.columnList = this.appService.getColumnListList();
+    this.columnList = this.coinsService.getColumnListList();
     console.log('columnList:', this.columnList);
 
     this.displayedColumns = this.columnList
