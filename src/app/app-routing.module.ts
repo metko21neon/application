@@ -1,7 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { CryptoDetailsComponent } from './components/crypto-details/crypto-details.component';
 import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 
@@ -34,10 +33,6 @@ const routes: Routes = [
     path: 'wallet',
     component: WalletComponent
   },
-  {
-    path: 'wallet/:walletAddress/coin/:symbol',
-    component: CryptoDetailsComponent
-  }
 ];
 
 @NgModule({

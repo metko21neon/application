@@ -1,21 +1,31 @@
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { CommonModule } from '@angular/common';
 
 import { map, Subscription } from 'rxjs';
 
-import { CryptoHistoryInterface } from '../../interfaces/crypto-history.interface';
-import { CoinHistoryActionEnum } from '../../enums/coin-history-action.enum';
-import { WalletInterface } from '../../interfaces/wallet.interface';
-import { CoinInterface } from '../../interfaces/coin.interface';
-import { CoinsService } from '../../services/coins.service';
+import { CryptoHistoryInterface } from '../../../../interfaces/crypto-history.interface';
+import { CoinHistoryActionEnum } from '../../../../enums/coin-history-action.enum';
+import { WalletInterface } from '../../../../interfaces/wallet.interface';
+import { CoinInterface } from '../../../../interfaces/coin.interface';
+import { CoinsService } from '../../../../services/coins.service';
+import { RoundValuePipe } from 'src/app/pipes/round-value.pipe';
+import { RoundPipe } from 'src/app/pipes/round.pipe';
 
 @Component({
-  selector: 'im-crypto-details',
-  templateUrl: './crypto-details.component.html',
-  styleUrls: ['./crypto-details.component.scss']
+  selector: 'im-wallet-coin-details',
+  templateUrl: './wallet-coin-details.component.html',
+  styleUrls: ['./wallet-coin-details.component.scss'],
+  standalone: true,
+  imports: [
+    MatTableModule,
+    RoundValuePipe,
+    CommonModule,
+    RoundPipe
+  ]
 })
-export class CryptoDetailsComponent implements OnInit, OnDestroy {
+export class WalletCoinDetailsComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['number', 'date', 'action', 'totalQuantity', 'quantity', 'price', 'averagePrice', 'total'];
   dataSource!: MatTableDataSource<any>;
@@ -48,15 +58,15 @@ export class CryptoDetailsComponent implements OnInit, OnDestroy {
   }
 
   back(): void {
-    this.router.navigate(['..']);
+    this.router.navigate(['./cryptocurrency/coins']);
   }
 
   prevWallet(): void {
-    this.router.navigate(['./wallet/', this.prevWalletAddress, 'coin', this.tokenDetails?.symbol]);
+    this.router.navigate(['./cryptocurrency/wallet/', this.prevWalletAddress, 'coin', this.tokenDetails?.symbol]);
   }
 
   nextWallet(): void {
-    this.router.navigate(['./wallet/', this.nextWalletAddress, 'coin', this.tokenDetails?.symbol]);
+    this.router.navigate(['./cryptocurrency/wallet/', this.nextWalletAddress, 'coin', this.tokenDetails?.symbol]);
   }
 
   ngOnDestroy(): void {
