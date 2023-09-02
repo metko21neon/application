@@ -1,4 +1,4 @@
-import { IGNORED_WALLET_LIST, WalletAddressInterface } from '../../../states/wallet.state';
+import { IGNORED_WALLET_LIST, WalletAddressInterface } from '../../../modules/cryptocurrency/states/wallet.state';
 import { BinanceWithdrawalInterface } from '../interfaces/binance-withdrawal.interface';
 import { WITHDRAWAL_STATUS_ENUM } from '../../../enums/withdrawal-status.enum';
 import { BinanceWithdrawalModel } from '../models/binance-withdrawal.model';
