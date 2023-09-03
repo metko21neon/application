@@ -4,6 +4,7 @@ import { WalletCoinDetailsComponent } from "./pages/wallet-coin-details/wallet-c
 import { WalletCoinsComponent } from "./pages/wallet-coins/wallet-coins.component";
 import { CoinListComponent } from "./pages/coin-list/coin-list.component";
 import { CryptocurrencyComponent } from "./cryptocurrency.component";
+import { WalletsComponent } from "./pages/wallets/wallets.component";
 
 export const CRYPTOCURRENCY_ROUTES: Routes = [{
   path: '',
@@ -12,18 +13,22 @@ export const CRYPTOCURRENCY_ROUTES: Routes = [{
     {
       path: '',
       pathMatch: 'full',
-      redirectTo: 'coins'
+      redirectTo: 'wallets'
     },
     {
       path: 'coins',
       component: CoinListComponent
     },
     {
-      path: 'wallet/:walletAddress',
+      path: 'wallets',
+      component: WalletsComponent,
+    },
+    {
+      path: 'wallets/:walletAddress',
       component: WalletCoinsComponent,
     },
     {
-      path: 'wallet/:walletAddress/coin/:symbol',
+      path: 'wallets/:walletAddress/coins/:symbol',
       component: WalletCoinDetailsComponent
     }
   ]

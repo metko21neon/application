@@ -129,13 +129,6 @@ export const WALLET_LIST: WalletInterface[] = [
     ]
   },
   {
-    name: "Internet Computer wallet",
-    company: "Internet Computer",
-    addresses: [
-      { network: NETORK_COIN_ENUM.NOT_KNOWN, address: 'internet_computer_1' },
-    ]
-  },
-  {
     name: "Avalanche wallet",
     company: "Avalanche",
     addresses: [

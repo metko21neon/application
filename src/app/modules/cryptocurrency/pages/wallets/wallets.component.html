@@ -1,10 +1,6 @@
 <div class="im-app">
   <div class="im-header">
-    <div class="im-header-left">
-      <button (click)="back()"> Back </button>
-    </div>
-
-    <div class="im-header-center">{{ wallet.company }} ({{ wallet.name }})</div>
+    <div class="im-header-center">Wallets</div>
   </div>
 
   <div class="im-content">
@@ -14,18 +10,23 @@
         <td mat-cell *matCellDef="let index = index"> {{ index + 1 }} </td>
       </ng-container>
 
+      <ng-container matColumnDef="company">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Company</th>
+        <td mat-cell *matCellDef="let element">{{ element.company }}</td>
+      </ng-container>
+
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }} ({{ element.symbol }})</td>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
       </ng-container>
 
-      <ng-container matColumnDef="coin_balance">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Coin balance</th>
-        <td mat-cell *matCellDef="let element">{{ element.quantity | roundValue }} {{ element.symbol }}</td>
+      <ng-container matColumnDef="ratio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ratio</th>
+        <td mat-cell *matCellDef="let element">{{ element.ration | roundValue: 1 }}%</td>
       </ng-container>
 
-      <ng-container matColumnDef="usd_balance">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>USD balance</th>
+      <ng-container matColumnDef="balance">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Balance</th>
         <td mat-cell *matCellDef="let element">
           {{ element.amount | roundValue | currency: 'USD': 'symbol': '1.2-20' }}
         </td>
@@ -35,8 +36,7 @@
 
       <tr mat-row
         *matRowDef="let row; columns: displayedColumns;"
-        (click)="openCoinDetails(row)">
-      </tr>
+        (click)="openWalletDetails(row)"></tr>
     </table>
   </div>
 
