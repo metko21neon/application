@@ -24,7 +24,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { PipesModule } from './pipes/pipes.module';
 
 // Components
-import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -43,7 +42,6 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    CoinDataListComponent,
     WalletComponent,
     AppComponent,
     DashboardComponent,

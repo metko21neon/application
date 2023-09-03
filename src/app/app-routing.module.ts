@@ -1,7 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { CoinDataListComponent } from './components/coin-data-list/coin-data-list.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 
 const routes: Routes = [
@@ -14,16 +13,8 @@ const routes: Routes = [
     loadChildren: () => import('./modules/cryptocurrency/cryptocurrency.routes').then(mod => mod.CRYPTOCURRENCY_ROUTES)
   },
   {
-    path: 'coin-data-list',
-    component: CoinDataListComponent
-  },
-  {
     path: 'finances',
     loadChildren: () => import('./modules/finances/finances.module').then((m) => m.FinancesModule),
-  },
-  {
-    path: 'cash-history',
-    loadChildren: () => import('./modules/cryptocurrency/pages/cash-transactions/cash-transactions.module').then((m) => m.CashTransactionsModule),
   },
   {
     path: 'binance',

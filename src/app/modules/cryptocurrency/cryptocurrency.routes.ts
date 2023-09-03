@@ -30,6 +30,10 @@ export const CRYPTOCURRENCY_ROUTES: Routes = [{
     {
       path: 'wallets/:walletAddress/coins/:symbol',
       component: WalletCoinDetailsComponent
-    }
+    },
+    {
+      path: 'cash-history',
+      loadChildren: () => import('./pages/cash-transactions/cash-transactions.module').then((m) => m.CashTransactionsModule),
+    },
   ]
 }];
