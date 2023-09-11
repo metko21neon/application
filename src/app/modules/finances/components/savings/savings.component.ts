@@ -8,6 +8,7 @@ import { CURRENCY_ENUM } from '../../enums/currency.enum';
 import { BORROWS_STATE } from './states/borrows.state';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { SPENDS_STATE } from './states/spends.state';
 
 const STATE = [
   {
@@ -18,34 +19,16 @@ const STATE = [
   },
   {
     label: 'EURO',
-    amount: 500,
+    amount: 300,
     exchangeRate: 38.8,
     description: 'Parents'
   },
-  // {
-  //   label: 'EURO',
-  //   amount: 40,
-  //   exchangeRate: 38.8,
-  //   description: 'Wallet'
-  // },
   {
     label: 'EURO',
     amount: 150,
     exchangeRate: 40,
     description: 'Wallet'
   },
-  {
-    label: 'USD',
-    amount: 100,
-    exchangeRate: 37.453,
-    description: 'Wallet'
-  },
-  // {
-  //   label: 'USD',
-  //   amount: 5,
-  //   exchangeRate: 37.453,
-  //   description: 'Privatbank'
-  // },
   {
     label: 'UAH',
     amount: 700,
@@ -87,6 +70,8 @@ export class SavingsComponent implements OnInit {
   };
   borrows = {
     uah: 0,
+    usd: 0,
+    eur: 0
   };
 
   capital = STATE;
@@ -104,6 +89,7 @@ export class SavingsComponent implements OnInit {
       ...EXCHANGES_STATE,
       ...SAVINGS_STATE,
       ...BORROWS_STATE,
+      ...SPENDS_STATE,
     ].sort((a, b) => this.sortByDate(a.period, b.period, 'asc'));
 
     const balance = {
@@ -122,9 +108,42 @@ export class SavingsComponent implements OnInit {
           break;
 
         case ACTION_TYPE_ENUM.BORROW:
-          this.borrows.uah += item.amount;
-          balance.total -= item.amount;
-          balance.uah -= item.amount;
+          if (item.currency === CURRENCY_ENUM.UAH) {
+            this.borrows.uah += item.amount;
+            balance.total -= item.amount;
+            balance.uah -= item.amount;
+          } else {
+            if (item.currency === CURRENCY_ENUM.USD) {
+              this.borrows.uah += item.amount * item.rate;
+              this.borrows.usd += item.amount;
+
+              balance.total -= item.amount * item.rate;
+              balance.usd -= item.amount;
+            }
+            if (item.currency === CURRENCY_ENUM.EUR) {
+              this.borrows.uah += item.amount * item.rate;
+              this.borrows.eur += item.amount;
+
+              balance.total -= item.amount * item.rate;
+              balance.eur -= item.amount;
+            }
+          }
+          break;
+
+        case ACTION_TYPE_ENUM.SPEND:
+          if (item.currency === CURRENCY_ENUM.UAH) {
+            balance.total -= item.amount;
+            balance.uah -= item.amount;
+          } else {
+            if (item.currency === CURRENCY_ENUM.USD) {
+              balance.total -= item.amount * item.rate;
+              balance.uah -= item.amount;
+            }
+            if (item.currency === CURRENCY_ENUM.EUR) {
+              balance.total -= item.amount * item.rate;
+              balance.eur -= item.amount;
+            }
+          }
           break;
 
         case ACTION_TYPE_ENUM.EXCHANGE:
