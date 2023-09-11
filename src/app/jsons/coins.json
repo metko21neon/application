@@ -742,6 +742,22 @@
             "date": "2023-08-17 12:29:30",
             "fee": 0.019,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 99.981,
+            "date": "2023-08-23 00:03:21",
+            "fee": 0.019,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 126.881,
+            "date": "2023-09-11 14:41:03",
+            "fee": 0.019,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -778,6 +794,22 @@
             "action": "receive",
             "amount": 90.881,
             "date": "2023-08-17 12:29:30",
+            "fee": 0.019,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 99.981,
+            "date": "2023-08-23 00:03:21",
+            "fee": 0.019,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 126.881,
+            "date": "2023-09-11 14:41:03",
             "fee": 0.019,
             "network": "ARBITRUM"
           }
@@ -2140,6 +2172,14 @@
             "date": "2023-06-10 13:58:16",
             "fee": 0.013,
             "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 16.987,
+            "date": "2023-09-11 14:10:45",
+            "fee": 0.013,
+            "network": "BSC"
           }
         ]
       },
@@ -2182,6 +2222,14 @@
             "amount": 14.767,
             "date": "2023-06-10 13:58:16",
             "fee": 0.013
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 16.987,
+            "date": "2023-09-11 14:10:45",
+            "fee": 0.013,
+            "network": "BSC"
           }
         ]
       },
@@ -2625,6 +2673,14 @@
             "date": "2023-08-17 12:24:33",
             "fee": 0.004,
             "network": "ATOM"
+          },
+          {
+            "action": "transfer",
+            "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
+            "amount": 15.47844,
+            "date": "2023-09-11 14:09:20",
+            "fee": 0.004,
+            "network": "ATOM"
           }
         ]
       },
@@ -2677,6 +2733,14 @@
             "action": "receive",
             "amount": 24.39602,
             "date": "2023-08-17 12:24:33",
+            "fee": 0.004,
+            "network": "ATOM"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 15.47844,
+            "date": "2023-09-11 14:09:20",
             "fee": 0.004,
             "network": "ATOM"
           }
@@ -3365,6 +3429,44 @@
             "date": "2023-08-07 09:38:04",
             "fee": 0.0007,
             "network": "ETH"
+          },
+          {
+            "action": "transfer",
+            "address": "0x3C8E0F3f992445faAd85be9De471f1391528563B",
+            "amount": 0.00884,
+            "date": "2023-08-29 09:49:21",
+            "fee": 0.00096,
+            "network": "ETH"
+          },
+          {
+            "action": "transfer",
+            "address": "0x3C8E0F3f992445faAd85be9De471f1391528563B",
+            "amount": 0.11904,
+            "date": "2023-08-29 09:53:23",
+            "fee": 0.00096,
+            "network": "ETH"
+          }
+        ]
+      },
+      {
+        "name": "Metamask (MA wallet #1)",
+        "address": "0x3C8E0F3f992445faAd85be9De471f1391528563B",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 0.00884,
+            "date": "2023-08-29 09:49:21",
+            "fee": 0.00096,
+            "network": "ETH"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 0.11904,
+            "date": "2023-08-29 09:53:23",
+            "fee": 0.00096,
+            "network": "ETH"
           }
         ]
       },
@@ -3539,6 +3641,14 @@
             "date": "2023-07-31 18:16:34",
             "fee": 0.3,
             "network": "FTM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 579.7,
+            "date": "2023-08-23 00:00:39",
+            "fee": 0.3,
+            "network": "FTM"
           }
         ]
       },
@@ -3574,6 +3684,14 @@
             "action": "receive",
             "amount": 799.7,
             "date": "2023-07-31 18:16:34",
+            "fee": 0.3,
+            "network": "FTM"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 579.7,
+            "date": "2023-08-23 00:00:39",
             "fee": 0.3,
             "network": "FTM"
           }
@@ -3720,6 +3838,14 @@
             "date": "2023-07-06 01:47:34",
             "fee": 0.001,
             "network": "FIL"
+          },
+          {
+            "action": "transfer",
+            "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
+            "amount": 27.769,
+            "date": "2023-08-23 00:04:42",
+            "fee": 0.001,
+            "network": "FIL"
           }
         ]
       },
@@ -3757,6 +3883,14 @@
             "amount": 21.639,
             "date": "2023-07-06 01:47:34",
             "fee": 0.001
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 27.769,
+            "date": "2023-08-23 00:04:42",
+            "fee": 0.001,
+            "network": "FIL"
           }
         ]
       }
@@ -3910,6 +4044,14 @@
             "date": "2023-08-17 12:35:58",
             "fee": 0.006,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 6.562,
+            "date": "2023-09-11 14:07:57",
+            "fee": 0.006,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -3921,6 +4063,14 @@
             "action": "receive",
             "amount": 8.604,
             "date": "2023-08-17 12:35:58",
+            "fee": 0.006,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 6.562,
+            "date": "2023-09-11 14:07:57",
             "fee": 0.006,
             "network": "ARBITRUM"
           }
@@ -4771,6 +4921,14 @@
             "date": "2023-06-15 19:19:18",
             "fee": 0.001,
             "network": "LTC"
+          },
+          {
+            "action": "transfer",
+            "address": "ltc1qu42e2x2y32g254ghdglm9k352a3ydkmdvjt2sm",
+            "amount": 1.561,
+            "date": "2023-08-23 00:02:03",
+            "fee": 0.001,
+            "network": "LTC"
           }
         ]
       },
@@ -4784,6 +4942,14 @@
             "amount": 0.859,
             "date": "2023-06-15 19:19:18",
             "fee": 0.001
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 1.561,
+            "date": "2023-08-23 00:02:03",
+            "fee": 0.001,
+            "network": "LTC"
           }
         ]
       }
@@ -6272,6 +6438,14 @@
             "date": "2023-07-07 19:35:01",
             "fee": 0.08,
             "network": "DOT"
+          },
+          {
+            "action": "transfer",
+            "address": "13tWubJx5KK36MDVTWYAVoEXa8Ks7cciBfvkLsep77NkEA2w",
+            "amount": 22.1400792,
+            "date": "2023-08-23 00:04:00",
+            "fee": 0.08,
+            "network": "DOT"
           }
         ]
       },
@@ -6291,6 +6465,14 @@
             "amount": 19.9222671,
             "date": "2023-07-07 19:35:01",
             "fee": 0.08
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 22.1400792,
+            "date": "2023-08-23 00:04:00",
+            "fee": 0.08,
+            "network": "DOT"
           }
         ]
       }
@@ -7529,6 +7711,22 @@
             "date": "2023-08-17 12:22:42",
             "fee": 0.02,
             "network": "SUI"
+          },
+          {
+            "action": "transfer",
+            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
+            "amount": 212.88,
+            "date": "2023-08-23 00:01:20",
+            "fee": 0.02,
+            "network": "SUI"
+          },
+          {
+            "action": "transfer",
+            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
+            "amount": 231.78,
+            "date": "2023-09-11 14:11:26",
+            "fee": 0.02,
+            "network": "SUI"
           }
         ]
       },
@@ -7566,6 +7764,22 @@
             "action": "receive",
             "amount": 470.18,
             "date": "2023-08-17 12:22:42",
+            "fee": 0.02,
+            "network": "SUI"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 212.88,
+            "date": "2023-08-23 00:01:20",
+            "fee": 0.02,
+            "network": "SUI"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 231.78,
+            "date": "2023-09-11 14:11:26",
             "fee": 0.02,
             "network": "SUI"
           }
@@ -7872,6 +8086,70 @@
             "date": "2023-08-18 08:22:56",
             "fee": 0,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 5.71,
+            "date": "2023-08-23 00:08:04",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 193.66654657,
+            "date": "2023-08-23 00:10:04",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "transfer",
+            "address": "TMaKLk4hBXJm8MauEn9BQqM9yAZEFRgGFs",
+            "amount": 9,
+            "date": "2023-08-29 00:35:56",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "TMaKLk4hBXJm8MauEn9BQqM9yAZEFRgGFs",
+            "amount": 99,
+            "date": "2023-08-29 00:39:58",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z",
+            "amount": 9,
+            "date": "2023-08-30 17:34:29",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z",
+            "amount": 1615,
+            "date": "2023-08-30 17:36:11",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z",
+            "amount": 1695.32,
+            "date": "2023-09-04 09:46:49",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "amount": 100.71,
+            "date": "2023-09-09 11:08:14",
+            "fee": 0.29,
+            "network": "BSC"
           }
         ]
       },
@@ -7929,6 +8207,58 @@
         ]
       },
       {
+        "name": "Metamask (Metamask wallet)",
+        "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 5.71,
+            "date": "2023-08-23 00:08:04",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 193.66654657,
+            "date": "2023-08-23 00:10:04",
+            "fee": 0.29,
+            "network": "BSC"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 100.71,
+            "date": "2023-09-09 11:08:14",
+            "fee": 0.29,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
+        "name": "OKX (OKX wallet)",
+        "address": "TMaKLk4hBXJm8MauEn9BQqM9yAZEFRgGFs",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 9,
+            "date": "2023-08-29 00:35:56",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 99,
+            "date": "2023-08-29 00:39:58",
+            "fee": 1,
+            "network": "TRX"
+          }
+        ]
+      },
+      {
         "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
@@ -7982,6 +8312,36 @@
             "date": "2023-06-14 23:59:10",
             "network": "BSC",
             "fee": 0
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 9,
+            "date": "2023-08-30 17:34:29",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 1615,
+            "date": "2023-08-30 17:36:11",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 1695.32,
+            "date": "2023-09-04 09:46:49",
+            "fee": 1,
+            "network": "TRX"
           }
         ]
       },
@@ -8125,6 +8485,22 @@
             "date": "2023-08-17 12:30:55",
             "fee": 5,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 1106.00028215,
+            "date": "2023-08-23 00:02:40",
+            "fee": 5,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "transfer",
+            "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
+            "amount": 1241.33164219,
+            "date": "2023-09-11 14:41:59",
+            "fee": 5,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -8155,6 +8531,22 @@
             "action": "receive",
             "amount": 947.00191862,
             "date": "2023-08-17 12:30:55",
+            "fee": 5,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 1106.00028215,
+            "date": "2023-08-23 00:02:40",
+            "fee": 5,
+            "network": "ARBITRUM"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 1241.33164219,
+            "date": "2023-09-11 14:41:59",
             "fee": 5,
             "network": "ARBITRUM"
           }
@@ -8246,6 +8638,28 @@
             "action": "sell",
             "price": 0.06042,
             "filled": 1663.7
+          },
+          {
+            "action": "transfer",
+            "address": "THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z",
+            "amount": 61.7,
+            "date": "2023-09-03 15:40:30",
+            "fee": 1,
+            "network": "TRX"
+          }
+        ]
+      },
+      {
+        "name": "Trust Wallet (Savings wallet)",
+        "address": "THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 61.7,
+            "date": "2023-09-03 15:40:30",
+            "fee": 1,
+            "network": "TRX"
           }
         ]
       }
@@ -8856,6 +9270,14 @@
             "date": "2023-06-08 21:34:07",
             "fee": 0.2,
             "network": "XRP"
+          },
+          {
+            "action": "transfer",
+            "address": "rLoEMuZG3EnhTSVHpo4vVEHu1QH3gMYxcA",
+            "amount": 210.8,
+            "date": "2023-09-11 14:08:39",
+            "fee": 0.2,
+            "network": "XRP"
           }
         ]
       },
@@ -8880,6 +9302,14 @@
             "amount": 108.982132,
             "date": "2023-06-08 21:34:07",
             "fee": 0.2
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 210.8,
+            "date": "2023-09-11 14:08:39",
+            "fee": 0.2,
+            "network": "XRP"
           }
         ]
       },
