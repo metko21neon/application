@@ -8010,7 +8010,7 @@
           {
             "action": "receive",
             "network": "BSC",
-            "amount": 448.44023564,
+            "amount": 448.43961664,
             "date": "2023-06-14 23:59:10",
             "fee": 0
           },
@@ -8150,6 +8150,36 @@
             "date": "2023-09-09 11:08:14",
             "fee": 0.29,
             "network": "BSC"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 680.4883,
+            "date": "2023-09-11 13:58:30",
+            "fee": 0.3,
+            "network": "BSC"
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
+        "address": "TNLpoyoGA47j92BQKWUwEYXm5peQs121hH",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 107,
+            "date": "2023-09-05 23:31:10",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 307.29,
+            "date": "2023-09-11 13:41:58",
+            "fee": 1.33,
+            "network": "TRX"
           }
         ]
       },
@@ -8163,6 +8193,11 @@
             "amount": 109.71,
             "date": "2023-07-06 00:03:31",
             "fee": 0.29
+          },
+          {
+            "date": "2023-08-01 00:00:00",
+            "action": "spend",
+            "amount": 109.6937
           },
           {
             "action": "receive",
@@ -8179,9 +8214,12 @@
             "network": "BSC"
           },
           {
-            "date": "2023-08-01 00:00:00",
-            "action": "spend",
-            "amount": 109.6937
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 680.4883,
+            "date": "2023-09-11 13:58:30",
+            "fee": 0.3,
+            "network": "BSC"
           }
         ]
       },
@@ -8255,6 +8293,14 @@
             "date": "2023-08-29 00:39:58",
             "fee": 1,
             "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "TNLpoyoGA47j92BQKWUwEYXm5peQs121hH",
+            "amount": 107,
+            "date": "2023-09-05 23:31:10",
+            "fee": 1,
+            "network": "TRX"
           }
         ]
       },
@@ -8308,7 +8354,7 @@
           {
             "action": "transfer",
             "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
-            "amount": 448.44023564,
+            "amount": 448.43961664,
             "date": "2023-06-14 23:59:10",
             "network": "BSC",
             "fee": 0
@@ -8341,6 +8387,14 @@
             "amount": 1695.32,
             "date": "2023-09-04 09:46:49",
             "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "TNLpoyoGA47j92BQKWUwEYXm5peQs121hH",
+            "amount": 307.29,
+            "date": "2023-09-11 13:41:58",
+            "fee": 1.33,
             "network": "TRX"
           }
         ]
