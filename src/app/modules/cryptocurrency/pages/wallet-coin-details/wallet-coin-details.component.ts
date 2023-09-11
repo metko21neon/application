@@ -62,11 +62,11 @@ export class WalletCoinDetailsComponent implements OnInit, OnDestroy {
   }
 
   prevWallet(): void {
-    this.router.navigate(['./cryptocurrency/wallet/', this.prevWalletAddress, 'coin', this.tokenDetails?.symbol]);
+    this.router.navigate(['./cryptocurrency/wallets/', this.prevWalletAddress, 'coin', this.tokenDetails?.symbol]);
   }
 
   nextWallet(): void {
-    this.router.navigate(['./cryptocurrency/wallet/', this.nextWalletAddress, 'coin', this.tokenDetails?.symbol]);
+    this.router.navigate(['./cryptocurrency/wallets/', this.nextWalletAddress, 'coin', this.tokenDetails?.symbol]);
   }
 
   ngOnDestroy(): void {

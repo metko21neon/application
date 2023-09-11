@@ -72,6 +72,7 @@ export const WALLET_LIST: WalletInterface[] = [
     addresses: [
       { network: NETORK_COIN_ENUM.BSC, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
       { network: NETORK_COIN_ENUM.ETH, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
+      { network: NETORK_COIN_ENUM.TRX, address: 'TNLpoyoGA47j92BQKWUwEYXm5peQs121hH' },
     ]
   },
   {
@@ -158,6 +159,20 @@ export const WALLET_LIST: WalletInterface[] = [
     ]
   },
   {
+    name: "OKX wallet",
+    company: "OKX",
+    addresses: [
+      { network: NETORK_COIN_ENUM.TRX, address: 'TMaKLk4hBXJm8MauEn9BQqM9yAZEFRgGFs' },
+    ]
+  },
+  {
+    name: "MA wallet #1",
+    company: "Metamask",
+    addresses: [
+      { network: NETORK_COIN_ENUM.ETH, address: '0x3C8E0F3f992445faAd85be9De471f1391528563B' },
+    ]
+  },
+  {
     name: "Savings wallet",
     company: "Trust Wallet",
     addresses: [
@@ -176,6 +191,7 @@ export const WALLET_LIST: WalletInterface[] = [
       { network: NETORK_COIN_ENUM.WAVES, address: '3PPKVawkKTm2eW5TDdh7z495BYVAKtA4im2' },
       { network: NETORK_COIN_ENUM.DOGE, address: 'DHKCoFbtYhh6VmxHwy9sf1gmSqMLxm8aRp' },
       { network: NETORK_COIN_ENUM.DASH, address: 'XgLGU88Her2GcgVam9n4AJwDK6AJx2og7U' },
+      { network: NETORK_COIN_ENUM.TRX, address: 'THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z' },
     ]
   },
 ];

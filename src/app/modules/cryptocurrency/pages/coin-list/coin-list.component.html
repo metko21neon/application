@@ -121,7 +121,7 @@
             <div class="example-element-detail flex" style="flex-direction: column;"
               [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
               <div *ngFor="let wallet of element.wallets" class="flex" style="cursor: pointer;"
-                [routerLink]="'../wallet/' + wallet.address + '/coin/' + element?.symbol">
+                [routerLink]="'../wallets/' + wallet.address + '/coins/' + element?.symbol">
                 <span class="property-title"> {{ wallet.address | imWalletName }} </span>
                 <span class="property-value"> {{ wallet.quantity | roundValue }} {{ element.symbol }} </span>
               </div>
