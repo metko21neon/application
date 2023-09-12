@@ -1885,6 +1885,12 @@
             "network": "ADA"
           },
           {
+            "action": "buy",
+            "date": "2023-08-11 02:34:01",
+            "price": 0.2964,
+            "total": 99.97572
+          },
+          {
             "action": "transfer",
             "address": "addr1q98z2sksmtnmepf7a6gpteqfuwa5z8ffah34mnnx8ne0dl8sssl3xjnx5jt60hak7267cy6c9svuc2ntfpd722szkpgqgcxf24",
             "amount": 336.500062,
@@ -2172,6 +2178,12 @@
             "date": "2023-06-10 13:58:16",
             "fee": 0.013,
             "network": "BSC"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 14:03:48",
+            "price": 5.878,
+            "total": 99.926
           },
           {
             "action": "transfer",
@@ -2659,6 +2671,12 @@
             "network": "ATOM"
           },
           {
+            "action": "buy",
+            "date": "2023-07-25 18:05:20",
+            "price": 8.995,
+            "total": 90.75955
+          },
+          {
             "action": "transfer",
             "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
             "amount": 10.08602,
@@ -2667,12 +2685,30 @@
             "network": "ATOM"
           },
           {
+            "action": "buy",
+            "date": "2023-08-11 05:19:06",
+            "price": 8.4,
+            "total": 99.96
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-16 09:24:11",
+            "price": 8,
+            "total": 100
+          },
+          {
             "action": "transfer",
             "address": "cosmos19da59dqs6anv68rtrum660nzg9turgcqsmxzv5",
             "amount": 24.39602,
             "date": "2023-08-17 12:24:33",
             "fee": 0.004,
             "network": "ATOM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 13:46:16",
+            "price": 6.456,
+            "total": 99.93888
           },
           {
             "action": "transfer",
@@ -3415,6 +3451,12 @@
             "network": "BSC"
           },
           {
+            "action": "buy",
+            "date": "2023-07-31 18:13:49",
+            "price": 1861.53,
+            "total": 99.964161
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 0.01665,
@@ -3429,6 +3471,30 @@
             "date": "2023-08-07 09:38:04",
             "fee": 0.0007,
             "network": "ETH"
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-29 09:31:58",
+            "price": 1647.65,
+            "total": 39.378835
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-29 09:31:58",
+            "price": 1647.65,
+            "total": 60.468755
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-29 09:33:11",
+            "price": 1646.92,
+            "total": 4.94076
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-29 09:33:11",
+            "price": 1646.92,
+            "total": 95.027284
           },
           {
             "action": "transfer",
@@ -4537,6 +4603,12 @@
             "network": "ICP"
           },
           {
+            "action": "buy",
+            "date": "2023-08-11 05:48:24",
+            "price": 4,
+            "total": 100
+          },
+          {
             "action": "transfer",
             "address": "fe462a4435a3ff0950d9b42883f57335e7f9ae043e547721976477a058739c71",
             "amount": 24.9997,
@@ -4921,6 +4993,12 @@
             "date": "2023-06-15 19:19:18",
             "fee": 0.001,
             "network": "LTC"
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-18 17:54:58",
+            "price": 64,
+            "total": 99.968
           },
           {
             "action": "transfer",
@@ -6440,6 +6518,12 @@
             "network": "DOT"
           },
           {
+            "action": "buy",
+            "date": "2023-08-18 00:41:35",
+            "price": 4.5,
+            "total": 99.99
+          },
+          {
             "action": "transfer",
             "address": "13tWubJx5KK36MDVTWYAVoEXa8Ks7cciBfvkLsep77NkEA2w",
             "amount": 22.1400792,
@@ -6544,6 +6628,18 @@
             "price": 0.5815,
             "action": "buy",
             "total": 74.95535
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-10 12:42:53",
+            "price": 0.5815,
+            "total": 51.4046
+          },
+          {
+            "action": "buy",
+            "date": "2023-06-10 12:42:53",
+            "price": 0.5815,
+            "total": 23.55075
           },
           {
             "action": "transfer",
@@ -7141,8 +7237,8 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2021-01-01 02:00:00",
             "action": "buy",
+            "date": "2021-05-10 14:00:00",
             "price": 0.000033,
             "total": 168.459357
           },
@@ -7952,6 +8048,28 @@
     "wallets": [
       {
         "name": "Binance (Binance wallet)",
+        "address": "TNLpoyoGA47j92BQKWUwEYXm5peQs121hH",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 107,
+            "date": "2023-09-05 23:31:10",
+            "fee": 1,
+            "network": "TRX"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 307.29,
+            "date": "2023-09-11 13:41:58",
+            "fee": 1.33,
+            "network": "TRX"
+          }
+        ]
+      },
+      {
+        "name": "Binance (Binance wallet)",
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
@@ -8158,28 +8276,6 @@
             "date": "2023-09-11 13:58:30",
             "fee": 0.3,
             "network": "BSC"
-          }
-        ]
-      },
-      {
-        "name": "Binance (Binance wallet)",
-        "address": "TNLpoyoGA47j92BQKWUwEYXm5peQs121hH",
-        "transactions": [
-          {
-            "action": "receive",
-            "address": "",
-            "amount": 107,
-            "date": "2023-09-05 23:31:10",
-            "fee": 1,
-            "network": "TRX"
-          },
-          {
-            "action": "receive",
-            "address": "",
-            "amount": 307.29,
-            "date": "2023-09-11 13:41:58",
-            "fee": 1.33,
-            "network": "TRX"
           }
         ]
       },
@@ -8692,6 +8788,12 @@
             "action": "sell",
             "price": 0.06042,
             "filled": 1663.7
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-16 11:39:57",
+            "price": 0.0763,
+            "total": 9.9953
           },
           {
             "action": "transfer",
@@ -9324,6 +9426,12 @@
             "date": "2023-06-08 21:34:07",
             "fee": 0.2,
             "network": "XRP"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 13:46:34",
+            "price": 0.472,
+            "total": 99.592
           },
           {
             "action": "transfer",
