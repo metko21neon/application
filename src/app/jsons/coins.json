@@ -3041,10 +3041,10 @@
             "total": 25
           },
           {
-            "date": "2022-06-08 15:27:14",
             "action": "sell",
+            "date": "2022-06-08 15:27:14",
             "price": 34.6,
-            "filled": 0.7396449704142013
+            "filled": 0.739
           }
         ]
       }
@@ -4176,12 +4176,42 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
+            "action": "buy",
+            "date": "2023-08-01 04:26:31",
+            "price": 54,
+            "total": 99.954
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-10 23:52:23",
+            "price": 49,
+            "total": 99.96
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-11 07:57:45",
+            "price": 45,
+            "total": 99.855
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-16 19:33:27",
+            "price": 40,
+            "total": 100
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 8.604,
             "date": "2023-08-17 12:35:58",
             "fee": 0.006,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 14:01:56",
+            "price": 30.45,
+            "total": 199.9956
           },
           {
             "action": "transfer",
@@ -5212,16 +5242,16 @@
             "total": 219.96
           },
           {
-            "date": "2022-05-11 17:52:31",
-            "action": "buy",
-            "price": 3,
-            "total": 55.02
-          },
-          {
             "date": "2022-05-11 17:49:13",
             "action": "sell",
             "price": 4.7568,
             "filled": 31.66
+          },
+          {
+            "date": "2022-05-11 17:52:31",
+            "action": "buy",
+            "price": 3,
+            "total": 55.02
           },
           {
             "date": "2022-05-11 18:08:51",
@@ -5272,16 +5302,16 @@
             "total": 25
           },
           {
-            "date": "2022-05-12 16:37:28",
-            "action": "buy",
-            "price": 0.0125,
-            "total": 50.1509
-          },
-          {
             "date": "2022-05-12 14:48:56",
             "action": "buy",
             "price": 0.04,
             "total": 49.8
+          },
+          {
+            "date": "2022-05-12 16:37:28",
+            "action": "buy",
+            "price": 0.0125,
+            "total": 50.1509
           },
           {
             "date": "2022-05-13 01:20:55",
