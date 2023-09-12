@@ -205,6 +205,12 @@
             "network": "BSC"
           },
           {
+            "action": "buy",
+            "date": "2023-08-16 23:29:50",
+            "price": 60,
+            "total": 120
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 1.99890118,
@@ -349,6 +355,12 @@
             "date": "2023-07-06 01:44:10",
             "fee": 0.008,
             "network": "ALGO"
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-24 16:26:20",
+            "price": 0.11,
+            "total": 99.99
           },
           {
             "action": "transfer",
@@ -624,6 +636,12 @@
             "network": "APT"
           },
           {
+            "action": "buy",
+            "date": "2023-08-10 23:12:28",
+            "price": 7.3325,
+            "total": 24.9305
+          },
+          {
             "action": "transfer",
             "address": "0x5d9ed17878cf433f3dc4f3356fade5cc2b5e2910fff2c09617525e98fcdacb85",
             "amount": 0.01,
@@ -728,12 +746,24 @@
             "network": "ARBITRUM"
           },
           {
+            "action": "buy",
+            "date": "2023-07-30 22:49:33",
+            "price": 1.16,
+            "total": 99.992
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 86.181,
             "date": "2023-07-31 18:17:30",
             "fee": 0.019,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-16 12:26:48",
+            "price": 1.1,
+            "total": 99.99
           },
           {
             "action": "transfer",
@@ -744,12 +774,24 @@
             "network": "ARBITRUM"
           },
           {
+            "action": "buy",
+            "date": "2023-08-18 00:41:40",
+            "price": 1,
+            "total": 100
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 99.981,
             "date": "2023-08-23 00:03:21",
             "fee": 0.019,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 14:16:18",
+            "price": 0.7879,
+            "total": 99.98451
           },
           {
             "action": "transfer",
@@ -3319,8 +3361,8 @@
             "total": 299.575
           },
           {
-            "date": "2022-08-18 19:56:58",
             "action": "sell",
+            "date": "2022-08-19 09:37:58",
             "price": 52,
             "filled": 5.21
           }
@@ -3701,12 +3743,24 @@
             "network": "FTM"
           },
           {
+            "action": "buy",
+            "date": "2023-07-23 02:32:01",
+            "price": 0.25,
+            "total": 100
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 799.7,
             "date": "2023-07-31 18:16:34",
             "fee": 0.3,
             "network": "FTM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-18 08:32:27",
+            "price": 0.1942,
+            "total": 112.636
           },
           {
             "action": "transfer",
@@ -3906,12 +3960,30 @@
             "network": "FIL"
           },
           {
+            "action": "buy",
+            "date": "2023-08-18 00:37:08",
+            "price": 3.6,
+            "total": 99.972
+          },
+          {
             "action": "transfer",
             "address": "f1xl7ztmwdmmqs6i6tfcfhkwn6mix35yiqkf2rdmq",
             "amount": 27.769,
             "date": "2023-08-23 00:04:42",
             "fee": 0.001,
             "network": "FIL"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 16:48:46",
+            "price": 3.045,
+            "total": 59.4993
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 16:48:46",
+            "price": 3.045,
+            "total": 40.4985
           }
         ]
       },
@@ -5816,6 +5888,18 @@
             "date": "2023-07-06 01:42:32",
             "fee": 0.01,
             "network": "NEAR"
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-15 22:07:37",
+            "price": 1.3,
+            "total": 99.97
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-17 00:09:21",
+            "price": 1.2,
+            "total": 120
           },
           {
             "action": "transfer",
@@ -7793,12 +7877,36 @@
             "network": "SUI"
           },
           {
+            "action": "buy",
+            "date": "2023-07-24 12:59:58",
+            "price": 0.6272,
+            "total": 19.94496
+          },
+          {
+            "action": "buy",
+            "date": "2023-07-24 12:59:58",
+            "price": 0.6272,
+            "total": 80.03072
+          },
+          {
             "action": "transfer",
             "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
             "amount": 159.38,
             "date": "2023-08-07 09:36:09",
             "fee": 0.02,
             "network": "SUI"
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-16 15:17:02",
+            "price": 0.55,
+            "total": 99.99
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-16 23:58:17",
+            "price": 0.52,
+            "total": 149.968
           },
           {
             "action": "transfer",
@@ -7809,12 +7917,24 @@
             "network": "SUI"
           },
           {
+            "action": "buy",
+            "date": "2023-08-18 20:07:52",
+            "price": 0.4697,
+            "total": 99.99913
+          },
+          {
             "action": "transfer",
             "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
             "amount": 212.88,
             "date": "2023-08-23 00:01:20",
             "fee": 0.02,
             "network": "SUI"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 14:06:51",
+            "price": 0.4314,
+            "total": 99.99852
           },
           {
             "action": "transfer",
@@ -8629,6 +8749,18 @@
             "network": "ARBITRUM"
           },
           {
+            "action": "buy",
+            "date": "2023-08-15 22:07:26",
+            "price": 0.105,
+            "total": 24.465
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-15 22:07:26",
+            "price": 0.105,
+            "total": 75.495
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 947.00191862,
@@ -8637,12 +8769,24 @@
             "network": "ARBITRUM"
           },
           {
+            "action": "buy",
+            "date": "2023-08-18 00:42:11",
+            "price": 0.09,
+            "total": 99.99
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 1106.00028215,
             "date": "2023-08-23 00:02:40",
             "fee": 5,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "buy",
+            "date": "2023-09-11 13:52:31",
+            "price": 0.0802,
+            "total": 99.9292
           },
           {
             "action": "transfer",
