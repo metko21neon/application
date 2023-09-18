@@ -711,7 +711,13 @@ export const FINANCES_STATE: StateInterface[] = [
       ]
     },
     debt: {
-      list: [],
+      list: [
+        {
+          source: "Privatbank",
+          amount: 8_200,
+          description: "Life costs"
+        },
+      ],
       payed: {
         list: [
           {
@@ -770,6 +776,109 @@ export const FINANCES_STATE: StateInterface[] = [
           source: "Cryptocurrency",
           payed: false,
           amount: 50_000
+        },
+      ]
+    },
+    lifeCosts: {
+      list: [
+        {
+          source: "",
+          payed: true,
+          amount: 63_200
+        }
+      ]
+    },
+  },
+  {
+    period: {
+      month: 8,
+      year: 2023,
+      string: "September 2023"
+    },
+    savings: {
+      percentage: 0,
+      list: []
+    },
+    costs: {
+      percentage: 0.1,
+      list: [
+        {
+          source: "Costs",
+          amount: 15_500,
+          payed: true,
+        }
+      ]
+    },
+    debt: {
+      list: [],
+      payed: {
+        list: [
+          {
+            source: "Privatbank",
+            amount: 0,
+            payed: true,
+          },
+        ]
+      }
+    },
+    income: {
+      list: [
+        {
+          source: 'Crosssoft',
+          amount: 164_558.7
+        }
+      ]
+    },
+    taxes: {
+      list: [
+        {
+          type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
+          source: "Єдиний соціальний внесок",
+          amount: 1_474,
+          payed: true,
+        },
+        {
+          type: TAX_ENUM.SINGLE_TAX,
+          source: "Єдиний податок",
+          percentage: 0.05,
+          payed: true,
+          amount: 0,
+        },
+      ]
+    },
+    investing: {
+      list: [
+        {
+          source: "Military bonds",
+          currency: CURRENCY_ENUM.UAH,
+          creation_date: '2023-09',
+          amount: 15_500,
+          payed: true,
+        },
+        {
+          source: "Cryptocurrency Crypto CREW",
+          payed: true,
+          amount: 5_100
+        },
+        {
+          source: "Cryptocurrency MA Andrij",
+          payed: true,
+          amount: 3_000
+        },
+        {
+          source: "Cryptocurrency MA",
+          payed: true,
+          amount: 600
+        },
+        {
+          source: "Cryptocurrency Comms",
+          payed: true,
+          amount: 37_500
+        },
+        {
+          source: "Cryptocurrency",
+          payed: false,
+          amount: 22_600
         },
       ]
     },

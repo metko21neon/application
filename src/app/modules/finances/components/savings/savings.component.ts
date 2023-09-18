@@ -13,7 +13,7 @@ import { SPENDS_STATE } from './states/spends.state';
 const STATE = [
   {
     label: 'USD',
-    amount: 1_000,
+    amount: 400,
     exchangeRate: 37.453,
     description: 'Parents'
   },
@@ -31,7 +31,7 @@ const STATE = [
   },
   {
     label: 'UAH',
-    amount: 700,
+    amount: 4_980,
     exchangeRate: 1,
     description: 'Monobank jar'
   },

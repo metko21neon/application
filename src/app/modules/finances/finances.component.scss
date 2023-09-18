@@ -8,7 +8,7 @@
 
 app-debts,
 app-month {
-  .mat-cell {
+  .cdk-cell {
     padding-bottom: 60px !important;
     padding-top: 5px !important;
     vertical-align: baseline;
@@ -16,7 +16,7 @@ app-month {
   }
 }
 
-.mat-cell {
+.cdk-cell {
   padding-top: 5px !important;
   vertical-align: baseline;
   position: relative;

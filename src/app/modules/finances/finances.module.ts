@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
@@ -41,6 +42,7 @@ import { BalanceHistoryTableComponent } from './components/bonds/components/bala
     PipesModule,
 
     MatFormFieldModule,
+    MatTooltipModule,
     MatTableModule,
     MatInputModule,
     MatSortModule,

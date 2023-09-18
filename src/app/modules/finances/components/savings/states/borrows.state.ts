@@ -4,6 +4,14 @@ import { CURRENCY_ENUM } from "../../../enums/currency.enum";
 export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
+    amount: 600,
+    currency: CURRENCY_ENUM.USD,
+    period: '08 September 2023 21:50:00',
+    description: 'Crypto COMMS',
+    rate: 37.453
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
     amount: 100,
     currency: CURRENCY_ENUM.USD,
     period: '04 September 2023 09:00:00',
@@ -15,21 +23,24 @@ export const BORROWS_STATE = [
     currency: CURRENCY_ENUM.UAH,
     amount: 4_000,
     period: '31 July 2023 09:28:00',
-    description: 'Braces'
+    description: 'Braces',
+    category: 'Teeth',
   },
   {
     action: ACTION_TYPE_ENUM.BORROW,
     currency: CURRENCY_ENUM.UAH,
     amount: 1_775,
     period: '01 June 2023 17:59:00',
-    description: 'Teeth equipements'
+    description: 'Teeth equipements',
+    category: 'Teeth',
   },
   {
     action: ACTION_TYPE_ENUM.BORROW,
     currency: CURRENCY_ENUM.UAH,
     amount: 43_000,
     period: '31 May 2023 11:30:00',
-    description: 'Braces'
+    description: 'Braces',
+    category: 'Teeth',
   },
   {
     action: ACTION_TYPE_ENUM.BORROW,
@@ -50,7 +61,8 @@ export const BORROWS_STATE = [
     currency: CURRENCY_ENUM.UAH,
     amount: 9_100,
     period: '19 May 2023 17:04',
-    description: 'Front teeth, remove 8s'
+    description: 'Front teeth, remove 8s',
+    category: 'Teeth',
   },
   {
     action: ACTION_TYPE_ENUM.BORROW,
@@ -69,15 +81,8 @@ export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
     currency: CURRENCY_ENUM.UAH,
-    amount: 8700,
+    amount: 8050,
     period: '05 May 2023 23:02:00',
     description: 'Business Event'
-  },
-  {
-    action: ACTION_TYPE_ENUM.BORROW,
-    currency: CURRENCY_ENUM.UAH,
-    amount: 3600,
-    period: '02 May 2023 12:46',
-    description: 'Home'
   },
 ];
