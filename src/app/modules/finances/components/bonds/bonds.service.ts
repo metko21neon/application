@@ -180,22 +180,24 @@ export class BondsService {
     });
 
     this._state
-      .filter((item: StateInterface) => item.investing?.list.some((item: any) => item.source === 'Military bonds'))
+      .filter((item: any) => item.income.list[0].investing?.list.some((item: any) => item.source === 'Military bonds'))
       .map((item: StateInterface) => {
-        item.investing?.list.map((item: any) => {
-          if (item.source === 'Military bonds') {
-            receives = [...receives, {
-              action: 'RECEIVE',
-              creation_date: item.creation_date,
-              amount: item.amount,
-              currency: item.currency,
-              balance: {
-                uah: item.currency === CURRENCY_ENUM.UAH ? item.amount : 0,
-                usd: item.currency === CURRENCY_ENUM.USD ? item.amount : 0,
-                eur: item.currency === CURRENCY_ENUM.EUR ? item.amount : 0
-              }
-            }];
-          }
+        item.income.list.map((incomeItem: any) => {
+          incomeItem.investing?.list.map((item: any) => {
+            if (item.source === 'Military bonds') {
+              receives = [...receives, {
+                action: 'RECEIVE',
+                creation_date: item.creation_date,
+                amount: item.amount,
+                currency: item.currency,
+                balance: {
+                  uah: item.currency === CURRENCY_ENUM.UAH ? item.amount : 0,
+                  usd: item.currency === CURRENCY_ENUM.USD ? item.amount : 0,
+                  eur: item.currency === CURRENCY_ENUM.EUR ? item.amount : 0
+                }
+              }];
+            }
+          });
         });
       });
 

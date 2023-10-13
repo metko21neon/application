@@ -179,7 +179,7 @@ export class SavingsComponent implements OnInit {
   private prepareReceivedTransactions(): any[] {
     return this.state.map((item: StateInterface) => ({
       action: ACTION_TYPE_ENUM.RECEIVE,
-      period: item.period.string,
+      period: item.period,
       amount: item.savings?.list
         .filter((item: any) => item.payed)
         .reduce((acc: number, item: any) => acc + item.amount, 0)

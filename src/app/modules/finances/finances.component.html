@@ -9,7 +9,11 @@
         <app-month [state]="finances"></app-month>
       </mat-tab>
 
-      <mat-tab label="Savings">
+      <mat-tab label="Bonds">
+        <app-bonds [state]="finances"></app-bonds>
+      </mat-tab>
+
+      <!-- <mat-tab label="Savings">
         <app-savings [state]="finances"></app-savings>
       </mat-tab>
 
@@ -25,13 +29,9 @@
         <app-spends [state]="finances"></app-spends>
       </mat-tab>
 
-      <mat-tab label="Bonds">
-        <app-bonds [state]="finances"></app-bonds>
-      </mat-tab>
-
       <mat-tab label="Capital">
         <app-capital [state]="finances"></app-capital>
-      </mat-tab>
+      </mat-tab> -->
     </mat-tab-group>
   </div>
 </div>

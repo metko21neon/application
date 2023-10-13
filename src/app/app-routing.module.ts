@@ -6,7 +6,7 @@ import { WalletComponent } from './components/wallet/wallet.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/coins', pathMatch: 'full'
+    redirectTo: '/finances', pathMatch: 'full'
   },
   {
     path: 'cryptocurrency',

@@ -3,6 +3,16 @@ import { BondInterface } from "../interfaces/bond.interface";
 
 export const BONDS_STATE: BondInterface[] = [
   {
+    amount: 34_823.48,
+    currency: CURRENCY_ENUM.UAH,
+    creation_date: '2023-10-13 21:31',
+    return_date: '2024-06-26',
+    bond_return: 1_140,
+    quantity: 34,
+    percantage: 17.5,
+    payed: true,
+  },
+  {
     amount: 31_160.5,
     currency: CURRENCY_ENUM.UAH,
     creation_date: '2023-08-17 22:15',
