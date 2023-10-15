@@ -29,6 +29,7 @@ export class MonthComponent implements OnInit {
     this.setTotal();
 
     console.log('state:', this.state);
+    this.expandedElement = this.dataSource[0];
   }
 
   private setDataSource(): void {

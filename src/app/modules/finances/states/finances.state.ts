@@ -1,4 +1,3 @@
-import { StateInterface } from "../interfaces/state.interface";
 import { CURRENCY_ENUM } from "../enums/currency.enum";
 import { TAX_ENUM } from "../enums/tax.enum";
 
@@ -363,14 +362,9 @@ export const FINANCES_STATE: any[] = [
                 amount: 12_000
               },
               {
-                source: "Crypto CREW",
-                payed: true,
-                amount: 3_300
-              },
-              {
                 source: "Cryptocurrency",
                 payed: true,
-                amount: 20_800
+                amount: 24_100
               }
             ]
           },
@@ -664,14 +658,9 @@ export const FINANCES_STATE: any[] = [
                 payed: true,
               },
               {
-                source: "Crypto CREW",
-                payed: true,
-                amount: 3_300
-              },
-              {
                 source: "Cryptocurrency",
                 payed: true,
-                amount: 34_500
+                amount: 37_800
               }
             ]
           },
@@ -771,24 +760,9 @@ export const FINANCES_STATE: any[] = [
                 payed: true,
               },
               {
-                source: "Crypto CREW",
-                payed: true,
-                amount: 10_800
-              },
-              {
                 source: "Cryptocurrency",
                 payed: true,
-                amount: 8_000
-              },
-              {
-                source: "Cryptocurrency Comms",
-                payed: true,
-                amount: 37_500
-              },
-              {
-                source: "Cryptocurrency MA",
-                payed: true,
-                amount: 12_500
+                amount: 68_800
               },
             ]
           },
@@ -867,24 +841,9 @@ export const FINANCES_STATE: any[] = [
                 payed: true,
               },
               {
-                source: "Cryptocurrency Crypto CREW",
-                payed: true,
-                amount: 5_100
-              },
-              {
-                source: "Cryptocurrency MA Andrij",
-                payed: true,
-                amount: 6_000
-              },
-              {
-                source: "Cryptocurrency MA",
-                payed: true,
-                amount: 10_100
-              },
-              {
                 source: "Cryptocurrency",
-                payed: false,
-                amount: 47_600
+                payed: true,
+                amount: 68_800
               },
             ]
           },

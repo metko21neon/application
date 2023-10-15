@@ -61,3 +61,9 @@ app-month {
 .mat-table {
   width: 100%;
 }
+
+app-details {
+  .mat-mdc-header-cell {
+    z-index: 99 !important;
+  }
+}

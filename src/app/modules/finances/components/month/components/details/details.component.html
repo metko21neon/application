@@ -1,1 +1,21 @@
-<p>details works!</p>
+<div class="flex flex-column" style="height: 100%; overflow: auto;">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+      <th mat-header-cell *matHeaderCellDef>{{ column | titlecase }}</th>
+
+      <td mat-cell *matCellDef="let element">
+        <div class="flex flex-column">
+          <div *ngFor="let item of element[column]?.list">
+            <span *ngIf="item.amount">{{ item.amount | number | imCurrency }} {{ item.currency || 'UAH' }} {{ item.source }}</span>
+            <span *ngIf="!item.amount" style="padding: 0 20px">-</span>
+          </div>
+
+          <span *ngIf="!element[column]?.list.length" style="padding: 0 20px">-</span>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
