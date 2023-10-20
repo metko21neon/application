@@ -1,19 +1,13 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 
+import { expandAnimation } from '../../../../animations/expand.animations';
 import { StateInterface } from '../../interfaces/state.interface';
 
 @Component({
   selector: 'app-month',
   templateUrl: './month.component.html',
   styleUrls: ['./month.component.scss'],
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({ height: '0px', minHeight: '0' })),
-      state('expanded', style({ height: '*', minHeight: '30px' })),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    ]),
-  ],
+  animations: [expandAnimation]
 })
 export class MonthComponent implements OnInit {
 
