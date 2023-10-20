@@ -29,20 +29,29 @@ export class MonthComponent implements OnInit {
     this.setTotal();
 
     console.log('state:', this.state);
-    this.expandedElement = this.dataSource[0];
   }
 
   private setDataSource(): void {
-    const list = this.state.map((item: any) => {
-      return {
-        ...item,
-        newDebts: item.debt,
-        type: 0,
-      }
-    });
+    const list = this.state
+      .map((item: any) => ({ ...item, newDebts: item.debt, type: 0 }))
+      .sort((a, b) => this.sortByDate(a, b, 'desc'));
 
     this.dataSource = this.chunks(list, 3);
-    console.log('dataSource:', this.dataSource);
+  }
+
+  private sortByDate(a: any, b: any, direction: string): number {
+    const aDate = new Date(a.period).getTime();
+    const bDate = new Date(b.period).getTime();
+
+    if (direction === 'asc') {
+      return aDate - bDate;
+    }
+
+    if (direction === 'desc') {
+      return bDate - aDate
+    }
+
+    return 0;
   }
 
   private quarterOfYear(date = new Date()): string {
@@ -53,10 +62,10 @@ export class MonthComponent implements OnInit {
   chunks<T>(arr: T[], size: number): any[] {
     const output = [];
 
-    for (let i = 0; i < arr.length; i += size) {
-      const list: any[] = arr.slice(i, i + size);
+    for (let i = arr.length; i > 0; i -= size) {
+      const list: any[] = arr.slice(i > size ? i - size : 0, i);
 
-      output.push(...arr.slice(i, i + size),
+      output.unshift(
         {
           type: 1,
           period: this.quarterOfYear(new Date(list[0].period)),
@@ -112,7 +121,9 @@ export class MonthComponent implements OnInit {
               usd: this.calculateQuarterTotal(list, 'taxes', 'usd'),
             }
           },
-        });
+        },
+        ...arr.slice(i > size ? i - size : 0, i)
+      );
     }
 
     return output;

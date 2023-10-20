@@ -5,16 +5,16 @@
 
   <div class="im-content">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-      <mat-tab label="Cryptocurrency">
-        <app-cryptocurrency [state]="finances"></app-cryptocurrency>
-      </mat-tab>
-
       <mat-tab label="Distribution">
         <app-month [state]="finances"></app-month>
       </mat-tab>
 
       <mat-tab label="Bonds">
         <app-bonds [state]="finances"></app-bonds>
+      </mat-tab>
+
+      <mat-tab label="Cryptocurrency">
+        <app-cryptocurrency [state]="finances"></app-cryptocurrency>
       </mat-tab>
 
       <!-- <mat-tab label="Savings">

@@ -13,7 +13,7 @@
     <th mat-header-cell *matHeaderCellDef>Amount</th>
     <td mat-cell *matCellDef="let element">
       <div class="flex" style="gap: 20px;">
-        <span>{{ element.amount | number | imCurrency }} {{ element.currency || 'uah' | uppercase }}</span>
+        <span>{{ element.amount | number: '1.0-0' | imCurrency }} {{ element.currency || 'uah' | uppercase }}</span>
       </div>
     </td>
   </ng-container>
@@ -35,8 +35,8 @@
     <th mat-header-cell *matHeaderCellDef>Balance</th>
     <td mat-cell *matCellDef="let element">
       <div class="flex" style="gap: 20px;">
-        <span style="width: 110px;">{{ element.balance.uah | number | imCurrency }} {{ CURRENCY_ENUM.UAH }}</span>
-        <span style="width: 110px;">{{ element.balance.usd | number | imCurrency }} {{ CURRENCY_ENUM.USD }}</span>
+        <span style="width: 110px;">{{ element.balance.uah | number: '1.0-0' | imCurrency }} {{ CURRENCY_ENUM.UAH }}</span>
+        <span style="width: 110px;">{{ element.balance.usd | number: '1.0-0' | imCurrency }} {{ CURRENCY_ENUM.USD }}</span>
       </div>
     </td>
   </ng-container>
