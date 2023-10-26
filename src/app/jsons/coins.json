@@ -3614,6 +3614,20 @@
             "amount": 0.144388,
             "fee": 0,
             "network": "BSC"
+          },
+          {
+            "date": "2023-07-31 18:25:23",
+            "action": "receive",
+            "amount": 0.005,
+            "fee": 0,
+            "network": "ARBITRUM"
+          },
+          {
+            "date": "2023-08-07 09:47:50",
+            "action": "receive",
+            "amount": 0.01,
+            "fee": 0,
+            "network": "ARBITRUM"
           }
         ]
       },
@@ -3637,7 +3651,8 @@
             "date": "2022-11-29 20:25:46",
             "action": "receive",
             "amount": 0.0796563,
-            "fee": 0.0015537
+            "fee": 0.0015537,
+            "network": "ETH"
           },
           {
             "action": "receive",
@@ -3655,32 +3670,59 @@
           },
           {
             "action": "receive",
-            "amount": 0.01665,
-            "date": "2023-07-31 18:22:58",
-            "fee": 0.00035,
+            "amount": 0.001,
+            "date": "2023-07-31 18:07:12",
+            "fee": 0,
             "network": "ARBITRUM"
+          },
+          {
+            "action": "receive",
+            "amount": 0.01665,
+            "date": "2023-07-31 18:23:28",
+            "fee": 0,
+            "network": "ARBITRUM"
+          },
+          {
+            "date": "2023-07-31 18:25:23",
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "network": "ARBITRUM",
+            "amount": 0.005,
+            "fee": 0
+          },
+          {
+            "date": "2023-08-07 09:47:50",
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "network": "ARBITRUM",
+            "amount": 0.01,
+            "fee": 0
           },
           {
             "date": "2023-06-10 09:27:47",
             "action": "spend",
-            "amount": 0.001047461451353876
+            "amount": 0.001047461451353876,
+            "network": "ETH"
           },
           {
             "date": "2023-06-10 09:31:59",
             "action": "spend",
-            "amount": 0.000724305079843897
+            "amount": 0.000724305079843897,
+            "network": "ETH"
           },
           {
             "date": "2023-07-05 20:55:59",
             "action": "spend",
-            "amount": 0.002937905751378076
+            "amount": 0.002937905751378076,
+            "network": "ETH"
           },
           {
             "date": "2023-07-16 15:06:11",
             "action": "transfer",
             "address": "0x02C18f708358887cB4993a9608e37216B71fE2A2",
             "amount": 0.05,
-            "fee": 0.000430409920647
+            "fee": 0.000430409920647,
+            "network": "ETH"
           },
           {
             "date": "2023-08-07 09:26:19",
