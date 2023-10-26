@@ -2085,7 +2085,7 @@
       },
       {
         "name": "Metamask (Metamask wallet)",
-        "address": "metamask_1",
+        "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
         "transactions": [
           {
             "date": "2023-07-31 15:25:44",
@@ -2560,7 +2560,7 @@
       },
       {
         "name": "Metamask (Metamask wallet)",
-        "address": "metamask_1",
+        "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
         "transactions": [
           {
             "date": "2023-07-31 15:17:45",
@@ -3580,30 +3580,40 @@
       },
       {
         "name": "Metamask (Metamask wallet)",
-        "address": "metamask_1",
+        "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
         "transactions": [
           {
             "date": "2021-01-01 02:00:00",
             "action": "receive",
-            "amount": 0.09775855
+            "amount": 0.09775855,
+            "network": "ETH"
           },
           {
             "date": "2021-01-01 02:00:00",
             "action": "spend",
-            "amount": 0.03568501
-          }
-        ]
-      },
-      {
-        "name": "Metamask (Metamask wallet)",
-        "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
-        "transactions": [
+            "amount": 0.03568501,
+            "network": "ETH"
+          },
           {
             "action": "receive",
             "amount": 0.036,
             "date": "2023-08-07 09:38:04",
             "fee": 0.0007,
             "network": "ETH"
+          },
+          {
+            "date": "2023-08-07 09:26:19",
+            "action": "receive",
+            "amount": 0.1,
+            "fee": 0,
+            "network": "BSC"
+          },
+          {
+            "date": "2023-08-08 20:10:53",
+            "action": "receive",
+            "amount": 0.144388,
+            "fee": 0,
+            "network": "BSC"
           }
         ]
       },
@@ -3671,6 +3681,22 @@
             "address": "0x02C18f708358887cB4993a9608e37216B71fE2A2",
             "amount": 0.05,
             "fee": 0.000430409920647
+          },
+          {
+            "date": "2023-08-07 09:26:19",
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "network": "BSC",
+            "amount": 0.1,
+            "fee": 0
+          },
+          {
+            "date": "2023-08-08 20:10:53",
+            "action": "transfer",
+            "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
+            "network": "BSC",
+            "amount": 0.144388,
+            "fee": 0
           }
         ]
       },
