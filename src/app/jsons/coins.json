@@ -3539,6 +3539,13 @@
             "total": 95.027284
           },
           {
+            "action": "earned",
+            "amount": 0.0085,
+            "date": "2023-08-29 09:49:20",
+            "fee": 0,
+            "network": "ETH"
+          },
+          {
             "action": "transfer",
             "address": "0x3C8E0F3f992445faAd85be9De471f1391528563B",
             "amount": 0.00884,
@@ -3639,7 +3646,20 @@
             "date": "2022-06-16 13:21:00",
             "action": "receive",
             "amount": 0.0134,
-            "fee": 0.0005
+            "fee": 0.0005,
+            "network": "ETH"
+          },
+          {
+            "date": "2022-06-16 13:28:08",
+            "action": "spend",
+            "amount": 0.001858913582025647,
+            "network": "ETH"
+          },
+          {
+            "date": "2022-06-16 13:37:41",
+            "action": "spend",
+            "amount": 0.000916899079362863,
+            "network": "ETH"
           }
         ]
       },
