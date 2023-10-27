@@ -492,6 +492,12 @@
             "total": 25.277938
           },
           {
+            "action": "buy",
+            "date": "2023-08-11 02:38:58",
+            "price": 0.002489,
+            "total": 99.998064
+          },
+          {
             "action": "transfer",
             "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
             "amount": 63952,
@@ -536,6 +542,12 @@
             "action": "buy",
             "price": 0.18,
             "total": 24.9984
+          },
+          {
+            "action": "buy",
+            "date": "2022-05-11 10:52:57",
+            "price": 0.18,
+            "total": 5.337
           }
         ]
       }
@@ -1595,6 +1607,12 @@
             "date": "2023-09-17 16:08:01",
             "fee": 0,
             "network": "BSC"
+          },
+          {
+            "action": "sell",
+            "date": "2023-09-17 16:17:59",
+            "price": 212.2,
+            "filled": 0.842
           }
         ]
       },
@@ -5139,6 +5157,18 @@
             "network": "KDA2"
           },
           {
+            "action": "buy",
+            "date": "2023-08-11 02:37:58",
+            "price": 0.526,
+            "total": 42.39034
+          },
+          {
+            "action": "buy",
+            "date": "2023-08-11 02:37:58",
+            "price": 0.526,
+            "total": 57.60752
+          },
+          {
             "action": "transfer",
             "address": "k:dc626bb50c84c0e700e7a3eaa11486267a8598b79e14fd7df965bb5e191c9fe6",
             "amount": 190.01,
@@ -5627,6 +5657,12 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
+            "action": "buy",
+            "date": "2023-06-15 00:00:35",
+            "price": 0.0568,
+            "total": 49.99536
+          },
+          {
             "action": "transfer",
             "address": "0xCfFE3fFEdE189CD9259433112b78C93Dc91977E3",
             "amount": 879.28,
@@ -6054,16 +6090,16 @@
         "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
         "transactions": [
           {
-            "date": "2022-02-24 06:13:43",
-            "action": "buy",
-            "price": 60,
-            "total": 24.96
-          },
-          {
             "date": "2022-01-24 12:50:11",
             "action": "buy",
             "price": 71,
             "total": 24.992
+          },
+          {
+            "date": "2022-02-24 06:13:43",
+            "action": "buy",
+            "price": 60,
+            "total": 24.96
           },
           {
             "date": "2022-05-09 22:05:03",
@@ -8449,6 +8485,12 @@
             "date": "2022-07-18 15:11:42",
             "action": "sell",
             "price": 20.93,
+            "filled": 1.5
+          },
+          {
+            "action": "sell",
+            "date": "2023-09-13 19:27:49",
+            "price": 29.4,
             "filled": 1.5
           }
         ]

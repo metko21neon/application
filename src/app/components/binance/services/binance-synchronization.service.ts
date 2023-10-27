@@ -62,7 +62,7 @@ export class BinanceSynchronizationService {
     };
 
     return this.api.getOrdersHistoryBySymbol(symbol + 'USDT', options).pipe(
-      map((orders: BinanceOrderInterface[]) => ({ symbol: coin.symbol, wallet, orders }))
+      map((orders: BinanceOrderInterface[]) => ({ symbol: coin.symbol, wallet, orders: Array.isArray(orders) ? orders : [] }))
     );
   }
 
@@ -74,7 +74,7 @@ export class BinanceSynchronizationService {
   }
 
   private getOrdersHistory(): Observable<any> {
-    return from(this.cccoinsService.coins).pipe(
+    return from(this.cccoinsService.coins.slice(0, 20)).pipe(
       filter((coin: any) => !['USDT', 'BUSD'].includes(coin.symbol)),
       concatMap((coin: any) => this.getOrdersHistoryBySymbol(coin)),
       tap((item: BinanceResponseOrdersInterface) => {
