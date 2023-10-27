@@ -1587,6 +1587,14 @@
             "date": "2023-06-08 21:25:43",
             "fee": 0.00068,
             "network": "BSC"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 0.84269366,
+            "date": "2023-09-17 16:08:01",
+            "fee": 0,
+            "network": "BSC"
           }
         ]
       },
@@ -1599,6 +1607,14 @@
             "amount": 0.84269366,
             "date": "2023-06-08 21:25:43",
             "fee": 0.00068
+          },
+          {
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 0.84269366,
+            "date": "2023-09-17 16:08:01",
+            "fee": 0,
+            "network": "BSC"
           }
         ]
       }
@@ -3639,6 +3655,18 @@
         ]
       },
       {
+        "name": "Trust Wallet (Additional wallet)",
+        "address": "0x02C18f708358887cB4993a9608e37216B71fE2A2",
+        "transactions": [
+          {
+            "date": "2023-07-16 15:06:11",
+            "action": "receive",
+            "amount": 0.05,
+            "fee": 0.000430409920647
+          }
+        ]
+      },
+      {
         "name": "Trust Wallet (Main wallet)",
         "address": "0xDc56ed4117C7d1350e9c7164220f6342F85BEA95",
         "transactions": [
@@ -3759,18 +3787,6 @@
             "network": "BSC",
             "amount": 0.144388,
             "fee": 0
-          }
-        ]
-      },
-      {
-        "name": "Trust Wallet (Additional wallet)",
-        "address": "0x02C18f708358887cB4993a9608e37216B71fE2A2",
-        "transactions": [
-          {
-            "date": "2023-07-16 15:06:11",
-            "action": "receive",
-            "amount": 0.05,
-            "fee": 0.000430409920647
           }
         ]
       },
@@ -8099,6 +8115,35 @@
         ]
       },
       {
+        "name": "Sui (Savings wallet)",
+        "address": "2TzFAR9D1sP1eZDKMSd53NY2pjDqqHTgJapmsELuQsA7",
+        "transactions": [
+          {
+            "action": "receive",
+            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
+            "amount": 0.5,
+            "date": "2023-10-03 19:09:00",
+            "fee": 0.00076976,
+            "network": "SUI"
+          },
+          {
+            "action": "receive",
+            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
+            "amount": 1614.99683483,
+            "date": "2023-10-03 19:10:00",
+            "fee": 0.00413072,
+            "network": "SUI"
+          },
+          {
+            "action": "stake",
+            "amount": 1615,
+            "date": "2023-10-03 19:15:00",
+            "fee": 0,
+            "network": "SUI"
+          }
+        ]
+      },
+      {
         "name": "Trust Wallet (Savings wallet)",
         "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
         "transactions": [
@@ -8164,35 +8209,6 @@
             "address": "2TzFAR9D1sP1eZDKMSd53NY2pjDqqHTgJapmsELuQsA7",
             "amount": 1615.00096555,
             "date": "2023-10-03 19:10:00",
-            "fee": 0,
-            "network": "SUI"
-          }
-        ]
-      },
-      {
-        "name": "Sui Wallet (Savings wallet)",
-        "address": "2TzFAR9D1sP1eZDKMSd53NY2pjDqqHTgJapmsELuQsA7",
-        "transactions": [
-          {
-            "action": "receive",
-            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
-            "amount": 0.5,
-            "date": "2023-10-03 19:09:00",
-            "fee": 0.00076976,
-            "network": "SUI"
-          },
-          {
-            "action": "receive",
-            "address": "0xded7199632cc4973a7da37d84fee1b20971e267c5b9a8f47441e1ca93916169b",
-            "amount": 1614.99683483,
-            "date": "2023-10-03 19:10:00",
-            "fee": 0.00413072,
-            "network": "SUI"
-          },
-          {
-            "action": "stake",
-            "amount": 1615,
-            "date": "2023-10-03 19:15:00",
             "fee": 0,
             "network": "SUI"
           }
@@ -8381,6 +8397,14 @@
             "amount": 307.29,
             "date": "2023-09-11 13:41:58",
             "fee": 1.33,
+            "network": "TRX"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 499,
+            "date": "2023-10-14 00:14:56",
+            "fee": 0,
             "network": "TRX"
           }
         ]
@@ -8808,6 +8832,14 @@
             "amount": 307.29,
             "date": "2023-09-11 13:41:58",
             "fee": 1.33,
+            "network": "TRX"
+          },
+          {
+            "action": "transfer",
+            "address": "TNLpoyoGA47j92BQKWUwEYXm5peQs121hH",
+            "amount": 499,
+            "date": "2023-10-14 00:14:56",
+            "fee": 0,
             "network": "TRX"
           }
         ]
