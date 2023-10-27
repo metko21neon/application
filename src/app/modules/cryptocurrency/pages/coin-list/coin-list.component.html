@@ -120,11 +120,17 @@
           <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
             <div class="example-element-detail flex" style="flex-direction: column;"
               [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-              <div *ngFor="let wallet of element.wallets" class="flex" style="cursor: pointer;"
-                [routerLink]="'../wallets/' + wallet.address + '/coins/' + element?.symbol">
-                <span class="property-title"> {{ wallet.address | imWalletName }} </span>
-                <span class="property-value"> {{ wallet.quantity | roundValue }} {{ element.symbol }} </span>
-              </div>
+              <ng-container *ngFor="let wallet of element.wallets">
+                <div *ngIf="wallet.quantity > 0.0000001" class="flex" style="cursor: pointer;"
+                  [routerLink]="'../wallets/' + wallet.address + '/coins/' + element?.symbol">
+                  <span class="property-title"> {{ wallet.address | imWalletName }} </span>
+                  <span class="property-value"> {{ wallet.quantity | roundValue }} {{ element.symbol }} </span>
+
+                  <span class="property-value ml-5">
+                    ({{ wallet.quantity * element.price | roundValue }} USDT)
+                  </span>
+                </div>
+              </ng-container>
             </div>
           </td>
         </ng-container>

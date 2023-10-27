@@ -203,7 +203,11 @@ export class CoinsService {
 
   private setCoinQuantityProperty(coin: CoinInterface): void {
     coin?.wallets?.map((wallet: WalletInterface) => {
+      wallet.stakedQuantity = 0;
+
       wallet.quantity = wallet?.transactions?.reduce((acc: number, curr: CryptoHistoryInterface) => {
+        wallet.availableQuantity = acc;
+
         if (curr.action === CoinHistoryActionEnum.TRANSFER) {
           return acc - curr.amount! - (curr.fee! || 0);
         }
@@ -212,7 +216,7 @@ export class CoinsService {
           return acc + curr.amount!;
         }
 
-        if (curr.action === CoinHistoryActionEnum.STAKE) {
+        if (curr.action === CoinHistoryActionEnum.EARNED) {
           return acc + curr.amount!;
         }
 
@@ -228,8 +232,15 @@ export class CoinsService {
           return acc - curr.filled!;
         }
 
+        if (curr.action === CoinHistoryActionEnum.STAKE) {
+          wallet.stakedQuantity! += curr.amount!;
+          return acc;
+        }
+
         return acc;
       }, 0);
+
+      wallet.availableQuantity = wallet.quantity! - wallet.stakedQuantity;
     });
 
     coin.quantity = coin?.wallets?.reduce((quantity: number, wallet: WalletInterface) => quantity += wallet.quantity!, 0);

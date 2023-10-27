@@ -15,7 +15,7 @@ export class RoundValuePipe implements PipeTransform {
       return Number.parseFloat(value.toFixed(2));
     }
 
-    if (value > 0.1 && value < 1 || value < -0.1 && value > -1) {
+    if (value >= 0.1 && value < 1 || value <= -0.1 && value > -1) {
       return Number.parseFloat(value.toFixed(4));
     }
 

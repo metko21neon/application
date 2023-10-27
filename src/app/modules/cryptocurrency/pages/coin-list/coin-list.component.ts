@@ -11,9 +11,9 @@ import { WalletNamePipe } from '../../../../pipes/wallet-name.pipe';
 import { CoinsService } from '../../../../services/coins.service';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 
 import { Subscription, switchMap } from 'rxjs';
 import { RoundValuePipe } from 'src/app/pipes/round-value.pipe';
@@ -37,6 +37,7 @@ import { MatInputModule } from '@angular/material/input';
     MatTableModule,
     RoundValuePipe,
     WalletNamePipe,
+    MatSortModule,
     RouterModule,
     CommonModule,
     FormsModule,

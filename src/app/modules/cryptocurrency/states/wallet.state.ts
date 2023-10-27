@@ -90,6 +90,13 @@ export const WALLET_LIST: WalletInterface[] = [
     ]
   },
   {
+    name: "Savings wallet",
+    company: "Sui",
+    addresses: [
+      { network: NETORK_COIN_ENUM.SUI, address: '2TzFAR9D1sP1eZDKMSd53NY2pjDqqHTgJapmsELuQsA7' },
+    ]
+  },
+  {
     name: "Web3 wallet",
     company: "Bybit",
     addresses: [
@@ -148,6 +155,7 @@ export const WALLET_LIST: WalletInterface[] = [
     company: "Trust Wallet",
     addresses: [
       { network: NETORK_COIN_ENUM.BSC, address: '0x02c18f708358887cb4993a9608e37216b71fe2a2' },
+      { network: NETORK_COIN_ENUM.BSC, address: '0x02C18f708358887cB4993a9608e37216B71fE2A2' },
     ]
   },
   {

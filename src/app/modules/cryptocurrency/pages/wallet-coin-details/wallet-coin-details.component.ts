@@ -27,7 +27,7 @@ import { RoundPipe } from 'src/app/pipes/round.pipe';
 })
 export class WalletCoinDetailsComponent implements OnInit, OnDestroy {
 
-  displayedColumns: string[] = ['number', 'date', 'action', 'totalQuantity', 'quantity', 'price', 'averagePrice', 'total'];
+  displayedColumns: string[] = ['number', 'date', 'action', 'quantity', 'network', 'totalQuantity', 'price', 'averagePrice', 'total'];
   dataSource!: MatTableDataSource<any>;
   tokenDetails!: CoinInterface;
   wallet!: WalletInterface;
@@ -169,9 +169,15 @@ export class WalletCoinDetailsComponent implements OnInit, OnDestroy {
         return;
       }
 
-      if (history.action === CoinHistoryActionEnum.STAKE) {
+      if (history.action === CoinHistoryActionEnum.EARNED) {
         history.totalQuantityPercentage = history.amount! / (previousTotal / 100);
         history.totalQuantity = previousTotal + history.amount!;
+        return;
+      }
+
+      if (history.action === CoinHistoryActionEnum.STAKE) {
+        history.totalQuantityPercentage = history.amount! / (previousTotal / 100);
+        history.totalQuantity = previousTotal;
         return;
       }
 

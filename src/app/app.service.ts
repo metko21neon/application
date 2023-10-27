@@ -216,7 +216,7 @@ export class AppService {
           return acc + curr.amount!;
         }
 
-        if (curr.action === CoinHistoryActionEnum.STAKE) {
+        if (curr.action === CoinHistoryActionEnum.EARNED) {
           return acc + curr.amount!;
         }
 

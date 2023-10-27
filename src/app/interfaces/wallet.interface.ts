@@ -9,4 +9,7 @@ export interface WalletInterface {
   totalInCurrency?: number;
   currencyResult?: number;
   quantity?: number;
+
+  availableQuantity?: number;
+  stakedQuantity?: number;
 }
