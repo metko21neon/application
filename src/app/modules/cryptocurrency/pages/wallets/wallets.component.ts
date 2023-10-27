@@ -1,15 +1,17 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-
 import { Subscription } from 'rxjs';
 
-import { NETORK_COIN_ENUM, WALLET_LIST, WalletAddressInterface, WalletInterface } from '../../states/wallet.state';
+import { WalletAddressInterface } from '../../interfaces/wallet-address.interface';
 import { CoinInterface } from '../../../../interfaces/coin.interface';
 import { RoundValuePipe } from '../../../../pipes/round-value.pipe';
+import { WalletInterface } from '../../interfaces/wallet.interface';
 import { CoinsService } from '../../../../services/coins.service';
+import { NETORK_COIN_ENUM } from '../../enums/network-coin.enum';
+import { WALLET_LIST } from '../../states/wallet.state';
 
 export interface ExtendedWalletInterface extends WalletInterface {
   amount: number;

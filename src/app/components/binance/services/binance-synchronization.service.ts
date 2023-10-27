@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 
 import { Observable, concatMap, filter, from, map, switchMap, tap, toArray } from 'rxjs';
 
+import { WalletNamePipe } from '../../../modules/cryptocurrency/enums/wallet-name.pipe';
 import { CoinHistoryActionEnum } from '../../../enums/coin-history-action.enum';
 import { BinanceOrderInterface } from '../interfaces/binance-order.interface';
 import { BinanceWithdrawalsService } from './binance-withdrawals.service';
 import { BinanceDepositsService } from './binance-deposits.service';
 import { CCCoinsService } from '../../../services/cccoins.service';
-import { WalletNamePipe } from '../../../pipes/wallet-name.pipe';
 import { CoinsService } from '../../../services/coins.service';
 import { DATE_FORMAT } from '../../../app.component';
 import { Api } from '../../../api/api';
@@ -35,9 +35,19 @@ export class BinanceSynchronizationService {
   ) { }
 
   synchronize(): Observable<any> {
-    // return this.binanceDepositsService.getDepositsHistory().pipe(
-    // return this.binanceWithdrawalsService.getWithdrawalsHistory().pipe(
     return this.getOrdersHistory().pipe(
+      switchMap(() => this.coinsService.getCoinList(this.cccoinsService.coins))
+    );
+  }
+
+  synchronizeWithdrawalsHistory(): Observable<any> {
+    return this.binanceWithdrawalsService.getWithdrawalsHistory().pipe(
+      switchMap(() => this.coinsService.getCoinList(this.cccoinsService.coins))
+    );
+  }
+
+  synchronizeDepositsHistory(): Observable<any> {
+    return this.binanceDepositsService.getDepositsHistory().pipe(
       switchMap(() => this.coinsService.getCoinList(this.cccoinsService.coins))
     );
   }

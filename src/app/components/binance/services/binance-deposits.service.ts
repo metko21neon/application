@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
 import { Observable, concatMap, tap, toArray } from 'rxjs';
 
 import { SelectWalletDialogComponent } from '../../../modules/cryptocurrency/pages/coin-list/dialogs/select-wallet-dialog/select-wallet-dialog.component';
+import { WalletNamePipe } from '../../../modules/cryptocurrency/enums/wallet-name.pipe';
 import { BinanceDepositInterface } from '../interfaces/binance-deposit.interface';
 import { BinanceDepositModel } from '../models/binance-deposit.model';
-import { WalletNamePipe } from '../../../pipes/wallet-name.pipe';
 import { CCCoinsService } from '../../../services/cccoins.service';
 import { BinanceApi } from '../api/binance.api';
 

@@ -3646,28 +3646,6 @@
         ]
       },
       {
-        "name": "Metamask (MA #1 wallet)",
-        "address": "0x3C8E0F3f992445faAd85be9De471f1391528563B",
-        "transactions": [
-          {
-            "action": "receive",
-            "address": "",
-            "amount": 0.00884,
-            "date": "2023-08-29 09:49:21",
-            "fee": 0.00096,
-            "network": "ETH"
-          },
-          {
-            "action": "receive",
-            "address": "",
-            "amount": 0.11904,
-            "date": "2023-08-29 09:53:23",
-            "fee": 0.00096,
-            "network": "ETH"
-          }
-        ]
-      },
-      {
         "name": "Metamask (Metamask wallet)",
         "address": "0x2387Eb22e73F85d80966CEd83C323482122Ccf92",
         "transactions": [

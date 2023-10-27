@@ -1,57 +1,49 @@
-export interface WalletInterface {
-  name: string;
-  company: string;
-  addresses: WalletAddressInterface[];
-}
+import { WalletAddressInterface } from "../interfaces/wallet-address.interface";
+import { WalletInterface } from "../interfaces/wallet.interface";
+import { NETORK_COIN_ENUM } from "../enums/network-coin.enum";
+import { MA_WALLET_LIST } from "./ma-wallet.state";
 
-export interface WalletAddressInterface {
-  network: NETORK_COIN_ENUM;
-  address: string;
-}
-
-export enum NETORK_COIN_ENUM {
-  ADA = 'ADA',
-  ALGO = 'ALGO',
-  AMP = 'AMP',
-  APT = 'APT',
-  ARB = 'ARB',
-  ATOM = 'ATOM',
-  AVAX = 'AVAX',
-  BNB = 'BNB',
-  BSC = 'BSC',
-  BTC = 'BTC',
-  DASH = 'DASH',
-  DOGE = 'DOGE',
-  DOT = 'DOT',
-  FIL = 'FIL',
-  HNT = 'HNT',
-  ETH = 'ETH',
-  ICP = 'ICP',
-  INCH = '1INCH',
-  KDA = 'KDA',
-  LTC = 'LTC',
-  MINA = 'MINA',
-  NEAR = 'NEAR',
-  SOL = 'SOL',
-  SUI = 'SUI',
-  TRX = 'TRX',
-  XLM = 'XLM',
-  XRP = 'XRP',
-  VET = 'VET',
-  USDT = 'USDT',
-  WAVES = 'WAVES',
-  ZIL = 'ZIL',
-  NOT_KNOWN = 'NOT_KNOWN'
-}
-
-export const WALLET_LIST: WalletInterface[] = [
+export const EXCHANGE_WALLET_LIST: WalletInterface[] = [
   {
-    name: "Martian wallet",
-    company: "Aptos",
+    name: "Binance wallet",
+    company: "Binance",
     addresses: [
-      { network: NETORK_COIN_ENUM.APT, address: '0x5d9ed17878cf433f3dc4f3356fade5cc2b5e2910fff2c09617525e98fcdacb85' },
+      { network: NETORK_COIN_ENUM.BSC, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
+      { network: NETORK_COIN_ENUM.ETH, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
+      { network: NETORK_COIN_ENUM.TRX, address: 'TNLpoyoGA47j92BQKWUwEYXm5peQs121hH' },
     ]
   },
+  {
+    name: "Bybit wallet",
+    company: "Bybit",
+    addresses: [
+      { network: NETORK_COIN_ENUM.BSC, address: '0x1983485e140bbfcd5193d7988ae6f93b90935fff' },
+    ]
+  },
+  {
+    name: "Web3 wallet",
+    company: "Bybit",
+    addresses: [
+      { network: NETORK_COIN_ENUM.ARB, address: '0xee43db2a99bc599d4f7c9d886437828e167fc987' },
+    ]
+  },
+  {
+    name: "OKX wallet",
+    company: "OKX",
+    addresses: [
+      { network: NETORK_COIN_ENUM.TRX, address: 'TMaKLk4hBXJm8MauEn9BQqM9yAZEFRgGFs' },
+    ]
+  },
+  {
+    name: "WhiteBit wallet",
+    company: "WhiteBit",
+    addresses: [
+      { network: NETORK_COIN_ENUM.NOT_KNOWN, address: 'whitebit_1' },
+    ]
+  },
+];
+
+export const NETWORK_WALLET_LIST: WalletInterface[] = [
   {
     name: "Helium wallet",
     company: "Helium",
@@ -67,40 +59,10 @@ export const WALLET_LIST: WalletInterface[] = [
     ]
   },
   {
-    name: "Binance wallet",
-    company: "Binance",
-    addresses: [
-      { network: NETORK_COIN_ENUM.BSC, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
-      { network: NETORK_COIN_ENUM.ETH, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
-      { network: NETORK_COIN_ENUM.TRX, address: 'TNLpoyoGA47j92BQKWUwEYXm5peQs121hH' },
-    ]
-  },
-  {
-    name: "WhiteBit wallet",
-    company: "WhiteBit",
-    addresses: [
-      { network: NETORK_COIN_ENUM.NOT_KNOWN, address: 'whitebit_1' },
-    ]
-  },
-  {
-    name: "Bybit wallet",
-    company: "Bybit",
-    addresses: [
-      { network: NETORK_COIN_ENUM.BSC, address: '0x1983485e140bbfcd5193d7988ae6f93b90935fff' },
-    ]
-  },
-  {
     name: "Savings wallet",
     company: "Sui",
     addresses: [
       { network: NETORK_COIN_ENUM.SUI, address: '2TzFAR9D1sP1eZDKMSd53NY2pjDqqHTgJapmsELuQsA7' },
-    ]
-  },
-  {
-    name: "Web3 wallet",
-    company: "Bybit",
-    addresses: [
-      { network: NETORK_COIN_ENUM.ARB, address: '0xee43db2a99bc599d4f7c9d886437828e167fc987' },
     ]
   },
   {
@@ -112,14 +74,6 @@ export const WALLET_LIST: WalletInterface[] = [
       { network: NETORK_COIN_ENUM.LTC, address: 'ltc1qu42e2x2y32g254ghdglm9k352a3ydkmdvjt2sm' },
       { network: NETORK_COIN_ENUM.BTC, address: 'bc1qg59jlc2cwazzjvean5ms8y36n4l3my053w7pq7' },
       { network: NETORK_COIN_ENUM.XRP, address: 'rLoEMuZG3EnhTSVHpo4vVEHu1QH3gMYxcA' },
-    ]
-  },
-  {
-    name: "Metamask wallet",
-    company: "Metamask",
-    addresses: [
-      { network: NETORK_COIN_ENUM.AMP, address: '0x2387Eb22e73F85d80966CEd83C323482122Ccf92' },
-      { network: NETORK_COIN_ENUM.NOT_KNOWN, address: 'metamask_1' },
     ]
   },
   {
@@ -167,20 +121,6 @@ export const WALLET_LIST: WalletInterface[] = [
     ]
   },
   {
-    name: "OKX wallet",
-    company: "OKX",
-    addresses: [
-      { network: NETORK_COIN_ENUM.TRX, address: 'TMaKLk4hBXJm8MauEn9BQqM9yAZEFRgGFs' },
-    ]
-  },
-  {
-    name: "MA wallet #1",
-    company: "Metamask",
-    addresses: [
-      { network: NETORK_COIN_ENUM.ETH, address: '0x3C8E0F3f992445faAd85be9De471f1391528563B' },
-    ]
-  },
-  {
     name: "Savings wallet",
     company: "Trust Wallet",
     addresses: [
@@ -202,10 +142,29 @@ export const WALLET_LIST: WalletInterface[] = [
       { network: NETORK_COIN_ENUM.TRX, address: 'THPjuTNZhLJ534YEvh6C43MVQGcxgnKw7z' },
     ]
   },
+  {
+    name: "Metamask wallet",
+    company: "Metamask",
+    addresses: [
+      { network: NETORK_COIN_ENUM.APT, address: '0x5d9ed17878cf433f3dc4f3356fade5cc2b5e2910fff2c09617525e98fcdacb85' },
+      { network: NETORK_COIN_ENUM.AMP, address: '0x2387Eb22e73F85d80966CEd83C323482122Ccf92' },
+      { network: NETORK_COIN_ENUM.NOT_KNOWN, address: 'metamask_1' },
+    ]
+  },
+];
+
+export const WALLET_LIST: WalletInterface[] = [
+  ...EXCHANGE_WALLET_LIST,
+  ...NETWORK_WALLET_LIST,
+  ...MA_WALLET_LIST,
 ];
 
 export const IGNORED_WALLET_LIST: WalletAddressInterface[] = [
   { network: NETORK_COIN_ENUM.BSC, address: '0xaf74fa07f68d267a1167c52854b1263f2cf41c83' },
   { network: NETORK_COIN_ENUM.TRX, address: 'TQ7XZ5wi25pvtecU4Y9We2Xqvr8xMseGmz' },
   { network: NETORK_COIN_ENUM.TRX, address: 'THqDcXqKwmo7Tgg3fsGRF1NF58hennSfhu' },
+
+  ...MA_WALLET_LIST.reduce((acc: WalletAddressInterface[], wallet: WalletInterface) => {
+    return [...acc, ...wallet.addresses];
+  }, [])
 ];

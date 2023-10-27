@@ -1,15 +1,16 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-
 import { Subscription, switchMap } from 'rxjs';
 
-import { WALLET_LIST, WalletAddressInterface, WalletInterface } from '../../states/wallet.state';
+import { WalletAddressInterface } from '../../interfaces/wallet-address.interface';
 import { CoinInterface } from '../../../../interfaces/coin.interface';
 import { RoundValuePipe } from '../../../../pipes/round-value.pipe';
+import { WalletInterface } from '../../interfaces/wallet.interface';
 import { CoinsService } from '../../../../services/coins.service';
+import { WALLET_LIST } from '../../states/wallet.state';
 
 @Component({
   selector: 'app-wallet-coins',

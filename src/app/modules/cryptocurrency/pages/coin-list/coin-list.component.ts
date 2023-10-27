@@ -7,8 +7,8 @@ import { CoinDataInterface } from '../../../../interfaces/coin-data.interface';
 import { ColumnInterface } from '../../../../interfaces/column.interface';
 import { CoinDataService } from '../../../../services/coin-data.service';
 import { CoinInterface } from '../../../../interfaces/coin.interface';
-import { WalletNamePipe } from '../../../../pipes/wallet-name.pipe';
 import { CoinsService } from '../../../../services/coins.service';
+import { WalletNamePipe } from '../../enums/wallet-name.pipe';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -110,6 +110,12 @@ export class CoinListComponent implements OnInit, OnDestroy {
     const stream$ = this.binanceSynchronizationService.synchronize().subscribe((data: any[]) => {
       console.log('synchronize:', data);
     });
+
+    this.subscription.add(stream$);
+  }
+
+  synchronizeWithdrawalsHistory(): void {
+    const stream$ = this.binanceSynchronizationService.synchronizeWithdrawalsHistory().subscribe();
 
     this.subscription.add(stream$);
   }

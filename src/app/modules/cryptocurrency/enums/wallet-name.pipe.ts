@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { WALLET_LIST, WalletInterface } from '../modules/cryptocurrency/states/wallet.state';
+import { WalletInterface } from '../interfaces/wallet.interface';
+import { WALLET_LIST } from '../states/wallet.state';
 
 @Pipe({
   name: 'imWalletName',

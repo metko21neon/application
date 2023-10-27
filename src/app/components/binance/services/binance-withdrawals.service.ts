@@ -1,8 +1,9 @@
-import { IGNORED_WALLET_LIST, WalletAddressInterface } from '../../../modules/cryptocurrency/states/wallet.state';
+import { WalletAddressInterface } from 'src/app/modules/cryptocurrency/interfaces/wallet-address.interface';
+import { IGNORED_WALLET_LIST } from '../../../modules/cryptocurrency/states/wallet.state';
 import { BinanceWithdrawalInterface } from '../interfaces/binance-withdrawal.interface';
+import { WalletNamePipe } from '../../../modules/cryptocurrency/enums/wallet-name.pipe';
 import { WITHDRAWAL_STATUS_ENUM } from '../../../enums/withdrawal-status.enum';
 import { BinanceWithdrawalModel } from '../models/binance-withdrawal.model';
-import { WalletNamePipe } from '../../../pipes/wallet-name.pipe';
 import { CCCoinsService } from '../../../services/cccoins.service';
 import { DATE_FORMAT } from '../../../app.component';
 import { BinanceApi } from '../api/binance.api';
