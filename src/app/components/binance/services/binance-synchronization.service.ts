@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable, concatMap, filter, from, map, switchMap, tap, toArray } from 'rxjs';
 
-import { WalletNamePipe } from '../../../modules/cryptocurrency/enums/wallet-name.pipe';
+import { WalletNamePipe } from '../../../modules/cryptocurrency/pipes/wallet-name.pipe';
 import { CoinHistoryActionEnum } from '../../../enums/coin-history-action.enum';
 import { BinanceOrderInterface } from '../interfaces/binance-order.interface';
 import { BinanceWithdrawalsService } from './binance-withdrawals.service';
