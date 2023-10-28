@@ -1,9 +1,10 @@
 <div class="im-app">
   <div class="im-header">
-    <div class="im-header-left">
+    <div class="im-header-left flex" style="gap: 4px;">
       <button (click)="synchronize()"> Synchronize </button>
-      <button class="ml-8" (click)="synchronizeOrders()"> Synchronize orders </button>
-      <button class="ml-8" (click)="synchronizeWithdrawalsHistory()">Synchronize Withdrawals</button>
+      <button (click)="synchronizeOrders()"> Synchronize orders </button>
+      <button (click)="synchronizeDepositsHistory()">Synchronize Deposits</button>
+      <button (click)="synchronizeWithdrawalsHistory()">Synchronize Withdrawals</button>
     </div>
 
     <div class="im-header-center">
@@ -122,7 +123,7 @@
             <div class="example-element-detail flex" style="flex-direction: column;"
               [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
               <ng-container *ngFor="let wallet of element.wallets">
-                <div *ngIf="wallet.quantity > 0.0000001" class="flex" style="cursor: pointer;"
+                <div class="flex" style="cursor: pointer;"
                   [routerLink]="'../wallets/' + wallet.address + '/coins/' + element?.symbol">
                   <span class="property-title"> {{ wallet.address | imWalletName }} </span>
                   <span class="property-value"> {{ wallet.quantity | roundValue }} {{ element.symbol }} </span>

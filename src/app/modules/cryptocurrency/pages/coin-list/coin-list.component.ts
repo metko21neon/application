@@ -114,6 +114,12 @@ export class CoinListComponent implements OnInit, OnDestroy {
     this.subscription.add(stream$);
   }
 
+  synchronizeDepositsHistory(): void {
+    const stream$ = this.binanceSynchronizationService.synchronizeDepositsHistory().subscribe();
+
+    this.subscription.add(stream$);
+  }
+
   synchronizeWithdrawalsHistory(): void {
     const stream$ = this.binanceSynchronizationService.synchronizeWithdrawalsHistory().subscribe();
 

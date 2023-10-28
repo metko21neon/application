@@ -19,8 +19,8 @@ export class BinanceApi {
   getDepositsHistory(options: any = { status: 1 }): Observable<BinanceDepositInterface[]> {
     const params = new HttpParams().appendAll(options);
 
-    // return this.http.get<any>('/api.statistic.im/deposits-history', { params });
-    return of((BINANCE_DEPOSITS as any).default);
+    return this.http.get<any>('/api.statistic.im/deposits-history', { params });
+    // return of((BINANCE_DEPOSITS as any).default);
   }
 
   getWithdrawalsHistory(options: any): Observable<BinanceWithdrawalInterface[]> {

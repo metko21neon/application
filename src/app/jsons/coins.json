@@ -3660,6 +3660,30 @@
             "date": "2023-08-29 09:53:23",
             "fee": 0.00096,
             "network": "ETH"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 0.015,
+            "date": "2023-10-28 11:26:01",
+            "fee": 0.000252119293692,
+            "network": "ETH"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 0.04968191,
+            "date": "2023-10-28 11:28:01",
+            "fee": 0.00031808980245,
+            "network": "ETH"
+          },
+          {
+            "action": "receive",
+            "address": "",
+            "amount": 0.01031009,
+            "date": "2023-10-28 11:29:31",
+            "fee": 0.000314088998139,
+            "network": "ETH"
           }
         ]
       },
@@ -3725,6 +3749,14 @@
             "action": "receive",
             "amount": 0.05,
             "fee": 0.000430409920647
+          },
+          {
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 0.04968191,
+            "date": "2023-10-28 11:28:01",
+            "fee": 0.00031808980245,
+            "network": "ETH"
           }
         ]
       },
@@ -3749,6 +3781,14 @@
             "date": "2022-06-16 13:37:41",
             "action": "spend",
             "amount": 0.000916899079362863,
+            "network": "ETH"
+          },
+          {
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 0.01031009,
+            "date": "2023-10-28 11:29:31",
+            "fee": 0.000314088998139,
             "network": "ETH"
           }
         ]
@@ -3857,6 +3897,14 @@
             "network": "BSC",
             "amount": 0.144388,
             "fee": 0
+          },
+          {
+            "action": "transfer",
+            "address": "0x78a05f925c1424d02211f9df98ebb7ad8df4d557",
+            "amount": 0.015,
+            "date": "2023-10-28 11:26:01",
+            "fee": 0.000252119293692,
+            "network": "ETH"
           }
         ]
       },
@@ -5297,6 +5345,11 @@
             "action": "buy",
             "total": 14.2464,
             "price": 1.696
+          },
+          {
+            "date": "2023-09-19 07:13:40",
+            "action": "earned",
+            "amount": 0.10965549
           },
           {
             "action": "transfer",
