@@ -9,6 +9,10 @@
         <app-month [state]="finances"></app-month>
       </mat-tab>
 
+      <mat-tab label="Savings">
+        <app-savings [state]="finances"></app-savings>
+      </mat-tab>
+
       <mat-tab label="Bonds">
         <app-bonds [state]="finances"></app-bonds>
       </mat-tab>
@@ -17,10 +21,7 @@
         <app-cryptocurrency [state]="finances"></app-cryptocurrency>
       </mat-tab>
 
-      <!-- <mat-tab label="Savings">
-        <app-savings [state]="finances"></app-savings>
-      </mat-tab>
-
+      <!--
       <mat-tab label="Costs">
         <app-costs [state]="finances"></app-costs>
       </mat-tab>

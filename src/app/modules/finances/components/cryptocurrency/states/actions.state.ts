@@ -4,6 +4,22 @@ export const ACTION_LIST = [
   {
     action: 'SPEND',
     category: 'MA',
+    description: 'Salary',
+    amount: 5000,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-06 00:59:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
+    description: 'Salary',
+    amount: 5200,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-10-23 19:20:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
     description: 'Accounts volume',
     amount: 500,
     currency: CURRENCY_ENUM.USD,
