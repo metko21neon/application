@@ -4,6 +4,37 @@ import { CURRENCY_ENUM } from "../../../enums/currency.enum";
 export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
+    amount: 7000,
+    currency: CURRENCY_ENUM.UAH,
+    period: '03 November 2023 21:51:00',
+    description: 'Parents',
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
+    amount: 100,
+    currency: CURRENCY_ENUM.EUR,
+    period: '03 November 2023 21:21:21',
+    description: 'Kozak',
+    rate: 38.8
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
+    amount: 400,
+    currency: CURRENCY_ENUM.USD,
+    period: '03 November 2023 21:50:00',
+    description: 'Parents',
+    rate: 37.453
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
+    amount: 200,
+    currency: CURRENCY_ENUM.EUR,
+    period: '03 November 2023 20:50:00',
+    description: 'Parents',
+    rate: 38.8
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
     amount: 600,
     currency: CURRENCY_ENUM.USD,
     period: '08 September 2023 21:50:00',
