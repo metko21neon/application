@@ -56,16 +56,18 @@ export class CryptocurrencyComponent implements OnInit {
 
   private calculateTotalByCategory(category: string): any {
     return this.dataSource
-      .filter((item: any) => item?.category === category && item.action === 'SPEND')
+      .filter((item: any) => item?.category === category)
       .reduce((acc: any, item: any) => {
-        if (item.currency === CURRENCY_ENUM.UAH) {
-          acc.total += item.amount;
-          acc.uah += item.amount;
-        }
+        if (item.action === 'SPEND') {
+          if (item.currency === CURRENCY_ENUM.UAH) {
+            acc.total += item.amount;
+            acc.uah += item.amount;
+          }
 
-        if (item.currency === CURRENCY_ENUM.USD) {
-          acc.total += item.amount * item.exchangeRate;
-          acc.usd += item.amount;
+          if (item.currency === CURRENCY_ENUM.USD) {
+            acc.total += item.amount * item.exchangeRate;
+            acc.usd += item.amount;
+          }
         }
 
         return acc;
@@ -130,6 +132,7 @@ export class CryptocurrencyComponent implements OnInit {
             this.balance.uah += item.amount;
             break;
 
+          case 'RETURNED':
           case 'SPEND':
             (this.balance as any)[item.currency.toLowerCase()] -= item.amount;
             break;

@@ -2,7 +2,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ImCurrencyPipe } from '../../../../../../modules/finances/pipes/im-currency.pipe';
+import { ImCurrencyPipe } from '../../../../pipes/im-currency.pipe';
 import { CURRENCY_ENUM } from '../../../../enums/currency.enum';
 
 const COLUMN_LIST = ['action', 'date', 'amount', 'description', 'balance'];

@@ -5,6 +5,62 @@ export const ACTION_LIST = [
     action: 'SPEND',
     category: 'MA',
     description: 'Salary',
+    amount: 5125,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-20 16:46:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
+    description: 'E-sims',
+    amount: 1_350,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-16 09:06:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'Education',
+    description: 'Invest event',
+    amount: 14_350,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-27 23:59:59'
+  },
+  {
+    action: 'SPEND',
+    category: 'Education',
+    description: 'Invest event tickets',
+    amount: 3_600, // TODO change on 7_200
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-17 17:13:00'
+  },
+  {
+    action: 'RETURNED',
+    category: 'COMMS',
+    description: 'Serhii debt',
+    amount: 19_100,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-14 20:54:00'
+  },
+  {
+    action: 'RETURNED',
+    category: 'COMMS',
+    description: 'Kitty debt',
+    amount: 18_750,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-14 20:54:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'Crypto Crew',
+    description: 'Subscription',
+    amount: 5050, // 132 USD
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-11-14 17:49:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
+    description: 'Salary',
     amount: 5000,
     currency: CURRENCY_ENUM.UAH,
     date: '2023-11-06 00:59:00'
@@ -44,7 +100,7 @@ export const ACTION_LIST = [
     fee: 0,
   },
   {
-    action: 'SPEND',
+    action: 'RETURNED',
     category: 'COMMS',
     description: 'Serhii debt',
     amount: 18_900,
@@ -53,7 +109,7 @@ export const ACTION_LIST = [
     exchangeRate: 37.8
   },
   {
-    action: 'SPEND',
+    action: 'RETURNED',
     category: 'COMMS',
     description: 'Kitty debt',
     amount: 18_750, // 0 USD
@@ -162,7 +218,7 @@ export const ACTION_LIST = [
     exchangeRate: 37.45,
   },
   {
-    action: 'SPEND',
+    action: 'RETURNED',
     category: 'COMMS',
     description: 'Serhii debt',
     amount: 18_925,
@@ -171,7 +227,7 @@ export const ACTION_LIST = [
     date: '2023-09-15 20:10:00'
   },
   {
-    action: 'SPEND',
+    action: 'RETURNED',
     category: 'COMMS',
     description: 'Kitty debt',
     amount: 18_750, // 0 USD
