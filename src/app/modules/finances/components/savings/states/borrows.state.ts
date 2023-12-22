@@ -18,13 +18,6 @@ export const BORROWS_STATE = [
   // },
   {
     action: ACTION_TYPE_ENUM.BORROW,
-    amount: 5_650,
-    currency: CURRENCY_ENUM.UAH,
-    period: '24 October 2023 10:44:00',
-    description: 'Mom birthday',
-  },
-  {
-    action: ACTION_TYPE_ENUM.BORROW,
     amount: 100,
     currency: CURRENCY_ENUM.EUR,
     period: '03 November 2023 21:21:21',
@@ -119,7 +112,7 @@ export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
     currency: CURRENCY_ENUM.UAH,
-    amount: 7950,
+    amount: 2890,
     period: '05 May 2023 23:02:00',
     description: 'Business Event'
   },

@@ -723,11 +723,11 @@ export const FINANCES_STATE: any[] = [
             list: []
           },
           costs: {
-            percentage: 0.1,
+            percentage: 0.0645,
             list: [
               {
                 source: "Costs",
-                amount: 15_500,
+                amount: 10_000,
                 payed: true,
               }
             ]
@@ -771,7 +771,7 @@ export const FINANCES_STATE: any[] = [
               {
                 source: "",
                 payed: true,
-                amount: 63_200
+                amount: 68_700
               }
             ]
           },
@@ -810,11 +810,11 @@ export const FINANCES_STATE: any[] = [
             list: []
           },
           costs: {
-            percentage: 0.1,
+            percentage: 0.0645,
             list: [
               {
                 source: "Costs",
-                amount: 15_500,
+                amount: 10_000,
                 payed: true,
               }
             ]
@@ -852,7 +852,7 @@ export const FINANCES_STATE: any[] = [
               {
                 source: "",
                 payed: true,
-                amount: 55_000
+                amount: 60_500
               }
             ]
           },
@@ -1007,6 +1007,94 @@ export const FINANCES_STATE: any[] = [
                 currency: CURRENCY_ENUM.UAH,
                 creation_date: '2023-11',
                 amount: 5_400,
+                payed: true,
+              },
+              {
+                source: "Cryptocurrency",
+                payed: true,
+                amount: 68_800
+              },
+            ]
+          },
+          lifeCosts: {
+            list: [
+              {
+                source: "",
+                payed: true,
+                amount: 55_000
+              }
+            ]
+          },
+        }
+      ]
+    },
+  },
+  {
+    period: "December 2023",
+    income: {
+      list: [
+        {
+          source: 'Crosssoft',
+          amount: 163_590.75,
+          currency: CURRENCY_ENUM.UAH,
+          exchangeRate: 36.3535,
+          taxes: {
+            list: [
+              {
+                type: TAX_ENUM.SINGLE_SOCIAL_CONTRIBUTION,
+                source: "Єдиний соціальний внесок",
+                amount: 1_474,
+                payed: true,
+              },
+              {
+                type: TAX_ENUM.SINGLE_TAX,
+                source: "Єдиний податок",
+                percentage: 0.05,
+                payed: true,
+                amount: 0,
+              },
+            ]
+          },
+          savings: {
+            percentage: 0,
+            list: []
+          },
+          costs: {
+            percentage: 0.1,
+            list: [
+              {
+                source: "Costs",
+                amount: 15_400,
+                payed: true,
+              }
+            ]
+          },
+          debt: {
+            list: [],
+            payed: {
+              list: [
+                {
+                  source: "Privatbank",
+                  amount: 0,
+                  payed: true,
+                },
+              ]
+            }
+          },
+          investing: {
+            list: [
+              {
+                source: "Military bonds",
+                currency: CURRENCY_ENUM.UAH,
+                creation_date: '2023-12',
+                amount: 10_100,
+                payed: true,
+              },
+              {
+                source: "Army donate",
+                currency: CURRENCY_ENUM.UAH,
+                creation_date: '2023-12',
+                amount: 5_300,
                 payed: true,
               },
               {

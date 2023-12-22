@@ -25,6 +25,7 @@ import { IMFloorPipe } from './pipes/im-floor.pipe';
 import { DetailsComponent } from './components/month/components/details/details.component';
 import { CryptocurrencyComponent } from './components/cryptocurrency/cryptocurrency.component';
 import { HistoryTableComponent } from './components/cryptocurrency/components/history-table/history-table.component';
+import { ReportComponent } from './components/report/report.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HistoryTableComponent } from './components/cryptocurrency/components/hi
     BalanceHistoryTableComponent,
     DetailsComponent,
     CryptocurrencyComponent,
+    ReportComponent,
   ],
   imports: [
     FinancesRoutingModule,

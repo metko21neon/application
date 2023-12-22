@@ -5,6 +5,10 @@
 
   <div class="im-content">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab label="Report">
+        <app-report [state]="finances"></app-report>
+      </mat-tab>
+
       <mat-tab label="Distribution">
         <app-month [state]="finances"></app-month>
       </mat-tab>
@@ -21,10 +25,10 @@
         <app-cryptocurrency [state]="finances"></app-cryptocurrency>
       </mat-tab>
 
-      <!--
       <mat-tab label="Costs">
         <app-costs [state]="finances"></app-costs>
       </mat-tab>
+      <!--
 
       <mat-tab label="Debts">
         <app-debts [state]="finances"></app-debts>

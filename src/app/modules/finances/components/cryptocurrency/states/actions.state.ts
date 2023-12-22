@@ -3,6 +3,70 @@ import { CURRENCY_ENUM } from "../../../enums/currency.enum";
 export const ACTION_LIST = [
   {
     action: 'SPEND',
+    category: 'Coins',
+    description: 'Deposit',
+    amount: 15_450,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-12-22 21:00:00'
+  },
+  {
+    action: 'RETURNED',
+    category: 'COMMS',
+    description: 'Serhii debt',
+    amount: 19_050,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-12-20 17:00:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
+    description: 'Salary',
+    amount: 5025,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-12-17 13:21:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'Crypto Crew',
+    description: 'Subscription',
+    amount: 5050,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-12-15 14:00:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'Coins',
+    description: '',
+    amount: 470,
+    currency: CURRENCY_ENUM.USD,
+    date: '2023-11-15 16:46:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
+    description: 'Volume',
+    amount: 530,
+    currency: CURRENCY_ENUM.USD,
+    date: '2023-11-15 16:46:00'
+  },
+  {
+    action: 'BORROW',
+    category: 'MA',
+    description: 'Volodymyr',
+    amount: 1_000,
+    currency: CURRENCY_ENUM.USD,
+    date: '2023-11-15 16:46:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
+    description: 'Salary',
+    amount: 5025,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-12-04 16:46:00'
+  },
+  {
+    action: 'SPEND',
     category: 'MA',
     description: 'Salary',
     amount: 5125,

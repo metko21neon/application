@@ -1,0 +1,39 @@
+<div class="flex flex-column p-20" style="gap: 5px;">
+  <div *ngFor="let category of list" class="flex flex-column mb-20">
+    <span class="mr-10" style="font-weight: bold;">{{ category.label }}</span>
+
+    <div class="flex flex-column ml-20">
+      <div *ngFor="let item of category.list" class="flex">
+        <span class="mr-10">{{ item.label }}:</span>
+        <span>{{ item.amount | number | imCurrency }} UAH</span>
+        <span *ngIf="item.description" class="ml-10">({{ item.description }})</span>
+      </div>
+    </div>
+
+    <div class="flex">
+      <span class="mr-10">Total:</span>
+      <span>{{ category.total | number | imCurrency }} UAH</span>
+    </div>
+  </div>
+
+  <div class="flex flex-column mb-20">
+    <span class="mr-10" style="font-weight: bold;">Crypto</span>
+
+    <div class="flex flex-column ml-20">
+      <div class="flex">
+        <span class="mr-10">Crypto:</span>
+        <span>{{ cryptocurrencyService.balance.uah | number | imCurrency }} UAH</span>
+      </div>
+    </div>
+
+    <div class="flex">
+      <span class="mr-10">Total:</span>
+      <span>{{ cryptocurrencyService.balance.uah | number | imCurrency }} UAH</span>
+    </div>
+  </div>
+
+  <div class="flex">
+    <span class="mr-10">Total:</span>
+    <span>{{ total | number | imCurrency }} UAH</span>
+  </div>
+</div>
