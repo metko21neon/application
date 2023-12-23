@@ -21,6 +21,11 @@ import { CostsComponent } from './components/costs/costs.component';
 import { BondsComponent } from './components/bonds/bonds.component';
 import { BondsTableComponent } from './components/bonds/components/bonds-table/bonds-table.component';
 import { BalanceHistoryTableComponent } from './components/bonds/components/balance-history-table/balance-history-table.component';
+import { IMFloorPipe } from './pipes/im-floor.pipe';
+import { DetailsComponent } from './components/month/components/details/details.component';
+import { CryptocurrencyComponent } from './components/cryptocurrency/cryptocurrency.component';
+import { HistoryTableComponent } from './components/cryptocurrency/components/history-table/history-table.component';
+import { ReportComponent } from './components/report/report.component';
 
 @NgModule({
   declarations: [
@@ -28,18 +33,24 @@ import { BalanceHistoryTableComponent } from './components/bonds/components/bala
     MonthComponent,
     DebtsComponent,
     SpendsComponent,
-    ImCurrencyPipe,
     SavingsComponent,
     CapitalComponent,
     CostsComponent,
     BondsComponent,
     BondsTableComponent,
     BalanceHistoryTableComponent,
+    DetailsComponent,
+    CryptocurrencyComponent,
+    ReportComponent,
   ],
   imports: [
     FinancesRoutingModule,
     CommonModule,
     PipesModule,
+    IMFloorPipe,
+
+    HistoryTableComponent,
+    ImCurrencyPipe,
 
     MatFormFieldModule,
     MatTooltipModule,

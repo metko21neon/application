@@ -4,15 +4,13 @@
 
 .im-finances {
   grid-template-rows: 30px minmax(0, 1fr);
-}
 
-app-debts,
-app-month {
-  .cdk-cell {
-    padding-bottom: 60px !important;
-    padding-top: 5px !important;
-    vertical-align: baseline;
-    position: relative;
+  .im-content {
+    overflow: hidden;
+  }
+
+  .mat-mdc-tab-group {
+    height: 100%;
   }
 }
 
@@ -27,13 +25,24 @@ app-month {
 }
 
 app-month {
-  .mat-column-period {
-    min-width: 140px;
-    width: 140px;
+  display: block;
+  height: 100%;
+
+  .mat-mdc-row {
+    cursor: pointer;
   }
 
-  .mat-column-taxes {
-    max-width: 200px;
+  .mat-mdc-cell {
+    padding-top: 0 !important;
+    vertical-align: inherit;
+  }
+
+  .mat-mdc-footer-row {
+    background-color: #000000;
+
+    * {
+      font-weight: bold;
+    }
   }
 }
 
@@ -51,4 +60,10 @@ app-month {
 
 .mat-table {
   width: 100%;
+}
+
+app-details {
+  .mat-mdc-header-cell {
+    z-index: 99 !important;
+  }
 }

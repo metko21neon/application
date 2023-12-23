@@ -10,7 +10,7 @@ import { CashTransactionsTableComponent } from './components/cash-transactions-t
 import { CashTransactionsHistoryComponent } from './cash-transactions.component';
 
 // UI
-import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({

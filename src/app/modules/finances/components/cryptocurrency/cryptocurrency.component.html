@@ -1,0 +1,19 @@
+<div class="flex flex-column p-20" style="height: 100%;">
+  <div class="flex" style="justify-content: space-between;">
+    <div *ngFor="let statistic of cryptocurrencyService.statistics" class="flex flex-column">
+      <div class="flex">{{ statistic.category }}</div>
+
+      <div class="flex flex-column" style="align-items: flex-end; width: 150px;">
+        <div class="flex">{{ statistic.data.uah | number: '1.0-0' | imCurrency }} UAH</div>
+        <div class="flex">{{ statistic.data.usd | number: '1.0-0' | imCurrency }} USD</div>
+        <div class="flex">Total: {{ statistic.data.total | number: '1.0-0' | imCurrency }} UAH</div>
+      </div>
+    </div>
+  </div>
+
+  <app-history-table [history]="cryptocurrencyService.dataSource"></app-history-table>
+
+  <div class="flex" style="justify-content: space-between;">
+    <div class="flex">Total income {{ total.income | number: '1.0-0' | imCurrency }} UAH</div>
+  </div>
+</div>

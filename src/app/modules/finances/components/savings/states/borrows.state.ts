@@ -4,6 +4,44 @@ import { CURRENCY_ENUM } from "../../../enums/currency.enum";
 export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
+    amount: 2_335,
+    currency: CURRENCY_ENUM.UAH,
+    period: '08 November 2023 10:44:00',
+    description: 'Dental',
+  },
+  // {
+  //   action: ACTION_TYPE_ENUM.BORROW,
+  //   amount: 1_700,
+  //   currency: CURRENCY_ENUM.UAH,
+  //   period: '09 October 2023 10:44:00',
+  //   description: 'Dental',
+  // },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
+    amount: 100,
+    currency: CURRENCY_ENUM.EUR,
+    period: '03 November 2023 21:21:21',
+    description: 'Kozak',
+    rate: 38.8
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
+    amount: 400,
+    currency: CURRENCY_ENUM.USD,
+    period: '03 November 2023 21:50:00',
+    description: 'Parents',
+    rate: 37.453
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
+    amount: 200,
+    currency: CURRENCY_ENUM.EUR,
+    period: '03 November 2023 20:50:00',
+    description: 'Parents',
+    rate: 38.8
+  },
+  {
+    action: ACTION_TYPE_ENUM.BORROW,
     amount: 600,
     currency: CURRENCY_ENUM.USD,
     period: '08 September 2023 21:50:00',
@@ -45,13 +83,6 @@ export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
     currency: CURRENCY_ENUM.UAH,
-    amount: 2200,
-    period: '03 May 2023',
-    description: 'Clothes'
-  },
-  {
-    action: ACTION_TYPE_ENUM.BORROW,
-    currency: CURRENCY_ENUM.UAH,
     amount: 2300,
     period: '14 May 2023 15:50',
     description: 'Sunglasses'
@@ -81,7 +112,7 @@ export const BORROWS_STATE = [
   {
     action: ACTION_TYPE_ENUM.BORROW,
     currency: CURRENCY_ENUM.UAH,
-    amount: 8050,
+    amount: 2890,
     period: '05 May 2023 23:02:00',
     description: 'Business Event'
   },

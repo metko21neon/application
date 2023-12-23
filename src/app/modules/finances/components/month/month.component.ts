@@ -1,24 +1,22 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
+import { expandAnimation } from '../../../../animations/expand.animations';
 import { StateInterface } from '../../interfaces/state.interface';
-import { DebtInterface } from '../../finances.component';
-import { FinancesService } from '../../finances.service';
 
 @Component({
   selector: 'app-month',
   templateUrl: './month.component.html',
   styleUrls: ['./month.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  animations: [expandAnimation]
 })
 export class MonthComponent implements OnInit {
 
   @Input() state!: StateInterface[];
 
-  displayedColumns = ['period', 'incomes', 'taxes', 'savings', 'costs', 'newDebts', 'payedDebts', 'investing', 'lifeCosts'];
+  displayedColumns = ['period', 'income', 'taxes', 'savings', 'costs', 'newDebts', 'payedDebts', 'investing', 'lifeCosts'];
+  expandedElement: any | null;
   dataSource: any[] = [];
   total: any;
-
-  constructor(private financesService: FinancesService) { }
 
   ngOnInit(): void {
     this.setDataSource();
@@ -28,56 +26,98 @@ export class MonthComponent implements OnInit {
   }
 
   private setDataSource(): void {
-    const list = this.state.map((item: any) => {
-      const payedDebts = {
-        rest: item.debt.rest - this.financesService.calculateTotalAmount(item.debt.payed.list),
-        total: this.financesService.calculateTotalAmount(item.debt.payed.list),
-        list: item.debt.payed.list,
-      };
-
-      return {
-        ...item,
-        period: item.period.string,
-        newDebts: item.debt,
-        payedDebts,
-        type: 0,
-      }
-    });
+    const list = this.state
+      .map((item: any) => ({ ...item, newDebts: item.debt, type: 0 }))
+      .sort((a, b) => this.sortByDate(a, b, 'desc'));
 
     this.dataSource = this.chunks(list, 3);
+  }
+
+  private sortByDate(a: any, b: any, direction: string): number {
+    const aDate = new Date(a.period).getTime();
+    const bDate = new Date(b.period).getTime();
+
+    if (direction === 'asc') {
+      return aDate - bDate;
+    }
+
+    if (direction === 'desc') {
+      return bDate - aDate
+    }
+
+    return 0;
+  }
+
+  private quarterOfYear(date = new Date()): string {
+    const quarter = Math.ceil((date.getMonth() + 1) / 3);
+    return `${this.integer_to_roman(quarter)} quarter ${date.getFullYear()}`;
   }
 
   chunks<T>(arr: T[], size: number): any[] {
     const output = [];
 
-    for (let i = 0; i < arr.length; i += size) {
-      const list: any[] = arr.slice(i, i + size);
+    for (let i = arr.length; i > 0; i -= size) {
+      const list: any[] = arr.slice(i > size ? i - size : 0, i);
 
-      output.push(...arr.slice(i, i + size),
+      output.unshift(
         {
           type: 1,
-          period: 'quarter',
-          payedDebts: { total: this.calculateQuarterTotal(list, 'payedDebts') },
-          lifeCosts: { total: this.calculateQuarterTotal(list, 'lifeCosts') },
-          investing: {
-            total: this.calculateQuarterTotal(list, 'investing'),
-            list: this.calculate(list, 'investing'),
+          period: this.quarterOfYear(new Date(list[0].period)),
+          payedDebts: {
+            total: {
+              uah: this.calculateQuarterTotal(list, 'payedDebts', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'payedDebts', 'usd'),
+            },
           },
-          newDebts: { total: this.calculateQuarterTotal(list, 'newDebts') },
+          lifeCosts: {
+            total: {
+              uah: this.calculateQuarterTotal(list, 'lifeCosts', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'lifeCosts', 'usd'),
+            },
+          },
+          investing: {
+            // list: this.calculate(list, 'investing'),
+            total: {
+              uah: this.calculateQuarterTotal(list, 'investing', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'investing', 'usd'),
+            },
+          },
+          newDebts: {
+            total: {
+              uah: this.calculateQuarterTotal(list, 'newDebts', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'newDebts', 'usd'),
+            },
+          },
           savings: {
-            total: this.calculateQuarterTotal(list, 'savings'),
-            list: this.calculate(list, 'savings'),
+            total: {
+              uah: this.calculateQuarterTotal(list, 'savings', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'savings', 'usd'),
+            },
+            // list: this.calculate(list, 'savings'),
           },
           costs: {
-            total: this.calculateQuarterTotal(list, 'costs'),
-            list: this.calculate(list, 'costs'),
+            // list: this.calculate(list, 'costs'),
+            total: {
+              uah: this.calculateQuarterTotal(list, 'costs', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'costs', 'usd'),
+            },
           },
-          income: { total: this.calculateQuarterTotal(list, 'income') },
+          income: {
+            total: {
+              uah: this.calculateQuarterTotal(list, 'income', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'income', 'usd'),
+            }
+          },
           taxes: {
-            total: this.calculateQuarterTotal(list, 'taxes'),
-            list: this.calculate(list, 'taxes'),
+            // list: this.calculate(list, 'taxes'),
+            total: {
+              uah: this.calculateQuarterTotal(list, 'taxes', 'uah'),
+              usd: this.calculateQuarterTotal(list, 'taxes', 'usd'),
+            }
           },
-        });
+        },
+        ...arr.slice(i > size ? i - size : 0, i)
+      );
     }
 
     return output;
@@ -108,24 +148,74 @@ export class MonthComponent implements OnInit {
 
   private setTotal(): void {
     this.total = {
-      payedDebts: this.calculateFullTotal('payedDebts'),
-      lifeCosts: this.calculateFullTotal('lifeCosts'),
-      investing: this.calculateFullTotal('investing'),
-      savings: this.calculateFullTotal('savings'),
-      costs: this.calculateFullTotal('costs'),
-      income: this.calculateFullTotal('income'),
-      taxes: this.calculateFullTotal('taxes'),
-      newDebts: this.calculateFullTotal('newDebts'),
+      income: {
+        uah: this.calculateFullTotal('income', 'uah'),
+        usd: this.calculateFullTotal('income', 'usd'),
+      },
+      taxes: {
+        uah: this.calculateFullTotal('taxes', 'uah'),
+        usd: this.calculateFullTotal('taxes', 'usd'),
+      },
+      savings: {
+        uah: this.calculateFullTotal('savings', 'uah'),
+        usd: this.calculateFullTotal('savings', 'usd'),
+      },
+      costs: {
+        uah: this.calculateFullTotal('costs', 'uah'),
+        usd: this.calculateFullTotal('costs', 'usd'),
+      },
+      payedDebts: {
+        uah: this.calculateFullTotal('payedDebts', 'uah'),
+        usd: this.calculateFullTotal('payedDebts', 'usd'),
+      },
+      newDebts: {
+        uah: this.calculateFullTotal('newDebts', 'uah'),
+        usd: this.calculateFullTotal('newDebts', 'usd'),
+      },
+      investing: {
+        uah: this.calculateFullTotal('investing', 'uah'),
+        usd: this.calculateFullTotal('investing', 'usd'),
+      },
+      lifeCosts: {
+        uah: this.calculateFullTotal('lifeCosts', 'uah'),
+        usd: this.calculateFullTotal('lifeCosts', 'usd'),
+      }
     };
   }
 
-  private calculateFullTotal(property: string): void {
+  private calculateFullTotal(property: string, currency: string = ''): void {
+    if (currency) {
+      return this.dataSource
+        .filter((item: any) => item.type === 0)
+        .reduce((acc: number, item: any) => (acc + item[property].total[currency]), 0);
+    }
+
     return this.dataSource
       .filter((item: any) => item.type === 0)
       .reduce((acc: number, item: any) => (acc + item[property].total), 0);
   }
 
-  private calculateQuarterTotal(list: any[], property: string): void {
+  private calculateQuarterTotal(list: any[], property: string, currency: any = ''): void {
+    if (currency) {
+      return list.reduce((acc: number, item: any) => (acc + item[property].total[currency]), 0);
+    }
+
     return list.reduce((acc: number, item: any) => (acc + item[property].total), 0);
+  }
+
+  private integer_to_roman(num: number): string {
+    if (typeof num !== 'number')
+      return '';
+
+    var digits: any[] = String(+num).split(""),
+      key = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM",
+        "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC",
+        "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+      roman_num = "",
+      i = 3;
+
+    while (i--)
+      roman_num = (key[+digits.pop() + (i * 10)] || "") + roman_num;
+    return Array(+digits.join("") + 1).join("M") + roman_num;
   }
 }
