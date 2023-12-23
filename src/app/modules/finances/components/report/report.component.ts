@@ -76,7 +76,7 @@ export class ReportComponent implements OnInit {
       list: [
         {
           label: 'Privatbank',
-          amount: 73_750
+          amount: 63_200
         },
         {
           label: 'Monobank',
@@ -84,7 +84,7 @@ export class ReportComponent implements OnInit {
         },
         {
           label: 'Cash',
-          amount: 4_000
+          amount: 7_000
         },
       ]
     }

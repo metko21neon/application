@@ -5,9 +5,9 @@ export const ACTION_LIST = [
     action: 'SPEND',
     category: 'Coins',
     description: 'Deposit',
-    amount: 15_450,
+    amount: 20_600,
     currency: CURRENCY_ENUM.UAH,
-    date: '2023-12-22 21:00:00'
+    date: '2023-12-23 21:00:00'
   },
   {
     action: 'RETURNED',
