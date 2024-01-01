@@ -91,6 +91,10 @@ export const COST_LIST = [
         label: 'Savings',
         amount: 5_000
       },
+      {
+        label: 'Shoes',
+        amount: 2_900
+      },
     ]
   },
 ];

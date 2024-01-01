@@ -8,6 +8,7 @@ export const EXCHANGE_WALLET_LIST: WalletInterface[] = [
     name: "Binance wallet",
     company: "Binance",
     addresses: [
+      { network: NETORK_COIN_ENUM.DOT, address: '13DV2s93kAz4beYKRfJ9rh9dQM6ALpSLxF3Zc72NpqYzuXtM' },
       { network: NETORK_COIN_ENUM.BSC, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
       { network: NETORK_COIN_ENUM.ETH, address: '0x78a05f925c1424d02211f9df98ebb7ad8df4d557' },
       { network: NETORK_COIN_ENUM.TRX, address: 'TNLpoyoGA47j92BQKWUwEYXm5peQs121hH' },

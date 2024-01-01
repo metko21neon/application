@@ -3,11 +3,11 @@ import { MatTableDataSource } from '@angular/material/table';
 import { UntypedFormControl } from '@angular/forms';
 import { MatSort } from '@angular/material/sort';
 
+import { CoinsService } from '../../modules/cryptocurrency/services/coins.service';
 import { WalletInterface } from '../../interfaces/wallet.interface';
 import { ColumnInterface } from '../../interfaces/column.interface';
 import { COIN_STATUS_LIST } from '../../states/coin-status.state';
 import { CoinInterface } from '../../interfaces/coin.interface';
-import { CoinsService } from '../../services/coins.service';
 
 import { Subscription } from 'rxjs';
 

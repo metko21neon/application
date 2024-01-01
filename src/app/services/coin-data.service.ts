@@ -65,14 +65,14 @@ export class CoinDataService {
   }
 
   private emitStreamSubject(response: ResponseInterface): void {
-    if (response.data.length === LIMIT) {
-      this.streamSubject.next(true);
-      START += LIMIT;
-    }
+    // if (response.data.length === LIMIT) {
+    //   this.streamSubject.next(true);
+    //   START += LIMIT;
+    // }
 
-    if (response.data.length !== LIMIT) {
-      this.streamSubject.complete();
-    }
+    // if (response.data.length !== LIMIT) {
+    this.streamSubject.complete();
+    // }
   }
 
   private getCoinSettings(): Observable<any> {

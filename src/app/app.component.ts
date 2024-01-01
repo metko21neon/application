@@ -3,8 +3,8 @@ import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { combineLatest, Subscription } from 'rxjs';
 
 import { CashTransactionsService } from './modules/cryptocurrency/pages/cash-transactions/cash-transactions.service';
+import { CoinsService } from './modules/cryptocurrency/services/coins.service';
 import { CoinDataService } from './services/coin-data.service';
-import { CoinsService } from './services/coins.service';
 
 export const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 

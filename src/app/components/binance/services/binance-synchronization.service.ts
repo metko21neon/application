@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable, concatMap, filter, from, map, switchMap, tap, toArray } from 'rxjs';
 
 import { WalletNamePipe } from '../../../modules/cryptocurrency/pipes/wallet-name.pipe';
+import { CoinsService } from '../../../modules/cryptocurrency/services/coins.service';
 import { CoinHistoryActionEnum } from '../../../enums/coin-history-action.enum';
 import { BinanceOrderInterface } from '../interfaces/binance-order.interface';
 import { BinanceWithdrawalsService } from './binance-withdrawals.service';
 import { BinanceDepositsService } from './binance-deposits.service';
 import { CCCoinsService } from '../../../services/cccoins.service';
-import { CoinsService } from '../../../services/coins.service';
 import { DATE_FORMAT } from '../../../app.component';
 import { Api } from '../../../api/api';
 
@@ -74,7 +74,8 @@ export class BinanceSynchronizationService {
   }
 
   private getOrdersHistory(): Observable<any> {
-    return from(this.cccoinsService.coins.slice(0, 20)).pipe(
+    // return from(this.cccoinsService.coins.slice(0, 20)).pipe(
+    return from([this.cccoinsService.coins.find((coin: any) => coin.symbol === 'DOT')]).pipe(
       filter((coin: any) => !['USDT', 'BUSD'].includes(coin.symbol)),
       concatMap((coin: any) => this.getOrdersHistoryBySymbol(coin)),
       tap((item: BinanceResponseOrdersInterface) => {

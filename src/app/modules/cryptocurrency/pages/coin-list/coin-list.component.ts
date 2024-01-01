@@ -7,8 +7,8 @@ import { CoinDataInterface } from '../../../../interfaces/coin-data.interface';
 import { ColumnInterface } from '../../../../interfaces/column.interface';
 import { CoinDataService } from '../../../../services/coin-data.service';
 import { CoinInterface } from '../../../../interfaces/coin.interface';
-import { CoinsService } from '../../../../services/coins.service';
 import { WalletNamePipe } from '../../pipes/wallet-name.pipe';
+import { CoinsService } from '../../services/coins.service';
 
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';

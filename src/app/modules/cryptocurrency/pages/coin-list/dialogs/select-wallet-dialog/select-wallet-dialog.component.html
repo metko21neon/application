@@ -23,6 +23,7 @@
   </form>
 
   <div mat-dialog-actions class="flex" style="justify-content: flex-end;">
-    <button mat-button [disabled]="+deposit.amount > wallet?.quantity" (click)="save()">Save</button>
+    <!--  [disabled]="+deposit.amount > wallet?.quantity" -->
+    <button mat-button (click)="save()">Save</button>
   </div>
 </div>

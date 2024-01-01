@@ -9,8 +9,8 @@ import { CryptoHistoryInterface } from '../../../../interfaces/crypto-history.in
 import { CoinHistoryActionEnum } from '../../../../enums/coin-history-action.enum';
 import { WalletInterface } from '../../../../interfaces/wallet.interface';
 import { CoinInterface } from '../../../../interfaces/coin.interface';
-import { CoinsService } from '../../../../services/coins.service';
 import { RoundValuePipe } from 'src/app/pipes/round-value.pipe';
+import { CoinsService } from '../../services/coins.service';
 import { RoundPipe } from 'src/app/pipes/round.pipe';
 
 @Component({
@@ -154,6 +154,11 @@ export class WalletCoinDetailsComponent implements OnInit, OnDestroy {
         this.totalEarnedCurrency += history.filled! * history.price;
 
         this.totalSell += history.filled! * history.price;
+        return;
+      }
+
+      if (history.action === CoinHistoryActionEnum.CONVERT) {
+        history.totalQuantity = previousTotal - history.amount!;
         return;
       }
 

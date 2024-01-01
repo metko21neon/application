@@ -3,21 +3,21 @@ import { Injectable } from '@angular/core';
 
 import { BehaviorSubject, Observable, of, tap } from 'rxjs';
 
-import { CashTransactionsService } from '../modules/cryptocurrency/pages/cash-transactions/cash-transactions.service';
-import { InvestStatisticInterface } from '../interfaces/invest-statistic.interface';
-import { CryptoHistoryInterface } from '../interfaces/crypto-history.interface';
-import { calculateAveragePrice } from '../utilities/average-price.utility';
-import { CoinHistoryActionEnum } from '../enums/coin-history-action.enum';
-import { CoinDataInterface } from '../interfaces/coin-data.interface';
-import { WalletInterface } from '../interfaces/wallet.interface';
-import { ColumnInterface } from '../interfaces/column.interface';
-import { CoinDataService } from './coin-data.service';
-import { CoinInterface } from '../interfaces/coin.interface';
-import { STATE } from '../states/invest-statistic.state';
-import { COLUMN_LIST } from '../states/column.state';
-import { Api } from '../api/api';
+import { CashTransactionsService } from '../pages/cash-transactions/cash-transactions.service';
+import { InvestStatisticInterface } from '../../../interfaces/invest-statistic.interface';
+import { CryptoHistoryInterface } from '../../../interfaces/crypto-history.interface';
+import { calculateAveragePrice } from '../../../utilities/average-price.utility';
+import { CoinHistoryActionEnum } from '../../../enums/coin-history-action.enum';
+import { CoinDataInterface } from '../../../interfaces/coin-data.interface';
+import { WalletInterface } from '../../../interfaces/wallet.interface';
+import { ColumnInterface } from '../../../interfaces/column.interface';
+import { CoinDataService } from '../../../services/coin-data.service';
+import { CoinInterface } from '../../../interfaces/coin.interface';
+import { STATE } from '../../../states/invest-statistic.state';
+import { COLUMN_LIST } from '../../../states/column.state';
+import { Api } from '../../../api/api';
 
-import * as COIN_LIST from "../jsons/coins.json";
+import * as COIN_LIST from "../../../jsons/coins.json";
 
 @Injectable({
   providedIn: 'root'
@@ -35,9 +35,7 @@ export class CoinsService {
 
   constructor(
     private cashTransactionsService: CashTransactionsService,
-    private coinDataService: CoinDataService,
-    private http: HttpClient,
-    private api: Api) {
+    private coinDataService: CoinDataService) {
     this.investStatistic$ = this.investStatisticSubject.asObservable();
     this.coinList$ = this.coinListSubject.asObservable();
   }
@@ -61,7 +59,6 @@ export class CoinsService {
   }
 
   getCoinList(coins = (COIN_LIST as any).default): Observable<CoinInterface[]> {
-    // return (this.dbService.getAll('coinList') as Observable<CoinInterface[]>).pipe(
     return (of(coins) as Observable<any[]>).pipe(
       tap((coinList: CoinInterface[]) => {
         coinList.map((coin: CoinInterface) => {
@@ -191,9 +188,6 @@ export class CoinsService {
       return 0;
     });
 
-    // if (coin.symbol === 'BTC') {
-    //   console.log('transactions:', transactions);
-    // }
     transactions!.map((transaction: CryptoHistoryInterface, index: number) => {
       transaction.averagePrice = calculateAveragePrice(transactions!.slice(0, index + 1));
     });
@@ -235,6 +229,10 @@ export class CoinsService {
         if (curr.action === CoinHistoryActionEnum.STAKE) {
           wallet.stakedQuantity! += curr.amount!;
           return acc;
+        }
+
+        if (curr.action === CoinHistoryActionEnum.CONVERT) {
+          return acc - curr.amount!;
         }
 
         return acc;

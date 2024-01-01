@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { StateInterface } from '../../interfaces/state.interface';
 import { CryptocurrencyService } from '../cryptocurrency/cryptocurrency.service';
+import { StateInterface } from '../../interfaces/state.interface';
+import { CostsService } from '../costs/costs.service';
 
 @Component({
   selector: 'app-report',
@@ -76,15 +77,15 @@ export class ReportComponent implements OnInit {
       list: [
         {
           label: 'Privatbank',
-          amount: 63_200
+          amount: 27_150
         },
         {
           label: 'Monobank',
-          amount: 100
+          amount: 700
         },
         {
           label: 'Cash',
-          amount: 7_000
+          amount: 3_200
         },
       ]
     }
@@ -92,9 +93,14 @@ export class ReportComponent implements OnInit {
 
   total = 0;
 
-  constructor(public cryptocurrencyService: CryptocurrencyService) { }
+  constructor(
+    public cryptocurrencyService: CryptocurrencyService,
+    public costsService: CostsService
+  ) { }
 
   ngOnInit(): void {
+    this.setCostsRest();
+
     this.list.map((item: any) => {
       item.total = item.list.reduce((acc: number, cur: any) => (acc + cur.amount), 0);
 
@@ -109,8 +115,18 @@ export class ReportComponent implements OnInit {
       }
     });
 
-    setTimeout(() => {
-      this.total -= this.cryptocurrencyService.balance.uah;
-    }, 0);
+    setTimeout(() => this.total -= this.cryptocurrencyService.balance.uah);
+  }
+
+  private setCostsRest(): void {
+    const group = this.list.find((item: any) => item.type === 'DEBTS')!;
+    const item = group.list.find((item: any) => item.label === 'Costs');
+
+    this.costsService.setDataSource();
+    this.costsService.calculateRest();
+
+    if (item) {
+      item.amount = this.costsService.rest;
+    }
   }
 }

@@ -3,9 +3,25 @@ import { CURRENCY_ENUM } from "../../../enums/currency.enum";
 export const ACTION_LIST = [
   {
     action: 'SPEND',
+    category: 'MA',
+    description: 'Salary',
+    amount: 5_175,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2024-01-01 14:46:00'
+  },
+  {
+    action: 'SPEND',
+    category: 'MA',
+    description: 'eSims',
+    amount: 1_900,
+    currency: CURRENCY_ENUM.UAH,
+    date: '2023-12-31 13:00:00'
+  },
+  {
+    action: 'SPEND',
     category: 'Coins',
     description: 'Deposit',
-    amount: 20_600,
+    amount: 40_800,
     currency: CURRENCY_ENUM.UAH,
     date: '2023-12-23 21:00:00'
   },

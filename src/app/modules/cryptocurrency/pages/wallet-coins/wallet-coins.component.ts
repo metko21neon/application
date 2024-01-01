@@ -9,7 +9,7 @@ import { WalletAddressInterface } from '../../interfaces/wallet-address.interfac
 import { CoinInterface } from '../../../../interfaces/coin.interface';
 import { RoundValuePipe } from '../../../../pipes/round-value.pipe';
 import { WalletInterface } from '../../interfaces/wallet.interface';
-import { CoinsService } from '../../../../services/coins.service';
+import { CoinsService } from '../../services/coins.service';
 import { WALLET_LIST } from '../../states/wallet.state';
 
 @Component({

@@ -118,6 +118,10 @@
             {{ element.amount | roundValue }}
           </span>
 
+          <span *ngIf="actionHistoryEnum.CONVERT === element.action">
+            - {{ element.amount | roundValue }}
+          </span>
+
           <!-- ({{ element.totalQuantityPercentage | imRound }}%) -->
           {{ tokenDetails.symbol }}
         </td>
